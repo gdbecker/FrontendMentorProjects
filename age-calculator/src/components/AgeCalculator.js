@@ -15,15 +15,16 @@ function AgeCalculator() {
     monthResult: '',
     yearResult: '',
   });
-  // const { dayResult, monthResult, yearResult } = formData;
 
   const [formErrors, setFormErrors] = useState({
     dayError: '',
     monthError: '',
     yearError: '',
-    dateError: ''
+    dateError: '',
+    hasErrorDay: '',
+    hasErrorMonth: '',
+    hasErrorYear: ''
   });
-  // const { dayError, monthError, yearError } = formData;
 
   const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -47,6 +48,9 @@ function AgeCalculator() {
     var monthMessage = '';
     var yearMessage = '';
     var dateMessage = '';
+    var errorPresentDay = false;
+    var errorPresentMonth = false;
+    var errorPresentYear = false;
 
     if (dayValid == false) {
       dayMessage = "Day must in the range 1-31"
@@ -91,11 +95,26 @@ function AgeCalculator() {
       }
     }
 
+    if (!dayValid) {
+      errorPresentDay = true;
+    }
+
+    if (!monthValid) {
+      errorPresentMonth = true;
+    }
+
+    if (!yearValid) {
+      errorPresentYear = true;
+    }
+
     setFormErrors({
       dayError: dayMessage,
       monthError: monthMessage,
       yearError: yearMessage,
-      dateError: dateMessage
+      dateError: dateMessage,
+      hasErrorDay: errorPresentDay,
+      hasErrorMonth: errorPresentMonth,
+      hasErrorYear: errorPresentYear,
     })
 
 
@@ -104,7 +123,10 @@ function AgeCalculator() {
         dayError: '',
         monthError: '',
         yearError: '',
-        dateError: ''
+        dateError: '',
+        hasErrorDay: false,
+        hasErrorMonth: false,
+        hasErrorYear: false
       });
 
       var totalDays = Math.floor((today - dateInput)/(24*3600*1000))
@@ -127,9 +149,13 @@ function AgeCalculator() {
     }
   }
 
+  var dayClassName = formErrors.hasErrorDay ? 'calc-form calc-label-error' : 'calf-form calc-label';
+  var monthClassName = formErrors.hasErrorMonth ? 'calc-form calc-label-error' : 'calf-form calc-label';
+  var yearClassName = formErrors.hasErrorYear ? 'calc-form calc-label-error' : 'calf-form calc-label';
+
   return (
     <div id="age-calculator">
-      <div className="container mt-5">
+      <div className="container mt-3">
         <form onSubmit={e => onSubmit(e)}>
           <div className="row">
             <div className="col-9">
@@ -138,7 +164,7 @@ function AgeCalculator() {
 
                   <div className="col-4">
                     <div className="form-group">
-                      <label className='calc-form calc-label' htmlFor="day">DAY</label>
+                      <label className={dayClassName} htmlFor="day">DAY</label>
                       <input
                         className='calc-form calc-box form-control'
                         type='number'
@@ -155,7 +181,7 @@ function AgeCalculator() {
 
                   <div className="col-4">
                     <div className="form-group">
-                      <label className='calc-form calc-label' htmlFor="month">MONTH</label>
+                      <label className={monthClassName} htmlFor="month">MONTH</label>
                       <input
                         className='calc-form calc-box form-control'
                         type='number'
@@ -172,7 +198,7 @@ function AgeCalculator() {
 
                   <div className="col-4">
                     <div className="form-group">
-                      <label className='calc-form calc-label' htmlFor="year">YEAR</label>
+                      <label className={yearClassName} htmlFor="year">YEAR</label>
                       <input
                         className='calc-form calc-box form-control'
                         type='number'
@@ -197,16 +223,15 @@ function AgeCalculator() {
           </div>
 
           <div className="row">
-            <div className="col-9">
-              <hr className="calc-divider"></hr>
+            <div className="calc-divider">
+              <span>
+                <div className="form-group">
+                  <button className="calc-button" type="submit"><Submit></Submit></button>
+                </div>
+              </span>
             </div>
-            <div className="col-3">
-              <div className="form-group">
-                <button className="calc-button" type="submit"><Submit></Submit></button>
-              </div>
-            </div>
+            
           </div>
-
         </form>
 
         <div className="row">
