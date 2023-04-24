@@ -1,0 +1,226 @@
+import React, { useState, useEffect } from 'react';
+import { ReactComponent as Submit } from '../assets/icon-arrow.svg';
+
+function AgeCalculator() {
+
+  const [formData, setFormData] = useState({
+    day: '--',
+    month: '--',
+    year: '--',
+  });
+  const { day, month, year } = formData;
+
+  const [resultsData, setResultsData] = useState({
+    dayResult: '',
+    monthResult: '',
+    yearResult: '',
+  });
+  // const { dayResult, monthResult, yearResult } = formData;
+
+  const [formErrors, setFormErrors] = useState({
+    dayError: '',
+    monthError: '',
+    yearError: '',
+    dateError: ''
+  });
+  // const { dayError, monthError, yearError } = formData;
+
+  const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    var today = new Date();
+    var currentYear = new Date().getFullYear();
+    setFormData({
+      day: parseInt(day),
+      month: parseInt(month),
+      year: parseInt(year)
+    });
+
+    var dateInput = new Date(year, month-1, day);
+    var dayValid = day >= 1 && day <= 31;
+    var monthValid = month >= 1 && month <= 12;
+    var yearValid = year <= currentYear && year > 0 && dateInput <= today;
+    var dateValid = false;
+    var dayMessage = '';
+    var monthMessage = '';
+    var yearMessage = '';
+    var dateMessage = '';
+
+    if (dayValid == false) {
+      dayMessage = "Day must in the range 1-31"
+    } else if (dayValid == true) {
+      dayMessage = '';
+    }
+
+    if (!monthValid) {
+      monthMessage = "Month must in the range 1-12"
+    } else if (monthValid) {
+      monthMessage = '';
+    }
+
+    if (!yearValid) {
+      yearMessage = "Date cannot be in the future."
+    } else if (yearValid) {
+      yearMessage = '';
+    }
+
+    if (dayValid && monthValid && yearValid) {
+      var daysAllowed = 0;
+      switch (month) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+          daysAllowed = 31;
+          break;
+        case 2:
+          daysAllowed = 29;
+          break;
+        case 4: case 6: case 9: case 11:
+          daysAllowed = 30;
+          break;
+        default:
+          daysAllowed = 0;
+          break;
+      }
+      
+      if (day > daysAllowed) {
+        dateValid = false;
+        dateMessage = 'Date must be a day that exists';
+      } else {
+        dateValid = true;
+      }
+    }
+
+    setFormErrors({
+      dayError: dayMessage,
+      monthError: monthMessage,
+      yearError: yearMessage,
+      dateError: dateMessage
+    })
+
+
+    if (dayValid && monthValid && yearValid && dateValid) {
+      setFormErrors({
+        dayError: '',
+        monthError: '',
+        yearError: '',
+        dateError: ''
+      });
+
+      var totalDays = Math.floor((today - dateInput)/(24*3600*1000))
+      var numYears = Math.floor(totalDays / 365);
+      totalDays -= (numYears * 365)
+      var numMonths = Math.floor(totalDays / 30);
+      totalDays -= (numMonths * 30)
+
+      setResultsData({
+        dayResult: totalDays,
+        monthResult: numMonths,
+        yearResult: numYears,
+      });
+    } else {
+      setResultsData({
+        dayResult: '',
+        monthResult: '',
+        yearResult: '',
+      });
+    }
+  }
+
+  return (
+    <div id="age-calculator">
+      <div className="container mt-5">
+        <form onSubmit={e => onSubmit(e)}>
+          <div className="row">
+            <div className="col-9">
+              
+                <div className="row g-4">
+
+                  <div className="col-4">
+                    <div className="form-group">
+                      <label className='calc-form calc-label' htmlFor="day">DAY</label>
+                      <input
+                        className='calc-form calc-box form-control'
+                        type='number'
+                        placeholder='DAY'
+                        id="day"
+                        name='day'
+                        value={formData.day}
+                        onChange={e => onChange(e)}
+                        required
+                      />
+                      <label className='calc-form calc-error' htmlFor="day">{formErrors.dayError}</label>
+                    </div>
+                  </div>
+
+                  <div className="col-4">
+                    <div className="form-group">
+                      <label className='calc-form calc-label' htmlFor="month">MONTH</label>
+                      <input
+                        className='calc-form calc-box form-control'
+                        type='number'
+                        placeholder='MONTH'
+                        id="month"
+                        name='month'
+                        value={formData.month}
+                        onChange={e => onChange(e)}
+                        required
+                      />
+                      <label className='calc-form calc-error' htmlFor="month">{formErrors.monthError}</label>
+                    </div>
+                  </div>
+
+                  <div className="col-4">
+                    <div className="form-group">
+                      <label className='calc-form calc-label' htmlFor="year">YEAR</label>
+                      <input
+                        className='calc-form calc-box form-control'
+                        type='number'
+                        placeholder='YEAR'
+                        id="year"
+                        name='year'
+                        value={formData.year}
+                        onChange={e => onChange(e)}
+                        required
+                      />
+                      <label className='calc-form calc-error' htmlFor="year">{formErrors.yearError}</label>
+                    </div>
+                  </div>
+
+                </div>
+                <p className='calc-form calc-error'>{formErrors.dateError}</p>
+              
+            </div>
+            <div className="col-lg-3">
+              
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-9">
+              <hr className="calc-divider"></hr>
+            </div>
+            <div className="col-3">
+              <div className="form-group">
+                <button className="calc-button" type="submit"><Submit></Submit></button>
+              </div>
+            </div>
+          </div>
+
+        </form>
+
+        <div className="row">
+          <div className="col-12">
+            
+
+            <h1 className="calc-results"><span className="calc-value">{resultsData.yearResult}</span> years</h1>
+            <h1 className="calc-results"><span className="calc-value">{resultsData.monthResult}</span> months</h1>
+            <h1 className="calc-results"><span className="calc-value">{resultsData.dayResult}</span> days</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default AgeCalculator;
