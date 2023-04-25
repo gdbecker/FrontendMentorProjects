@@ -14,6 +14,7 @@ function AgeCalculator() {
     dayResult: '',
     monthResult: '',
     yearResult: '',
+    submitted: ''
   });
 
   const [formErrors, setFormErrors] = useState({
@@ -26,7 +27,10 @@ function AgeCalculator() {
     hasErrorYear: ''
   });
 
-  const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
+  const onChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setResultsData({ ...resultsData, submitted: false });
+  }
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -51,6 +55,7 @@ function AgeCalculator() {
     var errorPresentDay = false;
     var errorPresentMonth = false;
     var errorPresentYear = false;
+    var formSubmitted = false;
 
     if (dayValid == false) {
       dayMessage = "Day must in the range 1-31"
@@ -70,9 +75,10 @@ function AgeCalculator() {
       yearMessage = '';
     }
 
+    var daysAllowed = 0;
     if (dayValid && monthValid && yearValid) {
-      var daysAllowed = 0;
-      switch (month) {
+      
+      switch(parseInt(month)) {
         case 1: case 3: case 5: case 7: case 8: case 10: case 12:
           daysAllowed = 31;
           break;
@@ -82,12 +88,9 @@ function AgeCalculator() {
         case 4: case 6: case 9: case 11:
           daysAllowed = 30;
           break;
-        default:
-          daysAllowed = 0;
-          break;
       }
       
-      if (day > daysAllowed) {
+      if (formData.day > daysAllowed) {
         dateValid = false;
         dateMessage = 'Date must be a day that exists';
       } else {
@@ -134,17 +137,20 @@ function AgeCalculator() {
       totalDays -= (numYears * 365)
       var numMonths = Math.floor(totalDays / 30);
       totalDays -= (numMonths * 30)
+      formSubmitted = true;
 
       setResultsData({
         dayResult: totalDays,
         monthResult: numMonths,
         yearResult: numYears,
+        submitted: formSubmitted,
       });
     } else {
       setResultsData({
         dayResult: '',
         monthResult: '',
         yearResult: '',
+        submitted: false
       });
     }
   }
@@ -152,6 +158,7 @@ function AgeCalculator() {
   var dayClassName = formErrors.hasErrorDay ? 'calc-form calc-label-error' : 'calf-form calc-label';
   var monthClassName = formErrors.hasErrorMonth ? 'calc-form calc-label-error' : 'calf-form calc-label';
   var yearClassName = formErrors.hasErrorYear ? 'calc-form calc-label-error' : 'calf-form calc-label';
+  var calcResultClassName = resultsData.submitted ? 'calc-value-animation' : 'calc-value';
 
   return (
     <div id="age-calculator">
@@ -238,9 +245,9 @@ function AgeCalculator() {
           <div className="col-12">
             
 
-            <h1 className="calc-results"><span className="calc-value">{resultsData.yearResult}</span> years</h1>
-            <h1 className="calc-results"><span className="calc-value">{resultsData.monthResult}</span> months</h1>
-            <h1 className="calc-results"><span className="calc-value">{resultsData.dayResult}</span> days</h1>
+            <h1 className="calc-results"><span className={calcResultClassName}>{resultsData.yearResult}</span> years</h1>
+            <h1 className="calc-results"><span className={calcResultClassName}>{resultsData.monthResult}</span> months</h1>
+            <h1 className="calc-results"><span className={calcResultClassName}>{resultsData.dayResult}</span> days</h1>
           </div>
         </div>
       </div>
