@@ -1,0 +1,157 @@
+/* Color Palette
+-Primary
+Orange: #FB7413
+
+-Neutral
+White: #FFFFFF
+Off white: #F0F0F0
+Light grey: #DBDBDB
+Medium grey: #7C8798
+Dark blue: #252D37
+Very dark blue: #121417
+*/
+
+/* Imported Fonts */
+@font-face {
+  font-family: Overpass-Bold;
+  src: url(assets/fonts/Overpass-Bold.ttf);
+}
+
+@font-face {
+  font-family: Overpass-Regular;
+  src: url(assets/fonts/Overpass-Regular.ttf);
+}
+
+/* App */
+.App {
+  background-color: #252D37;
+  color: #FFFFFF;
+  min-height: 100vh;
+  width: auto;
+  padding: 5%;
+}
+
+/* Landing Page */
+#landing-page {
+  background-color: #121417;
+  font-family: Poppins-Regular;
+  padding: 8%;
+  box-shadow: #252D37 0px 2px 8px 0px;
+  border-radius: 10px;
+}
+
+/* Rating Component */
+#rating {
+  background-image: linear-gradient(#252D37, #121417);
+  min-height: 35vh;
+  border-radius: 15px;
+  padding: 6%;
+}
+
+.star {
+  margin: auto;
+}
+
+.star-box {
+  background-color: #252D37;
+  height: 37px;
+  width: 37px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.rating-header {
+  color: #FFFFFF;
+  font-family: Overpass-Bold;
+}
+
+.rating-text {
+  color: #7C8798;
+  font-family: Overpass-Regular;
+  font-size: 15px;
+}
+
+.ratings-row {
+  text-align: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.rating-option-button {
+  height: 37px;
+  width: 37px;
+  border:0!important;
+  display: inline-block;
+  font-family: Overpass-Bold;
+  color: #7C8798;
+  border-radius: 50%;
+  background-color: #252D37;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 1%;
+}
+
+.rating-option-button:not(:last-child) {
+  margin-right: 7%;
+}
+
+.rating-option-button:hover {
+  background-color: #FB7413;
+  color: #FFFFFF;
+}
+
+.rating-option-button-selected {
+  background-color: #7C8798;
+  color: #FFFFFF;
+}
+
+.rating-submit-button {
+  height: 37px;
+  width: 100%;
+  border:0!important;
+  background-color: #FB7413;
+  color: #FFFFFF;
+  border-radius: 40px;
+  font-family: Overpass-Bold;
+  align-items: center;
+  font-size: 15px;
+  padding-top: 1%;
+}
+
+.rating-submit-button:hover {
+  background-color: #FFFFFF;
+  color: #FB7413;
+}
+
+.thank-you {
+  text-align: center;
+}
+
+.rating-result-box {
+  height: 37px;
+  border-radius: 40px;
+  text-align: center;
+  background-color: #252D37;
+  padding-top: 4%;
+}
+
+.rating-result {
+  color: #FB7413;
+  margin: auto;
+  font-family: Overpass-Regular;
+  font-size: 14px;
+}
+
+.rating-header-result {
+  color: #FFFFFF;
+  font-family: Overpass-Bold;
+  text-align: center;
+}
+
+.rating-text-result {
+  color: #7C8798;
+  font-family: Overpass-Regular;
+  font-size: 15px;
+  text-align: center;
+}

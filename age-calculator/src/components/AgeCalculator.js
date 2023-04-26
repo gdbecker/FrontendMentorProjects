@@ -70,7 +70,7 @@ function AgeCalculator() {
     }
 
     if (!yearValid) {
-      yearMessage = "Date cannot be in the future."
+      yearMessage = "Date cannot be in the future or negative."
     } else if (yearValid) {
       yearMessage = '';
     }
