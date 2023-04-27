@@ -1,0 +1,204 @@
+/* Color Palette
+-Primary
+Soft orange: #E9AB53
+Soft red: #F15E50
+
+-Neutral
+White: #FFFFFF
+Off-white: #FFFDFA
+Grayish blue: #C5C6CE
+Dark grayish blue: #5D5F79
+Very dark blue: #00001A
+*/
+
+/* Imported Fonts */
+@font-face {
+  font-family: Inter-Bold;
+  src: url(assets/fonts/Inter-Bold.ttf);
+}
+
+@font-face {
+  font-family: Inter-ExtraBold;
+  src: url(assets/fonts/Inter-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: Inter-Regular;
+  src: url(assets/fonts/Inter-Regular.ttf);
+}
+
+/* Layout */
+.layout-wrapper {
+  background-color: #FFFDFA;
+  padding: 4%;
+}
+
+/* App */
+.App {
+  background-color: #FFFDFA;
+  color: #FFFFFF;
+  min-height: 100vh;
+  width: auto;
+  padding-left: 1%;
+}
+
+/* Navigation */
+#navigation {
+  background-color: #FFFDFA;
+  text-align: left;
+  font-family: Inter-Regular;
+  margin: 3%;
+}
+
+.navbar {
+  padding: 1rem;
+}
+
+.navbar-brand {
+  width: 50px;
+}
+
+.nav-item {
+  padding: 0 10px;
+  font-family: Inter-Regular;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  color: #00001A !important;
+}
+
+.nav-link:hover {
+  color: #F15E50 !important;
+}
+
+/* Landing Page */
+#landing-page {
+  background-color: #FFFDFA;
+  color: #00001A;
+  font-family: Inter-Regular;
+  padding: 0%;
+}
+
+.block-pic-1 {
+  background-image: url(assets/image-web-3-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  min-height: 40vh;
+}
+
+.news-header {
+  font-family: Inter-ExtraBold;
+  font-size: 3.3em;
+}
+
+.news-text {
+  font-size: 15px;
+  color: #5D5F79;
+}
+
+.read-more-button {
+  height: 45px;
+  width: 50%;
+  border:0!important;
+  background-color: #F15E50;
+  color: #FFFDFA;
+  align-items: center;
+  font-size: 13px;
+  padding-top: 1%;
+  letter-spacing: 3px;
+}
+
+.read-more-button:hover {
+  background-color: #00001A;
+}
+
+.new-section {
+  background-color: #00001A;
+  padding-top: 4%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 4%;
+}
+
+.new-section-header {
+  color: #E9AB53;
+  font-family: Inter-Bold;
+}
+
+.new-section-subheader {
+  color: #FFFDFA;
+  font-family: Inter-Bold;
+  font-size: 21px;
+  text-decoration: none;
+}
+
+.new-section-subheader:hover {
+  color: #E9AB53 !important;
+}
+
+.new-section-text {
+  color: #C5C6CE;
+  font-size: 15px;
+}
+
+hr {
+  background-color: #C5C6CE;
+  height: 3px;
+  margin-top: 10px;
+}
+
+.block-pic-2 {
+  background-image: url(assets/image-retro-pcs.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  min-height: 17vh;
+}
+
+.block-pic-3 {
+  background-image: url(assets/image-top-laptops.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  min-height: 17vh;
+}
+
+.block-pic-4 {
+  background-image: url(assets/image-gaming-growth.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  min-height: 17vh;
+}
+
+.bottom-section-header {
+  font-family: Inter-ExtraBold;
+  color: #C5C6CE;
+  font-size: 34px;
+}
+
+.bottom-section-subheader {
+  color: #00001A;
+  font-family: Inter-Bold;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.bottom-section-subheader:hover {
+  color: #F15E50 !important;
+}
+
+.bottom-section-text {
+  font-size: 13px;
+  color: #5D5F79
+}
+
+@media(max-width: 800px) {
+  
+}
