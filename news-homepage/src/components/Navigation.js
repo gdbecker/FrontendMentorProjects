@@ -1,27 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ReactComponent as Logo } from '../assets/logo.svg';
 
 function Navigation() {
 
+  const [clicked, setClicked] = useState(false);
+
+  const onClick = (e) => {
+    setClicked(!clicked);}
+
+  var buttonClass = clicked ? 'navbar-toggler-icon navbar-x' : 'navbar-toggler-icon navbar-burger';
+
   return (
     <div id="navigation">
-      <nav className="navbar navbar-expand-lg navbar-light">
+      <nav className="navbar navbar-expand-lg navbar-light navbar-fixed-top mobile-nofixed">
         <div className="container-fluid">
           <a className="navbar-brand" href="/"><h4><Logo></Logo></h4></a>
-
           <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbar"
-            aria-controls="navbar"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
+              className="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbar"
+              aria-controls="navbar"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon navbar-burger"></span>
           </button>
-
+        
           <div className="collapse navbar-collapse" id="navbar">
+            <button
+                className="navbar-toggler pull-right"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbar"
+                aria-controls="navbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span className="navbar-toggler-icon navbar-x"></span>
+            </button>
+            
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
                 <a className="nav-link" href="/home">Home</a>

@@ -72,6 +72,51 @@ Very dark blue: #00001A
   color: #F15E50 !important;
 }
 
+.navbar-toggler {
+  border: none !important;
+}
+
+.navbar-light .navbar-burger {
+  background-image: url(assets/icon-menu.svg) !important;
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-light .navbar-x {
+  background-image: url(assets/icon-menu-close.svg) !important;
+  outline: none;
+  box-shadow: none;
+  margin-bottom: 50%;
+}
+
+@media(min-width: 620px) {
+  .navbar-light .navbar-x {
+    background-image: none !important;
+    outline: none;
+    box-shadow: none;
+    margin-bottom: 50%;
+  }
+}
+
+@media(max-width: 620px) { 
+  .navbar-collapse {
+    background-color:#FFFDFA;
+    width: 80%;
+    margin-top: 80%;
+    margin-left: 10rem;
+    position: absolute;
+    padding: 3%;
+    padding-top: 20%;
+    height: 150vh;
+    top: auto;
+    z-index: 10;
+  }
+
+  .navbar-toggler {
+    margin-left: 72%;
+  }
+}
+
 /* Landing Page */
 #landing-page {
   background-color: #FFFDFA;
@@ -109,6 +154,7 @@ Very dark blue: #00001A
   font-size: 13px;
   padding-top: 1%;
   letter-spacing: 3px;
+  margin-bottom: 5%;
 }
 
 .read-more-button:hover {

@@ -80,8 +80,8 @@ function LandingPage() {
                 <div className="row mt-4">
                     <div className="col-md-4">
                         <div className="row mt-4">
-                            <div className="col-md-4 block-pic-2"></div>
-                            <div className="col-md-8">
+                            <div className="col-4 block-pic-2"></div>
+                            <div className="col-8">
                                 <div className="row">
                                     <h1 className="bottom-section-header">01</h1>
                                 </div>
@@ -98,8 +98,8 @@ function LandingPage() {
                     </div>
                     <div className="col-md-4">
                         <div className="row mt-4">
-                            <div className="col-md-4 block-pic-3"></div>
-                            <div className="col-md-8">
+                            <div className="col-4 block-pic-3"></div>
+                            <div className="col-8">
                                 <div className="row">
                                     <h1 className="bottom-section-header">02</h1>
                                 </div>
@@ -116,8 +116,8 @@ function LandingPage() {
                     </div>
                     <div className="col-md-4">
                         <div className="row mt-4">
-                            <div className="col-md-4 block-pic-4"></div>
-                            <div className="col-md-8">
+                            <div className="col-4 block-pic-4"></div>
+                            <div className="col-8">
                                 <div className="row">
                                     <h1 className="bottom-section-header">03</h1>
                                 </div>
