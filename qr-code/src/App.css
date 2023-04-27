@@ -1,0 +1,78 @@
+/* Color Palette
+-Neutral
+White: #FFFFFF
+Off white: #F0F0F0
+Light grey: #DBDBDB
+Grayish blue: #7B879D
+Dark blue: #1F3251
+*/
+
+/* Imported Fonts */
+@font-face {
+  font-family: Outfit-Bold;
+  src: url(assets/fonts/Outfit-Bold.ttf);
+}
+
+@font-face {
+  font-family: Outfit-Regular;
+  src: url(assets/fonts/Outfit-Regular.ttf);
+}
+
+/* App */
+.App {
+  background-color: #DBDBDB;
+  color: #FFFFFF;
+  min-height: 100vh;
+  width: auto;
+  padding: 5%;
+}
+
+/* Landing Page */
+#landing-page {
+  background-color: #1F3251;
+  font-family: Poppins-Regular;
+  padding: 8%;
+  box-shadow: #1F3251 0px 2px 8px 0px;
+  border-radius: 10px;
+  margin: 5%;
+  min-height: 70vh;
+  align-items: center;
+}
+
+/* QR Code Component */
+#qr-code {
+  background-color: #FFFFFF;
+  min-height: 6vh;
+  text-align: center;
+  color: #1F3251;
+  font-family: Outfit-Regular;
+  padding: 11px;
+  border-radius: 10px;
+  min-width: 260px;
+  max-width: 260px;
+
+  position: relative;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.qr-box {
+  background-image: url(assets/image-qr-code.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 250px;
+  border-radius: 10px;
+}
+
+.code-header {
+  font-family: Outfit-Bold;
+  font-size: 18px;
+}
+
+.code-text {
+  color: #7B879D;
+  font-size: 13px;
+}
