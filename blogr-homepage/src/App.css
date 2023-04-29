@@ -7,12 +7,13 @@ Very dark blue (headings): #00001A
 -Neutral
 White (text): #FFFFFF
 Off-white: #FFFDFA
+Light grey: #DBDBDB
 Grayish blue (footer text): #C5C6CE
 Very dark grayish blue (body copy): #4B5862
 Very dark black blue (footer background): #25252D
 
 -Background gradient - Intro/CTA mobile nav:
-Very light red (CTA hover background): #c
+Very light red (CTA hover background): #FF8F70
 Light red (CTA text): #FF525D
 
 -Background gradient - body:
@@ -57,9 +58,6 @@ Very dark desaturated blue: #3F4164
   background-color: #FFFDFA;
   color: #FFFFFF;
   min-height: 100vh;
-  /* width: auto;
-  padding-left: 1%; */
-  /* font-family: Ubuntu-Light; */
 }
 
 /* Navigation */
@@ -78,10 +76,8 @@ Very dark desaturated blue: #3F4164
   width: 120px;
 }
 
-
-
 .nav-item {
-  padding: 0 10px;
+  padding: 0 5px;
   font-family: Ubuntu-Medium;
 }
 
@@ -101,7 +97,7 @@ Very dark desaturated blue: #3F4164
 }
 
 .dropdown-toggle::after {
-  display: none;
+  /* display: none; */
 }
 
 .navbar-light .navbar-burger {
@@ -114,35 +110,70 @@ Very dark desaturated blue: #3F4164
   background-image: url(assets/icon-close.svg) !important;
   outline: none;
   box-shadow: none;
-  margin-bottom: 50%;
 }
 
-@media(min-width: 620px) {
-  .navbar-light .navbar-x {
-    background-image: none !important;
-    outline: none;
-    box-shadow: none;
-    margin-bottom: 50%;
-  }
+#dropdown {
+  color: #FFFFFF !important;
+  background-color: transparent !important;
+  border: 0 !important
 }
 
-@media(max-width: 620px) { 
-  .navbar-collapse {
-    background-color:#FFFDFA;
-    width: 80%;
-    margin-top: 80%;
-    margin-left: 10rem;
-    position: absolute;
-    padding: 3%;
-    padding-top: 20%;
-    height: 150vh;
-    top: auto;
-    z-index: 10;
-  }
+#dropdown:hover {
+  text-decoration: underline;
+  font-family: Ubuntu-Bold;
+}
 
-  .navbar-toggler {
-    margin-left: 72%;
-  }
+/******/
+#dropdown::backdrop {
+  outline: none !important;
+  border: 0 !important;  
+  box-shadow: none !important;
+}
+
+.dropdown-item {
+  font-family: Ubuntu-Light;
+  font-size: 14px;
+}
+
+.dropdown-item:hover {
+  background-color: #FFFFFF !important;
+  font-family: Ubuntu-Medium;
+}
+
+.login-button {
+  width: 7rem !important;
+  background: #FF7A85;
+  color: #FFFFFF;
+  /* border: 1px solid #FFFFFF; */
+  border: 0 !important;
+  padding: 10px;
+  border-radius: 60px;
+  font-family: Ubuntu-Bold;
+  box-shadow: none;
+  margin: 1%;
+}
+
+.login-button:hover {
+  background-color: #FFFFFF;
+  color: #FF7A85;
+  border: 1px solid #FFFFFF;
+}
+
+.signup-button {
+  width: 7rem !important;
+  background-color: #FFFFFF;
+  color: #FF7A85;
+  padding: 10px;
+  border: 0 !important;
+  border-radius: 60px;
+  font-family: Ubuntu-Bold;
+  margin: 1%;
+}
+
+.signup-button:hover {
+  background-color: #FF7A85;
+  color: #FFFFFF;
+  border: 1px solid #FF7A85;
 }
 
 /* Landing Page */
@@ -153,15 +184,12 @@ Very dark desaturated blue: #3F4164
 
 /* Section 1 */
 .section-1 {
-  background-image: url(assets/bg-pattern-intro-desktop.svg), linear-gradient(to right, #FF7A85, #FF525D);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top right;
-  background-size: 100%;
-  /* transform: translateY(70%); */
+  background-image: url(assets/bg-pattern-intro-desktop.svg), linear-gradient(to right, #FF8F70, #FF525D);
+  background-position: 30% 50%;
+  background-size: 200% 500%;
 
   min-height: 30vh;
-  border-bottom-left-radius: 120px;
+  border-bottom-left-radius: 140px;
   padding-top: 5%;
   padding-left: 14%;
   padding-right: 14%;
@@ -172,7 +200,7 @@ Very dark desaturated blue: #3F4164
 }
 
 .section-1-header {
-  font-size: 3rem;
+  font-size: 3.3rem;
   font-family: Overpass-SemiBold;
 }
 
@@ -181,7 +209,6 @@ Very dark desaturated blue: #3F4164
 }
 
 .button-row {
-  align-items: center;
   justify-content: center;
 }
 
@@ -220,20 +247,179 @@ Very dark desaturated blue: #3F4164
   border: 1px solid #FFFFFF;
 }
 
-.login-button {
-  width: 6rem !important;
-  background: none;
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
-  padding: 10px;
-  border-radius: 60px;
-  font-family: Ubuntu-Bold;
-  box-shadow: none;
-  margin-right: 1%;
+/* Section 2 */
+.section-2 {
+  background-color: none !important;
+  padding-top: 2%;
+  padding-left: 14%;
+  padding-right: 0%;
+  padding-bottom: 5%;
+  text-align: left;
+  color: #4B5862;
 }
 
-.v-button:hover {
-  background-color: #FFFFFF;
-  color: #FF7A85;
-  border: 1px solid #FFFFFF;
+.section-2-header {
+  color: #00001A;
+  font-family: Overpass-Semibold;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 10%;
+  padding-top: 4%;
+  background-color: none;
+  position:absolute;
+  left: 0;
+  right: 0;
+}
+
+.section-2-subheader {
+  color: #00001A;
+  font-family: Overpass-Semibold;
+  font-size: 1.7rem;
+}
+
+.section-2-text {
+  font-family: Overpass-Light;
+  font-size: 1.1rem;
+  margin-bottom: 17%;
+}
+
+.section-2-pic-wrapper {
+  overflow: hidden;
+}
+
+/* Section 3 */
+.section-3 {
+  background-image: url(assets/bg-pattern-circles.svg), linear-gradient(to right, #2C2D3F, #3F4164);
+  background-position: 10% 80%;
+  background-size: 100% 200%;
+
+  min-height: 80vh;
+  border-bottom-left-radius: 140px;
+  border-top-right-radius: 140px;
+  padding-top: 0%;
+  padding-left: 0%;
+  padding-right: 14%;
+  padding-bottom: 12%;
+
+  text-align: left;
+  color: #FFFFFF;
+  align-items: center;
+}
+
+.section-3-pic {
+  /* background-image: url(assets/illustration-phones.svg);
+  background-size: cover;
+  background-position: 50% 50%; */
+
+  
+}
+
+.section-3-header {
+  font-family: Overpass-Semibold;
+  font-size: 2rem;
+  padding-top: 0%;
+}
+
+.section-3-text {
+  font-family: Overpass-Light;
+}
+
+
+/* Mobile screen settings */
+@media(max-width: 1000px) {
+
+  .nav-wrapper {
+    background-color: #FFFFFF;
+    color: #00001A;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+    padding: 7%;
+  }
+
+  #dropdown {
+    align-items: center;
+    justify-content: center;
+  }
+
+  #dropdown {
+    color: #00001A !important;
+    /* position: relative; */
+    margin: 0 !important;
+  }
+  
+  #dropdown:hover {
+    text-decoration: underline;
+    font-family: Ubuntu-Bold;
+  }
+
+  .dropdown-menu {
+    position:relative !important;
+
+    /* margin-left: 0 !important;
+    margin-right: 0 !important; */
+    
+    border-radius: 0 !important;
+    border: 0 !important;
+
+    width: 100%;
+
+    margin-top: -10% !important;
+    margin-bottom: 10% !important;
+
+    /* text-align: center !important; */
+  }
+
+  .dropdown-item {
+    background-color: #DBDBDB !important;
+    font-family: Ubuntu-Light;
+    font-size: 14px;
+    position: relative !important;
+    text-align: center !important;
+
+    /* left: 0 !important;
+    right: 0 !important; */
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #DBDBDB !important;
+    font-family: Ubuntu-Medium;
+    
+  }
+
+
+  .section-2 {
+    padding-left: 16%;
+    padding-right: 16%;
+  }
+
+  .section-2-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section-2-header {
+    position:block;
+    text-align: center;
+    padding-top: 7%;
+  }
+
+  .section-2-pic-wrapper {
+    width: 100%;
+    /* height: 100%; */
+    position: relative;
+  }
+
+  .section-2-pic {
+    
+  }
 }
