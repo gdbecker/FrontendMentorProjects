@@ -1,0 +1,239 @@
+/* Color Palette
+-Primary
+Light red (CTA text): #FF525D
+Very light red (CTA hover background): #FF7A85
+Very dark blue (headings): #00001A 
+
+-Neutral
+White (text): #FFFFFF
+Off-white: #FFFDFA
+Grayish blue (footer text): #C5C6CE
+Very dark grayish blue (body copy): #4B5862
+Very dark black blue (footer background): #25252D
+
+-Background gradient - Intro/CTA mobile nav:
+Very light red (CTA hover background): #c
+Light red (CTA text): #FF525D
+
+-Background gradient - body:
+Very dark gray blue: #2C2D3F
+Very dark desaturated blue: #3F4164
+*/
+
+/* Imported Fonts */
+@font-face {
+  font-family: Overpass-Light;
+  src: url(assets/fonts/Overpass-Light.ttf);
+}
+
+@font-face {
+  font-family: Overpass-SemiBold;
+  src: url(assets/fonts/Overpass-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Ubuntu-Light;
+  src: url(assets/fonts/Ubuntu-Light.ttf);
+}
+
+@font-face {
+  font-family: Ubuntu-Medium;
+  src: url(assets/fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url(assets/fonts/Ubuntu-Bold.ttf);
+}
+
+/* Layout */
+.layout-wrapper {
+  background-color: #FFFDFA;
+  padding: 0%;
+}
+
+/* App */
+.App {
+  background-color: #FFFDFA;
+  color: #FFFFFF;
+  min-height: 100vh;
+  /* width: auto;
+  padding-left: 1%; */
+  /* font-family: Ubuntu-Light; */
+}
+
+/* Navigation */
+#navigation {
+  background-color: none;
+  text-align: left;
+  font-family: Ubuntu-Medium;
+  margin-bottom: 6%;
+}
+
+.navbar {
+  padding: 1rem;
+}
+
+.navbar-brand {
+  width: 120px;
+}
+
+
+
+.nav-item {
+  padding: 0 10px;
+  font-family: Ubuntu-Medium;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  color: #FFFFFF !important;
+}
+
+.nav-link:hover {
+  color: #FFFFFF !important;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.navbar-light .navbar-burger {
+  background-image: url(assets/icon-hamburger.svg) !important;
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-light .navbar-x {
+  background-image: url(assets/icon-close.svg) !important;
+  outline: none;
+  box-shadow: none;
+  margin-bottom: 50%;
+}
+
+@media(min-width: 620px) {
+  .navbar-light .navbar-x {
+    background-image: none !important;
+    outline: none;
+    box-shadow: none;
+    margin-bottom: 50%;
+  }
+}
+
+@media(max-width: 620px) { 
+  .navbar-collapse {
+    background-color:#FFFDFA;
+    width: 80%;
+    margin-top: 80%;
+    margin-left: 10rem;
+    position: absolute;
+    padding: 3%;
+    padding-top: 20%;
+    height: 150vh;
+    top: auto;
+    z-index: 10;
+  }
+
+  .navbar-toggler {
+    margin-left: 72%;
+  }
+}
+
+/* Landing Page */
+#landing-page {
+  background-color: #FFFDFA;
+  color: #00001A;
+}
+
+/* Section 1 */
+.section-1 {
+  background-image: url(assets/bg-pattern-intro-desktop.svg), linear-gradient(to right, #FF7A85, #FF525D);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+  background-size: 100%;
+  /* transform: translateY(70%); */
+
+  min-height: 30vh;
+  border-bottom-left-radius: 120px;
+  padding-top: 5%;
+  padding-left: 14%;
+  padding-right: 14%;
+  padding-bottom: 12%;
+
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.section-1-header {
+  font-size: 3rem;
+  font-family: Overpass-SemiBold;
+}
+
+.section-1-text {
+  font-family: Overpass-Light;
+}
+
+.button-row {
+  align-items: center;
+  justify-content: center;
+}
+
+.start-button {
+  width: 9rem !important;
+  background-color: #FFFFFF;
+  color: #FF7A85;
+  padding: 10px;
+  border: 1px solid #FFFFFF;
+  border-radius: 60px;
+  font-family: Ubuntu-Bold;
+  margin: 1%;
+}
+
+.start-button:hover {
+  background-color: #FF7A85;
+  color: #FFFFFF;
+  border: 1px solid #FF7A85;
+}
+
+.learn-button {
+  width: 9rem !important;
+  background: none;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  padding: 10px;
+  border-radius: 60px;
+  font-family: Ubuntu-Bold;
+  box-shadow: none;
+  margin: 1%;
+}
+
+.learn-button:hover {
+  background-color: #FFFFFF;
+  color: #FF7A85;
+  border: 1px solid #FFFFFF;
+}
+
+.login-button {
+  width: 6rem !important;
+  background: none;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  padding: 10px;
+  border-radius: 60px;
+  font-family: Ubuntu-Bold;
+  box-shadow: none;
+  margin-right: 1%;
+}
+
+.v-button:hover {
+  background-color: #FFFFFF;
+  color: #FF7A85;
+  border: 1px solid #FFFFFF;
+}
