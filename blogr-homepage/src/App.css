@@ -304,8 +304,8 @@ Very dark desaturated blue: #3F4164
   border-bottom-left-radius: 140px;
   border-top-right-radius: 140px;
   padding-top: 3%;
-  padding-left: 0%;
-  padding-right: 14%;
+  padding-left: 7%;
+  padding-right: 7%;
   padding-bottom: 3%;
 
   text-align: left;
@@ -315,10 +315,18 @@ Very dark desaturated blue: #3F4164
   position: relative;
 }
 
-.section-3-pic {
-  position: absolute;
-  width: 100%;
-  
+.section-3-pic-wrapper {
+  position: flex;
+  bottom: 10;
+  left: 5;
+}
+
+.section-3-copy {
+  position: flex;
+  text-align: left;
+  float: right;
+  left: 50%;
+  width: 40px;
 }
 
 .section-3-header {
@@ -330,6 +338,78 @@ Very dark desaturated blue: #3F4164
 .section-3-text {
   font-family: Overpass-Light;
   font-size: 1.1rem;
+}
+
+/* Section 4 */
+.section-4 {
+  background-color: none !important;
+  padding-top: 2%;
+  padding-left: 0%;
+  padding-right: 14%;
+  padding-bottom: 5%;
+  text-align: left;
+  color: #4B5862;
+}
+
+.section-4-header {
+  color: #00001A;
+  font-family: Overpass-Semibold;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 10%;
+  padding-top: 4%;
+  background-color: none;
+  position:absolute;
+  left: 0;
+  right: 0;
+}
+
+.section-4-subheader {
+  color: #00001A;
+  font-family: Overpass-Semibold;
+  font-size: 1.7rem;
+}
+
+.section-4-text {
+  font-family: Overpass-Light;
+  font-size: 1.1rem;
+  margin-bottom: 17%;
+}
+
+.section-4-pic-wrapper {
+  overflow: hidden;
+}
+
+.section-4-pic-small {
+  visibility: hidden;
+  position: absolute;
+  z-index: -10;
+}
+
+/* Section 5 */
+.section-5 {
+  background-color: #25252D;
+  font-family: Ubuntu-Light;
+  padding-top: 6%;
+  padding-left: 14%;
+  padding-right: 14%;
+  padding-bottom: 5%;
+  text-align: left;
+  color: #FFFFFF;
+  min-height: 30vh;
+  border-top-right-radius: 140px;
+}
+
+.section-5-header {
+  font-family: Ubuntu-Medium;
+}
+
+.section-5-text {
+  font-family: Ubuntu-Light;
+}
+
+.section-5-text:hover {
+  text-decoration: underline;
 }
 
 
@@ -429,5 +509,51 @@ Very dark desaturated blue: #3F4164
     position: relative;
     margin-top: 25%;
     margin-bottom: 25%;
+  }
+
+  .section-4 {
+    padding-left: 16%;
+    padding-right: 16%;
+  }
+
+  .section-4-content {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section-4-header {
+    position:block;
+    text-align: center;
+    padding-top: 7%;
+  }
+
+  .section-4-pic-wrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  .section-4-pic-big {
+    visibility: hidden;
+    position: absolute;
+    z-index: -10;
+  }
+
+  .section-4-pic-small {
+    visibility:visible;
+    z-index: 0;
+
+    position: relative;
+    margin-top: 25%;
+    margin-bottom: 25%;
+  }
+
+  .section-5 {
+    padding-top: 10%;
+    text-align: center;
+  }
+
+  .section-5-header {
+    padding-top: 15%;
   }
 }

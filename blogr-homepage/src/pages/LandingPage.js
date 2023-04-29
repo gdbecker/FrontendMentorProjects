@@ -1,7 +1,10 @@
 import React from 'react';
+import { ReactComponent as Logo } from '../assets/logo.svg';
 import { ReactComponent as PicSection2Big } from '../assets/illustration-editor-desktop.svg';
 import { ReactComponent as PicSection2Small } from '../assets/illustration-editor-mobile.svg';
 import { ReactComponent as PicSection3 } from '../assets/illustration-phones.svg';
+import { ReactComponent as PicSection4Big } from '../assets/illustration-laptop-desktop.svg';
+import { ReactComponent as PicSection4Small } from '../assets/illustration-laptop-mobile.svg';
 
 import Navigation from '../components/Navigation';
 
@@ -61,12 +64,12 @@ function LandingPage() {
       </div>
 
       <div className="row section-3">
-        <div className="col-lg-6">
-          <div className="row section-3-pic">
-            <PicSection3></PicSection3>
-          </div>
+        <div className="section-3-pic-wrapper">
+          <PicSection3 className="section-3-pic"></PicSection3>
         </div>
-        <div className="col-lg-6">
+          
+        
+        <div className="section-3-copy">
           <div className="row mt-2">
             <h1 className="section-3-header">State of the Art Infrastructure</h1>
           </div>
@@ -78,7 +81,98 @@ function LandingPage() {
           </div>
           
         </div>
-        
+      </div>
+
+      <div className="row section-4">
+        <div className="row mt-3 section-4-content">
+          <div className="col-lg-6 section-4-pic-wrapper">
+            <PicSection4Big className="section-4-pic-big"></PicSection4Big>
+            <PicSection4Small className="section-4-pic-small"></PicSection4Small>
+          </div>
+          <div className="col-lg-6 my-auto">
+            <div className="row mt-2">
+              <h2 className="section-4-subheader">Free, open, simple</h2>
+            </div>
+            <div className="row mt-2">
+              <p className="section-4-text">
+                Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+                features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+                and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+              </p>
+            </div>
+
+            <div className="row mt-2">
+              <h2 className="section-2-subheader">Powerful tooling</h2>
+            </div>
+            <div className="row mt-2">
+              <p className="section-2-text">
+                Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+                capable of producing even the most complicated sites.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="section-5">
+        <div className="container g-4">
+          <div className="row">
+            <div className="col-lg-3">
+              <Logo></Logo>
+            </div>
+            <div className="col-lg-3">
+              <div className="row">
+                <p className="section-5-header">Product</p>
+              </div>
+              <div className="row mt-1">
+                <p className="section-5-text">Overview</p>
+              </div>
+              <div className="row mt-1">
+                <p className="section-5-text">Pricing</p>
+              </div>
+              <div className="row mt-1">
+                <p className="section-5-text">Marketplace</p>
+              </div>
+              <div className="row mt-1">
+                <p className="section-5-text">Features</p>
+              </div>
+              <div className="row mt-1">
+                <p className="section-5-text">Integrations</p>
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <div className="row">
+                <p className="section-5-header">Company</p>
+              </div>
+              <div className="row mt-1">
+                <p className="section-5-text">About</p>
+              </div>
+              <div className="row mt-1">
+                <p className="section-5-text">Team</p>
+              </div>
+              <div className="row mt-1">
+                <p className="section-5-text">Blog</p>
+              </div>
+              <div className="row mt-1">
+                <p className="section-5-text">Careers</p>
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <div className="row">
+                <p className="section-5-header">Connect</p>
+              </div>
+              <div className="row mt-1">
+                <p className="section-5-text">Contact</p>
+              </div>
+              <div className="row mt-1">
+                <p className="section-5-text">Newsletter</p>
+              </div>
+              <div className="row mt-1">
+                <p className="section-5-text">LinkedIn</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       

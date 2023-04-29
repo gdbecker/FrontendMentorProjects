@@ -9,7 +9,7 @@ function Navigation() {
   const [selectNavToggle, setSelectNavToggle] = useState(false);
   const [selectProduct, setSelectProduct] = useState(false);
   const [selectCompany, setSelectCompany] = useState(false);
-  const [selectContact, setSelectContact] = useState(false);
+  const [selectConnect, setSelectConnect] = useState(false);
 
   const onClick = (e) => {
     setSelectNavToggle(!selectNavToggle);
@@ -23,14 +23,14 @@ function Navigation() {
     setSelectCompany(!selectCompany);
   }
 
-  const onContactClick = (e) => {
-    setSelectContact(!selectContact);
+  const onConnectClick = (e) => {
+    setSelectConnect(!selectConnect);
   }
 
   var navToggler = selectNavToggle ? 'navbar-toggler-icon navbar-x' : 'navbar-toggler-icon navbar-burger';
   var product = selectProduct ? <span>Product  <ArrowUp></ArrowUp></span> : <span>Product  <ArrowDown></ArrowDown></span>;
   var company = selectCompany ? <span>Company  <ArrowUp></ArrowUp></span> : <span>Company  <ArrowDown></ArrowDown></span>;
-  var contact = selectContact ? <span>Contact  <ArrowUp></ArrowUp></span> : <span>Contact  <ArrowDown></ArrowDown></span>;
+  var connect = selectConnect ? <span>Connect  <ArrowUp></ArrowUp></span> : <span>Connect  <ArrowDown></ArrowDown></span>;
 
   return (
     <div id="navigation">
@@ -87,9 +87,9 @@ function Navigation() {
                   <DropdownButton
                     key="down-centered"
                     drop="down-centered"
-                    title={contact}
+                    title={connect}
                     id="dropdown"
-                    onClick={e => onContactClick(e)}
+                    onClick={e => onConnectClick(e)}
                   >
                     <Dropdown.Item href="/">Contact</Dropdown.Item>
                     <Dropdown.Item href="/">Newsletter</Dropdown.Item>
