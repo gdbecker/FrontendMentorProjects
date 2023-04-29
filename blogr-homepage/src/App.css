@@ -377,7 +377,15 @@ Very dark desaturated blue: #3F4164
 }
 
 .section-4-pic-wrapper {
+  background-image: url(assets/illustration-laptop-desktop.svg);
+  background-position: 90% center;
+  background-size: cover 100% 100%;
+  background-repeat: no-repeat;
+  min-height: 118vh;
+
+  position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .section-4-pic-small {
@@ -492,23 +500,20 @@ Very dark desaturated blue: #3F4164
   }
 
   .section-2-pic-wrapper {
-    width: 100%;
+    background-image: url(assets/illustration-editor-mobile.svg);
+    background-position: center center;
+    background-size: cover 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 75vh;
+
     position: relative;
+    overflow: visible;
   }
 
   .section-2-pic-big {
     visibility: hidden;
     position: absolute;
     z-index: -10;
-  }
-
-  .section-2-pic-small {
-    visibility:visible;
-    z-index: 0;
-
-    position: relative;
-    margin-top: 25%;
-    margin-bottom: 25%;
   }
 
   .section-4 {
@@ -529,23 +534,20 @@ Very dark desaturated blue: #3F4164
   }
 
   .section-4-pic-wrapper {
-    width: 100%;
+    background-image: url(assets/illustration-laptop-mobile.svg);
+    background-position: center center;
+    background-size: cover 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 50vh;
+    
     position: relative;
+    overflow: visible;
   }
 
   .section-4-pic-big {
     visibility: hidden;
     position: absolute;
     z-index: -10;
-  }
-
-  .section-4-pic-small {
-    visibility:visible;
-    z-index: 0;
-
-    position: relative;
-    margin-top: 25%;
-    margin-bottom: 25%;
   }
 
   .section-5 {
