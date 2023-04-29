@@ -1,18 +1,36 @@
 import React, {useState} from 'react';
-import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import { ReactComponent as Logo } from '../assets/logo.svg';
+import { ReactComponent as ArrowDown } from '../assets/chevron-down.svg';
+import { ReactComponent as ArrowUp } from '../assets/chevron-up.svg';
 
 function Navigation() {
-  const [selected, setSelected] = useState(false);
+  const [selectNavToggle, setSelectNavToggle] = useState(false);
+  const [selectProduct, setSelectProduct] = useState(false);
+  const [selectCompany, setSelectCompany] = useState(false);
+  const [selectContact, setSelectContact] = useState(false);
 
   const onClick = (e) => {
-    setSelected(!selected);
+    setSelectNavToggle(!selectNavToggle);
   }
 
-  var navToggler = selected ? 'navbar-toggler-icon navbar-x' : 'navbar-toggler-icon navbar-burger';
+  const onProductClick = (e) => {
+    setSelectProduct(!selectProduct);
+  }
+
+  const onCompanyClick = (e) => {
+    setSelectCompany(!selectCompany);
+  }
+
+  const onContactClick = (e) => {
+    setSelectContact(!selectContact);
+  }
+
+  var navToggler = selectNavToggle ? 'navbar-toggler-icon navbar-x' : 'navbar-toggler-icon navbar-burger';
+  var product = selectProduct ? <span>Product  <ArrowUp></ArrowUp></span> : <span>Product  <ArrowDown></ArrowDown></span>;
+  var company = selectCompany ? <span>Company  <ArrowUp></ArrowUp></span> : <span>Company  <ArrowDown></ArrowDown></span>;
+  var contact = selectContact ? <span>Contact  <ArrowUp></ArrowUp></span> : <span>Contact  <ArrowDown></ArrowDown></span>;
 
   return (
     <div id="navigation">
@@ -39,22 +57,25 @@ function Navigation() {
                   <DropdownButton
                     key="down-centered"
                     drop="down-centered"
-                    title="Product"
+                    title={product}
                     id="dropdown"
+                    onClick={e => onProductClick(e)}
                   >
                     <Dropdown.Item href="/">Overview</Dropdown.Item>
                     <Dropdown.Item href="/">Pricing</Dropdown.Item>
                     <Dropdown.Item href="/">Marketplace</Dropdown.Item>
                     <Dropdown.Item href="/">Features</Dropdown.Item>
                     <Dropdown.Item href="/">Integrations</Dropdown.Item>
+                    
                   </DropdownButton>
               </li>
               <li>
                   <DropdownButton
                     key="down-centered"
                     drop="down-centered"
-                    title="Company"
+                    title={company}
                     id="dropdown"
+                    onClick={e => onCompanyClick(e)}
                   >
                     <Dropdown.Item href="/">About</Dropdown.Item>
                     <Dropdown.Item href="/">Team</Dropdown.Item>
@@ -66,8 +87,9 @@ function Navigation() {
                   <DropdownButton
                     key="down-centered"
                     drop="down-centered"
-                    title="Connect"
+                    title={contact}
                     id="dropdown"
+                    onClick={e => onContactClick(e)}
                   >
                     <Dropdown.Item href="/">Contact</Dropdown.Item>
                     <Dropdown.Item href="/">Newsletter</Dropdown.Item>
