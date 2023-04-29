@@ -288,41 +288,48 @@ Very dark desaturated blue: #3F4164
   overflow: hidden;
 }
 
+.section-2-pic-small {
+  visibility: hidden;
+  position: absolute;
+  z-index: -10;
+}
+
 /* Section 3 */
 .section-3 {
   background-image: url(assets/bg-pattern-circles.svg), linear-gradient(to right, #2C2D3F, #3F4164);
-  background-position: 10% 80%;
-  background-size: 100% 200%;
+  background-position: -20% 120%;
+  background-size: 100% 150%;
 
-  min-height: 80vh;
+  min-height: 50vh;
   border-bottom-left-radius: 140px;
   border-top-right-radius: 140px;
-  padding-top: 0%;
+  padding-top: 3%;
   padding-left: 0%;
   padding-right: 14%;
-  padding-bottom: 12%;
+  padding-bottom: 3%;
 
   text-align: left;
   color: #FFFFFF;
   align-items: center;
+
+  position: relative;
 }
 
 .section-3-pic {
-  /* background-image: url(assets/illustration-phones.svg);
-  background-size: cover;
-  background-position: 50% 50%; */
-
+  position: absolute;
+  width: 100%;
   
 }
 
 .section-3-header {
   font-family: Overpass-Semibold;
-  font-size: 2rem;
+  font-size: 1.7rem;
   padding-top: 0%;
 }
 
 .section-3-text {
   font-family: Overpass-Light;
+  font-size: 1.1rem;
 }
 
 
@@ -382,8 +389,8 @@ Very dark desaturated blue: #3F4164
     font-family: Ubuntu-Medium;
   }
 
-  .icon-fill {
-    /* stroke: #FF525D !important; */
+  .section-1 {
+    background-image: url(assets/bg-pattern-intro-mobile.svg), linear-gradient(to right, #FF8F70, #FF525D);
   }
 
   .section-2 {
@@ -406,11 +413,21 @@ Very dark desaturated blue: #3F4164
 
   .section-2-pic-wrapper {
     width: 100%;
-    /* height: 100%; */
     position: relative;
   }
 
-  .section-2-pic {
-    
+  .section-2-pic-big {
+    visibility: hidden;
+    position: absolute;
+    z-index: -10;
+  }
+
+  .section-2-pic-small {
+    visibility:visible;
+    z-index: 0;
+
+    position: relative;
+    margin-top: 25%;
+    margin-bottom: 25%;
   }
 }

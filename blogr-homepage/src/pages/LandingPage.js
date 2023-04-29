@@ -1,5 +1,6 @@
 import React from 'react';
-import { ReactComponent as PicSection2 } from '../assets/illustration-editor-desktop.svg';
+import { ReactComponent as PicSection2Big } from '../assets/illustration-editor-desktop.svg';
+import { ReactComponent as PicSection2Small } from '../assets/illustration-editor-mobile.svg';
 import { ReactComponent as PicSection3 } from '../assets/illustration-phones.svg';
 
 import Navigation from '../components/Navigation';
@@ -53,19 +54,34 @@ function LandingPage() {
           </div>
 
           <div className="col-lg-6 section-2-pic-wrapper">
-            <PicSection2 className="section-2-pic"></PicSection2>
+            <PicSection2Big className="section-2-pic-big"></PicSection2Big>
+            <PicSection2Small className="section-2-pic-small"></PicSection2Small>
           </div>
-          
-          
         </div>
       </div>
 
       <div className="row section-3">
-        
+        <div className="col-lg-6">
+          <div className="row section-3-pic">
+            <PicSection3></PicSection3>
+          </div>
+        </div>
+        <div className="col-lg-6">
+          <div className="row mt-2">
+            <h1 className="section-3-header">State of the Art Infrastructure</h1>
+          </div>
+          <div className="row mt-2">
+            <p className="section-3-text">
+              With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+              This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+            </p>
+          </div>
           
-        
+        </div>
         
       </div>
+
+      
       
 
     </div>
