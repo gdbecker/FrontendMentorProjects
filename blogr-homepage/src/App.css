@@ -297,13 +297,14 @@ Very dark desaturated blue: #3F4164
 /* Section 3 */
 .section-3 {
   background-image: url(assets/bg-pattern-circles.svg), linear-gradient(to right, #2C2D3F, #3F4164);
-  background-position: -20% 120%;
-  background-size: 100% 150%;
+  background-position: -110% 90%;
+  background-size: cover 100% 150%;
+  background-repeat: no-repeat;
 
-  min-height: 50vh;
+  min-height: 30vh;
   border-bottom-left-radius: 140px;
   border-top-right-radius: 140px;
-  padding-top: 3%;
+  padding-top: -70%;
   padding-left: 7%;
   padding-right: 7%;
   padding-bottom: 3%;
@@ -316,23 +317,29 @@ Very dark desaturated blue: #3F4164
 }
 
 .section-3-pic-wrapper {
-  position: flex;
-  bottom: 10;
-  left: 5;
+  background-image: url(assets/illustration-phones.svg);
+  background-position: 90% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+
+  /* padding-top: -500px;
+  margin-top: 500px; */
+
+  padding-bottom: 80px;
+  margin-bottom: -140px;
+
+  position: relative;
 }
 
 .section-3-copy {
-  position: flex;
+  position: relative;
   text-align: left;
-  float: right;
-  left: 50%;
-  width: 40px;
 }
 
 .section-3-header {
   font-family: Overpass-Semibold;
   font-size: 1.7rem;
-  padding-top: 0%;
 }
 
 .section-3-text {
@@ -514,6 +521,23 @@ Very dark desaturated blue: #3F4164
     visibility: hidden;
     position: absolute;
     z-index: -10;
+  }
+
+  .section-3 {
+    padding-left: 16%;
+    padding-right: 16%;
+  }
+
+  .section-3-pic-wrapper {
+    background-position: center center;
+    background-size: contain;
+    overflow: visible;
+  }
+
+  .section-3-copy {
+    padding-top: 30%;
+    padding-bottom: 15%;
+    text-align: center;
   }
 
   .section-4 {

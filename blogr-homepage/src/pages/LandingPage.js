@@ -9,7 +9,9 @@ function LandingPage() {
   return (
     <div id="landing-page">
       <div className="row section-1">
+
         <Navigation></Navigation>
+
         <div className="row mt-4">
           <h1 className="section-1-header">A modern publishing platform</h1>
         </div>
@@ -54,12 +56,11 @@ function LandingPage() {
       </div>
 
       <div className="row section-3">
-        <div className="section-3-pic-wrapper">
-          <PicSection3 className="section-3-pic"></PicSection3>
+        <div className="col-lg-6 section-3-pic-wrapper">
+          {/* <PicSection3 className="section-3-pic"></PicSection3> */}
         </div>
           
-        
-        <div className="section-3-copy">
+        <div className="col-lg-6 section-3-copy">
           <div className="row mt-2">
             <h1 className="section-3-header">State of the Art Infrastructure</h1>
           </div>
