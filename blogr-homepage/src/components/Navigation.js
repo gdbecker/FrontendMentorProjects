@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import { ReactComponent as Logo } from '../assets/logo.svg';
@@ -7,30 +7,59 @@ import { ReactComponent as ArrowUp } from '../assets/chevron-up.svg';
 
 function Navigation() {
   const [selectNavToggle, setSelectNavToggle] = useState(false);
-  const [selectProduct, setSelectProduct] = useState(false);
-  const [selectCompany, setSelectCompany] = useState(false);
-  const [selectConnect, setSelectConnect] = useState(false);
+  const [openProduct, setOpenProduct] = useState(false);
+  const [openCompany, setOpenCompany] = useState(false);
+  const [openConnect, setOpenConnect] = useState(false);
+
+  let menuRefProduct = useRef();
+  let menuRefCompany = useRef();
+  let menuRefConnect = useRef();
+
+  useEffect(() => {
+    let handler = (e)=> {
+      if(!menuRefProduct.current.contains(e.target)){
+        setOpenProduct(false);
+        console.log(menuRefProduct.current);
+      }
+      
+      if(!menuRefCompany.current.contains(e.target)){
+        setOpenCompany(false);
+        console.log(menuRefCompany.current);
+      }
+
+      if(!menuRefConnect.current.contains(e.target)){
+        setOpenConnect(false);
+        console.log(menuRefConnect.current);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+    
+    return() =>{
+      document.removeEventListener("mousedown", handler);
+    }
+  });
 
   const onClick = (e) => {
     setSelectNavToggle(!selectNavToggle);
   }
 
   const onProductClick = (e) => {
-    setSelectProduct(!selectProduct);
+    setOpenProduct(!openProduct);
   }
 
   const onCompanyClick = (e) => {
-    setSelectCompany(!selectCompany);
+    setOpenCompany(!openCompany);
   }
 
   const onConnectClick = (e) => {
-    setSelectConnect(!selectConnect);
+    setOpenConnect(!openConnect);
   }
 
   var navToggler = selectNavToggle ? 'navbar-toggler-icon navbar-x' : 'navbar-toggler-icon navbar-burger';
-  var product = selectProduct ? <span>Product  <ArrowUp></ArrowUp></span> : <span>Product  <ArrowDown></ArrowDown></span>;
-  var company = selectCompany ? <span>Company  <ArrowUp></ArrowUp></span> : <span>Company  <ArrowDown></ArrowDown></span>;
-  var connect = selectConnect ? <span>Connect  <ArrowUp></ArrowUp></span> : <span>Connect  <ArrowDown></ArrowDown></span>;
+  var product = openProduct ? <span>Product  <ArrowUp></ArrowUp></span> : <span>Product  <ArrowDown></ArrowDown></span>;
+  var company = openCompany ? <span>Company  <ArrowUp></ArrowUp></span> : <span>Company  <ArrowDown></ArrowDown></span>;
+  var connect = openConnect ? <span>Connect  <ArrowUp></ArrowUp></span> : <span>Connect  <ArrowDown></ArrowDown></span>;
 
   return (
     <div id="navigation">
@@ -53,7 +82,7 @@ function Navigation() {
 
           <div className="collapse navbar-collapse nav-wrapper" id="navbar">
             <ul className="navbar-nav ms-left">
-              <li>
+              <li ref={menuRefProduct}>
                   <DropdownButton
                     key="down-centered"
                     drop="down-centered"
@@ -69,7 +98,7 @@ function Navigation() {
                     
                   </DropdownButton>
               </li>
-              <li>
+              <li ref={menuRefCompany}>
                   <DropdownButton
                     key="down-centered"
                     drop="down-centered"
@@ -83,7 +112,7 @@ function Navigation() {
                     <Dropdown.Item href="/">Careers</Dropdown.Item>
                   </DropdownButton>
               </li>
-              <li>
+              <li ref={menuRefConnect}>
                   <DropdownButton
                     key="down-centered"
                     drop="down-centered"
