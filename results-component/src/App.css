@@ -1,0 +1,132 @@
+/* Color Palette
+-Primary
+Light red: #FF5757
+Orangey yellow: #FFb01F
+Green teal: #00BD91
+Cobalt blue: #1125D4
+
+-Neutral
+White: #FFFFFF
+Off white: #F0F0F0
+Pale blue: #EBF1FF
+Light lavender: #C8C7FF
+Dark gray blue: #303B5A
+
+-Gradients
+Light slate blue (background): #7857FF
+Light royal blue (background): #2E2BE9
+
+Violet blue (circle): #4E21CA
+Persian blue (circle): #2421Ca
+*/
+
+/* Imported Fonts */
+@font-face {
+  font-family: HankenGrotesk-Bold;
+  src: url(assets/fonts/HankenGrotesk-Bold.ttf);
+}
+
+@font-face {
+  font-family: HankenGrotesk-ExtraBold;
+  src: url(assets/fonts/HankenGrotesk-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: HankenGrotesk-Medium;
+  src: url(assets/fonts/HankenGrotesk-Medium.ttf);
+}
+
+/* App */
+.App {
+  background-color: #F0F0F0;
+  color: #303B5A;
+  min-height: 100vh;
+  width: auto;
+  padding: 5%;
+}
+
+/* Landing Page */
+#landing-page {
+  background-color: #EBF1FF;
+  font-family: Poppins-Regular;
+  padding: 8%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+}
+
+/* Results Component */
+#results {
+  background-color: #FFFFFF;
+  min-height: 35vh;
+  border-radius: 20px;
+  /* padding: 6%; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  font-family: HankenGrotesk-Medium;
+}
+
+.section-1 {
+  background-image: linear-gradient(to top, #2E2BE9, #7857FF);
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  border-radius: 20px;
+
+  
+}
+
+.section-1-header-1 {
+  color: #C8C7FF;
+  font-size: 1.1rem;
+}
+
+.results-number-1 {
+  font-family: HankenGrotesk-ExtraBold;
+  font-size: 3.1rem;
+}
+
+.results-number-2 {
+  color: #C8C7FF;
+  font-size: 0.8rem;
+}
+
+.results-circle-wrapper {
+  display: table;
+  overflow: visible;
+
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7%;
+  margin-bottom: 10%;
+}
+
+.results-circle {
+  background-image: linear-gradient(to top, #4E21CA, #2421Ca);
+  width: 12vw;
+  height: 12vw;
+  border-radius: 50%;
+  padding-top: 9%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.section-1-header-2 {
+  font-family: HankenGrotesk-Bold;
+  font-size: 1.6rem;
+}
+
+.section-1-text {
+  color: #C8C7FF;
+  font-size: 0.9rem;
+}
+
+
+/* Mobile screen settings */
+@media(max-width: 800px) {
+  .results-circle {
+    width: 23vw;
+    height: 23vw;
+  }
+}

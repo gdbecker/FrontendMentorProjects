@@ -1,4 +1,4 @@
-import React, {useState, useEffect, Fragment} from 'react';
+import React, {useState, Fragment} from 'react';
 import { ReactComponent as Star } from '../assets/icon-star.svg';
 import { ReactComponent as ThankYou } from '../assets/illustration-thank-you.svg';
  
