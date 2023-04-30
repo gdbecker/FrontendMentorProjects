@@ -1,23 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import { ReactComponent as Reaction } from '../assets/icon-reaction.svg';
-import { ReactComponent as Memory } from '../assets/icon-memory.svg';
-import { ReactComponent as Verbal } from '../assets/icon-verbal.svg';
-import { ReactComponent as Visual } from '../assets/icon-visual.svg';
-
 import dataFile from '../data/data.json';
 
 function Results() {
   const [data, setData] = useState([]);
+  const [score, setScore] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const dataFetch = async () => {
+    const fetchData = async () => {
       setData(dataFile);
+
+      var sum = 0;
+      var count = 0;
+      for (var i = 0; i < dataFile.length; i++) {
+        sum += dataFile[i]["score"];
+        count += 1;
+      }
+
+      var ave = Math.round(sum / count);
+      setScore(ave);
+
       setIsLoading(false);
     };
 
-    console.log(dataFile);
-    dataFetch();
+    fetchData();
   }, []);
 
   if (isLoading == false) {
@@ -31,7 +37,7 @@ function Results() {
               </div>
               <div className="results-circle-wrapper">
                 <div className="results-circle">
-                  <h1 className="results-number-1">76</h1>
+                  <h1 className="results-number-1">{score}</h1>
                   <p  className="results-number-2">of 100</p>
                 </div>
               </div>
@@ -58,42 +64,13 @@ function Results() {
                 {data.map((d) => (
                   <div className={`row mt-3 row-result row-${d.category}`}>
                     <div className="col">
-                      <h3 className={`section-2-label ${d.category}-label`}><Reaction className="icon"></Reaction>Reaction</h3>
+                      <h3 className={`section-2-label ${d.category}-label`}><img src={d.icon} className="icon"></img>{d.category}</h3>
                     </div>
                     <div className="col">
                       <h3 className="section-2-results">{d.score} <span className="section-2-results-denominator">/ 100</span></h3>
                     </div>
                   </div>
                 ))}
-  
-                
-  
-                <div className="row mt-3 row-result row-memory">
-                  <div className="col">
-                    <h3 className="section-2-label memory-label"><Memory className="icon"></Memory>Memory</h3>
-                  </div>
-                  <div className="col">
-                    <h3 className="section-2-results">92 <span className="section-2-results-denominator">/ 100</span></h3>
-                  </div>
-                </div>
-  
-                <div className="row mt-3 row-result row-verbal">
-                  <div className="col">
-                    <h3 className="section-2-label verbal-label"><Verbal className="icon"></Verbal>Verbal</h3>
-                  </div>
-                  <div className="col">
-                    <h3 className="section-2-results">61 <span className="section-2-results-denominator">/ 100</span></h3>
-                  </div>
-                </div>
-  
-                <div className="row mt-3 row-result row-visual">
-                  <div className="col">
-                    <h3 className="section-2-label visual-label"><Visual className="icon"></Visual>Visual</h3>
-                  </div>
-                  <div className="col">
-                    <h3 className="section-2-results">72 <span className="section-2-results-denominator">/ 100</span></h3>
-                  </div>
-                </div>
   
                 <div className="row mt-1 row-button">
                   <button type="button" className="continue-button">Continue</button>
@@ -105,7 +82,6 @@ function Results() {
       </div>
     )
   }
-  
 }
 
 export default Results;

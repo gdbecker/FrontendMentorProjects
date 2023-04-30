@@ -101,7 +101,6 @@ Violet blue: rgb(78, 33, 202, 0.2)
 .results-circle-wrapper {
   display: table;
   overflow: visible;
-
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -181,27 +180,27 @@ Violet blue: rgb(78, 33, 202, 0.2)
   color: #FF5757;
 }
 
-.row-memory {
+.row-Memory {
   background-color: rgb(255, 176, 31, 0.08);
 }
 
-.memory-label {
+.Memory-label {
   color: #FFB01F;
 }
 
-.row-verbal {
+.row-Verbal {
   background-color: rgb(0, 189, 145, 0.08);
 }
 
-.verbal-label {
+.Verbal-label {
   color: #00BD91;
 }
 
-.row-visual {
+.row-Visual {
   background-color: rgb(17, 37, 212, 0.08);
 }
 
-.memory-visual {
+.Visual-label {
   color: #1125D4;
 }
 
@@ -215,21 +214,16 @@ Violet blue: rgb(78, 33, 202, 0.2)
   box-shadow: none;
   outline: none;
   border-radius: 70px;
-
   color: #FFFFFF;
   background-color: #303B5A;
-
   margin-top: 5% !important;
-
   padding-top: 4%;
   padding-bottom: 4%;
-
 }
 
 .continue-button:hover {
   background-color: #2E2BE9;
 }
-
 
 /* Mobile screen settings */
 @media(max-width: 1000px) {
