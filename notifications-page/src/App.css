@@ -1,0 +1,59 @@
+/* Color Palette
+-Primary
+Red: #F65351
+Blue: #0A317B
+
+-Neutral
+White: #FFFFFF
+Very light grayish blue: #F7FAFD
+Light grayish blue 1: #E5EFFA
+Light grayish blue 2: #DDE7EE
+Grayish blue: #939dAE
+Dark grayish blue: #5E6778
+Very dark blue: #1C202B
+*/
+
+/* Imported Fonts */
+@font-face {
+  font-family: PlusJakartaSans-Medium;
+  src: url(assets/fonts/PlusJakartaSans-Medium.ttf);
+}
+
+@font-face {
+  font-family: PlusJakartaSans-ExtraBold;
+  src: url(assets/fonts/PlusJakartaSans-ExtraBold.ttf);
+}
+
+/* App */
+.App {
+  background-color: #F0F0F0;
+  color: white;
+  min-height: 100vh;
+  width: auto;
+  padding: 5%;
+}
+
+/* Landing Page */
+#landing-page {
+  background-color: #DBDBDB;
+  font-family: PlusJakartaSans-Medium;
+  padding: 8%;
+  box-shadow: #DBDBDB 0px 13px 27px -5px, #716F6F 0px 8px 16px -8px;
+  border-radius: 10px;
+}
+
+/* Notifications component */
+#notifications {
+  background-color: #FFFFFF;
+  margin: auto;
+  text-align: left;
+  min-height: 80vh;
+  border-radius: 4%;
+  border-bottom-right-radius: 30%;
+
+  padding: 1%;
+  padding-top: 3%;
+  padding-left: 6%;
+  color: #716F6F;
+  font-weight: bold;
+}

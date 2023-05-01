@@ -1,5 +1,5 @@
 import React from 'react';
-import AgeCalculator from '../components/AgeCalculator';
+import Notifications from '../components/Notifications';
 
 function LandingPage() {
   return (
@@ -8,7 +8,7 @@ function LandingPage() {
         <div className="row">
           <div className="col-md-1"></div>
           <div className="col-md-10">
-            <AgeCalculator></AgeCalculator>
+            <Notifications></Notifications>
           </div>
           <div className="col-md-1"></div>
         </div>
