@@ -41,7 +41,7 @@ Very dark blue (line): #2F415B
   background-color: #0D192B;
   font-family: Poppins-Regular;
   padding: 8%;
-  box-shadow: #00FFF7 0px 1px 4px;
+  box-shadow: #00FFF7 0px 1px 3px 0px, #00FFF7 0px 0px 0px 1px;
   border-radius: 10px;
   margin: 5%;
   min-height: 70vh;
@@ -55,9 +55,9 @@ Very dark blue (line): #2F415B
   text-align: left;
   color: #8BACDA;
   font-family: Outfit-Light;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-top: 18px;
+  padding-left: 8px;
+  padding-right: 8px;
   padding-bottom: 15px;
   border-radius: 10px;
   width: 260px;
@@ -71,7 +71,7 @@ Very dark blue (line): #2F415B
 
 .nft-box-wrapper {
   border-radius: 7px;
-  min-height: 240px;
+  min-height: 230px;
 
   padding-left: 0px !important;
   margin-left: 0px !important;
@@ -84,7 +84,7 @@ Very dark blue (line): #2F415B
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 250px !important;
+  min-height: 230px !important;
   max-width: 250px !important;
   border-radius: 7px;
 
