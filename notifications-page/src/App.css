@@ -57,16 +57,12 @@ Very dark blue: #1C202B
   color: #939dAE;
 }
 
-.col-title {
-
-}
-
 .col-mark {
   text-align: right;
 }
 
 .title {
-  color: #0A317B;
+  color: #1C202B;
   font-size: 1.2rem;
   font-family: PlusJakartaSans-ExtraBold;
 }
@@ -100,10 +96,10 @@ Very dark blue: #1C202B
 
 .notification-row {
   padding-top: 12px;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   padding-left: 10px;
 
-  min-height: 12vh;
+  min-height: 11vh;
 
   border-radius: 7px;
 }
@@ -113,12 +109,20 @@ Very dark blue: #1C202B
 }
 
 .notification-row-details div:first-child {
-  width: 10vh;
+  min-width: 7vh;
+  min-height: 7vh;
 }
 
 .notification-row-details div:nth-child(2) {
-  width: 50vh;
-  flex: 0 0 auto;
+  max-width: 85%;
+  /* flex: 0 0 auto; */
+}
+
+.notification-row-details > .notification-img-wrapper {
+  min-width: 5vh;
+  min-height: 5vh;
+  margin-left: auto;
+  margin-right: 2%;
 }
 
 .unread {
@@ -130,29 +134,92 @@ Very dark blue: #1C202B
 }
 
 .avatar-wrapper {
-  background-image: url(assets/avatar-mark-webber.webp);
+  /* background-image: url(assets/avatar-mark-webber.webp); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   width: 6vh !important;
   height: 6vh !important;
   border-radius: 50%;
-  /* border: 1px solid #FFFFFF; */
-
   margin-left: 10px;
   margin-right: 15px;
-
-  /* background-color: blue; */
 }
 
 .avatar {
   width: 7vh !important;
   height: 7vh !important;
-
-  /* position: relative; */
-
-  /* display: inline-block; */
 }
 
+.notification-text {
+  font-size: 0.8rem;
+  margin-top: 2px;
+  margin-bottom: 4px;
+  color: #5E6778;
+}
 
+.time {
+ color: #939DAE;
+}
+
+.red-dot {
+  height: 7px;
+  width: 7px;
+  background-color: #F65351;
+  border-radius: 50%;
+  display: inline-block;
+
+  margin-bottom: 1px;
+  margin-left: 5px;
+}
+
+a {
+  text-decoration: none !important;
+  font-family: PlusJakartaSans-ExtraBold;
+}
+
+.a-name {
+  color: #1C202B !important;
+}
+
+.a-noun {
+  color: #5E6778 !important;
+}
+
+.a-name:hover, .a-noun:hover {
+  color: #0A317B !important;
+}
+
+.private-message-wrapper {
+  text-decoration: none !important;
+  color: #5E6778 !important;
+  font-family: PlusJakartaSans-Medium;
+}
+
+.private-message {
+  font-size: 0.8rem;
+  background-color: #FFFFFF;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 17px;
+  padding-right: 12px;
+  border-radius: 5px;
+  border: 1px solid #DDE7EE;
+
+  margin-top: 10px;
+}
+
+.private-message:hover {
+  background-color: #E5EFFA;
+}
+
+.notification-img-wrapper {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 6vh !important;
+  height: 6vh !important;
+  border-radius: 5px;
+  /* margin-left: 10px;
+  margin-right: 15px; */
+}
 
