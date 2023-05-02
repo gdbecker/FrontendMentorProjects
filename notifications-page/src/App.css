@@ -112,11 +112,11 @@ Very dark blue: #1C202B
   display: flex;
 }
 
-.notification-row-details:nth-child(1) {
+.notification-row-details div:first-child {
   width: 10vh;
 }
 
-.notification-row-details:nth-child(2) {
+.notification-row-details div:nth-child(2) {
   width: 50vh;
   flex: 0 0 auto;
 }
