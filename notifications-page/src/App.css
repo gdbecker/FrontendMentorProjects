@@ -53,7 +53,7 @@ Very dark blue: #1C202B
   padding-top: 5%;
   padding-left: 2.5%;
   padding-right: 2.5%;
-  padding-bottom: 4%;
+  /* padding-bottom: 4%; */
   color: #939dAE;
 }
 
@@ -161,7 +161,7 @@ Very dark blue: #1C202B
  color: #939DAE;
 }
 
-.red-dot {
+.unread-dot {
   height: 7px;
   width: 7px;
   background-color: #F65351;
@@ -210,6 +210,7 @@ a {
 
 .private-message:hover {
   background-color: #E5EFFA;
+  border: 1px solid #E5EFFA;
 }
 
 .notification-img-wrapper {
@@ -219,7 +220,5 @@ a {
   width: 6vh !important;
   height: 6vh !important;
   border-radius: 5px;
-  /* margin-left: 10px;
-  margin-right: 15px; */
 }
 
