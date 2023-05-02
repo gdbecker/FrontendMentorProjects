@@ -29,9 +29,7 @@ function NFTCard() {
           </div>          
         </div>
         <div className="row">
-          <div className="col-1 avatar-wrapper">
-            <div className=""></div>
-          </div>
+          <div className="col-1 avatar-wrapper"></div>
           <div className="col">
             <p className="nft-text">Creation of <a href="/">Jules Wyvern</a></p>
           </div>

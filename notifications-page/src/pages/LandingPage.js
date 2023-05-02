@@ -6,11 +6,11 @@ function LandingPage() {
     <div id="landing-page">
       <div className="container">
         <div className="row">
-          <div className="col-md-1"></div>
-          <div className="col-md-10">
+          <div className="col-md-2"></div>
+          <div className="col-md-8">
             <Notifications></Notifications>
           </div>
-          <div className="col-md-1"></div>
+          <div className="col-md-2"></div>
         </div>
       </div>
     </div>
