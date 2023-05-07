@@ -1,0 +1,15 @@
+/* Primary Color Pallette */
+/* Neutral Color Pallette */
+/* Fonts */
+@font-face {
+  font-family: LexendDeca-Regular;
+  src: url(../../public/LexendDeca-Regular.ttf);
+}
+@font-face {
+  font-family: LexendDeca-Light;
+  src: url(../../public/LexendDeca-Light.ttf);
+}
+@font-face {
+  font-family: BigShouldersDisplay-Bold;
+  src: url(../../public/BigShouldersDisplay-Bold.ttf);
+}

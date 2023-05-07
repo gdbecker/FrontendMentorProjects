@@ -1,0 +1,30 @@
+/* Primary Color Pallette */
+$orange: #E38826;
+$darkCyan: #006970;
+$veryDarkCyan: #004241;
+
+/* Neutral Color Pallette */
+$white: #FFFFFF;
+$offWhite: #F0F0F0;
+$transparentWhite: hsla(0, 0%, 100%, 0.75); //(paragraphs)
+$lightGray: #F2F2F2; //(background, headings, buttons)
+
+/* Fonts */
+@font-face {
+  font-family: LexendDeca-Regular;
+  src: url(../../public/LexendDeca-Regular.ttf);
+}
+
+@font-face {
+  font-family: LexendDeca-Light;
+  src: url(../../public/LexendDeca-Light.ttf);
+}
+  
+@font-face {
+  font-family: BigShouldersDisplay-Bold;
+  src: url(../../public/BigShouldersDisplay-Bold.ttf);
+}
+
+$LexendDeca-Regular: 'LexendDeca-Regular';
+$LexendDeca-Light: 'LexendDeca-Light';
+$BigShouldersDisplay-Bold: 'BigShouldersDisplay-Bold';

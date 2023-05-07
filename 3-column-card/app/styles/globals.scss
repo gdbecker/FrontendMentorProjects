@@ -1,0 +1,138 @@
+@import "./styles_variables.scss";
+
+/* Layout */
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  font-size: 11px;
+}
+
+.attribution a { 
+  color: $veryDarkCyan;
+}
+
+/* Loading Page */
+#loading-page {
+  background-color: $offWhite;
+  // align-items: center;
+  // justify-content: center;
+  // vertical-align: middle;
+  // text-align: center;
+  min-height: 100vh;
+  padding-top: 8%;
+}
+
+.loading-text {
+  padding: 15px;
+  font-size: 1.4rem;
+}
+
+/* Home Page */
+#home-page {
+  background-color: $offWhite;
+  padding: 7%;
+  min-height: 100vh;
+  // align-items: center;
+  // justify-content: center;
+}
+
+/* Preview Card Component */
+#preview-card {
+  background-color: $offWhite;
+  text-align: left;
+  min-height: 20vh;
+  border-radius: 7px !important;
+  overflow: hidden;
+  justify-content: center;
+  vertical-align: middle;
+
+  font-family: $LexendDeca-Light;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  margin-top: 15%;
+
+//   position: relative;
+//   margin-top: 10%;
+//   padding-top: 10px;
+//   padding-left: 20px;
+//   padding-right: 20px;
+//   padding-bottom: 10px;
+}
+
+.content-row {
+  border-radius: 10px;
+}
+
+.col-section {
+  padding-bottom: 35px;
+  padding-right: 15px;
+}
+
+.col-sedans {
+  background-color: $orange;
+}
+
+.col-suvs {
+  background-color: $darkCyan;
+}
+
+.col-luxury {
+  background-color: $veryDarkCyan;
+}
+
+.icon-wrapper {
+  text-align: left;
+}
+
+.card-title {
+  font-family: $BigShouldersDisplay-Bold;
+  color: $white;
+  font-size: 1.8rem;
+}
+
+.card-text {
+  color: $transparentWhite;
+  font-size: 0.75rem;
+}
+
+.card-btn {
+  border: 1.5px solid $white !important;
+  outline: none !important;
+  box-shadow: none !important;
+  // width: 110px !important;
+  width: 58% !important;
+  // height: 25px;
+  margin-left: 14px;
+  border-radius: 30px;
+  background-color: $white;
+  font-family: $LexendDeca-Regular;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 0.75rem
+}
+
+.btn-sedans {
+  color: $orange;
+}
+
+.btn-suvs {
+  color: $darkCyan;
+}
+
+.btn-luxury {
+  color: $veryDarkCyan;
+}
+
+.btn-sedans:hover, .btn-suvs:hover, .btn-luxury:hover {
+  background-color: transparent !important;
+  color: $white;
+}
+
+.card-btn:hover {
+  
+}
+
+
