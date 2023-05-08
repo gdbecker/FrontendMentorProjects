@@ -16,10 +16,10 @@
   background-color: $darkBlue2;
   text-align: left;
   font-family: $Raleway-Regular;
-  padding: 2%;
+  padding: 15px;
   // margin: 3%;
-  padding-left: 4%;
-  padding-right: 4%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
   
 .navbar {
@@ -32,19 +32,12 @@
   vertical-align: middle;
 }
 
-.navbar-nav {
-  // float: left !important;
-}
-
 .nav-item {
-  padding: 0 10px;
+  padding: 0 12px;
   font-size: 0.9rem;
-  // display: inline-block !important;
-  // float: left !important;
 }
 
 .nav-link {
-  font-size: 1.2rem;
   color: $white !important;
 }
 
@@ -53,30 +46,76 @@
   font-family: $Raleway-Bold;
 }
 
-.navbar-toggler {
-  border: none !important;
-}
-
 .navbar-light {
-  // background-image: url(assets/icon-menu.svg) !important;
   outline: none;
   box-shadow: none;
+  // margin-bottom: 50%;
 }
 
-.navbar-light {
-  // background-image: url(assets/icon-menu-close.svg) !important;
-  outline: none;
-  box-shadow: none;
-  margin-bottom: 50%;
+/* Loading Page */
+#loading-page {
+  background-color: $darkBlue2;
+  color: $white;
+  // align-items: center;
+  // justify-content: center;
+  // vertical-align: middle;
+  text-align: center;
+  min-height: 100vh;
+  padding-top: 2%;
 }
 
-@media(min-width: 620px) {
-  .navbar-light .navbar-x {
-    background-image: none !important;
-    outline: none;
-    box-shadow: none;
-    margin-bottom: 50%;
-  }
+.loading-text {
+  padding: 15px;
+  font-size: 1.4rem;
+}
+
+/* Home Page */
+#home-page {
+  background-color: $darkBlue2;
+  color: $white;
+  // padding: 7%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: $OpenSans-Regular;
+}
+
+.section-intro-pic {
+  background-image: url(../../public/illustration-intro.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  min-height: 65vh;
+}
+
+.section-intro-header {
+  font-family: $Raleway-Bold;
+  font-size: 2.1rem;
+}
+
+.section-intro-text {
+  font-size: 0.97rem;
+}
+
+.section-intro-button {
+  width: 30% !important;
+  min-height: 40px;
+  background: linear-gradient(to right, $cyan, $blue);
+  color: $white;
+  border: 0px !important;
+  outline: none !important;
+  box-shadow: none !important;
+
+  font-size: 0.8rem;
+  font-family: $OpenSans-Bold;
+  padding-top: auto !important;
+  padding-bottom: auto !important;
+  border-radius: 35px;
+}
+
+.section-intro-button:hover {
+  background: $lightBlue;
 }
 
 @media(max-width: 620px) { 
@@ -93,34 +132,7 @@
     z-index: 10;
   }
 
-  .navbar-toggler {
-    margin-left: 72%;
+  .section-intro-button {
+    width: 90% !important;
   }
-}
-
-/* Loading Page */
-#loading-page {
-  background-color: $darkBlue2;
-  color: $white;
-  // align-items: center;
-  // justify-content: center;
-  // vertical-align: middle;
-  text-align: center;
-  min-height: 100vh;
-  padding-top: 8%;
-}
-
-.loading-text {
-  padding: 15px;
-  font-size: 1.4rem;
-}
-
-/* Home Page */
-#home-page {
-  background-color: $darkBlue2;
-  color: $white;
-  padding: 7%;
-  min-height: 100vh;
-  // align-items: center;
-  // justify-content: center;
 }
