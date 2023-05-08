@@ -73,12 +73,19 @@
 #home-page {
   background-color: $darkBlue2;
   color: $white;
-  // padding: 7%;
+  // padding-left: 14%;
+  // padding-right: 14%;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
   text-align: center;
   font-family: $OpenSans-Regular;
+}
+
+.section-intro {
+  padding-left: 23% !important;
+  padding-right: 23% !important;
+  margin-bottom: 10%;
 }
 
 .section-intro-pic {
@@ -95,12 +102,12 @@
 }
 
 .section-intro-text {
-  font-size: 0.97rem;
+  font-size: 1.1rem;
 }
 
 .section-intro-button {
-  width: 30% !important;
-  min-height: 40px;
+  width: 40% !important;
+  min-height: 45px;
   background: linear-gradient(to right, $cyan, $blue);
   color: $white;
   border: 0px !important;
@@ -112,10 +119,73 @@
   padding-top: auto !important;
   padding-bottom: auto !important;
   border-radius: 35px;
+
+  // margin-bottom: 20%;
 }
 
 .section-intro-button:hover {
   background: $lightBlue;
+}
+
+.section-details {
+  padding-left: 14% !important;
+  padding-right: 14% !important;
+  margin-bottom: 10%;
+}
+
+.section-details-header {
+  font-family: $OpenSans-Bold;
+  font-size: 1.1rem;
+}
+
+.section-details-text {
+  font-size: 0.75rem;
+}
+
+.section-how {
+  padding-left: 4% !important;
+  padding-right: 8% !important;
+  text-align: left;
+}
+
+.section-how-pic {
+  background-image: url(../../public/illustration-stay-productive.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  min-height: 60vh;
+}
+
+.section-how-content {
+  
+}
+
+.section-how-header {
+  font-family: $OpenSans-Bold;
+  font-size: 2.1rem;
+  width: 80% !important;
+  margin-bottom: 20px;
+  margin-top: 21%;
+
+}
+
+.section-how-text {
+  font-size: 0.9rem;
+  // width: 95% !important;
+}
+
+.section-how-link {
+  color: $cyan;
+  // text-decoration: none !important;
+
+  // border-bottom-width: 1px;
+  // border-bottom-style: solid;
+  // border-bottom-color: $cyan;
+  text-underline-offset: 8px;
+}
+
+.section-how-link:hover {
+  color: $white;
 }
 
 @media(max-width: 620px) { 
@@ -132,7 +202,28 @@
     z-index: 10;
   }
 
+  .section-intro {
+    padding-left: 8% !important;
+    padding-right: 8% !important;
+  }
+
+  .section-intro-pic {
+    min-height: 45vh;
+  }
+
   .section-intro-button {
-    width: 90% !important;
+    width: 70% !important;
+    margin-bottom: 15%;
+  }
+
+  .section-how {
+    padding-left: 8% !important;
+    padding-right: 8% !important;
+    text-align: left;
+  }
+
+  .section-how-header {
+    margin-top: 0%;
+
   }
 }

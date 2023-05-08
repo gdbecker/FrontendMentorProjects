@@ -93,6 +93,12 @@
   font-family: "OpenSans-Regular";
 }
 
+.section-intro {
+  padding-left: 23% !important;
+  padding-right: 23% !important;
+  margin-bottom: 10%;
+}
+
 .section-intro-pic {
   background-image: url(../../public/illustration-intro.png);
   background-repeat: no-repeat;
@@ -107,12 +113,12 @@
 }
 
 .section-intro-text {
-  font-size: 0.97rem;
+  font-size: 1.1rem;
 }
 
 .section-intro-button {
-  width: 30% !important;
-  min-height: 40px;
+  width: 40% !important;
+  min-height: 45px;
   background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
   color: #FFFFFF;
   border: 0px !important;
@@ -129,6 +135,56 @@
   background: hsl(198, 60%, 70%);
 }
 
+.section-details {
+  padding-left: 14% !important;
+  padding-right: 14% !important;
+  margin-bottom: 10%;
+}
+
+.section-details-header {
+  font-family: "OpenSans-Bold";
+  font-size: 1.1rem;
+}
+
+.section-details-text {
+  font-size: 0.75rem;
+}
+
+.section-how {
+  padding-left: 4% !important;
+  padding-right: 8% !important;
+  text-align: left;
+}
+
+.section-how-pic {
+  background-image: url(../../public/illustration-stay-productive.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  min-height: 60vh;
+}
+
+.section-how-header {
+  font-family: "OpenSans-Bold";
+  font-size: 2.1rem;
+  width: 80% !important;
+  margin-bottom: 20px;
+  margin-top: 21%;
+}
+
+.section-how-text {
+  font-size: 0.9rem;
+}
+
+.section-how-link {
+  color: hsl(176, 68%, 64%);
+  text-underline-offset: 8px;
+}
+
+.section-how-link:hover {
+  color: #FFFFFF;
+}
+
 @media (max-width: 620px) {
   .navbar-collapse {
     background-color: #FFFDFA;
@@ -142,7 +198,23 @@
     top: auto;
     z-index: 10;
   }
+  .section-intro {
+    padding-left: 8% !important;
+    padding-right: 8% !important;
+  }
+  .section-intro-pic {
+    min-height: 45vh;
+  }
   .section-intro-button {
-    width: 90% !important;
+    width: 70% !important;
+    margin-bottom: 15%;
+  }
+  .section-how {
+    padding-left: 8% !important;
+    padding-right: 8% !important;
+    text-align: left;
+  }
+  .section-how-header {
+    margin-top: 0%;
   }
 }
