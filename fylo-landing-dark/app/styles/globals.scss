@@ -13,7 +13,7 @@
 
 /* Navbar */
 #navigation {
-  background-color: $darkBlue2;
+  background-color: $darkBlue1;
   text-align: left;
   font-family: $Raleway-Regular;
   padding: 15px;
@@ -71,7 +71,8 @@
 
 /* Home Page */
 #home-page {
-  background-color: $darkBlue2;
+  background-color: $darkBlue2 !important;
+  background-color: white;;
   color: $white;
   // padding-left: 14%;
   // padding-right: 14%;
@@ -85,7 +86,19 @@
 .section-intro {
   padding-left: 23% !important;
   padding-right: 23% !important;
-  margin-bottom: 10%;
+  padding-bottom: 10%;
+
+  overflow: visible !important;
+
+  background-image: url(../../public/bg-curvy-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  height: 50%;
+  overflow: visible !important;
+
+  background-color: $darkBlue1;
+  
 }
 
 .section-intro-pic {
@@ -119,8 +132,6 @@
   padding-top: auto !important;
   padding-bottom: auto !important;
   border-radius: 35px;
-
-  // margin-bottom: 20%;
 }
 
 .section-intro-button:hover {
@@ -130,6 +141,7 @@
 .section-details {
   padding-left: 14% !important;
   padding-right: 14% !important;
+  margin-top: 10%;
   margin-bottom: 10%;
 }
 
@@ -146,6 +158,7 @@
   padding-left: 4% !important;
   padding-right: 8% !important;
   text-align: left;
+  margin-bottom: 10%;
 }
 
 .section-how-pic {
@@ -154,10 +167,6 @@
   background-size: contain;
   background-position: center;
   min-height: 60vh;
-}
-
-.section-how-content {
-  
 }
 
 .section-how-header {
@@ -171,21 +180,59 @@
 
 .section-how-text {
   font-size: 0.9rem;
-  // width: 95% !important;
 }
 
 .section-how-link {
   color: $cyan;
-  // text-decoration: none !important;
-
-  // border-bottom-width: 1px;
-  // border-bottom-style: solid;
-  // border-bottom-color: $cyan;
   text-underline-offset: 8px;
 }
 
 .section-how-link:hover {
-  color: $white;
+  color: $white !important;
+}
+
+.section-testimonials {
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+  padding-top: 3%;
+  text-align: left;
+  margin-bottom: 10%;
+
+  background-image: url(../../public/bg-quotes.png);
+  background-repeat: no-repeat;
+  background-size: 5%;
+  background-position: 7.5vh 1vh;
+}
+
+.testimonial-box {
+  background-color: $darkBlue4;
+  border-radius: 8px;
+  padding-top: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 25px;
+}
+
+.testimonial-text {
+  font-size: 0.8rem;
+}
+
+.profile-wrapper {
+  width: 4.5vh !important;
+  height: 4.5vh !important;
+  border-radius: 50% !important;
+  overflow: hidden;
+  text-align: center;
+  margin: auto;
+}
+
+.profile-name {
+  font-size: 0.85rem;
+  font-family: $Raleway-Bold;
+}
+
+.profile-title {
+  font-size: 0.4rem;
 }
 
 @media(max-width: 620px) { 
@@ -224,6 +271,11 @@
 
   .section-how-header {
     margin-top: 0%;
+  }
 
+  .section-testimonials {
+    padding-left: 8% !important;
+    padding-right: 8% !important;
+    background-position: 6.5vh -1vh;
   }
 }

@@ -7,6 +7,9 @@ import IconSecurity from '../public/icon-security.svg';
 import IconCollaboration from '../public/icon-collaboration.svg';
 import IconAnyFile from '../public/icon-any-file.svg';
 import IconArrow from '../public/icon-arrow.svg';
+import Profile1 from '../public/profile-1.jpg';
+import Profile2 from '../public/profile-2.jpg';
+import Profile3 from '../public/profile-3.jpg';
 import LoadingPage from './loading';
 
 function Home() {
@@ -24,7 +27,7 @@ function Home() {
 
   return (
     <div id="home-page">
-      <div className="container section-intro">
+      <div className="section-intro">
         <div className="row">
           <div className="section-intro-pic"></div>
         </div>
@@ -165,6 +168,74 @@ function Home() {
                 </p>
               </a>
             {/* </div> */}
+          </div>
+        </div>
+      </div>
+
+      <div className="container section-testimonials">
+        <div className="row g-4">
+          <div className="col-md-4">
+            <div className="testimonial-box">
+              <div className="row">
+                <p className="testimonial-text">
+                  Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+                  become a well-oiled collaboration machine.
+                </p>
+              </div>
+              <div className="d-inline-flex flex-row">
+                <div className="p-2">
+                  <div className="profile-wrapper">
+                    <Image src={Profile1} alt="Profile" width={33} height={33} />
+                  </div>
+                </div>
+                <div className="p-2">
+                  <h4 className="profile-name">Satish Patel</h4>
+                  <h4 className="profile-title">Founder & CEO, Huddle</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="testimonial-box">
+              <div className="row">
+                <p className="testimonial-text">
+                  Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+                  become a well-oiled collaboration machine.
+                </p>
+              </div>
+              <div className="d-inline-flex flex-row">
+                <div className="p-2">
+                  <div className="profile-wrapper">
+                    <Image src={Profile2} alt="Profile" width={33} height={33} />
+                  </div>
+                </div>
+                <div className="p-2">
+                  <h4 className="profile-name">Bruce McKenzie</h4>
+                  <h4 className="profile-title">Founder & CEO, Huddle</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="testimonial-box">
+              <div className="row">
+                <p className="testimonial-text">
+                  Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+                  become a well-oiled collaboration machine.
+                </p>
+              </div>
+              <div className="d-inline-flex flex-row">
+                <div className="p-2">
+                  <div className="profile-wrapper">
+                    <Image src={Profile3} alt="Profile" width={33} height={33} />
+                  </div>
+                </div>
+                <div className="p-2">
+                  <h4 className="profile-name">Iva Boyd</h4>
+                  <h4 className="profile-title">Founder & CEO, Huddle</h4>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
