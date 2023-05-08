@@ -2,6 +2,7 @@
 import React from'react';
 import { useState, useEffect } from'react';
 import Image from 'next/image';
+import Logo from '../public/logo.svg'
 import IconAccess from '../public/icon-access-anywhere.svg';
 import IconSecurity from '../public/icon-security.svg';
 import IconCollaboration from '../public/icon-collaboration.svg';
@@ -239,6 +240,60 @@ function Home() {
           </div>
         </div>
       </div>
+
+      <div className="section-register">
+        <div className="register-box">
+          <div className="row mt-2">
+            <h1 className="register-header">Get early access today</h1>
+          </div>
+          <div className="row mt-2">
+            <p className="register-text">
+              It only takes a minute to sign up and our free starter tier is extremely generous. If you have any 
+              questions, our support team would be happy to help you.
+            </p>
+          </div>
+          <div className="row mt-2">
+            <form>
+              <div className="row mt-2">
+                <div className="col-md-8">
+                  <div className="form-group">
+                    <input
+                      className='form-control register-input'
+                      type='text'
+                      placeholder='email@example.com'
+                      id="year"
+                      name='year'
+                    />
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className="form-group">
+                    <button 
+                      className="register-button" 
+                      type="submit">Get Started for Free</button>
+                  </div>
+                </div>
+                
+              </div>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+
+      <div className="section-footer">
+        <div className="row">
+          <div className="col-md-4">
+            <Image
+              src={Logo}
+              alt="Logo"
+              width={145}
+              height={70}
+            />
+          </div>
+        </div>
+      </div>
+
     </div>
   )
 }

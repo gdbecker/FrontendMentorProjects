@@ -196,7 +196,7 @@
   padding-right: 5% !important;
   padding-top: 3%;
   text-align: left;
-  margin-bottom: 10%;
+  margin-bottom: 20%;
 
   background-image: url(../../public/bg-quotes.png);
   background-repeat: no-repeat;
@@ -233,6 +233,78 @@
 
 .profile-title {
   font-size: 0.4rem;
+}
+
+.section-register {
+  background: linear-gradient(to bottom, $darkBlue2, $darkBlue1);
+  position: relative;
+}
+
+.register-box {
+  background-color: $darkBlue1;
+  padding-top: 2%;
+  padding-bottom: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 60% !important;
+
+  position: absolute;
+  top: -125px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+  margin: auto;
+}
+
+.register-header {
+  font-family: $OpenSans-Bold;
+  font-size: 1.8rem;
+}
+
+.register-text {
+  font-size: 0.8rem;
+}
+
+.register-input {
+  min-height: 45px;
+
+  border: 0px !important;
+  outline: none !important;
+  box-shadow: none !important;
+
+  font-size: 0.7rem !important;
+
+  // padding-top: auto !important;
+  // padding-bottom: auto !important;
+  border-radius: 35px !important;
+
+  
+}
+
+.register-button {
+  // width: 40% !important;
+  width: 100% !important;
+  min-height: 45px;
+  background: linear-gradient(to right, $cyan, $blue);
+  color: $white;
+  border: 0px !important;
+  outline: none !important;
+  box-shadow: none !important;
+
+  font-size: 0.8rem;
+  font-family: $OpenSans-Bold;
+  padding-top: auto !important;
+  padding-bottom: auto !important;
+  border-radius: 35px;
+}
+
+.register-button:hover {
+  background: $lightBlue;
+}
+
+.section-footer {
+  padding-top: 12%;
+  background-color: $darkBlue3;
 }
 
 @media(max-width: 620px) { 
