@@ -1,0 +1,126 @@
+@import "./styles_variables.scss";
+
+/* Layout */
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  font-size: 11px;
+}
+
+.attribution a { 
+  color: $darkBlue1;
+}
+
+/* Navbar */
+#navigation {
+  background-color: $darkBlue2;
+  text-align: left;
+  font-family: $Raleway-Regular;
+  padding: 2%;
+  // margin: 3%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+  
+.navbar {
+  padding: 1rem;
+}
+
+.navbar-brand {
+  width: 145px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.navbar-nav {
+  // float: left !important;
+}
+
+.nav-item {
+  padding: 0 10px;
+  font-size: 0.9rem;
+  // display: inline-block !important;
+  // float: left !important;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  color: $white !important;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  font-family: $Raleway-Bold;
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+
+.navbar-light {
+  // background-image: url(assets/icon-menu.svg) !important;
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-light {
+  // background-image: url(assets/icon-menu-close.svg) !important;
+  outline: none;
+  box-shadow: none;
+  margin-bottom: 50%;
+}
+
+@media(min-width: 620px) {
+  .navbar-light .navbar-x {
+    background-image: none !important;
+    outline: none;
+    box-shadow: none;
+    margin-bottom: 50%;
+  }
+}
+
+@media(max-width: 620px) { 
+  .navbar-collapse {
+    background-color:#FFFDFA;
+    width: 80%;
+    margin-top: 80%;
+    margin-left: 10rem;
+    position: absolute;
+    padding: 3%;
+    padding-top: 20%;
+    height: 150vh;
+    top: auto;
+    z-index: 10;
+  }
+
+  .navbar-toggler {
+    margin-left: 72%;
+  }
+}
+
+/* Loading Page */
+#loading-page {
+  background-color: $darkBlue2;
+  color: $white;
+  // align-items: center;
+  // justify-content: center;
+  // vertical-align: middle;
+  text-align: center;
+  min-height: 100vh;
+  padding-top: 8%;
+}
+
+.loading-text {
+  padding: 15px;
+  font-size: 1.4rem;
+}
+
+/* Home Page */
+#home-page {
+  background-color: $darkBlue2;
+  color: $white;
+  padding: 7%;
+  min-height: 100vh;
+  // align-items: center;
+  // justify-content: center;
+}

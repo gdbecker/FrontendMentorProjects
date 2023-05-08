@@ -1,0 +1,39 @@
+/* Primary Color Pallette */
+$darkBlue1: hsl(217, 28%, 15%); // (intro and email sign up background)
+$darkBlue2: hsl(218, 28%, 13%); // (main background)
+$darkBlue3: hsl(216, 53%, 9%); // (footer background)
+$darkBlue4: hsl(219, 30%, 18%); // (testimonials background)
+
+/* Accent Color Pallette */
+$cyan: hsl(176, 68%, 64%); // (inside call-to-action gradient)
+$blue: hsl(198, 60%, 50%); // (inside call-to-action gradient)
+$lightRed: hsl(0, 100%, 63%); // (error)
+
+/* Neutral Color Pallette */
+$white: #FFFFFF;
+
+/* Fonts */
+@font-face {
+  font-family: Raleway-Bold;
+  src: url(../../public/Raleway-Bold.ttf);
+}
+
+@font-face {
+  font-family: Raleway-Regular;
+  src: url(../../public/Raleway-Regular.ttf);
+}
+
+@font-face {
+  font-family: OpenSans-Bold;
+  src: url(../../public/OpenSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url(../../public/OpenSans-Regular.ttf);
+}
+
+$Raleway-Bold: 'Raleway-Bold';
+$Raleway-Regular: 'Raleway-Regular';
+$OpenSans-Bold: 'OpenSans-Bold';
+$OpenSans-Regular: 'OpenSans-Regular';

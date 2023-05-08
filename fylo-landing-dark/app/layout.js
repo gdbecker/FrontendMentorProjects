@@ -1,15 +1,18 @@
 import './styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.css';
+import Navbar from './components/Navbar';
 
 export const metadata = {
-  title: 'Frontend Mentor | 3-Column Preview Card Component',
-  description: 'Solution for this challenge!',
+  title: 'Frontend Mentor | Fylo Landing Page - Dark Theme',
+  description: 'Solutiion for this challenge!',
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+
+        <Navbar />
       
         {children}
 
