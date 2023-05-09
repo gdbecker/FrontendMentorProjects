@@ -365,10 +365,10 @@ function Home() {
             </div>
           </div>
           <div className="col-md-2">
-            <div className="d-flex flex-row icon-row">
-              <div className="icon-wrapper">
-                <FaFacebookF />
-              </div>
+            <div className="icon-row">
+              <button type="button" className="icon-btn"><FaFacebookF /></button>
+              <button type="button" className="icon-btn"><FaTwitter /></button>
+              <button type="button" className="icon-btn"><FaInstagram /></button>
             </div>
           </div>
         </div>

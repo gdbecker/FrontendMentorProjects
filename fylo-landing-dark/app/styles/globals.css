@@ -338,6 +338,24 @@
   text-align: center;
 }
 
+.icon-btn {
+  border: 1px solid #FFFFFF !important;
+  border-radius: 50%;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: hsl(216, 53%, 9%) !important;
+  color: #FFFFFF !important;
+  margin: 7px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.icon-btn:hover {
+  color: hsl(176, 68%, 64%) !important;
+  border-color: hsl(176, 68%, 64%) !important;
+}
+
 @media (max-width: 620px) {
   .navbar-collapse {
     background-color: #FFFDFA;
@@ -379,5 +397,8 @@
   .register-box {
     position: relative !important;
     margin-top: 40%;
+  }
+  .icon-row {
+    text-align: center;
   }
 }

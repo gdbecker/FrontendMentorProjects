@@ -345,6 +345,24 @@
   text-align: center;
 }
 
+.icon-btn {
+  border: 1px solid $white !important;
+  border-radius: 50%;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: $darkBlue3 !important;
+  color: $white !important;
+  margin: 7px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.icon-btn:hover {
+  color: $cyan !important;
+  border-color: $cyan !important;
+}
+
 @media(max-width: 620px) { 
   .navbar-collapse {
     background-color:#FFFDFA;
@@ -404,5 +422,9 @@
     // right: 0px;
     // text-align: center;
     margin-top: 40%;
+  }
+
+  .icon-row {
+    text-align: center;
   }
 }
