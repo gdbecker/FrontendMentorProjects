@@ -1,0 +1,178 @@
+@import "./styles_variables.scss";
+
+/* Layout */
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  font-size: 11px;
+}
+
+.attribution a { 
+  color: $darkBlue;
+}
+
+/* Navbar */
+#navigation {
+  background-color: none;
+  text-align: left;
+  font-family: $Barlow-SemiBold;
+  margin-bottom: 6%;
+}
+
+.navbar {
+  padding: 1rem;
+}
+
+.navbar-brand {
+  width: 120px;
+}
+
+.nav-item {
+  padding: 0 5px;
+  font-family: $Barlow-SemiBold;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  color: #FFFFFF !important;
+}
+
+.nav-link:hover {
+  color: #FFFFFF !important;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+
+.dropdown-toggle::after {
+  /* display: none; */
+}
+
+.navbar-light .navbar-burger {
+  background-image: url(../../public/icon-hamburger.svg) !important;
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-light .navbar-x {
+  background-image: url(../../public/icon-hamburger.svg) !important;
+  outline: none;
+  box-shadow: none;
+}
+
+#dropdown {
+  color: #FFFFFF !important;
+  background-color: transparent !important;
+  border: 0 !important
+}
+
+#dropdown:hover {
+  text-decoration: underline;
+  font-family: $Barlow-SemiBold;
+}
+
+#dropdown::after {
+  display: none;
+}
+
+.dropdown-item {
+  font-family: $Barlow-SemiBold;
+  font-size: 14px;
+}
+
+.dropdown-item:hover {
+  background-color: #FFFFFF !important;
+  font-family: $Barlow-SemiBold;
+}
+
+.icon-fill {
+  color: #FFFFFF;
+}
+
+.login-button {
+  width: 7rem !important;
+  background: #FF7A85;
+  color: #FFFFFF;
+  /* border: 1px solid #FFFFFF; */
+  border: 0 !important;
+  padding: 10px;
+  border-radius: 60px;
+  font-family: $Barlow-SemiBold;
+  box-shadow: none;
+  margin: 1%;
+}
+
+.login-button:hover {
+  background-color: #FFFFFF;
+  color: #FF7A85;
+  border: 1px solid #FFFFFF;
+}
+
+.signup-button {
+  width: 7rem !important;
+  background-color: #FFFFFF;
+  color: #FF7A85;
+  padding: 10px;
+  border: 0 !important;
+  border-radius: 60px;
+  font-family: $Barlow-SemiBold;
+  margin: 1%;
+}
+
+.signup-button:hover {
+  background-color: #FF7A85;
+  color: #FFFFFF;
+  border: 1px solid #FF7A85;
+}
+
+/* Loading Page */
+#loading-page {
+  background-color: $darkBlue;
+  color: $white;
+  // align-items: center;
+  // justify-content: center;
+  // vertical-align: middle;
+  text-align: center;
+  min-height: 100vh;
+  padding-top: 2%;
+}
+
+.loading-text {
+  padding: 15px;
+  font-size: 1.4rem;
+}
+
+/* Home Page */
+#home-page {
+  background-color: $darkBlue !important;
+  background-color: white;;
+  color: $white;
+  // padding-left: 14%;
+  // padding-right: 14%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: $Barlow-SemiBold;
+}
+
+.section-intro {
+  padding-left: 23% !important;
+  padding-right: 23% !important;
+  padding-bottom: 10%;
+
+  overflow: visible !important;
+
+  // background-image: url(../../public/bg-curvy-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  height: 50%;
+  overflow: visible !important;
+
+  background-color: $darkBlue;
+  
+}

@@ -1,0 +1,36 @@
+/* Primary Color Pallette */
+$softRed: hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
+$darkDesaturatedCyan: hsl(167, 40%, 24%); // (graphic design text)
+$darkBlue: hsl(198, 62%, 26%); // (photography text)
+$darkModerateCyan: hsl(168, 34%, 41%); // (footer)
+
+/* Accent Color Pallette */
+
+
+/* Neutral Color Pallette */
+$white: #FFFFFF;
+$veryDarkDesaturatedBlue: hsl(212, 27%, 19%);
+$veryDarkGrayishBlue: hsl(213, 9%, 39%);
+$darkGrayishBlue: hsl(232, 10%, 55%);
+$grayishBlue: hsl(210, 4%, 67%);
+
+/* Fonts */
+@font-face {
+  font-family: Barlow-SemiBold;
+  src: url(../../public/Barlow-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Fraunces-Bold;
+  src: url(../../public/Fraunces_72pt-Bold.ttf);
+}
+
+@font-face {
+  font-family: Fraunces-Black;
+  src: url(../../public/Fraunces_72pt-Black.ttf);
+}
+
+$Barlow-SemiBold: 'Barlow-SemiBold';
+$Fraunces-Bold: 'Fraunces-Bold';
+$Fraunces-Black: 'Fraunces-Black';

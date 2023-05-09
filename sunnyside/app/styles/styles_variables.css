@@ -1,0 +1,16 @@
+/* Primary Color Pallette */
+/* Accent Color Pallette */
+/* Neutral Color Pallette */
+/* Fonts */
+@font-face {
+  font-family: Barlow-SemiBold;
+  src: url(../../public/Barlow-SemiBold.ttf);
+}
+@font-face {
+  font-family: Fraunces-Bold;
+  src: url(../../public/Fraunces_72pt-Bold.ttf);
+}
+@font-face {
+  font-family: Fraunces-Black;
+  src: url(../../public/Fraunces_72pt-Black.ttf);
+}

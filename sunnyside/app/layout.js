@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Navbar from './components/Navbar';
 
 export const metadata = {
-  title: 'Frontend Mentor | Fylo Landing Page - Dark Theme',
+  title: 'Frontend Mentor | Sunnyside Agency Landing Page',
   description: 'Solution for this challenge!',
 }
 
