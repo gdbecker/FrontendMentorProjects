@@ -38,11 +38,23 @@
 
 /* Home Page */
 #home-page {
-  background-color: hsl(185, 75%, 39%);
   padding: 8%;
-  min-height: 70vh;
+  min-height: 90vh;
+  text-align: center;
   align-items: center;
   justify-content: center;
+  background-image: url(../../public/bg-pattern-top.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -80vh -110vh;
+}
+
+#home-page-behind {
+  background-color: hsl(185, 75%, 39%);
+  background-image: url(../../public/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 80vh 30vh;
 }
 
 /* Profile Card Component */
@@ -50,27 +62,91 @@
   background-color: #FFFFFF;
   text-align: center;
   min-height: 20vh;
-  border-radius: 8px;
+  width: 300px !important;
+  border-radius: 10px;
   justify-content: center;
   vertical-align: middle;
   text-align: center;
+  font-family: "KumbhSans-Regular";
+  color: hsl(0, 0%, 59%);
   position: relative;
-  margin-top: 10%;
-  padding-top: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 10px;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+  padding-bottom: 2px;
+  overflow: hidden;
 }
 
-.avatar-wrapper {
-  width: 10vh !important;
-  height: 10vh !important;
+.profile-background {
+  background-image: url(../../public/bg-pattern-card.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 18vh;
+}
+
+.profile-wrapper {
+  width: 13vh !important;
+  height: 13vh !important;
   border-radius: 50% !important;
+  border: 4px solid #FFFFFF !important;
   overflow: hidden;
   position: absolute;
-  top: -40px;
+  top: 80px;
   left: 0px;
   right: 0px;
   text-align: center;
   margin: auto;
+}
+
+.profile-header {
+  margin-top: 55px;
+}
+
+.profile-name {
+  font-family: "KumbhSans-Bold";
+  font-size: 1.05rem;
+  color: hsl(229, 23%, 23%);
+}
+
+.profile-count {
+  font-size: 0.95rem;
+}
+
+.profile-loc {
+  font-size: 0.8rem;
+  margin-top: -15px;
+}
+
+.divider {
+  background-color: hsl(185, 75%, 39%);
+  color: hsl(0, 0%, 59%);
+  height: 1px;
+  margin-top: 0px;
+}
+
+.stats-box {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+.stats-header {
+  color: hsl(229, 23%, 23%);
+  font-family: "KumbhSans-Bold";
+  font-size: 0.95rem;
+}
+
+.stats-text {
+  font-size: 0.65rem;
+  letter-spacing: 1.2px;
+}
+
+@media (max-width: 800px) {
+  #home-page-behind {
+    background-position: 35vh 50vh;
+  }
+  #home-page {
+    background-position: -50vh -50vh;
+  }
 }

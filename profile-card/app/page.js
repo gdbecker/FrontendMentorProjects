@@ -18,15 +18,9 @@ function Home() {
   }
 
   return (
-    <div id="home-page">
-      <div className="container">
-        <div className="row">
-          <div className="col-4"></div>
-          <div className="col-4">
-            <ProfileCard />
-          </div>
-          <div className="col-4"></div>
-        </div>
+    <div id="home-page-behind">
+      <div id="home-page">
+        <ProfileCard />
       </div>
     </div>
   )
