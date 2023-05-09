@@ -22,11 +22,29 @@ import LoadingPage from './loading';
 function Home() {
 
   const [loading, setLoading] = useState(true);
+  const [formEmail, setFormEmail] = useState('');
+  const [formError, setFormErrors] = useState('');
 
   useEffect(() => {
     import ('bootstrap/dist/js/bootstrap.min.js');
     setLoading(false);
   }, []);
+
+  const onChange = (e) => {
+    setFormEmail( e.target.value );
+  }
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    var validRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (formEmail.match(validRegex)) {
+      setFormErrors('');
+    } else {
+      setFormErrors('Please enter a valid email address');
+    }
+  }
 
   if (loading) {
     return <LoadingPage />
@@ -259,7 +277,7 @@ function Home() {
             </p>
           </div>
           <div className="row mt-2">
-            <form>
+            <form onSubmit={e => onSubmit(e)}>
               <div className="row mt-1">
                 <div className="col-md-8">
                   <div className="form-group">
@@ -269,7 +287,11 @@ function Home() {
                       placeholder='email@example.com'
                       id="year"
                       name='year'
+                      value={formEmail}
+                      onChange={e => onChange(e)}
+                      required
                     />
+                    <label className='register-form register-error' htmlFor="day">{formError}</label>
                   </div>
                 </div>
                 <div className="col-md-4">

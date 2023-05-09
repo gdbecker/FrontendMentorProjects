@@ -297,6 +297,12 @@
   background: hsl(198, 60%, 70%);
 }
 
+.register-error {
+  font-size: 0.65rem;
+  color: hsl(0, 100%, 63%);
+  text-align: left !important;
+}
+
 .section-footer {
   padding-top: 13%;
   background-color: hsl(216, 53%, 9%);
@@ -323,7 +329,7 @@
 }
 
 .footer-link:hover {
-  font-family: "Raleway-Bold";
+  font-weight: bold;
 }
 
 .icon-wrapper {
