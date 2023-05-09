@@ -1,0 +1,68 @@
+@import "./styles_variables.scss";
+
+/* Layout */
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  font-size: 0.8rem;
+}
+
+.attribution a { 
+  color: $veryDarkDesaturatedBlue; 
+}
+
+/* Loading Page */
+#loading-page {
+  background-color: $white;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+  min-height: 100vh;
+  padding-top: 8%;
+}
+
+.loading-text {
+  padding: 15px;
+  font-size: 1.4rem;
+}
+
+/* Home Page */
+#home-page {
+  background-color: $darkCyan;
+  padding: 8%;
+  min-height: 70vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Profile Card Component */
+#profile {
+  background-color: $white;
+  text-align: center;
+  min-height: 20vh;
+  border-radius: 8px;
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+
+  position: relative;
+  margin-top: 10%;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.avatar-wrapper {
+  width: 10vh !important;
+  height: 10vh !important;
+  border-radius: 50% !important;
+  overflow: hidden;
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+  margin: auto;
+}

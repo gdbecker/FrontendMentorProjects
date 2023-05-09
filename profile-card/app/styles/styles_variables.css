@@ -1,0 +1,11 @@
+/* Primary Color Pallette */
+/* Neutral Color Pallette */
+/* Fonts */
+@font-face {
+  font-family: KumbhSans-Bold;
+  src: url(../../public/KumbhSans-Bold.ttf);
+}
+@font-face {
+  font-family: KumbhSans-Regular;
+  src: url(../../public/KumbhSans-Regular.ttf);
+}

@@ -1,0 +1,22 @@
+/* Primary Color Pallette */
+$darkCyan: hsl(185, 75%, 39%);
+$veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+$DarkGrayishBlue: hsl(227, 10%, 46%);
+
+/* Neutral Color Pallette */
+$white: #FFFFFF;
+$DarkGray: hsl(0, 0%, 59%);
+
+/* Fonts */
+@font-face {
+  font-family: KumbhSans-Bold;
+  src: url(../../public/KumbhSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: KumbhSans-Regular;
+  src: url(../../public/KumbhSans-Regular.ttf);
+}
+
+$KumbhSans-Bold: 'KumbhSans-Bold';
+$KumbhSans-Regular: 'KumbhSans-Regular';
