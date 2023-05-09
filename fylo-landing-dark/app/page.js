@@ -2,12 +2,18 @@
 import React from'react';
 import { useState, useEffect } from'react';
 import Image from 'next/image';
+import { FaFacebookF } from  'react-icons/fa';
+import { FaTwitter } from  'react-icons/fa';
+import { FaInstagram } from  'react-icons/fa';
 import Logo from '../public/logo.svg'
 import IconAccess from '../public/icon-access-anywhere.svg';
 import IconSecurity from '../public/icon-security.svg';
 import IconCollaboration from '../public/icon-collaboration.svg';
 import IconAnyFile from '../public/icon-any-file.svg';
 import IconArrow from '../public/icon-arrow.svg';
+import IconLocation from '../public/icon-location.svg';
+import IconPhone from '../public/icon-phone.svg';
+import IconEmail from '../public/icon-email.svg';
 import Profile1 from '../public/profile-1.jpg';
 import Profile2 from '../public/profile-2.jpg';
 import Profile3 from '../public/profile-3.jpg';
@@ -243,10 +249,10 @@ function Home() {
 
       <div className="section-register">
         <div className="register-box">
-          <div className="row mt-2">
+          <div className="row mt-3">
             <h1 className="register-header">Get early access today</h1>
           </div>
-          <div className="row mt-2">
+          <div className="row mt-1">
             <p className="register-text">
               It only takes a minute to sign up and our free starter tier is extremely generous. If you have any 
               questions, our support team would be happy to help you.
@@ -254,7 +260,7 @@ function Home() {
           </div>
           <div className="row mt-2">
             <form>
-              <div className="row mt-2">
+              <div className="row mt-1">
                 <div className="col-md-8">
                   <div className="form-group">
                     <input
@@ -282,14 +288,88 @@ function Home() {
       </div>
 
       <div className="section-footer">
-        <div className="row">
+        <Image
+          src={Logo}
+          alt="Logo"
+          width={145}
+          height={70}
+        />
+        <div className="row g-4">
           <div className="col-md-4">
-            <Image
-              src={Logo}
-              alt="Logo"
-              width={145}
-              height={70}
-            />
+            <div className="d-inline-flex flex-row">
+              <div className="col-1">
+                <Image
+                  src={IconLocation}
+                  alt="Location"
+                  width={15}
+                  height={15}
+                />
+              </div>
+              <div className="col-11 footer-location">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                dolore magna aliqua
+              </div>
+            </div>
+          </div>
+          <div className="col-md-2">
+            <div className="d-inline-flex flex-row">
+              <div className="p-1">
+                <Image
+                  src={IconPhone}
+                  alt="Phone"
+                  width={15}
+                  height={15}
+                />
+              </div>
+              <div className="p-2 footer-contact">
+                +1-543-123-4567
+              </div>
+            </div>
+            <div className="d-flex flex-row">
+              <div className="p-1">
+                <Image
+                  src={IconEmail}
+                  alt="Email"
+                  width={15}
+                  height={15}
+                />
+              </div>
+              <div className="p-2 footer-contact">
+                example@fylo.com
+              </div>
+            </div>
+          </div>
+          <div className="col-md-2">
+            <div className="d-flex flex-row">
+              <a href="/" className="footer-link">About Us</a>
+            </div>
+            <div className="d-flex flex-row">
+              <a href="/" className="footer-link">Jobs</a>
+            </div>
+            <div className="d-flex flex-row">
+              <a href="/" className="footer-link">Press</a>
+            </div>
+            <div className="d-flex flex-row">
+              <a href="/" className="footer-link">Blog</a>
+            </div>
+          </div>
+          <div className="col-md-2">
+            <div className="d-flex flex-row">
+              <a href="/" className="footer-link">Contact Us</a>
+            </div>
+            <div className="d-flex flex-row">
+              <a href="/" className="footer-link">Terms</a>
+            </div>
+            <div className="d-flex flex-row">
+              <a href="/" className="footer-link">Privacy</a>
+            </div>
+          </div>
+          <div className="col-md-2">
+            <div className="d-flex flex-row icon-row">
+              <div className="icon-wrapper">
+                <FaFacebookF />
+              </div>
+            </div>
           </div>
         </div>
       </div>

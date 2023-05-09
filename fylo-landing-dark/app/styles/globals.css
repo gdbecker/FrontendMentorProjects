@@ -251,8 +251,9 @@
   padding-left: 5%;
   padding-right: 5%;
   width: 60% !important;
+  border-radius: 8px;
   position: absolute;
-  top: -125px;
+  top: -135px;
   left: 0px;
   right: 0px;
   text-align: center;
@@ -275,6 +276,8 @@
   box-shadow: none !important;
   font-size: 0.7rem !important;
   border-radius: 35px !important;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .register-button {
@@ -290,6 +293,8 @@
   padding-top: auto !important;
   padding-bottom: auto !important;
   border-radius: 35px;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .register-button:hover {
@@ -297,8 +302,40 @@
 }
 
 .section-footer {
-  padding-top: 12%;
+  padding-top: 13%;
   background-color: hsl(216, 53%, 9%);
+  text-align: left;
+  padding-left: 10% !important;
+  padding-right: 10% !important;
+  padding-bottom: 6% !important;
+}
+
+.footer-location {
+  font-size: 0.9rem;
+}
+
+.footer-contact {
+  font-size: 0.8rem;
+}
+
+.footer-link {
+  color: #FFFFFF !important;
+  font-size: 0.9rem;
+  text-decoration: none !important;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.footer-link:hover {
+  font-family: "Raleway-Bold";
+}
+
+.icon-wrapper {
+  border: 1px solid #FFFFFF;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
 }
 
 @media (max-width: 620px) {
@@ -317,6 +354,7 @@
   .section-intro {
     padding-left: 8% !important;
     padding-right: 8% !important;
+    background-image: url(../../public/bg-curvy-mobile.svg);
   }
   .section-intro-pic {
     min-height: 45vh;
@@ -337,5 +375,9 @@
     padding-left: 8% !important;
     padding-right: 8% !important;
     background-position: 6.5vh -1vh;
+  }
+  .register-box {
+    position: relative !important;
+    margin-top: 40%;
   }
 }
