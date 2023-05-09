@@ -133,7 +133,7 @@
   border: 0px !important;
   outline: none !important;
   box-shadow: none !important;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   font-family: "OpenSans-Bold";
   padding-top: auto !important;
   padding-bottom: auto !important;
@@ -276,8 +276,6 @@
   box-shadow: none !important;
   font-size: 0.7rem !important;
   border-radius: 35px !important;
-  margin-top: 2%;
-  margin-bottom: 2%;
 }
 
 .register-button {
@@ -293,8 +291,6 @@
   padding-top: auto !important;
   padding-bottom: auto !important;
   border-radius: 35px;
-  margin-top: 2%;
-  margin-bottom: 2%;
 }
 
 .register-button:hover {
@@ -373,6 +369,7 @@
     padding-left: 8% !important;
     padding-right: 8% !important;
     background-image: url(../../public/bg-curvy-mobile.svg);
+    height: 70%;
   }
   .section-intro-pic {
     min-height: 45vh;
@@ -397,6 +394,10 @@
   .register-box {
     position: relative !important;
     margin-top: 40%;
+  }
+  .register-button {
+    margin-top: 4%;
+    margin-bottom: 4%;
   }
   .icon-row {
     text-align: center;
