@@ -36,28 +36,57 @@ function Home() {
         </div>
       </div>
 
-      <div className="row">
-        <div className="col">
-          <div className="col-transform">
-            <div className="row mt-2">
-              <h1 className="section-details-title">Transform your brand</h1>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-lg-6">
+            <div className="col-transform">
+              <div className="row mt-2">
+                <h1 className="section-details-title">Transform your brand</h1>
+              </div>
+              <div className="row mt-2">
+                <p className="section-details-text">
+                  We are a full-service creative agency specializing in helping brands grow fast. 
+                  Engage your clients through compelling visuals that do most of the marketing for you.
+                </p>
+              </div>
+              <div className="row mt-2">
+                <a href="/" className="section-details-link"><span className="transform">LEARN MORE</span></a>
+              </div>
             </div>
-            <div className="row mt-2">
-              <p className="section-details-text">
-                We are a full-service creative agency specializing in helping brands grow fast. 
-                Engage your clients through compelling visuals that do most of the marketing for you.
-              </p>
-            </div>
-            
+          </div>
+          <div className="col-lg-6">
+            <div className="col-egg"></div>
           </div>
         </div>
-        <div className="col">
-          <div className="col-egg"></div>
-        </div>
-            
-            
-
       </div>
+
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-lg-6">
+            <div className="col-cup"></div>
+          </div>
+          <div className="col-lg-6">
+            <div className="col-audience">
+              <div className="row mt-2">
+                <h1 className="section-details-title">Stand out to the right audience</h1>
+              </div>
+              <div className="row mt-2">
+                <p className="section-details-text">
+                  Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, 
+                  we’ll build and extend your brand in digital places. 
+                </p>
+              </div>
+              <div className="row mt-2">
+                <a href="/" className="section-details-link"><span className="audience">LEARN MORE</span></a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+
+  
     </div>
   )
 }
