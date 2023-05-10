@@ -10,7 +10,7 @@ function Home() {
 
   useEffect(() => {
     // import ('bootstrap/dist/js/bootstrap');
-    import ('bootstrap/dist/js/bootstrap.bundle');
+    // import ('bootstrap/dist/js/bootstrap.bundle');
     import ('bootstrap/dist/js/bootstrap.min.js');
     setLoading(false);
   }, []);
