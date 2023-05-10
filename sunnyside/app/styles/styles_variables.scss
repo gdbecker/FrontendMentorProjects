@@ -9,7 +9,8 @@ $darkModerateCyan: hsl(168, 34%, 41%); // (footer)
 
 
 /* Neutral Color Pallette */
-$white: #FFFFFF;
+$white: hsl(0, 0%, 100%);
+$whiteTransparent: hsl(0, 0%, 100%, 60%);
 $veryDarkDesaturatedBlue: hsl(212, 27%, 19%);
 $veryDarkGrayishBlue: hsl(213, 9%, 39%);
 $darkGrayishBlue: hsl(232, 10%, 55%);
