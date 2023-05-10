@@ -9,8 +9,6 @@ function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // import ('bootstrap/dist/js/bootstrap');
-    // import ('bootstrap/dist/js/bootstrap.bundle');
     import ('bootstrap/dist/js/bootstrap.min.js');
     setLoading(false);
   }, []);
@@ -36,6 +34,29 @@ function Home() {
           </div>
           
         </div>
+      </div>
+
+      <div className="row">
+        <div className="col">
+          <div className="col-transform">
+            <div className="row mt-2">
+              <h1 className="section-details-title">Transform your brand</h1>
+            </div>
+            <div className="row mt-2">
+              <p className="section-details-text">
+                We are a full-service creative agency specializing in helping brands grow fast. 
+                Engage your clients through compelling visuals that do most of the marketing for you.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+        <div className="col">
+          <div className="col-egg"></div>
+        </div>
+            
+            
+
       </div>
     </div>
   )

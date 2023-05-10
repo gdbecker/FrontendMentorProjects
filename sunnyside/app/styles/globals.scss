@@ -61,25 +61,10 @@
   /* display: none; */
 }
 
-// .navbar-light .navbar-burger {
-//   background-image: url(../../public/icon-hamburger.svg) !important;
-//   outline: none;
-//   box-shadow: none;
-// }
-
-@media(max-width: 720px) { 
-  // .navbar-collapse {
-  //   background-color:#FFFDFA;
-  //   width: 80%;
-  //   margin-top: 80%;
-  //   margin-left: 10rem;
-  //   position: absolute !important;;
-  //   padding: 3%;
-  //   padding-top: 20%;
-  //   height: 150vh;
-  //   top: auto;
-  //   z-index: 10;
-  // }
+.navbar-light .navbar-burger {
+  background-image: url(../../public/icon-hamburger.svg) !important;
+  outline: none;
+  box-shadow: none;
 }
 
 .icon-fill {
@@ -99,15 +84,46 @@
   // margin: 1%;
 }
 
-// .contact-button:hover {
-//   background-color: $white;
-//   color: $veryDarkDesaturatedBlue;
-//   // border: 1px solid #FFFFFF;
-// }
-
 .contact-button:hover {
   background-color: $whiteTransparent;
   color: $white;
+}
+
+@media(max-width: 986px) { 
+  .navbar-collapse {
+    background-color:#FFFDFA;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    // width: 80%;
+    // margin-top: 80%;
+    // margin-left: 10rem;
+    // position: absolute !important;;
+    // padding: 3%;
+    // padding-top: 20%;
+    // height: 150vh;
+    // top: auto;
+    // z-index: 10;
+  }
+
+  .nav-item {
+    padding: 7px 0px 7px 0px;
+  }
+
+  .nav-link {
+    color: $grayishBlue !important;
+  }
+
+  .nav-link:hover {
+    color: $softRed !important;
+  }
+
+  .contact-button {
+    background-color: $yellow;
+  }
+
+  .contact-button:hover {
+    background-color: $softRed;
+  }
 }
 
 /* Loading Page */
@@ -129,7 +145,7 @@
 
 /* Home Page */
 #home-page {
-  background-color: $darkBlue !important;
+  background-color: $white !important;
   background-color: white;;
   color: $white;
   // padding-left: 14%;
@@ -165,6 +181,36 @@
   font-family: $Fraunces-Black;
   letter-spacing: 9px;
   font-size: 2.9rem;
+}
+
+.section-details-title {
+  font-family: $Fraunces-Black;
+  font-size: 2.1rem;
+  color: $darkDesaturatedCyan;
+}
+
+.section-details-text {
+  color: $grayishBlue;
+  font-size: 0.9rem;
+}
+
+.col-transform {
+  padding: 18%;
+  padding-left: 25%;
+  text-align: left;
+}
+
+.col-egg {
+  background-image: url(../../public/desktop/image-transform.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  display: block;
+  min-height: 400px;
+  min-width: 400px;
+  height: auto;
+  width: auto;
 }
 
 @media(max-width: 620px) { 

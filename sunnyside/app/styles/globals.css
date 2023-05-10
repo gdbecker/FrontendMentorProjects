@@ -73,6 +73,12 @@
   /* display: none; */
 }
 
+.navbar-light .navbar-burger {
+  background-image: url(../../public/icon-hamburger.svg) !important;
+  outline: none;
+  box-shadow: none;
+}
+
 .icon-fill {
   color: #FFFFFF;
 }
@@ -94,6 +100,28 @@
   color: hsl(0, 0%, 100%);
 }
 
+@media (max-width: 986px) {
+  .navbar-collapse {
+    background-color: #FFFDFA;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .nav-item {
+    padding: 7px 0px 7px 0px;
+  }
+  .nav-link {
+    color: hsl(210, 4%, 67%) !important;
+  }
+  .nav-link:hover {
+    color: hsl(7, 99%, 70%) !important;
+  }
+  .contact-button {
+    background-color: hsl(51, 100%, 49%);
+  }
+  .contact-button:hover {
+    background-color: hsl(7, 99%, 70%);
+  }
+}
 /* Loading Page */
 #loading-page {
   background-color: hsl(198, 62%, 26%);
@@ -110,7 +138,7 @@
 
 /* Home Page */
 #home-page {
-  background-color: hsl(198, 62%, 26%) !important;
+  background-color: hsl(0, 0%, 100%) !important;
   background-color: white;
   color: hsl(0, 0%, 100%);
   min-height: 100vh;
@@ -137,6 +165,35 @@
   font-family: "Fraunces-Black";
   letter-spacing: 9px;
   font-size: 2.9rem;
+}
+
+.section-details-title {
+  font-family: "Fraunces-Black";
+  font-size: 2.1rem;
+  color: hsl(167, 40%, 24%);
+}
+
+.section-details-text {
+  color: hsl(210, 4%, 67%);
+  font-size: 0.9rem;
+}
+
+.col-transform {
+  padding: 18%;
+  padding-left: 25%;
+  text-align: left;
+}
+
+.col-egg {
+  background-image: url(../../public/desktop/image-transform.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: block;
+  min-height: 400px;
+  min-width: 400px;
+  height: auto;
+  width: auto;
 }
 
 @media (max-width: 620px) {
