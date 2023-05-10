@@ -1,6 +1,6 @@
 import './styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.css';
-import Navbar from './components/Navbar';
+import Navigation from './components/Navigation';
 
 export const metadata = {
   title: 'Frontend Mentor | Sunnyside Agency Landing Page',
@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
 
-        <Navbar />
+        <Navigation />
       
         {children}
 
