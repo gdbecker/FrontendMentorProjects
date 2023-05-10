@@ -69,10 +69,6 @@
   border: none !important;
 }
 
-.dropdown-toggle::after {
-  /* display: none; */
-}
-
 .navbar-light .navbar-burger {
   background-image: url(../../public/icon-hamburger.svg) !important;
   outline: none;
@@ -100,31 +96,16 @@
   color: hsl(0, 0%, 100%);
 }
 
-@media (max-width: 986px) {
-  .navbar-collapse {
-    background-color: #FFFDFA;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  .nav-item {
-    padding: 7px 0px 7px 0px;
-  }
-  .nav-link {
-    color: hsl(210, 4%, 67%) !important;
-  }
-  .nav-link:hover {
-    color: hsl(7, 99%, 70%) !important;
-  }
-  .contact-button {
-    background-color: hsl(51, 100%, 49%);
-  }
-  .contact-button:hover {
-    background-color: hsl(7, 99%, 70%);
-  }
+#navbarNav {
+  position: relative;
+  margin-top: 10px;
+  margin-right: 8px;
+  margin-left: 8px;
 }
+
 /* Loading Page */
 #loading-page {
-  background-color: hsl(198, 62%, 26%);
+  background-color: hsl(51, 100%, 80%);
   color: hsl(0, 0%, 100%);
   text-align: center;
   min-height: 100vh;
@@ -138,7 +119,7 @@
 
 /* Home Page */
 #home-page {
-  background-color: hsl(0, 0%, 100%) !important;
+  background-color: #FFFDFA !important;
   background-color: white;
   color: hsl(0, 0%, 100%);
   min-height: 100vh;
@@ -195,7 +176,8 @@ span.transform:hover {
 }
 
 div[class^=col-lg-6] {
-  padding: 0;
+  padding: 0 !important;
+  margin: 0;
 }
 
 .col-transform {
@@ -214,7 +196,6 @@ div[class^=col-lg-6] {
   background-position: center center;
   display: block;
   min-height: 450px;
-  min-width: 450px;
   max-width: 100% !important;
 }
 
@@ -247,12 +228,233 @@ span.audience:hover {
   box-shadow: inset 0 -0.6em 0 0 hsl(7, 99%, 70%);
 }
 
-@media (max-width: 620px) {
+.col-cherry {
+  background-image: url(../../public/desktop/image-graphic-design.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  display: block;
+  min-height: 450px;
+  max-width: 100% !important;
+  padding-top: 40vh;
+  padding-left: 15vh;
+  padding-right: 15vh;
+}
+
+.col-orange {
+  background-image: url(../../public/desktop/image-photography.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  display: block;
+  min-height: 450px;
+  min-width: 450px;
+  max-width: 100% !important;
+  padding-top: 40vh;
+  padding-left: 15vh;
+  padding-right: 15vh;
+}
+
+.section-details-subtitle {
+  font-family: "Fraunces-Black";
+  font-size: 1.5rem;
+  color: hsl(167, 40%, 24%);
+  padding-bottom: 10px;
+}
+
+.section-details-fruit {
+  color: hsl(167, 40%, 24%);
+  font-size: 0.8rem;
+}
+
+.section-testimonials {
+  padding: 18vh;
+  text-align: center;
+  justify-content: center;
+}
+
+.avatar-wrapper {
+  width: 8vh !important;
+  height: 8vh !important;
+  border-radius: 50% !important;
+  overflow: hidden;
+  text-align: center;
+  margin: auto;
+}
+
+.avatar-emily {
+  background-image: url(../../public/image-emily.jpg);
+  background-size: cover;
+}
+
+.avatar-thomas {
+  background-image: url(../../public/image-thomas.jpg);
+  background-size: cover;
+}
+
+.avatar-jennie {
+  background-image: url(../../public/image-jennie.jpg);
+  background-size: cover;
+}
+
+.section-testimonials-title {
+  font-family: "Fraunces-Black";
+  font-size: 1rem;
+  color: hsl(210, 4%, 67%);
+  letter-spacing: 4px;
+}
+
+.section-testimonials-text {
+  color: hsl(232, 10%, 55%);
+  font-size: 0.95rem;
+}
+
+.section-testimonials-name {
+  font-family: "Fraunces-Black";
+  color: hsl(167, 40%, 24%);
+  font-size: 1rem;
+}
+
+.section-testimonials-role {
+  color: hsl(210, 4%, 67%);
+  font-size: 0.8rem;
+}
+
+.col-milk {
+  background-image: url(../../public/desktop/image-gallery-milkbottles.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: block;
+  min-height: 360px;
+  max-width: 100% !important;
+}
+
+.col-bowl {
+  background-image: url(../../public/desktop/image-gallery-orange.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: block;
+  min-height: 360px;
+  max-width: 100% !important;
+}
+
+.col-cone {
+  background-image: url(../../public/desktop/image-gallery-cone.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: block;
+  min-height: 360px;
+  max-width: 100% !important;
+}
+
+.col-cubes {
+  background-image: url(../../public/desktop/image-gallery-sugarcubes.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: block;
+  min-height: 360px;
+  max-width: 100% !important;
+}
+
+div[class^=col-6] {
+  padding: 0 !important;
+  margin: 0;
+}
+
+.section-footer {
+  background-color: hsl(168, 34%, 59%);
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+}
+
+.section-footer-logo {
+  color: hsl(167, 40%, 24%);
+}
+
+.section-footer-link {
+  color: hsl(167, 40%, 24%);
+  text-decoration: none;
+  display: inline !important;
+  padding: 15px;
+}
+
+.section-footer-link:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+@media (max-width: 986px) {
+  .navbar-collapse {
+    background-color: #FFFDFA;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .nav-item {
+    padding: 7px 0px 7px 0px;
+  }
+  .nav-link {
+    color: hsl(210, 4%, 67%) !important;
+  }
+  .nav-link:hover {
+    color: hsl(7, 99%, 70%) !important;
+  }
+  .contact-button {
+    background-color: hsl(51, 100%, 49%);
+  }
+  .contact-button:hover {
+    background-color: hsl(7, 99%, 70%);
+  }
+  .triangle {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(to bottom right, transparent 0%, transparent 50%, hsl(0, 0%, 100%) 50%, hsl(0, 0%, 100%) 100%);
+    position: absolute;
+    right: 0px;
+    top: -30px;
+  }
+}
+@media (max-width: 986px) {
   .section-header {
     background-image: url(../../public/mobile/image-header.jpg);
     padding-top: 100px;
   }
   .section-header-title {
     letter-spacing: 2px;
+  }
+  .row-egg {
+    flex-direction: column-reverse;
+  }
+  .col-egg {
+    background-image: url(../../public/mobile/image-transform.jpg);
+  }
+  .col-cup {
+    background-image: url(../../public/mobile/image-stand-out.jpg);
+  }
+  .col-cherry {
+    background-image: url(../../public/mobile/image-graphic-design.jpg);
+  }
+  .col-orange {
+    background-image: url(../../public/mobile/image-photography.jpg);
+  }
+  .col-milk {
+    background-image: url(../../public/mobile/image-gallery-milkbottles.jpg);
+    min-height: 260px;
+  }
+  .col-bowl {
+    background-image: url(../../public/mobile/image-gallery-orange.jpg);
+    min-height: 260px;
+  }
+  .col-cone {
+    background-image: url(../../public/mobile/image-gallery-cone.jpg);
+    min-height: 260px;
+  }
+  .col-cubes {
+    background-image: url(../../public/mobile/image-gallery-sugar-cubes.jpg);
+    min-height: 260px;
   }
 }

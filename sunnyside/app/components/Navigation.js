@@ -28,10 +28,10 @@ function Navigation() {
           <a className="navbar-brand" href="/">
             <h1 className="logo">
               <Image
-              src={Logo}
-              alt="logo"
-              width={140}
-              height={75}
+                src={Logo}
+                alt="logo"
+                width={140}
+                height={75}
               />
             </h1>
           </a>
@@ -46,6 +46,7 @@ function Navigation() {
             <span className="navbar-toggler-icon navbar-burger"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
+            <div className="triangle"></div>
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
                   <a className="nav-link" href="/">About</a>
