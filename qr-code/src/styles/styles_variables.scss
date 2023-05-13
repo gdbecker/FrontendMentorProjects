@@ -1,0 +1,20 @@
+/* Neutral Color Palette */
+$white: #FFFFFF;
+$offWhite: #F0F0F0;
+$lightGrey: #DBDBDB;
+$grayishBlue: #7B879D;
+$darkBlue: #1F3251;
+
+/* Imported Fonts */
+@font-face {
+  font-family: Outfit-Bold;
+  src: url(assets/fonts/Outfit-Bold.ttf);
+}
+
+@font-face {
+  font-family: Outfit-Regular;
+  src: url(assets/fonts/Outfit-Regular.ttf);
+}
+
+$KumbhSans-Bold: 'KumbhSans-Bold';
+$KumbhSans-Regular: 'KumbhSans-Regular';
