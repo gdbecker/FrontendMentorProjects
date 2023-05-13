@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts */
+@font-face {
+  font-family: Inter-Regular;
+  src: url(../../public/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: Inter-Bold;
+  src: url(../../public/Inter-Bold.ttf);
+}
+
+@font-face {
+  font-family: LexendDeca-Regular;
+  src: url(../../public/LexendDeca-Regular.ttf);
+}
+
+
