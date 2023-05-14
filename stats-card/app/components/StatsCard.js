@@ -1,7 +1,4 @@
 import React from 'react'
-import Image from 'next/image';
-import headerDesktop from '../../public/image-header-desktop.jpg'
-import headerMobile from '../../public/image-header-mobile.jpg'
 
 function StatsCard() {
   return (
