@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts */
+@font-face {
+  font-family: Barlow-Medium;
+  src: url(../../public/BarlowSemiCondensed-Medium.ttf);
+}
+@font-face {
+  font-family: Barlow-SemiBold;
+  src: url(../../public/BarlowSemiCondensed-SemiBold.ttf);
+}

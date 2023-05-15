@@ -1,13 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import Image from 'next/image';
-import IconFacebook from '../public/icon-facebook.svg';
-import IconTwitter from '../public/icon-twitter.svg';
-import IconInstagram from '../public/icon-instagram.svg';
-import IconYouTube from '../public/icon-youtube.svg';
-import IconUp from '../public/icon-up.svg';
-import IconDown from '../public/icon-down.svg';
-
+import LoadingPage from './loading';
 import DetailCard from './components/DetailCard';
 import AccountCard from './components/AccountCard';
 
