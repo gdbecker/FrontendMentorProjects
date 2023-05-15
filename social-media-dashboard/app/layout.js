@@ -14,8 +14,8 @@ export default function RootLayout({ children }) {
         {children}
 
         <div className="text-center font-interRegular text-sm">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" className=" font-interBold hover:text-lightTheme-500">Frontend Mentor</a>. 
-          Coded by <a href="#" className="font-interBold hover:text-lightTheme-500">Garrett Becker</a>.
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" className=" font-interBold hover:text-lightTheme-400">Frontend Mentor</a>. 
+          Coded by <a href="#" className="font-interBold hover:text-lightTheme-400">Garrett Becker</a>.
         </div>
       </body>
     </html>

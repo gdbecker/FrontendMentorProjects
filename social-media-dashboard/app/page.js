@@ -8,6 +8,9 @@ import IconYouTube from '../public/icon-youtube.svg';
 import IconUp from '../public/icon-up.svg';
 import IconDown from '../public/icon-down.svg';
 
+import DetailCard from './components/DetailCard';
+import AccountCard from './components/AccountCard';
+
 function Home() {
   const [darkMode, setDarkMode] = useState(true);
 
@@ -37,7 +40,44 @@ function Home() {
         </section>
 
         <section className="flex flex-col gap-x-8 gap-y-5 w-full px-6 pb-10 mt-[-40px] lg:flex-row lg:flex-wrap lg:mt-[-125px]">  
-          <a href="/" className="basis-1/5 flex-1 bg-facebook pt-1 rounded-md">
+
+          <AccountCard 
+            social="facebook"
+            handle="@nathanf"
+            value="1987"
+            title="FOLLOWERS"
+            direction="up"
+            count="12"
+          />
+
+          <AccountCard 
+            social="twitter"
+            handle="@nathanf"
+            value="1044"
+            title="FOLLOWERS"
+            direction="up"
+            count="99"
+          />
+
+          <AccountCard 
+            social="instagram"
+            handle="@realnathanf"
+            value="11k"
+            title="FOLLOWERS"
+            direction="up"
+            count="1099"
+          />
+
+          <AccountCard 
+            social="youtube"
+            handle="Nathan F."
+            value="8239"
+            title="SUBSCRIBERS"
+            direction="down"
+            count="144"
+          />
+
+          {/* <a href="/" className="basis-1/5 flex-1 bg-facebook pt-1 rounded-md">
             <div className="bg-lightTheme-300 text-center justify-center rounded-bl-md rounded-br-md hover:bg-lightToggle dark:bg-darkTheme-300 dark:hover:bg-lightTheme-400">
               <div className="justify-center flex flex-row py-7">
                 <Image src={IconFacebook} alt="Facebook" width={20} height={20}/>
@@ -92,13 +132,85 @@ function Home() {
                 <p className="text-red font-interBold text-sm px-2">144 Today</p>
               </div>
             </div>
-          </a>
+          </a> */}
         </section>
 
         <section className="px-6 pb-10">
           <h1 className="py-4 font-interBold text-2xl text-lightTheme-400 dark:text-darkTheme-500">Overview - Today</h1>
           <div className="flex flex-col gap-x-8 gap-y-5 w-full lg:flex-row lg:flex-wrap">
-            <a href="/" className="basis-1/5 flex-1 grid grid-cols-2 px-8 py-6 bg-lightTheme-300 rounded-md hover:bg-lightToggle dark:bg-darkTheme-300 dark:hover:bg-lightTheme-400">
+            <DetailCard 
+              title="Page Views"
+              value="87"
+              social="facebook"
+              percent="3"
+              direction="up"
+              darkMode={darkMode}
+            />
+
+            <DetailCard 
+              title="Likes"
+              value="52"
+              social="facebook"
+              percent="2"
+              direction="down"
+              darkMode={darkMode}
+            />
+
+            <DetailCard 
+              title="Likes"
+              value="5462"
+              social="instagram"
+              percent="2275"
+              direction="up"
+              darkMode={darkMode}
+            />
+
+            <DetailCard 
+              title="Profile Views"
+              value="52k"
+              social="instagram"
+              percent="1375"
+              direction="up"
+              darkMode={darkMode}
+            />
+
+            <DetailCard 
+              title="Retweets"
+              value="117"
+              social="twitter"
+              percent="303"
+              direction="up"
+              darkMode={darkMode}
+            />
+
+            <DetailCard 
+              title="Likes"
+              value="507"
+              social="twitter"
+              percent="553"
+              direction="up"
+              darkMode={darkMode}
+            />
+
+            <DetailCard 
+              title="Likes"
+              value="107"
+              social="youtube"
+              percent="30193"
+              direction="down"
+              darkMode={darkMode}
+            />
+
+            <DetailCard 
+              title="Total Views"
+              value="1407"
+              social="youtube"
+              percent="12"
+              direction="down"
+              darkMode={darkMode}
+            /> 
+
+            {/* <a href="/" className="basis-1/5 flex-1 grid grid-cols-2 px-8 py-6 bg-lightTheme-300 rounded-md hover:bg-lightToggle dark:bg-darkTheme-300 dark:hover:bg-lightTheme-400">
               <div className="flex h-10 items-start justify-left">
                 <p className="font-interBold text-sm text-lightTheme-400 dark:text-darkTheme-400">Page Views</p>
               </div>
@@ -233,7 +345,7 @@ function Home() {
                   <p className="text-red font-interBold text-sm ml-2">12%</p>
                 </div>
               </div>
-            </a>
+            </a> */}
           </div>
         </section>
         
