@@ -5,7 +5,7 @@ function StatsCard() {
     <div id="stats-card" className="text-center md:text-left h-screen md:max-h-[56vh]">
       <div className="flex flex-col h-full justify-center items-center rounded-lg overflow-hidden md:flex-row-reverse">
         <div className="w-full h-full bg-[url('../../public/image-header-mobile.jpg')] bg-cover bg-center bg-no-repeat md:bg-[url('../../public/image-header-desktop.jpg')]">
-          <div className=" flex w-full min-h-[200px] bg-violet/60 md:h-full">
+          <div className="flex w-full min-h-[200px] bg-violet/60 md:h-full">
           </div> 
         </div>
         <div className="w-full h-fit bg-darkDesaturatedBlue font-interRegular px-20 py-10 md:px-16 md:py-14">
