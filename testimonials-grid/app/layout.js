@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
       
         {children}
 
-        <div className="text-center font-interRegular text-sm">
+        <div className="text-center font-barlowMedium text-sm">
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" className=" font-barlowMedium hover:text-violet-100">Frontend Mentor</a>. 
           Coded by <a href="#" className="font-barlowMedium hover:text-violet-100">Garrett Becker</a>.
         </div>
