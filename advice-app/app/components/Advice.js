@@ -13,14 +13,8 @@ function Advice({ data, fetchNewData }) {
   return (
     <div className="relative bg-darkGrayishBlue mt-10 px-10 pb-14 w-[70vh] min-h-full rounded-lg md:w-[60vh]">
       <div className="flex flex-col">
-        {/* <div className="flex flex-row m-atuo"> */}
-          <p className="text-green text-center text-xs tracking-[0.2em] pt-10 pb-2">ADVICE #{data.id}</p>
-        {/* </div> */}
-
-        {/* <div className="flex flex-row"> */}
-          <h3 className="text-cyan text-xl py-4">"{data.advice}"</h3>
-        {/* </div> */}
-
+        <p className="text-green text-center text-xs tracking-[0.2em] pt-10 pb-2">ADVICE #{data.id}</p>
+        <h3 className="text-cyan text-xl py-4">"{data.advice}"</h3>
         <div className="flex flex-row">
           <Image 
             src={IconDividerDesktop}
@@ -30,7 +24,6 @@ function Advice({ data, fetchNewData }) {
             className="mx-auto py-2"
           />
         </div>
-        
         <div className="flex flex-row">
           <button onClick={onClick} className="absolute m-auto left-0 right-0 bottom-[-30px] bg-green py-4 w-[60px] h-[60px] rounded-full hover:shadow-[0_0px_30px] hover:shadow-green">
             <Image 
@@ -42,10 +35,6 @@ function Advice({ data, fetchNewData }) {
             />
           </button>
         </div>
-        
-        
-        
-        
       </div>
     </div>
   )

@@ -17,7 +17,6 @@ function Home() {
     const response = await fetch(
       'https://api.adviceslip.com/advice', {
         headers: {
-          // "Content-Type": "application/json",
           "Accept": "application/json"
         }
       }
