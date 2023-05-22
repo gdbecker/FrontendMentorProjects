@@ -9,7 +9,6 @@ function Home() {
 
   const onClick = async (e) => {
     setDarkMode(!darkMode);
-    console.log(darkMode);
   }
 
   return (
