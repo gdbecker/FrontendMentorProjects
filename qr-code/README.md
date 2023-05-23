@@ -5,6 +5,7 @@ This is my solution to the [QR code component challenge on Frontend Mentor](http
 ## Table of contents
 
 - [Overview](#overview)
+  - [Project Brief](#project-brief)
   - [Desktop View](#desktop-view)
   - [Mobile View](#mobile-view)
   - [Links](#links)
@@ -18,7 +19,7 @@ This is my solution to the [QR code component challenge on Frontend Mentor](http
 
 ## Overview
 
-### Project Brief
+### [Project Brief](./project%20brief/)
 
 Your challenge is to build out this QR code component and get it looking as close to the design as possible.
 
