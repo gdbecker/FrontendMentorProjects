@@ -6,6 +6,7 @@ Check out links below for each project's live demo, my Frontend Mentor solution,
 
 ## Finished Solutions
 
+| Syntax | Description |
 | ----------- | ----------- |
 | Header | Title |
 | Paragraph | Text |
