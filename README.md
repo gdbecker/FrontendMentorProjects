@@ -14,6 +14,6 @@ Check out links below for each project's live demo, my Frontend Mentor solution,
 | Advanced | ⭐️⭐️⭐️⭐️ |
 | Guru | ⭐️⭐️⭐️⭐️⭐️ |
 
-| Project | Level | Live Demo | Solution | Brief |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| [QR Code Component](./qr-code/) | ⭐️ | [Live](https://qr-code-gdbecker.netlify.app) | [Solution](https://www.frontendmentor.io/solutions/qr-code-component-hosted-on-netlify-rwLGIUAbUi) | [Brief](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H) |
+| Project | Level | Tools & Approach |
+| ----------- | ----------- | ----------- |
+| [QR Code Component](./qr-code/) [Live](https://qr-code-gdbecker.netlify.app) [Solution](https://www.frontendmentor.io/solutions/qr-code-component-hosted-on-netlify-rwLGIUAbUi) [Brief](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H) | ⭐️ | React, Bootstrap |
