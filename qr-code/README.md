@@ -38,7 +38,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 ### Links
 
 - Solution URL: [Coming soon!](https://your-solution-url.com)
-- Live Site URL: [Coming soon!](https://qr-code-gdbecker.netlify.app)
+- [Live Site URL](https://qr-code-gdbecker.netlify.app)
 
 ## My process
 
