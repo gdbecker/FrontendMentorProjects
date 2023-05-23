@@ -46,7 +46,7 @@ This is my solution to the [QR code component challenge on Frontend Mentor](http
 
 I decided to try Frontend Mentor as a way to challenge myself in frontend design and push myself to grow more comfortable and fluent in this stack - and so far I'm loving it! This QR code project was a great way to get familiar with React again as well as some basic CSS styles. Getting the QR image right was the trickiest part; I had to play around with the Bootstrap settings a bit to make sure everything stayed centered. It was a good reminder to keep my styles code cohesive and simple.
 
-Here are some code samples I'm proud of from this project:
+Here are a few code samples from this project:
 
 ```html
 <div className="row">
