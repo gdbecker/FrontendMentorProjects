@@ -1,6 +1,6 @@
 # Frontend Mentor - QR Code Component Solution
 
-This is my solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). Frontend Mentor challenges are a great way to help improve coding skills by building realistic projects. 
+This is my solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). I'm super thankful to have found Frontend Mentor as a great way to confidently grow in my coding skills with real-life projects. 
 
 ## Table of contents
 
@@ -17,6 +17,14 @@ This is my solution to the [QR code component challenge on Frontend Mentor](http
 - [Acknowledgments](#acknowledgments)
 
 ## Overview
+
+### Project Brief
+
+Your challenge is to build out this QR code component and get it looking as close to the design as possible.
+
+You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+
+Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
 
 ### Desktop View
 
@@ -44,7 +52,7 @@ This is my solution to the [QR code component challenge on Frontend Mentor](http
 
 ### What I learned
 
-I decided to try Frontend Mentor as a way to challenge myself in frontend design and push myself to grow more comfortable and fluent in this stack - and so far I'm loving it! This QR code project was a great way to get familiar with React again as well as some basic CSS styles. Getting the QR image right was the trickiest part; I had to play around with the Bootstrap settings a bit to make sure everything stayed centered. It was a good reminder to keep my styles code cohesive and simple.
+I decided to try Frontend Mentor as a way to challenge myself in frontend design and push myself to grow more comfortable and fluent in this stack - and so far I'm loving it! This QR code project was a great way to get familiar with React again as well as some basic CSS. Getting the QR image right was the trickiest part; I had to play around with the Bootstrap settings a bit to make sure it was centered and even. It was a good reminder to keep my style code cohesive and simple.
 
 Here are a few code samples from this project:
 
