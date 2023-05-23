@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -6,11 +7,21 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    colors: {
+      'white': {
+        100: "hsl(0, 0%, 100%)",
+        200: "hsla(0, 0%, 100%, 0.75)",
+        300: "hsla(0, 0%, 100%, 0.6)",
+      },
+      "offWhite": "#F0F0F0",
+      "violet": "hsl(257, 40%, 49%)",
+      "magenta": "hsl(300, 69%, 71%)",
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        poppinsRegular: "Poppins-Regular",
+        poppinsSemiBold: "Poppins-SemiBold",
+        opensansRegular: "OpenSans-Regular",
       },
     },
   },
