@@ -1,11 +1,12 @@
 # Frontend Mentor - QR Code Component Solution
 
-This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is my solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). Frontend Mentor challenges are a great way to help improve coding skills by building realistic projects. 
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [Screenshot](#screenshot)
+  - [Desktop View](#desktop-view)
+  - [Mobile View](#mobile-view)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -15,13 +16,15 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
-### Screenshot
+### Desktop View
 
-![](./qr-code-screenshot.jpg)
+![](./qr-code-desktop.jpg)
+
+### Mobile View
+
+![](./qr-code-mobile.jpg)
 
 ### Links
 
@@ -32,60 +35,50 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- HTML5
+- CSS custom properties
+- Bootstrap
+- Mobile-first workflow
+- [VS Code](https://code.visualstudio.com)
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I decided to try Frontend Mentor as a way to challenge myself in frontend design and push myself to grow more comfortable and fluent in this stack - and so far I'm loving it! This QR code project was a great way to get familiar with React again as well as some basic CSS styles. Getting the QR image right was the trickiest part; I had to play around with the Bootstrap settings a bit to make sure everything stayed centered. It was a good reminder to keep my styles code cohesive and simple.
 
-To see how you can add code snippets, see below:
+Here are some code samples I'm proud of from this project:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div className="row">
+  <div className="qr-box"></div>
+</div>
 ```
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.qr-box {
+	background-image: url(assets/image-qr-code.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 10px;
+	min-height: 250px;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+As a starter developer, I want to keep growing in working as a team and learning how to deliver smaller packages of code at a time, such as components like this one. I thought this project was a good way to get back into React and begin doing just that!
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Taking screenshots on Safari for Mac](https://eshop.macsales.com/blog/76508-take-a-screenshot-of-an-entire-webpage/) - This was a helpful way I found to take screenshots on Safari for Mac. Another way I'll use is to print a page to PDF, and then convert to .jpg or .png format.
+- [CSS Box Shadows](https://getcssscan.com/css-box-shadow-examples) - These are a helpful set of box-shadow styles with a wide variety of styles. This is one of those settings I'm coming to grips with so this is a great way to find one to start off with and then modify as needed.
 
 ## Author
 
 - Website - [Garrett Becker]()
 - Frontend Mentor - [@gdbecker](https://www.frontendmentor.io/profile/gdbecker)
 - LinkedIn - [Garrett Becker](https://www.linkedin.com/in/garrett-becker-923b4a106/)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 
