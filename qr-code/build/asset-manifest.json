@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/FrontendMentorProjects/qr-code/static/css/main.2761a0f0.css",
-    "main.js": "/FrontendMentorProjects/qr-code/static/js/main.4428fddc.js",
-    "static/js/787.bf125a00.chunk.js": "/FrontendMentorProjects/qr-code/static/js/787.bf125a00.chunk.js",
-    "static/media/Outfit-Bold.ttf": "/FrontendMentorProjects/qr-code/static/media/Outfit-Bold.36c68bf1f2dd2db40a39.ttf",
-    "static/media/Outfit-Regular.ttf": "/FrontendMentorProjects/qr-code/static/media/Outfit-Regular.51d1bb828dff5d66e85e.ttf",
-    "index.html": "/FrontendMentorProjects/qr-code/index.html",
-    "main.2761a0f0.css.map": "/FrontendMentorProjects/qr-code/static/css/main.2761a0f0.css.map",
-    "main.4428fddc.js.map": "/FrontendMentorProjects/qr-code/static/js/main.4428fddc.js.map",
-    "787.bf125a00.chunk.js.map": "/FrontendMentorProjects/qr-code/static/js/787.bf125a00.chunk.js.map"
+    "main.css": "./static/css/main.dc2b26ce.css",
+    "main.js": "./static/js/main.dda78078.js",
+    "static/js/787.bf125a00.chunk.js": "./static/js/787.bf125a00.chunk.js",
+    "static/media/Outfit-Bold.ttf": "./static/media/Outfit-Bold.36c68bf1f2dd2db40a39.ttf",
+    "static/media/Outfit-Regular.ttf": "./static/media/Outfit-Regular.51d1bb828dff5d66e85e.ttf",
+    "index.html": "./index.html",
+    "main.dc2b26ce.css.map": "./static/css/main.dc2b26ce.css.map",
+    "main.dda78078.js.map": "./static/js/main.dda78078.js.map",
+    "787.bf125a00.chunk.js.map": "./static/js/787.bf125a00.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2761a0f0.css",
-    "static/js/main.4428fddc.js"
+    "static/css/main.dc2b26ce.css",
+    "static/js/main.dda78078.js"
   ]
 }
