@@ -6,7 +6,14 @@ Check out links below for each project's live demo, my Frontend Mentor solution,
 
 ## Finished Solutions
 
-| Syntax | Description |
+| Project Difficulty Level | Key |
 | ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
+| Newbie | ⭐️ |
+| Junior | ⭐️⭐️ |
+| Intermediate | ⭐️⭐️⭐️ |
+| Advanced | ⭐️⭐️⭐️⭐️ |
+| Guru | ⭐️⭐️⭐️⭐️⭐️ |
+
+| Project | Level | Live Demo | Solution | Brief |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| QR Code Component | ⭐️ | [Live](https://qr-code-gdbecker.netlify.app) | Solution Coming soon! | [Brief](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H) |
