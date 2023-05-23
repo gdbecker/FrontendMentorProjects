@@ -37,7 +37,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### Links
 
-- Solution URL: [Coming soon!](https://your-solution-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/qr-code-component-hosted-on-netlify-rwLGIUAbUi)
 - [Live Site URL](https://qr-code-gdbecker.netlify.app)
 
 ## My process
