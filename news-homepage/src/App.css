@@ -41,16 +41,16 @@ Very dark blue - transparent:	hsla(240, 100%, 5%, 20%)
   background-color: #FFFDFA;
   color: #FFFFFF;
   min-height: 100vh;
-  width: auto;
   padding-left: 1%;
+  width: auto;
 }
 
 /* Navigation */
 #navigation {
   background-color: #FFFDFA;
-  text-align: left;
   font-family: Inter-Regular;
   margin: 3%;
+  text-align: left;
 }
 
 .navbar {
@@ -67,8 +67,8 @@ Very dark blue - transparent:	hsla(240, 100%, 5%, 20%)
 }
 
 .nav-link {
-  font-size: 1.2rem;
   color: #00001A !important;
+  font-size: 1.2rem;
 }
 
 .nav-link:hover {
@@ -81,39 +81,39 @@ Very dark blue - transparent:	hsla(240, 100%, 5%, 20%)
 
 .navbar-light .navbar-burger {
   background-image: url(assets/icon-menu.svg) !important;
-  outline: none;
   box-shadow: none;
+  outline: none;
 }
 
 .navbar-light .navbar-x {
   background-image: url(assets/icon-menu-close.svg) !important;
-  outline: none;
   box-shadow: none;
   margin-bottom: 50%;
+  outline: none;
 }
 
 @media(min-width: 700px) {
   .navbar-light .navbar-x {
     background-image: none !important;
-    outline: none;
     box-shadow: none;
     margin-bottom: 50%;
+    outline: none;
   }
 }
 
 @media(max-width: 700px) { 
   .navbar-collapse {
     background-color:#FFFDFA;
-    width: 80%;
+    box-shadow: -400px 0 5px -1px hsla(240, 100%, 5%, 55%) !important;
     margin-top: 500px;
     margin-left: 10rem;
-    position: fixed;
+    min-height: 120vh;
     padding-left: 15px;
     padding-right: 50px;
     padding-top: 120px;
-    min-height: 120vh;
+    position: fixed;
+    width: 80%;
     z-index: 10;
-    box-shadow: -400px 0 5px -1px hsla(240, 100%, 5%, 55%) !important;
   }
 
   .navbar-toggler {
@@ -131,11 +131,11 @@ Very dark blue - transparent:	hsla(240, 100%, 5%, 20%)
 
 .block-pic-1 {
   background-image: url(assets/image-web-3-desktop.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center center;
-  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 40vh;
+  width: 100%;
 }
 
 .news-header {
@@ -144,21 +144,21 @@ Very dark blue - transparent:	hsla(240, 100%, 5%, 20%)
 }
 
 .news-text {
-  font-size: 15px;
   color: #5D5F79;
+  font-size: 15px;
 }
 
 .read-more-button {
-  height: 45px;
-  width: 50%;
-  border:0!important;
-  background-color: #F15E50;
-  color: #FFFDFA;
-  align-items: center;
-  font-size: 13px;
-  padding-top: 1%;
-  letter-spacing: 3px;
-  margin-bottom: 5%;
+	align-items: center;
+	background-color: #F15E50;
+	border: 0!important;
+	color: #FFFDFA;
+	font-size: 13px;
+	height: 45px;
+	letter-spacing: 3px;
+	margin-bottom: 5%;
+	padding-top: 1%;
+	width: 50%;
 }
 
 .read-more-button:hover {
@@ -201,35 +201,35 @@ hr {
 }
 
 .block-pic-2 {
-  background-image: url(assets/image-retro-pcs.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 100%;
-  min-height: 17vh;
+	background-image: url(assets/image-retro-pcs.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 17vh;
+	width: 100%;
 }
 
 .block-pic-3 {
-  background-image: url(assets/image-top-laptops.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 100%;
-  min-height: 17vh;
+	background-image: url(assets/image-top-laptops.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 17vh;
+	width: 100%;
 }
 
 .block-pic-4 {
-  background-image: url(assets/image-gaming-growth.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 100%;
-  min-height: 17vh;
+	background-image: url(assets/image-gaming-growth.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 17vh;
+	width: 100%;
 }
 
 .bottom-section-header {
-  font-family: Inter-ExtraBold;
   color: #C5C6CE;
+  font-family: Inter-ExtraBold;
   font-size: 34px;
 }
 
