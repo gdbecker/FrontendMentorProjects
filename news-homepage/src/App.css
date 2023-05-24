@@ -92,7 +92,7 @@ Very dark blue - transparent:	hsla(240, 100%, 5%, 20%)
   outline: none;
 }
 
-@media(min-width: 700px) {
+@media(min-width: 600px) {
   .navbar-light .navbar-x {
     background-image: none !important;
     box-shadow: none;
@@ -101,23 +101,25 @@ Very dark blue - transparent:	hsla(240, 100%, 5%, 20%)
   }
 }
 
-@media(max-width: 700px) { 
+@media(max-width: 600px) { 
   .navbar-collapse {
     background-color:#FFFDFA;
-    box-shadow: -400px 0 5px -1px hsla(240, 100%, 5%, 55%) !important;
-    margin-top: 500px;
-    margin-left: 10rem;
+    box-shadow: -300px 0px 0px 0px hsla(240, 100%, 5%, 55%) !important;
+    
+    margin-top: 525px;
+    /* margin-left: 10rem; */
     min-height: 120vh;
     padding-left: 15px;
     padding-right: 50px;
     padding-top: 120px;
     position: fixed;
-    width: 80%;
+    right: 0;
+    width: 300px;
     z-index: 10;
   }
 
-  .navbar-toggler {
-    margin-left: 72%;
+  .navbar-x {
+    margin-left: 215px;
   }
 }
 
