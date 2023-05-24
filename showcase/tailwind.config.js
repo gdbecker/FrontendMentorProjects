@@ -6,11 +6,25 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    colors: { 
+      "white": "hsl(0, 0%, 100%)",
+      "darkBlue": "#1c2023",
+      "red": "#ec2c4c",
+      "lightGray": "hsl(0, 0%, 81%)",
+      "grayishBlue": "hsl(217, 19%, 35%)",
+      "lightPurple": "#b5bedd",
+      "darkPurple": "#3e53a2",
+      "level1": "#89ccd9",
+      "level2": "#b1dc52",
+      "level3": "#f4b404",
+      "level4": "#f48c24",
+      "level5": "#ec2c4c",
+
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        heeboRegular: "Heebo-Regular",
+        heeboBold: "Heebo-Bold",
       },
     },
   },

@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts */
+@font-face {
+  font-family: Heebo-Regular;
+  src: url(../../public/Heebo-Regular.ttf);
+}
+
+@font-face {
+  font-family: Heebo-Bold;
+  src: url(../../public/Heebo-Bold.ttf);
+}
+
+/* Project backgrounds */
+.bg-qr-code {
+  background-image: url(../../public/qr-code-desktop.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-nft-card {
+  background-image: url(../../public/nft-card-desktop.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-news-homepage {
+  background-image: url(../../public/news-homepage-desktop.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Link Underline Animation */
+.project-link {
+  position: relative;
+  text-decoration: none;
+}
+
+.project-link::before {
+  background-color: red;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 2px;
+	left: 0;
+	position: absolute;
+	transform: scaleX(0);
+	transition: transform 0.35s ease;
+	width: 100%;
+}
+
+.project-link:hover::before {
+  transform: scaleX(1);
+}
