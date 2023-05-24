@@ -47,7 +47,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### Links
 
-- [Solution URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/news-homepage-with-react-bootstrap-tkackbvjn1)
 - [Live Site URL](https://news-homepage-gdbecker.netlify.app)
 
 ## My process
