@@ -80,6 +80,7 @@ Very dark blue (line): #2F415B
   border-radius: 7px;
   max-width: 250px !important;
   min-height: 230px !important;
+  color: transparent !important;
 }
 
 .nft-box-wrapper:hover {

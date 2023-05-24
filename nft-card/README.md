@@ -42,7 +42,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### Links
 
-- [Solution URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/nft-card-component-with-react-bootstrap-hiW4LJD-cc)
 - [Live Site URL](https://nft-card-gdbecker.netlify.app)
 
 ## My process

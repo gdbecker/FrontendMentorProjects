@@ -17,4 +17,4 @@ Check out links below for each project's live demo, my Frontend Mentor solution,
 | Project | Level | Links | Tools & Approach |
 | ----------- | ----------- | ----------- | ----------- |
 | [QR Code Component](./qr-code/) | ⭐️ | [Live Demo](https://qr-code-gdbecker.netlify.app) / [Solution](https://www.frontendmentor.io/solutions/qr-code-component-hosted-on-netlify-rwLGIUAbUi) / [Project Brief](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H) | React, Bootstrap |
-| [NFT Preview Card Component](./nft-card/) | ⭐️ | [Live Demo](https://nft-card-gdbecker.netlify.app) / [Solution]() / [Project Brief](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U) | React, Bootstrap |
+| [NFT Preview Card Component](./nft-card/) | ⭐️ | [Live Demo](https://nft-card-gdbecker.netlify.app) / [Solution](https://www.frontendmentor.io/solutions/nft-card-component-with-react-bootstrap-hiW4LJD-cc) / [Project Brief](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U) | React, Bootstrap |

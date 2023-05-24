@@ -6,7 +6,7 @@ function NFTCard() {
       <div className="container">
         <div className="row g-1">
           <div className="nft-box-wrapper">
-            <a href="/" className="nft-box-link"><div className="nft-box"></div></a>
+            <a href="/" className="nft-box-link"><div className="nft-box">image link</div></a>
           </div>
         </div>
         <div className="row g-1 mt-3">
@@ -17,10 +17,10 @@ function NFTCard() {
         </div>
         <div className="row g-1">
           <div className="col nft-price-col">
-            <p className='nft-price-text'><img src='./assets/images/icon-ethereum.svg' className="nft-price-icon"></img>0.041 ETH</p>
+            <p className='nft-price-text'><img src='./assets/images/icon-ethereum.svg' alt="price-icon" className="nft-price-icon"></img>0.041 ETH</p>
           </div>
           <div className='col time-col'>
-            <p className='time-text'><img src='./assets/images/icon-clock.svg' className="time-icon"></img>3 days left</p>
+            <p className='time-text'><img src='./assets/images/icon-clock.svg' alt="time-icon" className="time-icon"></img>3 days left</p>
           </div>
         </div>
         <div className="row g-1">
