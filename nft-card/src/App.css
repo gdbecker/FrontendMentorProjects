@@ -33,83 +33,74 @@ Very dark blue (line): #2F415B
   color: #FFFFFF;
   min-height: 100vh;
   width: auto;
-  padding: 5%;
 }
 
 /* Landing Page */
 #landing-page {
+  align-items: center;
   background-color: #0D192B;
   font-family: Poppins-Regular;
+  min-height: 100vh;
   padding: 8%;
-  box-shadow: #00FFF7 0px 1px 3px 0px, #00FFF7 0px 0px 0px 1px;
-  border-radius: 10px;
-  margin: 5%;
-  min-height: 70vh;
-  align-items: center;
 }
 
 /* NFT Preview Card Component */
 #nft {
-  background-color: #14253D;
-  min-height: 6vh;
-  text-align: left;
-  color: #8BACDA;
-  font-family: Outfit-Light;
-  padding-top: 18px;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-bottom: 15px;
-  border-radius: 10px;
-  width: 260px;
-
-  position: relative;
-  left: 0;
-  right: 0;
-  margin-right: auto;
-  margin-left: auto;
+	background-color: #14253D;
+	border-radius: 10px;
+	color: #8BACDA;
+	font-family: Outfit-Light;
+	left: 0;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 6vh;
+	padding-bottom: 15px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 18px;
+	position: relative;
+	right: 0;
+	text-align: left;
+	width: 260px;
 }
 
 .nft-box-wrapper {
   border-radius: 7px;
-  min-height: 230px;
-
-  padding-left: 0px !important;
   margin-left: 0px !important;
-
+  min-height: 230px;
+  padding-left: 0px !important;
   padding-right: 0px !important;
 }
 
 .nft-box {
   background-image: url(assets/image-equilibrium.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center center;
-  min-height: 230px !important;
-  max-width: 250px !important;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 7px;
-
-  margin: 0px;
+  max-width: 250px !important;
+  min-height: 230px !important;
 }
 
 .nft-box-wrapper:hover {
   background-image: url(assets/image-equilibrium.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .nft-box:hover {
-  background-image: url(assets/icon-view.svg);
-  background-size: 20%;
-  background-repeat: no-repeat;
-  background-position: center center;
   background-color: rgb(0, 255, 247, 0.5);
+  background-image: url(assets/icon-view.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 17%;
 }
 
 a {
-  text-decoration: none !important;
   color: #FFFFFF !important;
   margin: 0% !important;
+  text-decoration: none !important;
 }
 
 a:hover {
@@ -122,8 +113,8 @@ a:hover {
 }
 
 .nft-text {
-  margin-top: 5px;
   font-size: 0.8rem;
+  margin-top: 5px;
 }
 
 .nft-price-text {
@@ -133,8 +124,8 @@ a:hover {
 }
 
 .nft-price-icon {
-  margin-right: 5px;
   margin-bottom: 4px;
+  margin-right: 5px;
 }
 
 .time-col {
@@ -147,8 +138,8 @@ a:hover {
 }
 
 .time-icon {
-  margin-right: 3px;
   margin-bottom: 2.5px;
+  margin-right: 3px;
 }
 
 .divider {
@@ -158,14 +149,26 @@ a:hover {
 
 .avatar-wrapper {
   background-image: url(assets/image-avatar.png);
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
-  width: 27px;
-  height: 27px;
-  border-radius: 50%;
   border: 1px solid #FFFFFF;
-
+  border-radius: 50%;
+  height: 27px;
   margin-left: 10px;
+  width: 27px;
 }
 
+/* Footer */
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%) !important;
+}
+
+.attribution a:hover {
+  color: #00FFF7 !important;
+}

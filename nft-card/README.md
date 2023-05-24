@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+# Frontend Mentor - QR Code Component Solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my solution to the [NFT preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U). I'm super thankful to have found Frontend Mentor as a great way to confidently grow in my coding skills with real-life projects. 
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [Project Brief](#project-brief)
+  - [Mobile View](#mobile-view)
+  - [Desktop View](#desktop-view)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### [Project Brief](./project%20brief/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Your challenge is to build out this preview card component and get it looking as close to the design as possible.
 
-### `npm test`
+You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Your users should be able to:
 
-### `npm run build`
+- View the optimal layout depending on their device's screen size
+- See hover states for interactive elements
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Mobile View
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![](./nft-card-mobile.jpg)
 
-### `npm run eject`
+### Desktop View
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![](./nft-card-desktop.jpg)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Links
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [Solution URL]()
+- [Live Site URL]()
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## My process
 
-## Learn More
+### Built with
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [React](https://reactjs.org/) - JS library
+- HTML5
+- CSS
+- Bootstrap
+- Mobile-first workflow
+- [VS Code](https://code.visualstudio.com)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### What I learned
 
-### Code Splitting
+At the start I approached this project in a similar way as the QR code component, but the trickiest part was getting the hover state working for the image. It needed to be either an anchor tag or a button so it would take you somewhere, but also flash the eye symbol on top of a semi-transparent cyan background so you could still see the original pic underneath. After a lot of tinkering I got it to work by splitting images between a "box wrapper" and a "box" inside, so on hover the internal div switches from using the NFT image as the background to the eye symbol, and then the outer div switches to the blue background. I like how this turned out because then anyone can modify what pics are switched and can see how it works.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Here are a few code samples from this project:
 
-### Analyzing the Bundle Size
+```html
+<div className="row g-1">
+  <div className="nft-box-wrapper">
+    <a href="/" className="nft-box-link"><div className="nft-box"></div></a>
+  </div>
+</div>
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```css
+.nft-box-wrapper {
+  border-radius: 7px;
+  margin-left: 0px !important;
+  min-height: 230px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
 
-### Making a Progressive Web App
+.nft-box {
+  background-image: url(assets/image-equilibrium.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 7px;
+  max-width: 250px !important;
+  min-height: 230px !important;
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+.nft-box-wrapper:hover {
+  background-image: url(assets/image-equilibrium.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-### Advanced Configuration
+.nft-box:hover {
+  background-color: rgb(0, 255, 247, 0.5);
+  background-image: url(assets/icon-view.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 17%;
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Continued development
 
-### Deployment
+As a starter developer, I want to keep growing in working as a team and learning how to deliver smaller packages of code at a time, such as components like this one. I thought this project was a good way to get back into React and begin doing just that!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Useful resources
 
-### `npm run build` fails to minify
+- [CSS Formatter](http://www.lonniebest.com/FormatCSS/) - I found this helpful site when I'm feeling lazy and don't want to format my CSS code, I can have this do it for me, espcially putting everything in alphabetical order.
+- [CSS Box Shadows](https://getcssscan.com/css-box-shadow-examples) - These are a helpful set of box-shadow styles with a wide variety of styles. This is one of those settings I'm coming to grips with so this is a great way to find one to start off with and then modify as needed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author
+
+- Website - [Garrett Becker]()
+- Frontend Mentor - [@gdbecker](https://www.frontendmentor.io/profile/gdbecker)
+- LinkedIn - [Garrett Becker](https://www.linkedin.com/in/garrett-becker-923b4a106/)
+
+## Acknowledgments
+
+Thank you to the Frontend Mentor team for providing all of these fantastic projects to build, and for our getting to help each other grow!
