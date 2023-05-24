@@ -43,7 +43,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 ### Links
 
 - [Solution URL]()
-- [Live Site URL]()
+- [Live Site URL](https://nft-card-gdbecker.netlify.app)
 
 ## My process
 
