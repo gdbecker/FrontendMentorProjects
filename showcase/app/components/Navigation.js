@@ -19,10 +19,10 @@ function Navigation() {
             alt="Frontend Mentor Logo"
             width={190}
             height={80}
-            className="pr-2 mr-2 border-lightGray border-r-2"
+            className="pr-2 mr-2 w-36 border-lightGray border-r-2 md:w-48"
           />
         </a>
-        <h1 className="tracking-wider text-lg text-darkPurple">Showcase</h1>
+        <h1 className="tracking-wider text-sm text-darkPurple md:text-lg">Showcase</h1>
       </div>
       <a class="flex items-center justify-center" href="https://github.com/gdbecker/FrontendMentorProjects/tree/main" target="_blank">
         <Image 
