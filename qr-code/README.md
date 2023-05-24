@@ -6,8 +6,8 @@ This is my solution to the [QR code component challenge on Frontend Mentor](http
 
 - [Overview](#overview)
   - [Project Brief](#project-brief)
-  - [Desktop View](#desktop-view)
   - [Mobile View](#mobile-view)
+  - [Desktop View](#desktop-view)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -27,13 +27,13 @@ You can use any tools you like to help you complete the challenge. So if you've 
 
 Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
 
-### Desktop View
-
-![](./qr-code-desktop.jpg)
-
 ### Mobile View
 
 ![](./qr-code-mobile.jpg)
+
+### Desktop View
+
+![](./qr-code-desktop.jpg)
 
 ### Links
 

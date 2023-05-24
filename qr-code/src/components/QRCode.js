@@ -8,7 +8,7 @@ function QRCode() {
           <div className="qr-box"></div>
         </div>
         <div className="row mt-3">
-          <h4 className="code-header">Improve your front-end skills by building projects</h4>
+          <h1 className="code-header">Improve your front-end skills by building projects</h1>
         </div>
         <div className="row mt-1">
           <p className="code-text">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>

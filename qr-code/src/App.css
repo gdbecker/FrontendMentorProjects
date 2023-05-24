@@ -23,7 +23,6 @@ Dark blue: #1F3251
 	background-color: #DBDBDB;
 	color: #FFFFFF;
 	min-height: 100vh;
-	padding: 5%;
 	width: auto;
 }
 
@@ -31,11 +30,8 @@ Dark blue: #1F3251
 #landing-page {
 	align-items: center;
 	background-color: #1F3251;
-	border-radius: 10px;
-	box-shadow: #1F3251 0px 2px 8px 0px;
 	font-family: Poppins-Regular;
-	margin: 5%;
-	min-height: 70vh;
+	min-height: 100vh;
 	padding: 8%;
 }
 
