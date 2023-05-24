@@ -43,7 +43,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### Desktop View
 
-![](./news-homepage--desktop.jpg)
+![](./news-homepage-desktop.jpg)
 
 ### Links
 
@@ -104,7 +104,34 @@ Here are a few code samples from this project:
 ```
 
 ```css
+@media(min-width: 600px) {
+  .navbar-light .navbar-x {
+    background-image: none !important;
+    box-shadow: none;
+    margin-bottom: 50%;
+    outline: none;
+  }
+}
 
+@media(max-width: 600px) { 
+  .navbar-collapse {
+    background-color:#FFFDFA;
+    box-shadow: -300px 0px 0px 0px hsla(240, 100%, 5%, 55%) !important;
+    margin-top: 525px;
+    min-height: 120vh;
+    padding-left: 15px;
+    padding-right: 50px;
+    padding-top: 150px;
+    position: fixed;
+    right: 0;
+    width: 300px;
+    z-index: 10;
+  }
+
+  .navbar-x {
+    margin-left: 215px;
+  }
+}
 ```
 
 ### Continued development

@@ -17,7 +17,7 @@ function Navigation() {
     <div id="navigation">
       <nav className="navbar navbar-expand-lg navbar-light navbar-fixed-top mobile-nofixed">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/"><h4><Logo></Logo></h4></a>
+          <a className="navbar-brand" href="/"><h4 className="nav-h4"><Logo />logo</h4></a>
           <button
               className="navbar-toggler"
               type="button"

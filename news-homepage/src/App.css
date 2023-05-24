@@ -92,6 +92,11 @@ Very dark blue - transparent:	hsla(240, 100%, 5%, 20%)
   outline: none;
 }
 
+.nav-h4 {
+  color: transparent !important;
+  font-size: xx-small;
+}
+
 @media(min-width: 600px) {
   .navbar-light .navbar-x {
     background-image: none !important;
@@ -105,9 +110,7 @@ Very dark blue - transparent:	hsla(240, 100%, 5%, 20%)
   .navbar-collapse {
     background-color:#FFFDFA;
     box-shadow: -300px 0px 0px 0px hsla(240, 100%, 5%, 55%) !important;
-    
     margin-top: 525px;
-    /* margin-left: 10rem; */
     min-height: 120vh;
     padding-left: 15px;
     padding-right: 50px;
