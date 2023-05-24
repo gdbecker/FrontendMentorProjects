@@ -1,70 +1,128 @@
-# Getting Started with Create React App
+# Frontend Mentor - News Homepage Solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my solution to the [News homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl). I'm super thankful to have found Frontend Mentor as a great way to confidently grow in my coding skills with real-life projects. 
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [Project Brief](#project-brief)
+  - [Mobile View](#mobile-view)
+  - [Mobile View with Menu](#mobile-view-eith-menu)
+  - [Desktop View](#desktop-view)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### [Project Brief](./project%20brief/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Your challenge is to build out this news website homepage and get it looking as close to the design as possible.
 
-### `npm test`
+You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Your users should be able to:
 
-### `npm run build`
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Mobile View
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![](./news-homepage-mobile.jpg)
 
-### `npm run eject`
+### Mobile View with Menu
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![](./news-homepage-mobile-menu.jpg)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Desktop View
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![](./news-homepage--desktop.jpg)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Links
 
-## Learn More
+- [Solution URL]()
+- [Live Site URL]()
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## My process
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Built with
 
-### Code Splitting
+- [React](https://reactjs.org/) - JS library
+- HTML5
+- CSS
+- Bootstrap
+- Mobile-first workflow
+- [VS Code](https://code.visualstudio.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### What I learned
 
-### Analyzing the Bundle Size
+This was my first 'landing page' type of project for Frontend Mentor and it was a wonderful challenge - not just with the general grid layout but especially with the navbar. I used the usual Bootstrap responsive rows and columns I've been used to for the main content, and of course needed to play around with it to get everything in the right positions, especially the bottom 01 - 03 section. The navbar was tricky getting it to stay to the right of the screen but also feature that transparent dark background in between the page and navigation. When I first saw the design I doubted if I could get it working, but I'm really glad I pushed myself to break down the problem into smaller parts at a time to get it working. I ended up using a box-shadow effect to the left of the fixed navbar on mobile view to achieve the desired effect, and I think it looks good!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+For the navbar buttons, I at first used a small bit of JS and React hooks to flip the hamburger to X and vice versa, and then accidentally figured out how to do it with just HTML and CSS, so I could comment out the JS code 😂.
 
-### Making a Progressive Web App
+Here are a few code samples from this project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```html
+<div className="collapse navbar-collapse" id="navbar">
+  <button
+      className="navbar-toggler pull-right"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbar"
+      aria-controls="navbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span className="navbar-toggler-icon navbar-x"></span>
+  </button>
+  
+  <ul className="navbar-nav ms-auto">
+    <li className="nav-item">
+      <a className="nav-link" href="/home">Home</a>
+    </li>
+    <li className="nav-item">
+      <a className="nav-link" href="/new">New</a>
+    </li>
+    <li className="nav-item">
+      <a className="nav-link" href='/popular'>Popular</a>
+    </li>
+    <li className="nav-item">
+      <a className="nav-link" href='/trending'>Trending</a>
+    </li>
+    <li className="nav-item">
+      <a className="nav-link" href='/categories'>Categories</a>
+    </li>
+  </ul>
+</div>
+```
 
-### Advanced Configuration
+```css
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
 
-### Deployment
+### Continued development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+As a starter developer, I want to keep growing in working as a team and learning how to deliver robust and beautiful solutions like this one. I thought this project was a good way to get back into React and begin doing just that!
 
-### `npm run build` fails to minify
+### Useful resources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [CSS Formatter](http://www.lonniebest.com/FormatCSS/) - I found this helpful site when I'm feeling lazy and don't want to format my CSS code, I can have this do it for me, espcially putting everything in alphabetical order.
+- [HSL to HEX Color Converter](https://htmlcolors.com/hsl-to-hex) - For a few of my Frontend Mentor projects I liked to convert the HSL into HEX codes just because I was more familiar with those, and this site was a handy link I had on hand to accomplish that
+- [CSS Box Shadows](https://getcssscan.com/css-box-shadow-examples) - These are a helpful set of box-shadow styles with a wide variety of styles. This is one of those settings I'm coming to grips with so this is a great way to find one to start off with and then modify as needed.
+
+## Author
+
+- Website - [Garrett Becker]()
+- Frontend Mentor - [@gdbecker](https://www.frontendmentor.io/profile/gdbecker)
+- LinkedIn - [Garrett Becker](https://www.linkedin.com/in/garrett-becker-923b4a106/)
+
+## Acknowledgments
+
+Thank you to the Frontend Mentor team for providing all of these fantastic projects to build, and for our getting to help each other grow!

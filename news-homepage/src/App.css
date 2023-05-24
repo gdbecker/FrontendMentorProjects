@@ -7,8 +7,11 @@ Soft red: #F15E50
 White: #FFFFFF
 Off-white: #FFFDFA
 Grayish blue: #C5C6CE
+Grayish blue - transparent: hsla(233, 8%, 79%, 20%)
 Dark grayish blue: #5D5F79
+Dark grayish blue - transparent: hsla(236, 13%, 42%, 20%)
 Very dark blue: #00001A
+Very dark blue - transparent:	hsla(240, 100%, 5%, 20%)
 */
 
 /* Imported Fonts */
@@ -89,7 +92,7 @@ Very dark blue: #00001A
   margin-bottom: 50%;
 }
 
-@media(min-width: 620px) {
+@media(min-width: 700px) {
   .navbar-light .navbar-x {
     background-image: none !important;
     outline: none;
@@ -98,18 +101,19 @@ Very dark blue: #00001A
   }
 }
 
-@media(max-width: 620px) { 
+@media(max-width: 700px) { 
   .navbar-collapse {
     background-color:#FFFDFA;
     width: 80%;
-    margin-top: 80%;
+    margin-top: 500px;
     margin-left: 10rem;
-    position: absolute;
-    padding: 3%;
-    padding-top: 20%;
-    height: 150vh;
-    top: auto;
+    position: fixed;
+    padding-left: 15px;
+    padding-right: 50px;
+    padding-top: 120px;
+    min-height: 120vh;
     z-index: 10;
+    box-shadow: -400px 0 5px -1px hsla(240, 100%, 5%, 55%) !important;
   }
 
   .navbar-toggler {

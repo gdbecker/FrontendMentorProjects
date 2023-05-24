@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ReactComponent as Logo } from '../assets/logo.svg';
 
 function Navigation() {
 
-  const [clicked, setClicked] = useState(false);
+  // This was my initial JS solution for changing the navbar buttons but I figured out how to only use HTML and CSS
 
-  const onClick = (e) => {
-    setClicked(!clicked);}
+  // const [clicked, setClicked] = useState(false);
 
-  var buttonClass = clicked ? 'navbar-toggler-icon navbar-x' : 'navbar-toggler-icon navbar-burger';
+  // const onClick = (e) => {
+  //   setClicked(!clicked);
+  // }
+
+  // var buttonClass = clicked ? 'navbar-toggler-icon navbar-x' : 'navbar-toggler-icon navbar-burger';
 
   return (
     <div id="navigation">
