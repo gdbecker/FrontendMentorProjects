@@ -30,7 +30,7 @@ function Navigation() {
           alt="Profile Photo"
           width={75}
           height={75}
-          className="w-12 h-12 rounded-full"
+          className="w-8 h-8 rounded-full md:w-12 md:h-12"
         />
       </a>
     </div>
