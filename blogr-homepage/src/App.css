@@ -387,7 +387,7 @@ Very dark desaturated blue: #3F4164
 .section-4-pic-wrapper {
   background-image: url(assets/illustration-laptop-desktop.svg);
   background-position: 90% center;
-  background-size: contain;
+  background-size: cover 100% 100%;
   background-repeat: no-repeat;
   min-height: 118vh;
 
