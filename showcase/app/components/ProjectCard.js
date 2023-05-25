@@ -5,35 +5,35 @@ function ProjectCard({ img_bg, title, title_url, level, demo_url, solution_url, 
   function getLevelName(level) {
     if (level == '1') {
       return (
-        <div className="flex flex-row items-center justify-center min-w-max ml-2 ring-level1 ring-1 rounded-sm font-heeboBold text-sm overflow-hidden lg:text-[0.75rem]">
+        <div className="flex flex-row items-center justify-center min-w-max ml-2 ring-level1 ring-1 rounded-md font-heeboBold text-sm overflow-hidden lg:text-[0.75rem]">
           <p className="px-2 pt-1 h-full bg-level1 text-white text-center">1</p>
           <p className="px-2 pt-1 h-full text-level1">NEWBIE</p>
         </div>
       );
     } else if (level == '2') {
       return (
-        <div className="flex flex-row items-center justify-center min-w-max ml-2 ring-level2 ring-1 rounded-sm font-heeboBold text-sm overflow-hidden lg:text-[0.75rem]">
+        <div className="flex flex-row items-center justify-center min-w-max ml-2 ring-level2 ring-1 rounded-md font-heeboBold text-sm overflow-hidden lg:text-[0.75rem]">
           <p className="px-2 pt-1 h-full bg-level2 text-white text-center">2</p>
           <p className="px-2 pt-1 h-full text-level2">JUNIOR</p>
         </div>
       );
     } else if (level == '3') {
       return (
-        <div className="flex flex-row items-center justify-between min-w-max ml-2 ring-level3 ring-1 rounded-sm font-heeboBold text-sm overflow-hidden lg:text-[0.75rem]">
+        <div className="flex flex-row items-center justify-between min-w-max ml-2 ring-level3 ring-1 rounded-md font-heeboBold text-sm overflow-hidden lg:text-[0.75rem]">
           <p className="px-2 pt-1 h-full bg-level3 text-white text-center">3</p>
           <p className="px-2 pt-1 h-full text-level3">INTERMEDIATE</p>
         </div>
       );
     } else if (level == '4') {
       return (
-        <div className="flex flex-row items-center justify-center min-w-max ml-2 ring-level4 ring-1 rounded-sm font-heeboBold text-sm overflow-hidden lg:text-[0.75rem]">
+        <div className="flex flex-row items-center justify-center min-w-max ml-2 ring-level4 ring-1 rounded-md font-heeboBold text-sm overflow-hidden lg:text-[0.9rem]">
           <p className="px-2 pt-1 h-full bg-level4 text-white text-center">4</p>
           <p className="px-2 pt-1 h-full text-level4">ADVANCED</p>
         </div>
       );
     } else if (level == '5') {
       return (
-        <div className="flex flex-row items-center justify-center min-w-max ml-2 ring-level5 ring-1 rounded-sm font-heeboBold text-sm overflow-hidden lg:text-[0.75rem]">
+        <div className="flex flex-row items-center justify-center min-w-max ml-2 ring-level5 ring-1 rounded-md font-heeboBold text-sm overflow-hidden lg:text-[0.75rem]">
           <p className="px-2 pt-1 h-full bg-level5 text-white text-center">5</p>
           <p className="px-2 pt-1 h-full text-level5">GURU</p>
         </div>

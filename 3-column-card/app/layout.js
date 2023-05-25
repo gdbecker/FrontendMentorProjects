@@ -13,10 +13,10 @@ export default function RootLayout({ children }) {
       
         {children}
 
-        <div class="attribution">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-          Coded by <a href="#">Garrett Becker</a>.
-        </div>
+        <footer class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="https://github.com/gdbecker/FrontendMentorProjects/tree/main/3-column-card" target="_blank">Garrett Becker</a>.
+        </footer>
       </body>
     </html>
   )

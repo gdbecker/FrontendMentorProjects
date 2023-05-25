@@ -18,7 +18,7 @@ function Home() {
   }
 
   return (
-    <div id="home-page">
+    <main id="home-page">
       <div className="container">
         <div className="row">
           <div className="col-2"></div>
@@ -28,7 +28,7 @@ function Home() {
           <div className="col-2"></div>
         </div>
       </div>
-    </div>
+    </main>
   )
 }
 

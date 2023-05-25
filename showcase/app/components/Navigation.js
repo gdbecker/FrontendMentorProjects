@@ -2,11 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import Logo from '../../public/fem-logo-png.png';
 import Avatar from '../../public/gdbecker.jpeg';
-import { FaGithub } from 'react-icons/fa';
-import { FaLinkedin } from 'react-icons/fa';
-import { FaEnvelope } from 'react-icons/fa';
-import { BsFillSunFill } from 'react-icons/bs';
-import { BsMoonStarsFill } from 'react-icons/bs';
 
 function Navigation() {
 
