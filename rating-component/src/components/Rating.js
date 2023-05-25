@@ -35,7 +35,7 @@ function Rating() {
         </div>
 
         <div className="row mt-4">
-          <h3 className="rating-header">How did we do?</h3>
+          <h1 className="rating-header">How did we do?</h1>
         </div>
 
         <div className="row mt-2">

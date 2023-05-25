@@ -49,7 +49,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### Links
 
-- [Solution URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/rating-component-with-react-bootstrap-Tba__w3pRE)
 - [Live Site URL](https://rating-component-gdbecker.netlify.app)
 
 ## My process
@@ -99,7 +99,7 @@ Here are a few code samples from this project:
       </p>
     </div>
   </div>
-  </Fragment>
+</Fragment>
 ```
 
 ```css
