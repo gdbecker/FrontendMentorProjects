@@ -58,6 +58,7 @@ Very dark desaturated blue: #3F4164
   background-color: #FFFDFA;
   color: #FFFFFF;
   min-height: 100vh;
+  overflow: hidden !important;
 }
 
 /* Navigation */
@@ -194,6 +195,8 @@ Very dark desaturated blue: #3F4164
   padding-top: 5%;
   padding-left: 14%;
   padding-right: 14%;
+  /* padding-left: 2rem;
+  padding-right: 2rem; */
   padding-bottom: 12%;
 
   text-align: center;
@@ -285,7 +288,7 @@ Very dark desaturated blue: #3F4164
 }
 
 .section-2-pic-wrapper {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .section-2-pic-small {
@@ -391,7 +394,7 @@ Very dark desaturated blue: #3F4164
   min-height: 118vh;
 
   position: relative;
-  overflow: hidden;
+  overflow: hidden !important;
   width: 100%;
 }
 

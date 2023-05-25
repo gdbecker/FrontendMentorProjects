@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f7464091.css",
-    "main.js": "/static/js/main.00a04368.js",
+    "main.css": "/static/css/main.880f1f3b.css",
+    "main.js": "/static/js/main.b390f02f.js",
     "static/js/787.892e5664.chunk.js": "/static/js/787.892e5664.chunk.js",
     "static/media/Ubuntu-Light.ttf": "/static/media/Ubuntu-Light.f8765117ee72baf98124.ttf",
     "static/media/Ubuntu-Medium.ttf": "/static/media/Ubuntu-Medium.ea2efd053b75799d508e.ttf",
@@ -22,12 +22,12 @@
     "static/media/chevron-up.svg": "/static/media/chevron-up.21ead3be1dbf588b9fb74874b00dd155.svg",
     "static/media/icon-close.svg": "/static/media/icon-close.c6580312401807bc9f98.svg",
     "static/media/icon-hamburger.svg": "/static/media/icon-hamburger.68867946847c3249542e.svg",
-    "main.f7464091.css.map": "/static/css/main.f7464091.css.map",
-    "main.00a04368.js.map": "/static/js/main.00a04368.js.map",
+    "main.880f1f3b.css.map": "/static/css/main.880f1f3b.css.map",
+    "main.b390f02f.js.map": "/static/js/main.b390f02f.js.map",
     "787.892e5664.chunk.js.map": "/static/js/787.892e5664.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f7464091.css",
-    "static/js/main.00a04368.js"
+    "static/css/main.880f1f3b.css",
+    "static/js/main.b390f02f.js"
   ]
 }
