@@ -8,6 +8,7 @@ This is my solution to the [Interactive rating component challenge on Frontend M
   - [Project Brief](#project-brief)
   - [Mobile View](#mobile-view)
   - [Desktop View](#desktop-view)
+  - [Desktop Submitted View](#desktop-submitted-view)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -42,6 +43,10 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ![](./rating-component-desktop.jpg)
 
+### Desktop Submitted View
+
+![](./rating-component-submit-desktop.jpg)
+
 ### Links
 
 - [Solution URL]()
@@ -60,20 +65,73 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### What I learned
 
-After working through several challenges with React and Bootstrap, I wanted to challenge myself and learn a couple of new tools I've heard about - Next.js and SASS. Definitely a learning curve for both of these but completely worth it, especially coming to grips with SASS - it was so handy separating my color palette and font variables into a separate file and then calling them throughout the .scss file. Next.js was also a lot of fun to learn and get started with, as well as figuring out how the server side rendering works and when to 'use client' s needed - I needed to for the home page on this project to pull in the Bootstrap js I installed. It felt like a good step to start with a smaller component project like this one to learn new tools.
+This was a great challenge not just to keep practicing creating components from design specs and guidelines, but also using a bit of React JS to make the functionality work. I liked getting to practice hooks and managing state in this one, and handling the submit button click to pop up the result view. I first developed each view one at a time and make sure the design matched up closely, and then devided them up between two Fragment tags, so ultimately a React state would decide which one was rendered, depending on if the form was submitted or not. This was also great practice for lining up multiple buttons in a row, as well as managing spacing and hover states.
 
 Here are a few code samples from this project:
 
 ```html
+<Fragment>
+  <div className="container mt-3">
+    <div className="row">
+      <div className="thank-you">
+        <ThankYou className="thank-you"></ThankYou>
+      </div>
+    </div>
 
+    <div className="row mt-4">
+      <div className="col-1"></div>
+      <div className="col-10">
+        <div className="rating-result-box">
+          <p className="rating-result">You selected {selected} out of 5.</p>
+        </div>
+      </div>
+      <div className="col-1"></div>
+    </div>
+
+    <div className="row mt-4">
+      <h3 className="rating-header-result">Thank you!</h3>
+    </div>
+
+    <div className="row mt-3">
+      <p className="rating-text-result">
+        We appreciate your taking the time to leave a rating.
+        If you ever need more support, don't hesitate to get in touch!
+      </p>
+    </div>
+  </div>
+  </Fragment>
 ```
 
 ```css
+.rating-result-box {
+  background-color: #252D37;
+  border-radius: 40px;
+  height: 37px;
+  padding-top: 4%;
+  text-align: center;
+}
 
+.rating-result {
+  color: #FB7413;
+  font-family: Overpass-Regular;
+  font-size: 14px;
+  margin: auto;
+}
 ```
 
 ```js
+const [submitted, setSubmitted] = useState('');
+const [selected, setSelected] = useState('');
 
+const onClick = (e) => {
+  setSelected(e.target.value);
+  console.log(e.target.value);
+}
+
+const onSubmit = async (e) => {
+  e.preventDefault();
+  setSubmitted(true);
+}
 ```
 
 ### Continued development
@@ -83,7 +141,7 @@ As a starter developer, I want to keep growing in working as a team and learning
 ### Useful resources
 
 - [CSS Formatter](http://www.lonniebest.com/FormatCSS/) - I found this helpful site when I'm feeling lazy and don't want to format my CSS code, I can have this do it for me, especially putting everything in alphabetical order.
-- [CSS Button Generator](https://css3buttongenerator.com) - Quickly make buttons by inputting desired features
+- [CSS Button Generator](https://css3buttongenerator.com) - Quickly make buttons by inputting desired features. This helps as I'm continuing to learn how to make good looking buttons.
 
 ## Author
 
