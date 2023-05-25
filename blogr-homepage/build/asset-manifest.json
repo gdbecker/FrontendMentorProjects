@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f7464091.css",
+    "main.js": "/static/js/main.00a04368.js",
+    "static/js/787.892e5664.chunk.js": "/static/js/787.892e5664.chunk.js",
+    "static/media/Ubuntu-Light.ttf": "/static/media/Ubuntu-Light.f8765117ee72baf98124.ttf",
+    "static/media/Ubuntu-Medium.ttf": "/static/media/Ubuntu-Medium.ea2efd053b75799d508e.ttf",
+    "static/media/Ubuntu-Bold.ttf": "/static/media/Ubuntu-Bold.acc5e44d1628ee74573b.ttf",
+    "static/media/Overpass-Light.ttf": "/static/media/Overpass-Light.452a303781b18457e7df.ttf",
+    "static/media/Overpass-SemiBold.ttf": "/static/media/Overpass-SemiBold.021f0a58c78fd613243a.ttf",
+    "static/media/illustration-phones.svg": "/static/media/illustration-phones.fd23559f1d2f81f9e3f3340eeaf2467c.svg",
+    "static/media/logo.svg": "/static/media/logo.1591bc20b914c098a9cd6e423b1623c3.svg",
+    "static/media/illustration-laptop-mobile.svg": "/static/media/illustration-laptop-mobile.fe1ec0f05da01bb067fa.svg",
+    "static/media/illustration-laptop-desktop.svg": "/static/media/illustration-laptop-desktop.799209c2628b1f244e15.svg",
+    "static/media/illustration-editor-desktop.svg": "/static/media/illustration-editor-desktop.c6c8050aa4dcf0c64b4406570c970d2b.svg",
+    "static/media/illustration-editor-mobile.svg": "/static/media/illustration-editor-mobile.b9c7941a96d06832fa27.svg",
+    "index.html": "/index.html",
+    "static/media/bg-pattern-intro-mobile.svg": "/static/media/bg-pattern-intro-mobile.3d70cc0d02948cb77851.svg",
+    "static/media/bg-pattern-intro-desktop.svg": "/static/media/bg-pattern-intro-desktop.bf6b3e1b727eabeffdc5.svg",
+    "static/media/bg-pattern-circles.svg": "/static/media/bg-pattern-circles.bae804b8cc1519f26c94.svg",
+    "static/media/chevron-down.svg": "/static/media/chevron-down.8624f04faf16b2d07c00235d9dc68ae2.svg",
+    "static/media/chevron-up.svg": "/static/media/chevron-up.21ead3be1dbf588b9fb74874b00dd155.svg",
+    "static/media/icon-close.svg": "/static/media/icon-close.c6580312401807bc9f98.svg",
+    "static/media/icon-hamburger.svg": "/static/media/icon-hamburger.68867946847c3249542e.svg",
+    "main.f7464091.css.map": "/static/css/main.f7464091.css.map",
+    "main.00a04368.js.map": "/static/js/main.00a04368.js.map",
+    "787.892e5664.chunk.js.map": "/static/js/787.892e5664.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f7464091.css",
+    "static/js/main.00a04368.js"
+  ]
+}
