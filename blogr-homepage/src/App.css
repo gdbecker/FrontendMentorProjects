@@ -513,7 +513,7 @@ Very dark desaturated blue: #3F4164
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
-    min-height: 45vh;
+    min-height: 65vh;
 
     position: relative;
     overflow: visible;
@@ -535,7 +535,7 @@ Very dark desaturated blue: #3F4164
     background-position: center center;
     background-size: contain;
     overflow: visible;
-    min-height: 45vh;
+    min-height: 60vh;
   }
 
   .section-3-copy {
