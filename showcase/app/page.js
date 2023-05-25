@@ -5,15 +5,15 @@ import ProjectCard from './components/ProjectCard';
   return (
     <main className="flex flex-col gap-7 w-full p-10 items-center justify-between bg-white lg:grid lg:grid-cols-3">
       <ProjectCard 
-        img_bg="bg-qr-code"
-        title="QR Code Component"
-        title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/qr-code"
+        img_bg="bg-3-column-card"
+        title="3-Column Preview Card Component"
+        title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/3-column-card"
         level="1"
-        demo_url="https://qr-code-gdbecker.netlify.app"
-        solution_url="https://www.frontendmentor.io/solutions/qr-code-component-hosted-on-netlify-rwLGIUAbUi"
-        brief_url="https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H"
+        demo_url="https://3-column-card-gdbecker.netlify.app"
+        solution_url="https://www.frontendmentor.io/solutions/3column-card-with-nextjs-sass-voBV4ThwSG"
+        brief_url="https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-"
       />
-
+      
       <ProjectCard 
         img_bg="bg-nft-card"
         title="NFT Preview Card Component"
@@ -22,6 +22,16 @@ import ProjectCard from './components/ProjectCard';
         demo_url="https://nft-card-gdbecker.netlify.app"
         solution_url="https://www.frontendmentor.io/solutions/nft-card-component-with-react-bootstrap-hiW4LJD-cc"
         brief_url="https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U"
+      />
+      
+      <ProjectCard 
+        img_bg="bg-qr-code"
+        title="QR Code Component"
+        title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/qr-code"
+        level="1"
+        demo_url="https://qr-code-gdbecker.netlify.app"
+        solution_url="https://www.frontendmentor.io/solutions/qr-code-component-hosted-on-netlify-rwLGIUAbUi"
+        brief_url="https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H"
       />
 
       <ProjectCard 

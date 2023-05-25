@@ -42,8 +42,8 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### Links
 
-- [Solution URL]()
-- [Live Site URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/3column-card-with-nextjs-sass-voBV4ThwSG)
+- [Live Site URL](https://3-column-card-gdbecker.netlify.app)
 
 ## My process
 
