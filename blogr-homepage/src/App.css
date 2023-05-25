@@ -387,7 +387,7 @@ Very dark desaturated blue: #3F4164
 .section-4-pic-wrapper {
   background-image: url(assets/illustration-laptop-desktop.svg);
   background-position: 90% center;
-  background-size: cover 100% 100%;
+  background-size: contain;
   background-repeat: no-repeat;
   min-height: 118vh;
 
@@ -513,7 +513,7 @@ Very dark desaturated blue: #3F4164
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
-    min-height: 75vh;
+    min-height: 45vh;
 
     position: relative;
     overflow: visible;
@@ -535,6 +535,7 @@ Very dark desaturated blue: #3F4164
     background-position: center center;
     background-size: contain;
     overflow: visible;
+    min-height: 45vh;
   }
 
   .section-3-copy {
@@ -564,9 +565,9 @@ Very dark desaturated blue: #3F4164
   .section-4-pic-wrapper {
     background-image: url(assets/illustration-laptop-mobile.svg);
     background-position: center center;
-    background-size: cover 100% 100%;
+    background-size: contain;
     background-repeat: no-repeat;
-    min-height: 50vh;
+    min-height: 45vh;
     
     position: relative;
     overflow: visible;
