@@ -28,23 +28,21 @@ Very dark blue: #121417
   color: #FFFFFF;
   min-height: 100vh;
   width: auto;
-  padding: 5%;
 }
 
 /* Landing Page */
 #landing-page {
   background-color: #121417;
   font-family: Poppins-Regular;
-  padding: 8%;
-  box-shadow: #252D37 0px 2px 8px 0px;
-  border-radius: 10px;
+  min-height: 100vh;
+  padding: 5%;
 }
 
 /* Rating Component */
 #rating {
   background-image: linear-gradient(#252D37, #121417);
-  min-height: 35vh;
   border-radius: 15px;
+  min-height: 35vh;
   padding: 6%;
 }
 
@@ -54,11 +52,11 @@ Very dark blue: #121417
 
 .star-box {
   background-color: #252D37;
-  height: 37px;
-  width: 37px;
   border-radius: 50%;
   display: flex;
+  height: 37px;
   justify-content: center;
+  width: 37px;
 }
 
 .rating-header {
@@ -73,23 +71,23 @@ Very dark blue: #121417
 }
 
 .ratings-row {
+  justify-content: space-between;
   text-align: center;
   width: 100%;
-  justify-content: space-between;
 }
 
 .rating-option-button {
-  height: 37px;
-  width: 37px;
-  border:0!important;
-  display: inline-block;
-  font-family: Overpass-Bold;
-  color: #7C8798;
-  border-radius: 50%;
   background-color: #252D37;
-  font-size: 12px;
-  text-align: center;
-  padding-top: 1%;
+	border: 0!important;
+	border-radius: 50%;
+	color: #7C8798;
+	display: inline-block;
+	font-family: Overpass-Bold;
+	font-size: 12px;
+	height: 37px;
+	padding-top: 1%;
+	text-align: center;
+	width: 37px;
 }
 
 .rating-option-button:not(:last-child) {
@@ -107,16 +105,16 @@ Very dark blue: #121417
 }
 
 .rating-submit-button {
-  height: 37px;
-  width: 100%;
-  border:0!important;
-  background-color: #FB7413;
-  color: #FFFFFF;
-  border-radius: 40px;
-  font-family: Overpass-Bold;
   align-items: center;
-  font-size: 15px;
-  padding-top: 1%;
+	background-color: #FB7413;
+	border: 0!important;
+	border-radius: 40px;
+	color: #FFFFFF;
+	font-family: Overpass-Bold;
+	font-size: 15px;
+	height: 37px;
+	padding-top: 1%;
+	width: 100%;
 }
 
 .rating-submit-button:hover {
@@ -129,18 +127,18 @@ Very dark blue: #121417
 }
 
 .rating-result-box {
-  height: 37px;
-  border-radius: 40px;
-  text-align: center;
   background-color: #252D37;
+  border-radius: 40px;
+  height: 37px;
   padding-top: 4%;
+  text-align: center;
 }
 
 .rating-result {
   color: #FB7413;
-  margin: auto;
   font-family: Overpass-Regular;
   font-size: 14px;
+  margin: auto;
 }
 
 .rating-header-result {

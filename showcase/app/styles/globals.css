@@ -21,6 +21,13 @@
   background-size: cover;
 }
 
+.bg-rating-component {
+  background-image: url(../../public/rating-component-desktop.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .bg-nft-card {
   background-image: url(../../public/nft-card-desktop.jpg);
   background-position: top center;
