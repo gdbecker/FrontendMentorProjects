@@ -13,6 +13,16 @@ import ProjectCard from './components/ProjectCard';
         solution_url="https://www.frontendmentor.io/solutions/3column-card-with-nextjs-sass-voBV4ThwSG"
         brief_url="https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-"
       />
+
+      <ProjectCard 
+        img_bg="bg-rating-component"
+        title="Interactive Rating Component"
+        title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/rating-component"
+        level="1"
+        demo_url="https://rating-component-gdbecker.netlify.app"
+        solution_url="https://www.frontendmentor.io/solutions/rating-component-with-react-bootstrap-Tba__w3pRE"
+        brief_url="https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI"
+      />
       
       <ProjectCard 
         img_bg="bg-nft-card"
