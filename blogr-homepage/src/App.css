@@ -58,15 +58,14 @@ Very dark desaturated blue: #3F4164
   background-color: #FFFDFA;
   color: #FFFFFF;
   min-height: 100vh;
-  /* overflow: hidden !important; */
 }
 
 /* Navigation */
 #navigation {
   background-color: none;
-  text-align: left;
   font-family: Ubuntu-Medium;
   margin-bottom: 6%;
+  text-align: left;
 }
 
 .navbar {
@@ -78,50 +77,46 @@ Very dark desaturated blue: #3F4164
 }
 
 .nav-item {
-  padding: 0 5px;
   font-family: Ubuntu-Medium;
+  padding: 0 5px;
 }
 
 .nav-link {
-  font-size: 1.2rem;
   color: #FFFFFF !important;
+  font-size: 1.2rem;
 }
 
 .nav-link:hover {
   color: #FFFFFF !important;
-  text-decoration: underline;
   font-weight: bold;
+  text-decoration: underline;
 }
 
 .navbar-toggler {
   border: none !important;
 }
 
-.dropdown-toggle::after {
-  /* display: none; */
-}
-
 .navbar-light .navbar-burger {
   background-image: url(assets/icon-hamburger.svg) !important;
-  outline: none;
   box-shadow: none;
+  outline: none;
 }
 
 .navbar-light .navbar-x {
   background-image: url(assets/icon-close.svg) !important;
-  outline: none;
   box-shadow: none;
+  outline: none;
 }
 
 #dropdown {
-  color: #FFFFFF !important;
   background-color: transparent !important;
-  border: 0 !important
+  border: 0 !important;
+  color: #FFFFFF !important;
 }
 
 #dropdown:hover {
-  text-decoration: underline;
   font-family: Ubuntu-Bold;
+  text-decoration: underline;
 }
 
 #dropdown::after {
@@ -143,38 +138,38 @@ Very dark desaturated blue: #3F4164
 }
 
 .login-button {
-  width: 7rem !important;
   background: #FF7A85;
-  color: #FFFFFF;
-  border: 0 !important;
-  padding: 10px;
-  border-radius: 60px;
-  font-family: Ubuntu-Bold;
-  box-shadow: none;
-  margin: 1%;
+	border: 0 !important;
+	border-radius: 60px;
+	box-shadow: none;
+	color: #FFFFFF;
+	font-family: Ubuntu-Bold;
+	margin: 1%;
+	padding: 10px;
+	width: 7rem !important;
 }
 
 .login-button:hover {
   background-color: #FFFFFF;
-  color: #FF7A85;
   border: 1px solid #FFFFFF;
+  color: #FF7A85;
 }
 
 .signup-button {
-  width: 7rem !important;
   background-color: #FFFFFF;
-  color: #FF7A85;
-  padding: 10px;
-  border: 0 !important;
-  border-radius: 60px;
-  font-family: Ubuntu-Bold;
-  margin: 1%;
+	border: 0 !important;
+	border-radius: 60px;
+	color: #FF7A85;
+	font-family: Ubuntu-Bold;
+	margin: 1%;
+	padding: 10px;
+	width: 7rem !important;
 }
 
 .signup-button:hover {
   background-color: #FF7A85;
-  color: #FFFFFF;
   border: 1px solid #FF7A85;
+  color: #FFFFFF;
 }
 
 /* Landing Page */
@@ -186,24 +181,22 @@ Very dark desaturated blue: #3F4164
 /* Section 1 */
 .section-1 {
   background-image: url(assets/bg-pattern-intro-desktop.svg), linear-gradient(to right, #FF8F70, #FF525D);
-  background-position: 30% 50%;
-  background-size: 200% 500%;
-
-  min-height: 30vh;
-  border-bottom-left-radius: 140px;
-  padding-top: 5%;
-  padding-left: 14%;
-  padding-right: 14%;
-  padding-bottom: 12%;
-
-  text-align: center !important;
-  color: #FFFFFF;
-  justify-content: center;
+	background-position: 30% 50%;
+	background-size: 200% 500%;
+	border-bottom-left-radius: 140px;
+	color: #FFFFFF;
+	justify-content: center;
+	min-height: 30vh;
+	padding-bottom: 12%;
+	padding-left: 14%;
+	padding-right: 14%;
+	padding-top: 5%;
+	text-align: center !important;
 }
 
 .section-1-header {
-  font-size: 3.3rem;
   font-family: Overpass-SemiBold;
+  font-size: 3.3rem;
 }
 
 .section-1-text {
@@ -215,62 +208,62 @@ Very dark desaturated blue: #3F4164
 }
 
 .start-button {
-  width: 9rem !important;
   background-color: #FFFFFF;
-  color: #FF7A85;
-  padding: 10px;
-  border: 1px solid #FFFFFF;
-  border-radius: 60px;
-  font-family: Ubuntu-Bold;
-  margin: 1%;
+	border: 1px solid #FFFFFF;
+	border-radius: 60px;
+	color: #FF7A85;
+	font-family: Ubuntu-Bold;
+	margin: 1%;
+	padding: 10px;
+	width: 9rem !important;
 }
 
 .start-button:hover {
   background-color: #FF7A85;
-  color: #FFFFFF;
   border: 1px solid #FF7A85;
+  color: #FFFFFF;
 }
 
 .learn-button {
-  width: 9rem !important;
   background: none;
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
-  padding: 10px;
-  border-radius: 60px;
-  font-family: Ubuntu-Bold;
-  box-shadow: none;
-  margin: 1%;
+	border: 1px solid #FFFFFF;
+	border-radius: 60px;
+	box-shadow: none;
+	color: #FFFFFF;
+	font-family: Ubuntu-Bold;
+	margin: 1%;
+	padding: 10px;
+	width: 9rem !important;
 }
 
 .learn-button:hover {
   background-color: #FFFFFF;
-  color: #FF7A85;
   border: 1px solid #FFFFFF;
+  color: #FF7A85;
 }
 
 /* Section 2 */
 .section-2 {
   background-color: none !important;
-  padding-top: 2%;
-  padding-left: 14%;
-  padding-right: 0%;
-  padding-bottom: 5%;
-  text-align: left;
-  color: #4B5862;
+	color: #4B5862;
+	padding-bottom: 5%;
+	padding-left: 14%;
+	padding-right: 0%;
+	padding-top: 2%;
+	text-align: left;
 }
 
 .section-2-header {
-  color: #00001A;
-  font-family: Overpass-Semibold;
-  font-size: 2.2rem;
-  text-align: center;
-  margin-bottom: 10%;
-  padding-top: 4%;
   background-color: none;
-  position:absolute;
-  left: 0;
-  right: 0;
+	color: #00001A;
+	font-family: Overpass-Semibold;
+	font-size: 2.2rem;
+	left: 0;
+	margin-bottom: 10%;
+	padding-top: 4%;
+	position: absolute;
+	right: 0;
+	text-align: center;
 }
 
 .section-2-subheader {
@@ -290,47 +283,39 @@ Very dark desaturated blue: #3F4164
 }
 
 .section-2-pic-small {
-  visibility: hidden;
   position: absolute;
+  visibility: hidden;
   z-index: -10;
 }
 
 /* Section 3 */
 .section-3 {
-  background-image: url(assets/bg-pattern-circles.svg), linear-gradient(to right, #2C2D3F, #3F4164);
-  background-position: -110% 90%;
-  background-size: cover 100% 150%;
-  background-repeat: no-repeat;
-
-  min-height: 30vh;
-  border-bottom-left-radius: 140px;
-  border-top-right-radius: 140px;
-  padding-top: -70%;
-  padding-left: 7%;
-  padding-right: 7%;
-  padding-bottom: 3%;
-
-  text-align: left;
-  color: #FFFFFF;
   align-items: center;
-
-  position: relative;
+	background-image: url(assets/bg-pattern-circles.svg), linear-gradient(to right, #2C2D3F, #3F4164);
+	background-position: -110% 90%;
+	background-repeat: no-repeat;
+	background-size: cover 100% 150%;
+	border-bottom-left-radius: 140px;
+	border-top-right-radius: 140px;
+	color: #FFFFFF;
+	min-height: 30vh;
+	padding-bottom: 3%;
+	padding-left: 7%;
+	padding-right: 7%;
+	padding-top: -70%;
+	position: relative;
+	text-align: left;
 }
 
 .section-3-pic-wrapper {
   background-image: url(assets/illustration-phones.svg);
-  background-position: 90% 50%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  min-height: 80vh;
-
-  /* padding-top: -500px;
-  margin-top: 500px; */
-
-  padding-bottom: 80px;
-  margin-bottom: -140px;
-
-  position: relative;
+	background-position: 90% 50%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-bottom: -140px;
+	min-height: 80vh;
+	padding-bottom: 80px;
+	position: relative;
 }
 
 .section-3-copy {
@@ -351,25 +336,25 @@ Very dark desaturated blue: #3F4164
 /* Section 4 */
 .section-4 {
   background-color: none !important;
-  padding-top: 2%;
-  padding-left: 0%;
-  padding-right: 14%;
-  padding-bottom: 5%;
-  text-align: left;
-  color: #4B5862;
+	color: #4B5862;
+	padding-bottom: 5%;
+	padding-left: 0%;
+	padding-right: 14%;
+	padding-top: 2%;
+	text-align: left;
 }
 
 .section-4-header {
-  color: #00001A;
-  font-family: Overpass-Semibold;
-  font-size: 2.2rem;
-  text-align: center;
-  margin-bottom: 10%;
-  padding-top: 4%;
   background-color: none;
-  position:absolute;
-  left: 0;
-  right: 0;
+	color: #00001A;
+	font-family: Overpass-Semibold;
+	font-size: 2.2rem;
+	left: 0;
+	margin-bottom: 10%;
+	padding-top: 4%;
+	position: absolute;
+	right: 0;
+	text-align: center;
 }
 
 .section-4-subheader {
@@ -386,34 +371,33 @@ Very dark desaturated blue: #3F4164
 
 .section-4-pic-wrapper {
   background-image: url(assets/illustration-laptop-desktop.svg);
-  background-position: 90% center;
-  background-size: cover 100% 100%;
-  background-repeat: no-repeat;
-  min-height: 118vh;
-
-  position: relative;
-  overflow: hidden !important;
-  width: 100%;
+	background-position: 90% center;
+	background-repeat: no-repeat;
+	background-size: cover 100% 100%;
+	min-height: 118vh;
+	overflow: hidden !important;
+	position: relative;
+	width: 100%;
 }
 
 .section-4-pic-small {
-  visibility: hidden;
   position: absolute;
+  visibility: hidden;
   z-index: -10;
 }
 
 /* Section 5 */
 .section-5 {
   background-color: #25252D;
-  font-family: Ubuntu-Light;
-  padding-top: 6%;
-  padding-left: 14%;
-  padding-right: 14%;
-  padding-bottom: 5%;
-  text-align: left;
-  color: #FFFFFF;
-  min-height: 30vh;
-  border-top-right-radius: 140px;
+	border-top-right-radius: 140px;
+	color: #FFFFFF;
+	font-family: Ubuntu-Light;
+	min-height: 30vh;
+	padding-bottom: 5%;
+	padding-left: 14%;
+	padding-right: 14%;
+	padding-top: 6%;
+	text-align: left;
 }
 
 .section-5-header {
@@ -434,15 +418,15 @@ Very dark desaturated blue: #3F4164
 
   .nav-wrapper {
     background-color: #FFFFFF;
-    color: #00001A;
     border-radius: 5px;
-    text-align: center;
+    color: #00001A;
     justify-content: center;
-    position: absolute;
     left: 0;
-    right: 0;
-    top: 100px;
     padding: 7%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 100px;
   }
 
   #dropdown {
@@ -452,32 +436,31 @@ Very dark desaturated blue: #3F4164
 
   #dropdown {
     color: #00001A !important;
-    /* position: relative; */
     margin: 0 !important;
   }
   
   #dropdown:hover {
-    text-decoration: underline;
     font-family: Ubuntu-Bold;
+    text-decoration: underline;
   }
 
   .dropdown-menu {
-    position:relative !important;
-    border-radius: 0 !important;
     border: 0 !important;
-    width: 100%;
-    margin-top: -10% !important;
+    border-radius: 0 !important;
     margin-bottom: 3rem !important;
+    margin-top: -10% !important;
+    position: relative !important;
+    width: 100%;
   }
 
   .dropdown-item {
     background-color: #DBDBDB !important;
     font-family: Ubuntu-Light;
     font-size: 14px;
-    position: relative !important;
-    text-align: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
+    position: relative !important;
+    text-align: center !important;
   }
   
   .dropdown-item:hover {
@@ -490,99 +473,97 @@ Very dark desaturated blue: #3F4164
   }
 
   .section-2 {
+    justify-content: center;
     padding-left: 16%;
     padding-right: 16%;
-    justify-content: center;
   }
 
   .section-2-content {
-    flex-direction: column-reverse;
-    text-align: center;
     align-items: center;
+    flex-direction: column-reverse;
     justify-content: center;
+    text-align: center;
   }
 
   .section-2-header {
+    padding-top: 7%;
     position:block;
     text-align: center;
-    padding-top: 7%;
   }
 
   .section-2-pic-wrapper {
     background-image: url(assets/illustration-editor-mobile.svg);
     background-position: center center;
-    background-size: contain;
     background-repeat: no-repeat;
+    background-size: contain;
     min-height: 65vh;
-
-    position: relative;
     overflow: visible;
+    position: relative;
   }
 
   .section-2-pic-big {
-    visibility: hidden;
     position: absolute;
+    visibility: hidden;
     z-index: -10;
   }
 
   .section-3 {
+    justify-content: center;
     padding-left: 16%;
     padding-right: 16%;
-    justify-content: center;
   }
 
   .section-3-pic-wrapper {
     background-position: center center;
     background-size: contain;
-    overflow: visible;
     min-height: 60vh;
+    overflow: visible;
   }
 
   .section-3-copy {
-    padding-top: 30%;
     padding-bottom: 15%;
+    padding-top: 30%;
     text-align: center;
   }
 
   .section-4 {
+    justify-content: center;
     padding-left: 16%;
     padding-right: 16%;
-    justify-content: center;
   }
 
   .section-4-content {
-    text-align: center;
     align-items: center;
     justify-content: center;
+    text-align: center;
   }
 
   .section-4-header {
-    position:block;
-    text-align: center;
     padding-top: 7%;
+    position: block;
+    text-align: center;
   }
 
   .section-4-pic-wrapper {
     background-image: url(assets/illustration-laptop-mobile.svg);
     background-position: center center;
-    background-size: contain;
     background-repeat: no-repeat;
+    background-size: contain;
     min-height: 45vh;
-    
-    position: relative;
     overflow: visible;
+    position: relative;
   }
 
   .section-4-pic-big {
-    visibility: hidden;
     position: absolute;
+    visibility: hidden;
     z-index: -10;
   }
 
   .section-5 {
+    justify-content: center;
     padding-top: 10%;
     text-align: center;
-    justify-content: center;
   }
 
   .section-5-header {

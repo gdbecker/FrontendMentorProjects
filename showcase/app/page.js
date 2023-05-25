@@ -45,6 +45,16 @@ import ProjectCard from './components/ProjectCard';
       />
 
       <ProjectCard 
+        img_bg="bg-blogr-homepage"
+        title="Blogr Landing Page"
+        title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/blogr-homepage"
+        level="2"
+        demo_url="https://blogr-homepage-gdbecker.netlify.app"
+        solution_url="https://www.frontendmentor.io/solutions/blogr-landing-page-with-react-bootstrap-ziqxnxrt9z"
+        brief_url="https://www.frontendmentor.io/challenges/blogr-landing-page-EX2RLAApP"
+      />
+
+      <ProjectCard 
         img_bg="bg-news-homepage"
         title="News Homepage"
         title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/news-homepage"

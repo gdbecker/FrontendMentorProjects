@@ -1,7 +1,6 @@
 import React from 'react';
 import { ReactComponent as Logo } from '../assets/logo.svg';
 import { ReactComponent as PicSection2Big } from '../assets/illustration-editor-desktop.svg';
-import { ReactComponent as PicSection3 } from '../assets/illustration-phones.svg';
 
 import Navigation from '../components/Navigation';
 
@@ -56,9 +55,7 @@ function LandingPage() {
       </div>
 
       <div className="row section-3">
-        <div className="col-lg-6 section-3-pic-wrapper">
-          {/* <PicSection3 className="section-3-pic"></PicSection3> */}
-        </div>
+        <div className="col-lg-6 section-3-pic-wrapper"></div>
           
         <div className="col-lg-6 section-3-copy">
           <div className="row mt-2">

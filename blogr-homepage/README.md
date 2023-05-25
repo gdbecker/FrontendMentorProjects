@@ -35,20 +35,20 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### Mobile View
 
-![](./news-homepage-mobile.jpg)
+![](./blogr-homepage-mobile.jpg)
 
 ### Mobile View with Menu
 
-![](./news-homepage-mobile-menu.jpg)
+![](./blogr-homepage-mobile-menu.jpg)
 
 ### Desktop View
 
-![](./news-homepage-desktop.jpg)
+![](./blogr-homepage-desktop.jpg)
 
 ### Links
 
-- [Solution URL](https://www.frontendmentor.io/solutions/news-homepage-with-react-bootstrap-tkackbvjn1)
-- [Live Site URL](https://news-homepage-gdbecker.netlify.app)
+- [Solution URL](https://www.frontendmentor.io/solutions/blogr-landing-page-with-react-bootstrap-ziqxnxrt9z)
+- [Live Site URL](https://blogr-homepage-gdbecker.netlify.app)
 
 ## My process
 
@@ -63,75 +63,113 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### What I learned
 
-This was my first 'landing page' type of project for Frontend Mentor and it was a wonderful challenge - not just with the general grid layout but especially with the navbar. I used the usual Bootstrap responsive rows and columns I've been used to for the main content, and of course needed to play around with it to get everything in the right positions, especially the bottom 01 - 03 section. The navbar was tricky getting it to stay to the right of the screen but also feature that transparent dark background in between the page and navigation. When I first saw the design I doubted if I could get it working, but I'm really glad I pushed myself to break down the problem into smaller parts at a time to get it working. I ended up using a box-shadow effect to the left of the fixed navbar on mobile view to achieve the desired effect, and I think it looks good!
+Blogr's landing page took me longer than I anticipated, but it was a really good challenge for me to keep persevering through the difficulties. As I was going section by section and breaking down the design problem into parts, I quickly realized how tricky getting the images right would be - I think in general this is something I want to keep working on. Because there are many ways to format image content, it took me some time flipping between loading in the picture as a component and then positioning, or using it as a background and then adjust size, position, and so on. Plus I had to keep the mobile view and desktop views in mind while I worked, and that was good practice for me to make sure that the choices I made could be spread across both as much as possible.
 
-For the navbar buttons, I at first used a small bit of JS and React hooks to flip the hamburger to X and vice versa, and then accidentally figured out how to do it with just HTML and CSS, so I could comment out the JS code 😂.
+Navbars in general are also an area I'm learning so much more about and want to keep growing in - that's part of why I'm thankful for these realistic project scenarios because of the varied designs. The trickiest part with this navbar was to get the mobile menu and arrow signs across dekstop and mobile to flip like I wanted. I also figured out a way to flip the arrow back even if a user clicks outside of the menu link. After a whole lot of tinkering I'm happy with the result!
 
 Here are a few code samples from this project:
 
 ```html
-<div className="collapse navbar-collapse" id="navbar">
-  <button
-      className="navbar-toggler pull-right"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbar"
-      aria-controls="navbar"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span className="navbar-toggler-icon navbar-x"></span>
-  </button>
-  
-  <ul className="navbar-nav ms-auto">
-    <li className="nav-item">
-      <a className="nav-link" href="/home">Home</a>
-    </li>
-    <li className="nav-item">
-      <a className="nav-link" href="/new">New</a>
-    </li>
-    <li className="nav-item">
-      <a className="nav-link" href='/popular'>Popular</a>
-    </li>
-    <li className="nav-item">
-      <a className="nav-link" href='/trending'>Trending</a>
-    </li>
-    <li className="nav-item">
-      <a className="nav-link" href='/categories'>Categories</a>
-    </li>
-  </ul>
-</div>
+<li ref={menuRefProduct}>
+  <DropdownButton
+    key="down-centered"
+    drop="down-centered"
+    title={product}
+    id="dropdown"
+    onClick={e => onProductClick(e)}
+  >
+    <Dropdown.Item href="/">Overview</Dropdown.Item>
+    <Dropdown.Item href="/">Pricing</Dropdown.Item>
+    <Dropdown.Item href="/">Marketplace</Dropdown.Item>
+    <Dropdown.Item href="/">Features</Dropdown.Item>
+    <Dropdown.Item href="/">Integrations</Dropdown.Item>
+    
+  </DropdownButton>
+</li>
 ```
 
 ```css
-@media(min-width: 600px) {
-  .navbar-light .navbar-x {
-    background-image: none !important;
-    box-shadow: none;
-    margin-bottom: 50%;
-    outline: none;
-  }
-}
+@media(max-width: 1000px) {
 
-@media(max-width: 600px) { 
-  .navbar-collapse {
-    background-color:#FFFDFA;
-    box-shadow: -300px 0px 0px 0px hsla(240, 100%, 5%, 55%) !important;
-    margin-top: 525px;
-    min-height: 120vh;
-    padding-left: 15px;
-    padding-right: 50px;
-    padding-top: 150px;
-    position: fixed;
+  .nav-wrapper {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    color: #00001A;
+    justify-content: center;
+    left: 0;
+    padding: 7%;
+    position: absolute;
     right: 0;
-    width: 300px;
-    z-index: 10;
+    text-align: center;
+    top: 100px;
   }
 
-  .navbar-x {
-    margin-left: 215px;
+  #dropdown {
+    align-items: center;
+    justify-content: center;
+  }
+
+  #dropdown {
+    color: #00001A !important;
+    margin: 0 !important;
+  }
+  
+  #dropdown:hover {
+    font-family: Ubuntu-Bold;
+    text-decoration: underline;
+  }
+
+  .dropdown-menu {
+    border: 0 !important;
+    border-radius: 0 !important;
+    margin-bottom: 3rem !important;
+    margin-top: -10% !important;
+    position: relative !important;
+    width: 100%;
+  }
+
+  .dropdown-item {
+    background-color: #DBDBDB !important;
+    font-family: Ubuntu-Light;
+    font-size: 14px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative !important;
+    text-align: center !important;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #DBDBDB !important;
+    font-family: Ubuntu-Medium;
   }
 }
+```
+
+```js
+ useEffect(() => {
+  let handler = (e)=> {
+    if(!menuRefProduct.current.contains(e.target)){
+      setOpenProduct(false);
+      console.log(menuRefProduct.current);
+    }
+    
+    if(!menuRefCompany.current.contains(e.target)){
+      setOpenCompany(false);
+      console.log(menuRefCompany.current);
+    }
+
+    if(!menuRefConnect.current.contains(e.target)){
+      setOpenConnect(false);
+      console.log(menuRefConnect.current);
+    }
+  };
+
+  document.addEventListener("mousedown", handler);
+  
+  return() =>{
+    document.removeEventListener("mousedown", handler);
+  }
+});
 ```
 
 ### Continued development
