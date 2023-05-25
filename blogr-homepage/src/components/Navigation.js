@@ -65,7 +65,7 @@ function Navigation() {
     <div id="navigation">
       <nav className="navbar navbar-fixed-top navbar-expand-lg navbar-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/"><h1 className="logo"><Logo></Logo></h1></a>
+          <a className="navbar-brand" href="/"><Logo></Logo>Logo</a>
 
           <button
             className="navbar-toggler"
@@ -87,7 +87,7 @@ function Navigation() {
                   key="down-centered"
                   drop="down-centered"
                   title={product}
-                  id="dropdown"
+                  id="dropdown-product"
                   onClick={e => onProductClick(e)}
                 >
                   <Dropdown.Item href="/">Overview</Dropdown.Item>
@@ -103,7 +103,7 @@ function Navigation() {
                   key="down-centered"
                   drop="down-centered"
                   title={company}
-                  id="dropdown"
+                  id="dropdown-company"
                   onClick={e => onCompanyClick(e)}
                 >
                   <Dropdown.Item href="/">About</Dropdown.Item>
@@ -117,7 +117,7 @@ function Navigation() {
                   key="down-centered"
                   drop="down-centered"
                   title={connect}
-                  id="dropdown"
+                  id="dropdown-connect"
                   onClick={e => onConnectClick(e)}
                 >
                   <Dropdown.Item href="/">Contact</Dropdown.Item>

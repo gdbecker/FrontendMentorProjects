@@ -73,6 +73,7 @@ Very dark desaturated blue: #3F4164
 }
 
 .navbar-brand {
+  color: transparent !important;
   width: 120px;
 }
 
@@ -108,18 +109,18 @@ Very dark desaturated blue: #3F4164
   outline: none;
 }
 
-#dropdown {
+#dropdown-product, #dropdown-company, #dropdown-connect {
   background-color: transparent !important;
   border: 0 !important;
   color: #FFFFFF !important;
 }
 
-#dropdown:hover {
+#dropdown-product:hover, #dropdown-company:hover, #dropdown-connect:hover {
   font-family: Ubuntu-Bold;
   text-decoration: underline;
 }
 
-#dropdown::after {
+#dropdown-product::after, #dropdown-company::after, #dropdown-connect::after {
   display: none;
 }
 
