@@ -58,7 +58,7 @@ Very dark desaturated blue: #3F4164
   background-color: #FFFDFA;
   color: #FFFFFF;
   min-height: 100vh;
-  overflow: hidden !important;
+  /* overflow: hidden !important; */
 }
 
 /* Navigation */
@@ -146,7 +146,6 @@ Very dark desaturated blue: #3F4164
   width: 7rem !important;
   background: #FF7A85;
   color: #FFFFFF;
-  /* border: 1px solid #FFFFFF; */
   border: 0 !important;
   padding: 10px;
   border-radius: 60px;
@@ -195,12 +194,11 @@ Very dark desaturated blue: #3F4164
   padding-top: 5%;
   padding-left: 14%;
   padding-right: 14%;
-  /* padding-left: 2rem;
-  padding-right: 2rem; */
   padding-bottom: 12%;
 
-  text-align: center;
+  text-align: center !important;
   color: #FFFFFF;
+  justify-content: center;
 }
 
 .section-1-header {
@@ -468,8 +466,8 @@ Very dark desaturated blue: #3F4164
     border-radius: 0 !important;
     border: 0 !important;
     width: 100%;
-    margin-top: -8% !important;
-    margin-bottom: 10% !important;
+    margin-top: -10% !important;
+    margin-bottom: 3rem !important;
   }
 
   .dropdown-item {
@@ -494,6 +492,7 @@ Very dark desaturated blue: #3F4164
   .section-2 {
     padding-left: 16%;
     padding-right: 16%;
+    justify-content: center;
   }
 
   .section-2-content {
@@ -512,7 +511,7 @@ Very dark desaturated blue: #3F4164
   .section-2-pic-wrapper {
     background-image: url(assets/illustration-editor-mobile.svg);
     background-position: center center;
-    background-size: cover 100% 100%;
+    background-size: contain;
     background-repeat: no-repeat;
     min-height: 75vh;
 
@@ -529,6 +528,7 @@ Very dark desaturated blue: #3F4164
   .section-3 {
     padding-left: 16%;
     padding-right: 16%;
+    justify-content: center;
   }
 
   .section-3-pic-wrapper {
@@ -546,6 +546,7 @@ Very dark desaturated blue: #3F4164
   .section-4 {
     padding-left: 16%;
     padding-right: 16%;
+    justify-content: center;
   }
 
   .section-4-content {
@@ -580,6 +581,7 @@ Very dark desaturated blue: #3F4164
   .section-5 {
     padding-top: 10%;
     text-align: center;
+    justify-content: center;
   }
 
   .section-5-header {

@@ -7,7 +7,7 @@ import Navigation from '../components/Navigation';
 
 function LandingPage() {
   return (
-    <div id="landing-page" className="">
+    <div id="landing-page" className="container-fluid">
       <div className="row section-1">
 
         <Navigation></Navigation>
