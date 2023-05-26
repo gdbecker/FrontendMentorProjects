@@ -64,10 +64,10 @@ function Results() {
                 {data.map((d) => (
                   <div className={`row mt-3 row-result row-${d.category}`}>
                     <div className="col">
-                      <h3 className={`section-2-label ${d.category}-label`}><img src={d.icon} className="icon"></img>{d.category}</h3>
+                      <h2 className={`section-2-label ${d.category}-label`}><img src={d.icon} alt="icon" className="icon"></img>{d.category}</h2>
                     </div>
                     <div className="col">
-                      <h3 className="section-2-results">{d.score} <span className="section-2-results-denominator">/ 100</span></h3>
+                      <h2 className="section-2-results">{d.score} <span className="section-2-results-denominator">/ 100</span></h2>
                     </div>
                   </div>
                 ))}
