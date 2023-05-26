@@ -80,7 +80,7 @@ import ProjectCard from './components/ProjectCard';
         title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/notifications-page"
         level="2"
         demo_url="https://notifications-page-gdbecker.netlify.app"
-        solution_url=""
+        solution_url="https://www.frontendmentor.io/solutions/notifications-page-with-react-bootstrap-LjvWM4bG57"
         brief_url="https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC"
       />
     </main>

@@ -37,7 +37,7 @@ function Notifications() {
             <div className="notification-row-details">
                 <div className="avatar-wrapper" style={{ backgroundImage: `url(${require("../assets/avatar-angela-gray.webp")})` }}></div>
                 <div>
-                  <p className="notification-text"><span><a href="/" className="a-name">Angela Gray</a></span> followed you <a href="/" className="a-noun"></a> <span className={clicked ? "" : "unread-dot"}></span></p>
+                  <p className="notification-text"><span><a href="/" className="a-name">Angela Gray</a></span> followed you <span className={clicked ? "" : "unread-dot"}></span></p>
                   <p className="notification-text time">5m ago</p>
                 </div>
             </div>
@@ -61,7 +61,7 @@ function Notifications() {
             <div className="notification-row-details">
                 <div className="avatar-wrapper" style={{ backgroundImage: `url(${require("../assets/avatar-rizky-hasanuddin.webp")})` }}></div>
                 <div>
-                  <p className="notification-text"><span><a href="/" className="a-name">Rizky Hasanuddin</a></span> sent you a private message <a href="/" className="a-noun"></a> <span className={clicked ? "" : ""}></span></p>
+                  <p className="notification-text"><span><a href="/" className="a-name">Rizky Hasanuddin</a></span> sent you a private message <span className={clicked ? "" : ""}></span></p>
                   <p className="notification-text time">5 days ago</p>
                   <a href="/" className="private-message-wrapper">
                     <div className="private-message">
@@ -80,7 +80,7 @@ function Notifications() {
             <div className="notification-row-details">
                 <div className="avatar-wrapper" style={{ backgroundImage: `url(${require("../assets/avatar-kimberly-smith.webp")})` }}></div>
                 <div>
-                  <p className="notification-text"><span><a href="/" className="a-name">Kimberly Smith</a></span> commented on your picture <a href="/" className="a-noun"></a> <span className={clicked ? "" : ""}></span></p>
+                  <p className="notification-text"><span><a href="/" className="a-name">Kimberly Smith</a></span> commented on your picture <span className={clicked ? "" : ""}></span></p>
                   <p className="notification-text time">1 week ago</p>
                 </div>
                 <div className="notification-img-wrapper" style={{ backgroundImage: `url(${require("../assets/image-chess.webp")})` }}></div>

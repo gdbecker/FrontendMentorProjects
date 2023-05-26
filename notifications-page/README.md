@@ -45,7 +45,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### Links
 
-- [Solution URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/notifications-page-with-react-bootstrap-LjvWM4bG57)
 - [Live Site URL](https://notifications-page-gdbecker.netlify.app)
 
 ## My process
