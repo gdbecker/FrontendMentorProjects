@@ -73,6 +73,16 @@ import ProjectCard from './components/ProjectCard';
         solution_url="https://www.frontendmentor.io/solutions/news-homepage-with-react-bootstrap-tkackbvjn1"
         brief_url="https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl"
       />
+
+      <ProjectCard 
+        img_bg="bg-notifications-page"
+        title="News Homepage"
+        title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/notifications-page"
+        level="2"
+        demo_url="https://notifications-page-gdbecker.netlify.app"
+        solution_url=""
+        brief_url="https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC"
+      />
     </main>
   )
 }

@@ -63,6 +63,13 @@
   background-size: cover;
 }
 
+.bg-notifications-page {
+  background-image: url(../../public/notifications-page-desktop.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* Link Underline Animation */
 .project-link {
   position: relative;
