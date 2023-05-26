@@ -45,7 +45,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### Links
 
-- [Solution URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/results-component-with-react-bootstrap-EaorfiBf3j)
 - [Live Site URL](https://results-component-gdbecker.netlify.app)
 
 ## My process
@@ -61,20 +61,65 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### What I learned
 
-This was a great challenge not just to keep practicing creating components from design specs and guidelines, but also using a bit of React JS to make the functionality work. I liked getting to practice hooks and managing state in this one, and handling the submit button click to pop up the result view. I first developed each view one at a time and make sure the design matched up closely, and then devided them up between two Fragment tags, so ultimately a React state would decide which one was rendered, depending on if the form was submitted or not. This was also great practice for lining up multiple buttons in a row, as well as managing spacing and hover states.
+I thought this was a fun challenge not just to match the layout and feel, but also get more practice using React JS and hooks and import the provided .json data file. My first goal was to work on the design and make sure that I got the elements where I needed them, and then pushed myself to use a 'useEffect' hook to import the data on load, and then for each item in the data list, map the row of data to the component. I kept the code and data file as simple as possible so all you would need to do is adjust the values or file path of the icon and then on refresh the component would reflect those changes. 
 
 Here are a few code samples from this project:
 
 ```html
-
+{data.map((d) => (
+  <div className={`row mt-3 row-result row-${d.category}`}>
+    <div className="col">
+      <h2 className={`section-2-label ${d.category}-label`}><img src={d.icon} alt="icon" className="icon"></img>{d.category}</h2>
+    </div>
+    <div className="col">
+      <h2 className="section-2-results">{d.score} <span className="section-2-results-denominator">/ 100</span></h2>
+    </div>
+  </div>
+))}
 ```
 
 ```css
+.row-Reaction {
+  background-color: rgb(255, 87, 87, 0.08);
+}
 
+.Reaction-label {
+  color: #FF5757;
+}
+
+.row-Memory {
+  background-color: rgb(255, 176, 31, 0.08);
+}
+
+.Memory-label {
+  color: #FFB01F;
+}
 ```
 
 ```js
+const [data, setData] = useState([]);
+const [score, setScore] = useState('');
+const [isLoading, setIsLoading] = useState(true);
 
+useEffect(() => {
+  const fetchData = async () => {
+    setData(dataFile);
+
+    var sum = 0;
+    var count = 0;
+    for (var i = 0; i < dataFile.length; i++) {
+      sum += dataFile[i]["score"];
+      count += 1;
+    }
+
+    var ave = Math.round(sum / count);
+    setScore(ave);
+
+    setIsLoading(false);
+  };
+
+  fetchData();
+}, []);
 ```
 
 ### Continued development

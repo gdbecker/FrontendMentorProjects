@@ -45,6 +45,16 @@ import ProjectCard from './components/ProjectCard';
       />
 
       <ProjectCard 
+        img_bg="bg-results-component"
+        title="Results Summary Component"
+        title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/results-component"
+        level="1"
+        demo_url="https://results-component-gdbecker.netlify.app"
+        solution_url="https://www.frontendmentor.io/solutions/results-component-with-react-bootstrap-EaorfiBf3j"
+        brief_url="https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV"
+      />
+
+      <ProjectCard 
         img_bg="bg-blogr-homepage"
         title="Blogr Landing Page"
         title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/blogr-homepage"

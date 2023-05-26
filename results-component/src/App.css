@@ -56,30 +56,30 @@ Violet blue: rgb(78, 33, 202, 0.2)
 /* Landing Page */
 #landing-page {
   background-color: #FFFFFF;
-  border-radius: 10px;
-  font-family: Poppins-Regular;
-  min-height: 100vh;
-  padding: 10%;
+	border-radius: 10px;
+	font-family: Poppins-Regular;
+	min-height: 100vh;
+	padding: 10%;
 }
 
 /* Results Component */
 #results {
   background-color: #FFFFFF;
-  min-height: 35vh;
-  border-radius: 20px;
-  padding: auto;
-  box-shadow: 0px 0px 30px 5px rgb(78, 33, 202, 0.2) ;
-  font-family: HankenGrotesk-Medium;
+	border-radius: 20px;
+	box-shadow: 0px 0px 30px 5px rgb(78, 33, 202, 0.2);
+	font-family: HankenGrotesk-Medium;
+	min-height: 35vh;
+	padding: auto;
 }
 
 /* Section 1 */
 .section-1 {
   background-image: linear-gradient(to top, #2E2BE9, #7857FF);
-  text-align: center;
-  color: #FFFFFF;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  border-radius: 20px;
+	border-radius: 20px;
+	color: #FFFFFF;
+	padding-bottom: 5%;
+	padding-top: 5%;
+	text-align: center;
 }
 
 .section-1-header-1 {
@@ -99,23 +99,23 @@ Violet blue: rgb(78, 33, 202, 0.2)
 
 .results-circle-wrapper {
   display: table;
-  overflow: visible;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10%;
-  margin-bottom: 14%;
+	margin-bottom: 14%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+	overflow: visible;
+	position: relative;
 }
 
 .results-circle {
   background-image: linear-gradient(to top, #4E21CA, #2421CA);
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  padding-top: 15%;
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
+	border-radius: 50%;
+	display: table-cell;
+	height: 150px;
+	padding-top: 15%;
+	text-align: center;
+	vertical-align: middle;
+	width: 150px;
 }
 
 .section-1-header-2 {
@@ -131,11 +131,11 @@ Violet blue: rgb(78, 33, 202, 0.2)
 /* Section 2 */
 .section-2 {
   background-color: #FFFFFF;
-  color: #303B5A;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  border-radius: 20px;
-  font-family: HankenGrotesk-Bold;
+	border-radius: 20px;
+	color: #303B5A;
+	font-family: HankenGrotesk-Bold;
+	padding-bottom: 5%;
+	padding-top: 5%;
 }
 
 .section-2-header {
@@ -145,14 +145,14 @@ Violet blue: rgb(78, 33, 202, 0.2)
 
 .section-2-label {
   font-size: 1rem;
-  text-align: left;
   margin-left: 5%;
+  text-align: left;
 }
 
 .section-2-results {
   font-size: 1rem;
-  text-align: right;
   margin-right: 5%;
+  text-align: right;
 }
 
 .section-2-results-denominator {
@@ -160,14 +160,14 @@ Violet blue: rgb(78, 33, 202, 0.2)
 }
 
 .icon {
-  margin-right: 5%;
   margin-bottom: 2%;
+  margin-right: 5%;
 }
 
 .row-result {
-  padding-top: 6%;
-  padding-bottom: 4%;
   border-radius: 8px;
+  padding-bottom: 4%;
+  padding-top: 6%;
   vertical-align: middle;
 }
 
@@ -208,16 +208,16 @@ Violet blue: rgb(78, 33, 202, 0.2)
 }
 
 .continue-button {
-  width: 90% !important;
-  border: 0 !important;
-  box-shadow: none;
-  outline: none;
-  border-radius: 70px;
-  color: #FFFFFF;
   background-color: #303B5A;
-  margin-top: 5% !important;
-  padding-top: 4%;
-  padding-bottom: 4%;
+	border: 0 !important;
+	border-radius: 70px;
+	box-shadow: none;
+	color: #FFFFFF;
+	margin-top: 5% !important;
+	outline: none;
+	padding-bottom: 4%;
+	padding-top: 4%;
+	width: 90% !important;
 }
 
 .continue-button:hover {
@@ -227,7 +227,7 @@ Violet blue: rgb(78, 33, 202, 0.2)
 /* Mobile screen settings */
 @media(max-width: 1000px) {
   .results-circle {
-    width: 135px;
     height: 135px;
+    width: 135px;
   }
 }
