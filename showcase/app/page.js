@@ -76,7 +76,7 @@ import ProjectCard from './components/ProjectCard';
 
       <ProjectCard 
         img_bg="bg-notifications-page"
-        title="News Homepage"
+        title="Notifications Page"
         title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/notifications-page"
         level="2"
         demo_url="https://notifications-page-gdbecker.netlify.app"
