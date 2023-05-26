@@ -109,8 +109,8 @@ Violet blue: rgb(78, 33, 202, 0.2)
 
 .results-circle {
   background-image: linear-gradient(to top, #4E21CA, #2421CA);
-  width: 12vw;
-  height: 12vw;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   padding-top: 15%;
   display: table-cell;
@@ -227,7 +227,7 @@ Violet blue: rgb(78, 33, 202, 0.2)
 /* Mobile screen settings */
 @media(max-width: 1000px) {
   .results-circle {
-    width: 23vw;
-    height: 23vw;
+    width: 135px;
+    height: 135px;
   }
 }
