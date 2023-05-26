@@ -42,6 +42,13 @@
   background-size: cover;
 }
 
+.bg-results-component {
+  background-image: url(../../public/results-component-desktop.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .bg-blogr-homepage {
   background-image: url(../../public/blogr-homepage-desktop.jpg);
   background-position: top center;
