@@ -43,7 +43,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### Links
 
-- [Solution URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/fylo-dark-landing-page-with-next-and-sass-IAyv5CaYqZ)
 - [Live Site URL](https://fylo-landing-dark-gdbecker.netlify.app)
 
 ## My process

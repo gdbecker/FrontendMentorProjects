@@ -65,6 +65,16 @@ import ProjectCard from './components/ProjectCard';
       />
 
       <ProjectCard 
+        img_bg="bg-fylo-dark-landing"
+        title="Fylo Dark Theme Landing Page"
+        title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/fylo-dark-landing"
+        level="2"
+        demo_url="https://fylo-dark-landing-gdbecker.netlify.app"
+        solution_url="https://www.frontendmentor.io/solutions/fylo-dark-landing-page-with-next-and-sass-IAyv5CaYqZ#comment-64722b78fc4fcd2328945d5f"
+        brief_url="https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd"
+      />
+
+      <ProjectCard 
         img_bg="bg-news-homepage"
         title="News Homepage"
         title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/news-homepage"
