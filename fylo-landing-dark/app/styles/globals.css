@@ -22,7 +22,6 @@
 .attribution {
   font-size: 11px;
   text-align: center;
-  font-size: 11px;
 }
 
 .attribution a {
@@ -32,11 +31,11 @@
 /* Navbar */
 #navigation {
   background-color: hsl(217, 28%, 15%);
-  text-align: left;
   font-family: "Raleway-Regular";
   padding: 15px;
   padding-left: 3%;
   padding-right: 3%;
+  text-align: left;
 }
 
 .navbar {
@@ -44,14 +43,16 @@
 }
 
 .navbar-brand {
-  width: 145px;
+  color: transparent !important;
   display: inline-block;
+  font-size: xx-small;
   vertical-align: middle;
+  width: 145px;
 }
 
 .nav-item {
-  padding: 0 12px;
   font-size: 0.9rem;
+  padding: 0 12px;
 }
 
 .nav-link {
@@ -59,60 +60,59 @@
 }
 
 .nav-link:hover {
-  text-decoration: underline;
   font-family: "Raleway-Bold";
+  text-decoration: underline;
 }
 
 .navbar-light {
-  outline: none;
   box-shadow: none;
+  outline: none;
 }
 
 /* Loading Page */
 #loading-page {
   background-color: hsl(218, 28%, 13%);
   color: #FFFFFF;
-  text-align: center;
   min-height: 100vh;
   padding-top: 2%;
+  text-align: center;
 }
 
 .loading-text {
-  padding: 15px;
   font-size: 1.4rem;
+  padding: 15px;
 }
 
 /* Home Page */
 #home-page {
+  align-items: center;
   background-color: hsl(218, 28%, 13%) !important;
   background-color: white;
   color: #FFFFFF;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   font-family: "OpenSans-Regular";
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
 }
 
 .section-intro {
-  padding-left: 23% !important;
-  padding-right: 23% !important;
-  padding-bottom: 10%;
-  overflow: visible !important;
+  background-color: hsl(217, 28%, 15%);
   background-image: url(../../public/bg-curvy-desktop.svg);
+  background-position: center bottom;
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center bottom;
   height: 50%;
   overflow: visible !important;
-  background-color: hsl(217, 28%, 15%);
+  padding-bottom: 10%;
+  padding-left: 23% !important;
+  padding-right: 23% !important;
 }
 
 .section-intro-pic {
   background-image: url(../../public/illustration-intro.png);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
   min-height: 65vh;
 }
 
@@ -126,18 +126,18 @@
 }
 
 .section-intro-button {
-  width: 40% !important;
-  min-height: 45px;
   background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
-  color: #FFFFFF;
   border: 0px !important;
-  outline: none !important;
-  box-shadow: none !important;
-  font-size: 0.95rem;
-  font-family: "OpenSans-Bold";
-  padding-top: auto !important;
-  padding-bottom: auto !important;
   border-radius: 35px;
+  box-shadow: none !important;
+  color: #FFFFFF;
+  font-family: "OpenSans-Bold";
+  font-size: 0.95rem;
+  min-height: 45px;
+  outline: none !important;
+  padding-bottom: auto !important;
+  padding-top: auto !important;
+  width: 40% !important;
 }
 
 .section-intro-button:hover {
@@ -145,10 +145,10 @@
 }
 
 .section-details {
+  margin-bottom: 10%;
+  margin-top: 10%;
   padding-left: 14% !important;
   padding-right: 14% !important;
-  margin-top: 10%;
-  margin-bottom: 10%;
 }
 
 .section-details-header {
@@ -161,26 +161,26 @@
 }
 
 .section-how {
+  margin-bottom: 10%;
   padding-left: 4% !important;
   padding-right: 8% !important;
   text-align: left;
-  margin-bottom: 10%;
 }
 
 .section-how-pic {
   background-image: url(../../public/illustration-stay-productive.png);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
   min-height: 60vh;
 }
 
 .section-how-header {
   font-family: "OpenSans-Bold";
   font-size: 2.1rem;
-  width: 80% !important;
   margin-bottom: 20px;
   margin-top: 21%;
+  width: 80% !important;
 }
 
 .section-how-text {
@@ -197,24 +197,24 @@
 }
 
 .section-testimonials {
+  background-image: url(../../public/bg-quotes.png);
+  background-position: 7.5vh 1vh;
+  background-repeat: no-repeat;
+  background-size: 5%;
+  margin-bottom: 20%;
   padding-left: 5% !important;
   padding-right: 5% !important;
   padding-top: 3%;
   text-align: left;
-  margin-bottom: 20%;
-  background-image: url(../../public/bg-quotes.png);
-  background-repeat: no-repeat;
-  background-size: 5%;
-  background-position: 7.5vh 1vh;
 }
 
 .testimonial-box {
   background-color: hsl(219, 30%, 18%);
   border-radius: 8px;
-  padding-top: 25px;
+  padding-bottom: 25px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 25px;
+  padding-top: 25px;
 }
 
 .testimonial-text {
@@ -222,17 +222,17 @@
 }
 
 .profile-wrapper {
-  width: 4.5vh !important;
-  height: 4.5vh !important;
   border-radius: 50% !important;
+  height: 4.5vh !important;
+  margin: auto;
   overflow: hidden;
   text-align: center;
-  margin: auto;
+  width: 4.5vh !important;
 }
 
 .profile-name {
-  font-size: 0.85rem;
   font-family: "Raleway-Bold";
+  font-size: 0.85rem;
 }
 
 .profile-title {
@@ -246,18 +246,18 @@
 
 .register-box {
   background-color: hsl(217, 28%, 15%);
-  padding-top: 2%;
+  border-radius: 8px;
+  left: 0px;
+  margin: auto;
   padding-bottom: 3%;
   padding-left: 5%;
   padding-right: 5%;
-  width: 60% !important;
-  border-radius: 8px;
+  padding-top: 2%;
   position: absolute;
-  top: -135px;
-  left: 0px;
   right: 0px;
   text-align: center;
-  margin: auto;
+  top: -135px;
+  width: 60% !important;
 }
 
 .register-header {
@@ -270,27 +270,27 @@
 }
 
 .register-input {
-  min-height: 45px;
   border: 0px !important;
-  outline: none !important;
+  border-radius: 35px !important;
   box-shadow: none !important;
   font-size: 0.7rem !important;
-  border-radius: 35px !important;
+  min-height: 45px;
+  outline: none !important;
 }
 
 .register-button {
-  width: 100% !important;
-  min-height: 45px;
   background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
-  color: #FFFFFF;
   border: 0px !important;
-  outline: none !important;
-  box-shadow: none !important;
-  font-size: 0.8rem;
-  font-family: "OpenSans-Bold";
-  padding-top: auto !important;
-  padding-bottom: auto !important;
   border-radius: 35px;
+  box-shadow: none !important;
+  color: #FFFFFF;
+  font-family: "OpenSans-Bold";
+  font-size: 0.8rem;
+  min-height: 45px;
+  outline: none !important;
+  padding-bottom: auto !important;
+  padding-top: auto !important;
+  width: 100% !important;
 }
 
 .register-button:hover {
@@ -298,18 +298,18 @@
 }
 
 .register-error {
-  font-size: 0.65rem;
   color: hsl(0, 100%, 63%);
+  font-size: 0.65rem;
   text-align: left !important;
 }
 
 .section-footer {
-  padding-top: 13%;
   background-color: hsl(216, 53%, 9%);
-  text-align: left;
+  padding-bottom: 6% !important;
   padding-left: 10% !important;
   padding-right: 10% !important;
-  padding-bottom: 6% !important;
+  padding-top: 13%;
+  text-align: left;
 }
 
 .footer-location {
@@ -323,9 +323,9 @@
 .footer-link {
   color: #FFFFFF !important;
   font-size: 0.9rem;
-  text-decoration: none !important;
-  margin-top: 7px;
   margin-bottom: 7px;
+  margin-top: 7px;
+  text-decoration: none !important;
 }
 
 .footer-link:hover {
@@ -334,55 +334,58 @@
 
 .icon-wrapper {
   border: 1px solid #FFFFFF;
-  width: 30px;
-  height: 30px;
   border-radius: 50%;
+  height: 30px;
   text-align: center;
+  width: 30px;
 }
 
 .icon-btn {
+  background-color: hsl(216, 53%, 9%) !important;
   border: 1px solid #FFFFFF !important;
   border-radius: 50%;
-  outline: none !important;
   box-shadow: none !important;
-  background-color: hsl(216, 53%, 9%) !important;
   color: #FFFFFF !important;
   margin: 7px;
+  outline: none !important;
   padding-bottom: 5px;
   padding-left: 8px;
   padding-right: 8px;
 }
 
 .icon-btn:hover {
-  color: hsl(176, 68%, 64%) !important;
   border-color: hsl(176, 68%, 64%) !important;
+  color: hsl(176, 68%, 64%) !important;
 }
 
 @media (max-width: 620px) {
+  .navbar-logo {
+    width: 100px;
+  }
   .navbar-collapse {
     background-color: #FFFDFA;
-    width: 80%;
-    margin-top: 80%;
+    height: 150vh;
     margin-left: 10rem;
-    position: absolute;
+    margin-top: 80%;
     padding: 3%;
     padding-top: 20%;
-    height: 150vh;
+    position: absolute;
     top: auto;
+    width: 80%;
     z-index: 10;
   }
   .section-intro {
-    padding-left: 8% !important;
-    padding-right: 8% !important;
     background-image: url(../../public/bg-curvy-mobile.svg);
     height: 70%;
+    padding-left: 8% !important;
+    padding-right: 8% !important;
   }
   .section-intro-pic {
     min-height: 45vh;
   }
   .section-intro-button {
-    width: 70% !important;
     margin-bottom: 15%;
+    width: 70% !important;
   }
   .section-how {
     padding-left: 8% !important;
@@ -393,17 +396,17 @@
     margin-top: 0%;
   }
   .section-testimonials {
+    background-position: 6.5vh -1vh;
     padding-left: 8% !important;
     padding-right: 8% !important;
-    background-position: 6.5vh -1vh;
   }
   .register-box {
-    position: relative !important;
     margin-top: 40%;
+    position: relative !important;
   }
   .register-button {
-    margin-top: 4%;
     margin-bottom: 4%;
+    margin-top: 4%;
   }
   .icon-row {
     text-align: center;

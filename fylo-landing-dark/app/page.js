@@ -51,13 +51,12 @@ function Home() {
   }
 
   return (
-    <div id="home-page">
+    <main id="home-page">
       <div className="section-intro">
         <div className="row">
           <div className="section-intro-pic"></div>
         </div>
         <div className="row mt-3">
-          <div className=""></div>
           <div className="">
             <div className="row mt-3">
               <h1 className="section-intro-header">
@@ -74,14 +73,10 @@ function Home() {
               <div className="">
                 <button type="button" className="section-intro-button">Get Started</button>
               </div>
-              
             </div>
           </div>
         </div>
-
-
       </div>
-
       <div className="container section-details">
         <div className="row mt-5">
           <div className="col-md-5">
@@ -164,39 +159,34 @@ function Home() {
           </div>
         </div>
       </div>
-
       <div className="container section-how">
         <div className="row">
           <div className="col-md-6 section-how-pic">
-
           </div>
           <div className="col-md-6 section-how-content">
-            {/* <div className="row mt-3"> */}
-              <h1 className="section-how-header">Stay productive, wherever you are</h1>
-            {/* </div> */}
-            {/* <div className="row mt-3"> */}
+            <h1 className="section-how-header">Stay productive, wherever you are</h1>
+            <p className="section-how-text">
+              Never let location be an issue when accessing your files. Fylo has you covered for all of your file 
+              storage needs.
+            </p>
+            <p className="section-how-text">
+              Securely share files and folders with friends, family and colleagues for live collaboration. No email 
+              attachments required.
+            </p>
+            <a href="/" className="section-how-link">
               <p className="section-how-text">
-                Never let location be an issue when accessing your files. Fylo has you covered for all of your file 
-                storage needs.
+                See how Fylo works 
+                <Image 
+                  src={IconArrow} 
+                  alt="Arrow" 
+                  width={15} 
+                  height={15}
+                />
               </p>
-            {/* </div> */}
-            {/* <div className="row mt-0"> */}
-              <p className="section-how-text">
-                Securely share files and folders with friends, family and colleagues for live collaboration. No email 
-                attachments required.
-              </p>
-            {/* </div> */}
-            {/* <div className="row mt-0"> */}
-              <a href="/" className="section-how-link">
-                <p className="section-how-text">
-                  See how Fylo works <Image src={IconArrow} alt="Arrow" width={15} height={15}/>
-                </p>
-              </a>
-            {/* </div> */}
+            </a>
           </div>
         </div>
       </div>
-
       <div className="container section-testimonials">
         <div className="row g-4">
           <div className="col-md-4">
@@ -210,7 +200,12 @@ function Home() {
               <div className="d-inline-flex flex-row">
                 <div className="p-2">
                   <div className="profile-wrapper">
-                    <Image src={Profile1} alt="Profile" width={33} height={33} />
+                    <Image 
+                      src={Profile1} 
+                      alt="Profile" 
+                      width={33} 
+                      height={33}
+                    />
                   </div>
                 </div>
                 <div className="p-2">
@@ -231,7 +226,12 @@ function Home() {
               <div className="d-inline-flex flex-row">
                 <div className="p-2">
                   <div className="profile-wrapper">
-                    <Image src={Profile2} alt="Profile" width={33} height={33} />
+                    <Image 
+                      src={Profile2} 
+                      alt="Profile" 
+                      width={33} 
+                      height={33}
+                    />
                   </div>
                 </div>
                 <div className="p-2">
@@ -252,7 +252,12 @@ function Home() {
               <div className="d-inline-flex flex-row">
                 <div className="p-2">
                   <div className="profile-wrapper">
-                    <Image src={Profile3} alt="Profile" width={33} height={33} />
+                    <Image 
+                      src={Profile3} 
+                      alt="Profile" 
+                      width={33} 
+                      height={33} 
+                    />
                   </div>
                 </div>
                 <div className="p-2">
@@ -264,7 +269,6 @@ function Home() {
           </div>
         </div>
       </div>
-
       <div className="section-register">
         <div className="register-box">
           <div className="row mt-3">
@@ -301,14 +305,11 @@ function Home() {
                       type="submit">Get Started for Free</button>
                   </div>
                 </div>
-                
               </div>
             </form>
           </div>
-          
         </div>
       </div>
-
       <div className="section-footer">
         <Image
           src={Logo}
@@ -395,8 +396,7 @@ function Home() {
           </div>
         </div>
       </div>
-
-    </div>
+    </main>
   )
 }
 
