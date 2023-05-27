@@ -362,17 +362,8 @@
   .navbar-logo {
     width: 100px;
   }
-  .navbar-collapse {
-    background-color: #FFFDFA;
-    height: 150vh;
-    margin-left: 10rem;
-    margin-top: 80%;
-    padding: 3%;
-    padding-top: 20%;
-    position: absolute;
-    top: auto;
-    width: 80%;
-    z-index: 10;
+  .nav-item {
+    padding: 0 3px !important;
   }
   .section-intro {
     background-image: url(../../public/bg-curvy-mobile.svg);
@@ -410,5 +401,9 @@
   }
   .icon-row {
     text-align: center;
+  }
+  .icon-wrapper {
+    height: 20px;
+    width: 20px;
   }
 }
