@@ -341,15 +341,18 @@
 }
 
 @media(max-width: 620px) { 
+  .navbar-brand {
+    width: 80px;
+  }
+
   .navbar-logo {
     width: 100px;
   }
 
   .nav-item {
     font-size: 0.8rem;
-    margin-bottom: 3px !important;
     padding-left: 0px !important;
-    padding-right: 1px !important;
+    padding-right: 0px !important;
   }
 
   .section-intro {
