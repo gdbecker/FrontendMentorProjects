@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts */
+@font-face {
+  font-family: LeagueSpartan-Bold;
+  src: url(../../public/LeagueSpartan-Bold.ttf);
+}
