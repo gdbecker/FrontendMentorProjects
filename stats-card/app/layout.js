@@ -1,5 +1,4 @@
 import './styles/globals.css'
-// import 'bootstrap/dist/css/bootstrap.css';
 
 export const metadata = {
   title: 'Frontend Mentor | Stats Preview Card Component',
@@ -13,10 +12,10 @@ export default function RootLayout({ children }) {
       
         {children}
 
-        <div className="text-center font-interRegular text-sm">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" className=" font-interBold hover:text-violet">Frontend Mentor</a>. 
-          Coded by <a href="#" className="font-interBold hover:text-violet">Garrett Becker</a>.
-        </div>
+        <footer className="text-center font-interRegular text-sm">
+          Challenge by <a href="https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62/hub" target="_blank" className="font-interBold hover:text-violet">Frontend Mentor</a>. 
+          Coded by <a href="https://github.com/gdbecker/FrontendMentorProjects/tree/main/stats-card" target="_blank" className="font-interBold hover:text-violet">Garrett Becker</a>.
+        </footer>
       </body>
     </html>
   )

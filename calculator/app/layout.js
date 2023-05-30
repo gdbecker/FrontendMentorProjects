@@ -9,7 +9,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-      
+        <link href="https://cdn.jsdelivr.net/css-toggle-switch/latest/toggle-switch.css" rel="stylesheet" />
+
         {children}
 
         <footer className="text-center font-leagueSpartanBold text-sm">

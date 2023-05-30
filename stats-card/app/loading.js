@@ -2,11 +2,11 @@ import React from 'react'
 
 function LoadingPage() {
   return (
-    <div id="loading-page">
+    <main id="loading-page">
       <div className="text-center min-h-screen">
         Loading
       </div>
-    </div>
+    </main>
   )
 }
 
