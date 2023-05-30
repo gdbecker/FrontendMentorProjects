@@ -55,6 +55,16 @@ import ProjectCard from './components/ProjectCard';
       />
 
       <ProjectCard 
+        img_bg="bg-stats-card"
+        title="Stats Preview Card Component"
+        title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/stats-card"
+        level="1"
+        demo_url="https://stats-card-gdbecker.netlify.app"
+        solution_url="https://www.frontendmentor.io/solutions/stats-card-with-next-tailwind-s2UBHsewM6"
+        brief_url="https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62"
+      />
+
+      <ProjectCard 
         img_bg="bg-blogr-homepage"
         title="Blogr Landing Page"
         title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/blogr-homepage"

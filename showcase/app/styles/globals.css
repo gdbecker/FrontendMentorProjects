@@ -49,6 +49,13 @@
   background-size: cover;
 }
 
+.bg-stats-card {
+  background-image: url(../../public/stats-card-desktop.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .bg-blogr-homepage {
   background-image: url(../../public/blogr-homepage-desktop.jpg);
   background-position: top center;
