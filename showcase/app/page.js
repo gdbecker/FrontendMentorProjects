@@ -15,6 +15,16 @@ import ProjectCard from './components/ProjectCard';
       />
 
       <ProjectCard 
+        img_bg="bg-huddle-landing"
+        title="Huddle Landing Page"
+        title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/huddle-landing"
+        level="1"
+        demo_url="https://huddle-landing-gdbecker.netlify.app"
+        solution_url="https://www.frontendmentor.io/solutions/huddle-landing-with-next-tailwind-qui6I1xtZh"
+        brief_url="https://www.frontendmentor.io/challenges/huddle-landing-page-with-a-single-introductory-section-B_2Wvxgi0"
+      />
+
+      <ProjectCard 
         img_bg="bg-rating-component"
         title="Interactive Rating Component"
         title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/rating-component"
