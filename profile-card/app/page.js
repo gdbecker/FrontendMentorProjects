@@ -18,11 +18,11 @@ function Home() {
   }
 
   return (
-    <div id="home-page-behind">
+    <main id="home-page-behind">
       <div id="home-page">
         <ProfileCard />
       </div>
-    </div>
+    </main>
   )
 }
 

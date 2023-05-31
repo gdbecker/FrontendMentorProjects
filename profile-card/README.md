@@ -1,34 +1,144 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Profile Card Component Solution
 
-## Getting Started
+This is my solution to the [Profile card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ). I'm super thankful to have found Frontend Mentor as a great way to confidently grow in my coding skills with real-life projects. 
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- [Overview](#overview)
+  - [Project Brief](#project-brief)
+  - [Mobile View](#mobile-view)
+  - [Desktop View](#desktop-view)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+## Overview
+
+### [Project Brief](./project%20brief/)
+
+Your challenge is to build out this profile card component and get it looking as close to the design as possible.
+
+You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+
+Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+
+### Mobile View
+
+![](./profile-card-mobile.jpg)
+
+### Desktop View
+
+![](./profile-card-desktop.jpg)
+
+### Links
+
+- [Solution URL]()
+- [Live Site URL](https://profile-card-gdbecker.netlify.app)
+
+## My process
+
+### Built with
+
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org) - React framework
+- HTML5
+- CSS
+- [SASS](https://sass-lang.com) - CSS extension language
+- Bootstrap
+- Mobile-first workflow
+- [VS Code](https://code.visualstudio.com)
+
+### What I learned
+
+I really enjoy how each of these frontend projects not only let you practice with whichever tools you choose, but also to push yourself and accomplish design challenges you may not have faced before. This profile card was great for me to practice some absolute positioning with the main profile image on the front - I tackled this one first by building the card elements and then positioning as needed - and then went for the background. I first tried putting both background images on the same <div> tag, but was having issues getting the positioning right, so I decided to try having two <div> layers for the background. That's what worked for me to give flexibility in positioning each one how I wanted depending on screen size. Really happy with how this one turned out!
+
+Here are a few code samples from this project:
+
+```html
+<!-- HTML for the profile image section on the card -->
+<div className="row">
+  <div className="profile-wrapper">
+    <Image
+      src={Avatar}
+      alt="Profile-Image"
+      layout='fill'
+      objectFit='contain'
+    />
+  </div>
+</div>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```css
+/* CSS for the dual-layered background images and the profile image positioning */
+#home-page {
+  align-items: center;
+	background-image: url(../../public/bg-pattern-top.svg);
+	background-position: -80vh -110vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	justify-content: center;
+	min-height: 90vh;
+	padding: 8%;
+	text-align: center;
+}
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+#home-page-behind {
+  background-color: $darkCyan;
+	background-image: url(../../public/bg-pattern-bottom.svg);
+	background-position: 80vh 30vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+.profile-wrapper {
+  border: 4px solid $white !important;
+	border-radius: 50% !important;
+	height: 13vh !important;
+	left: 0px;
+	margin: auto;
+	overflow: hidden;
+	position: absolute;
+	right: 0px;
+	text-align: center;
+	top: 80px;
+	width: 13vh !important;
+}
+```
 
-## Learn More
+```js
+// Loading in Bootstrap JS
+const [loading, setLoading] = useState(true);
 
-To learn more about Next.js, take a look at the following resources:
+useEffect(() => {
+  import ('bootstrap/dist/js/bootstrap.min.js');
+  setLoading(false);
+}, []);
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+if (loading) {
+  return <LoadingPage />
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Continued development
 
-## Deploy on Vercel
+As a starter developer, I want to keep growing in working as a team and learning how to deliver smaller packages of code at a time, such as components like this one. I thought this project was a good way to get back into React and begin doing just that!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Useful resources
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [CSS Formatter](http://www.lonniebest.com/FormatCSS/) - I found this helpful site when I'm feeling lazy and don't want to format my CSS code, I can have this do it for me, especially putting everything in alphabetical order.
+- [SASS Tutorial and Setup](https://www.youtube.com/watch?v=txg2fCPsYYU&t=241s) - This was a helpful quick tutorial I watched to help me get started with SASS and the live compiler in VS Code.
+
+## Author
+
+- Website - [Garrett Becker]()
+- Frontend Mentor - [@gdbecker](https://www.frontendmentor.io/profile/gdbecker)
+- LinkedIn - [Garrett Becker](https://www.linkedin.com/in/garrett-becker-923b4a106/)
+
+## Acknowledgments
+
+Thank you to the Frontend Mentor team for providing all of these fantastic projects to build, and for our getting to help each other grow!

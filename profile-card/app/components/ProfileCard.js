@@ -6,13 +6,12 @@ function ProfileCard() {
   return (
     <div id="profile">
       <div className="row profile-background">
-
       </div>
       <div className="row">
         <div className="profile-wrapper">
           <Image
             src={Avatar}
-            alt="cat-image"
+            alt="Profile-Image"
             layout='fill'
             objectFit='contain'
           />
@@ -24,20 +23,16 @@ function ProfileCard() {
         </div>
         <div className="p-1">
           <p className="profile-count">26</p>
-        </div>
-        
+        </div> 
       </div>
-
       <div className="flex-row">
         <p className="profile-loc">London</p>
       </div>
-
       <div className="row">
         <div className="col">
           <hr className="divider"></hr>
         </div>          
       </div>
-
       <div className="row mt-1">
         <div className="container stats-box">
           <div className="row">
@@ -65,12 +60,9 @@ function ProfileCard() {
                 <p className="stats-text">Photos</p>
               </div>
             </div>
-          </div>
-          
+          </div>   
         </div>
-        
       </div>
-      
     </div>
   )
 }

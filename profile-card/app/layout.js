@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 export const metadata = {
   title: 'Frontend Mentor | Profile Card Component',
-  description: 'Solutiion for this challenge!',
+  description: 'Solution for this challenge!',
 }
 
 export default function RootLayout({ children }) {
@@ -12,10 +12,10 @@ export default function RootLayout({ children }) {
       <body>
         {children}
 
-        <div class="attribution">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-          Coded by <a href="#">Garrett Becker</a>.
-        </div>
+        <footer class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="https://github.com/gdbecker/FrontendMentorProjects/tree/main/profile-card" target="_blank">Garrett Becker</a>.
+        </footer>
       </body>
     </html>
   )

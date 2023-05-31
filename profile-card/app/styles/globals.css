@@ -11,9 +11,8 @@
 }
 /* Layout */
 .attribution {
-  font-size: 11px;
-  text-align: center;
   font-size: 0.8rem;
+  text-align: center;
 }
 
 .attribution a {
@@ -22,61 +21,60 @@
 
 /* Loading Page */
 #loading-page {
-  background-color: #FFFFFF;
   align-items: center;
+  background-color: #FFFFFF;
   justify-content: center;
-  vertical-align: middle;
-  text-align: center;
   min-height: 100vh;
   padding-top: 8%;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .loading-text {
-  padding: 15px;
   font-size: 1.4rem;
+  padding: 15px;
 }
 
 /* Home Page */
 #home-page {
-  padding: 8%;
-  min-height: 90vh;
-  text-align: center;
   align-items: center;
-  justify-content: center;
   background-image: url(../../public/bg-pattern-top.svg);
+  background-position: -80vh -110vh;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: -80vh -110vh;
+  justify-content: center;
+  min-height: 90vh;
+  padding: 8%;
+  text-align: center;
 }
 
 #home-page-behind {
   background-color: hsl(185, 75%, 39%);
   background-image: url(../../public/bg-pattern-bottom.svg);
+  background-position: 80vh 30vh;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 80vh 30vh;
 }
 
 /* Profile Card Component */
 #profile {
   background-color: #FFFFFF;
-  text-align: center;
-  min-height: 20vh;
-  width: 300px !important;
   border-radius: 10px;
-  justify-content: center;
-  vertical-align: middle;
-  text-align: center;
-  font-family: "KumbhSans-Regular";
   color: hsl(0, 0%, 59%);
-  position: relative;
+  font-family: "KumbhSans-Regular";
+  justify-content: center;
   left: 0;
-  right: 0;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
   margin-top: 60px;
-  padding-bottom: 2px;
+  min-height: 20vh;
   overflow: hidden;
+  padding-bottom: 2px;
+  position: relative;
+  right: 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 300px !important;
 }
 
 .profile-background {
@@ -87,17 +85,17 @@
 }
 
 .profile-wrapper {
-  width: 13vh !important;
-  height: 13vh !important;
-  border-radius: 50% !important;
   border: 4px solid #FFFFFF !important;
+  border-radius: 50% !important;
+  height: 13vh !important;
+  left: 0px;
+  margin: auto;
   overflow: hidden;
   position: absolute;
-  top: 80px;
-  left: 0px;
   right: 0px;
   text-align: center;
-  margin: auto;
+  top: 80px;
+  width: 13vh !important;
 }
 
 .profile-header {
@@ -105,9 +103,9 @@
 }
 
 .profile-name {
+  color: hsl(229, 23%, 23%);
   font-family: "KumbhSans-Bold";
   font-size: 1.05rem;
-  color: hsl(229, 23%, 23%);
 }
 
 .profile-count {
@@ -144,9 +142,9 @@
 
 @media (max-width: 800px) {
   #home-page-behind {
-    background-position: 35vh 50vh;
+    background-position: 30vh 30vh;
   }
   #home-page {
-    background-position: -50vh -50vh;
+    background-position: -70vh -50vh;
   }
 }
