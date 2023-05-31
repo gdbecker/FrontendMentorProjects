@@ -33,6 +33,16 @@ import ProjectCard from './components/ProjectCard';
         solution_url="https://www.frontendmentor.io/solutions/nft-card-component-with-react-bootstrap-hiW4LJD-cc"
         brief_url="https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U"
       />
+
+      <ProjectCard 
+        img_bg="bg-profile-card"
+        title="Profile Card Component"
+        title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/profile-card"
+        level="1"
+        demo_url="https://profile-card-gdbecker.netlify.app"
+        solution_url="https://www.frontendmentor.io/solutions/profile-card-with-next-sass-bgCML2EGD_"
+        brief_url="https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ"
+      />
       
       <ProjectCard 
         img_bg="bg-qr-code"

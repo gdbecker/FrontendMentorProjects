@@ -35,6 +35,13 @@
   background-size: cover;
 }
 
+.bg-profile-card {
+  background-image: url(../../public/profile-card-desktop.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .bg-qr-code {
   background-image: url(../../public/qr-code-desktop.jpg);
   background-position: top center;

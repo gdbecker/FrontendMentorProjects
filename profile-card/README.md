@@ -37,7 +37,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### Links
 
-- [Solution URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/profile-card-with-next-sass-bgCML2EGD_)
 - [Live Site URL](https://profile-card-gdbecker.netlify.app)
 
 ## My process
