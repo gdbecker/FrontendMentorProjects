@@ -1,34 +1,106 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Stats Preview Card Component Solution
 
-## Getting Started
+This is my solution to the [Huddle landing page with single introductory section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/huddle-landing-page-with-a-single-introductory-section-B_2Wvxgi0). I'm super thankful to have found Frontend Mentor as a great way to confidently grow in my coding skills with real-life projects. 
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- [Overview](#overview)
+  - [Project Brief](#project-brief)
+  - [Mobile View](#mobile-view)
+  - [Desktop View](#desktop-view)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+## Overview
+
+### [Project Brief](./project%20brief/)
+
+Your challenge is to build out this landing page from the designs provided in the starter code.
+
+You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+
+Your users should be able to: 
+
+- View the optimal layout for the page depending on their device's screen size
+- See hover states for all interactive elements on the page
+
+Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+
+### Mobile View
+
+![](./huddle-landing-mobile.jpg)
+
+### Desktop View
+
+![](./huddle-landing-desktop.jpg)
+
+### Links
+
+- [Solution URL]()
+- [Live Site URL](https://huddle-landing-gdbecker.netlify.app)
+
+## My process
+
+### Built with
+
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org) - React framework
+- HTML5
+- CSS
+- [Tailwind CSS](https://tailwindcss.com) - CSS framework
+- Mobile-first workflow
+- [VS Code](https://code.visualstudio.com)
+
+### What I learned
+
+This small landing page was great practice for using Tailwind in tandem with Next.js - I am greatly enjoying using this framework to write CSS within my HTMl. The challenge is to keep the utility classes as concise as possible because it's easy to add too many and add clutter to the code; as I keep working on these projects I'm aiming for functionality and readability. The trickiest part was handling the separately sized background images, and I decided on using a single background CSS class which changes the image source depending on screen size.
+
+Here are a few code samples from this project:
+
+```html
+<!-- Main tag showing background settings and intro image -->
+<main className="p-12 w-full h-full bg-violet bg-illustration bg-cover bg-top bg-no-repeat font-poppinsRegular text-white-100 text-center">
+  <div className="flex">
+    <Image src={Logo} alt="logo" width={175} height={125} />
+  </div>
+  ...
+</main>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```css
+/* CSS for switching between the two background images depending on screen size */
+.bg-illustration {
+  background-image: url(../../public/bg-mobile.svg);
+}
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+@media (min-width: 768px) {
+  .bg-illustration {
+    background-image: url(../../public/bg-desktop.svg);
+  }
+}
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Continued development
 
-## Learn More
+As a starter developer, I want to keep growing in working as a team and learning how to deliver smaller packages of code at a time, such as components like this one. I thought this project was a good way to get back into React and begin doing just that!
 
-To learn more about Next.js, take a look at the following resources:
+### Useful resources
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [CSS Formatter](http://www.lonniebest.com/FormatCSS/) - I found this helpful site when I'm feeling lazy and don't want to format my CSS code, I can have this do it for me, especially putting everything in alphabetical order.
+- [Tailwind Responsive Classes](https://tailwindcss.com/docs/responsive-design) - Tailwind makes it easy to add specific CSS code for screen size break points.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Author
 
-## Deploy on Vercel
+- Website - [Garrett Becker]()
+- Frontend Mentor - [@gdbecker](https://www.frontendmentor.io/profile/gdbecker)
+- LinkedIn - [Garrett Becker](https://www.linkedin.com/in/garrett-becker-923b4a106/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Acknowledgments
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Thank you to the Frontend Mentor team for providing all of these fantastic projects to build, and for our getting to help each other grow!

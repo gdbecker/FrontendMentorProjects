@@ -8,7 +8,7 @@ import { FaInstagram } from 'react-icons/fa';
 
 function Home() {
   return (
-    <div className="p-12 w-full h-full bg-violet bg-illustration bg-cover bg-top bg-no-repeat font-poppinsRegular text-white-100 text-center">
+    <main className="p-12 w-full h-full bg-violet bg-illustration bg-cover bg-top bg-no-repeat font-poppinsRegular text-white-100 text-center">
       <div className="flex">
         <Image src={Logo} alt="logo" width={175} height={125} />
       </div>
@@ -38,7 +38,7 @@ function Home() {
           <FaInstagram />
         </button>
       </div>
-    </div>
+    </main>
   )
 }
 
