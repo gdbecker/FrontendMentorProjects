@@ -8,7 +8,7 @@ import ImgPatrick from '../public/image-patrick.jpg';
 
 function Home() {
   return (
-    <div className="min-h-screen bg-lightGrayishBlue" >
+    <main className="min-h-screen bg-lightGrayishBlue" >
       <section className="flex flex-col gap-6 p-20 lg:flex-row lg:grid-cols-4">
         <div className="flex flex-col gap-6 lg:grid lg:grid-cols-3 lg:basis-3/4">
 
@@ -156,7 +156,7 @@ function Home() {
         </div>
 
       </section>
-    </div>
+    </main>
   )
 }
 
