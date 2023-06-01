@@ -23,7 +23,7 @@ function Home() {
   }
 
   return (
-    <div id="home-page">
+    <main id="home-page">
       <div className="row">
         <div className="section-header">
           <div className="row mt-5">
@@ -221,7 +221,7 @@ function Home() {
           </span>
         </div>
       </div>
-    </div>
+    </main>
   )
 }
 

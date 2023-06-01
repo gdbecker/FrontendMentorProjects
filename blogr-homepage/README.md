@@ -7,7 +7,7 @@ This is my solution to the [Blogr landing page challenge on Frontend Mentor](htt
 - [Overview](#overview)
   - [Project Brief](#project-brief)
   - [Mobile View](#mobile-view)
-  - [Mobile View with Menu](#mobile-view-eith-menu)
+  - [Mobile View with Menu](#mobile-view-with-menu)
   - [Desktop View](#desktop-view)
   - [Links](#links)
 - [My process](#my-process)
