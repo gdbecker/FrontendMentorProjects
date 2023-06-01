@@ -123,6 +123,16 @@ import ProjectCard from './components/ProjectCard';
         solution_url="https://www.frontendmentor.io/solutions/notifications-page-with-react-bootstrap-LjvWM4bG57"
         brief_url="https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC"
       />
+
+      <ProjectCard 
+        img_bg="bg-testimonials-grid"
+        title="Notifications Page"
+        title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/testimonials-grid"
+        level="2"
+        demo_url="https://testimonials-grid-gdbecker.netlify.app"
+        solution_url="https://www.frontendmentor.io/solutions/testimonials-grid-with-next-tailwind-Jk2KbMWvmV"
+        brief_url="https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7"
+      />
     </main>
   )
 }
