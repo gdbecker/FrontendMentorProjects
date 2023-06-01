@@ -30,14 +30,15 @@ function Home() {
             <h1 className="section-header-title">WE ARE CREATIVES</h1>
           </div>
           <div className="row mt-5">
-            <Image
-              src={IconArrow}
-              alt="arrow-down"
-              width={30}
-              height={100}
-            />
+            <div className="icon-arrow">
+              <Image
+                src={IconArrow}
+                alt="arrow-down"
+                width={30}
+                height={0} 
+              />
+            </div>
           </div>
-          
         </div>
       </div>
 
@@ -201,8 +202,8 @@ function Home() {
           <Image
             src={Logo}
             alt="logo"
-            width={55}
-            height={30}
+            width={140}
+            height={0}
           />
         </div>
         <div className="row mt-4">

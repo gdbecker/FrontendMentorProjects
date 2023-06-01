@@ -11,11 +11,11 @@ function Navigation() {
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
             <h1 className="logo">
-              <Image
+              <Image          
                 src={Logo}
                 alt="logo"
                 width={140}
-                height={75}
+                height={0}
               />
             </h1>
           </a>
