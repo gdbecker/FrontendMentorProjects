@@ -9,7 +9,7 @@ import ImgPatrick from '../public/image-patrick.jpg';
 function Home() {
   return (
     <main className="min-h-screen bg-lightGrayishBlue" >
-      <section className="flex flex-col gap-6 p-20 lg:flex-row lg:grid-cols-4">
+      <section className="flex flex-col gap-6 p-14 lg:flex-row lg:grid-cols-4 lg:p-36">
         <div className="flex flex-col gap-6 lg:grid lg:grid-cols-3 lg:basis-3/4">
 
           <div className="px-8 py-6 bg-violet-100 rounded-lg font-barlowMedium bg-[url('../../public/bg-pattern-quotation.svg')] bg-no-repeat bg-[right_2rem_top_0rem] md:bg-[right_6rem_top_0rem] md:col-span-2">
