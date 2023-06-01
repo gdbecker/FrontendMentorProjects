@@ -49,7 +49,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### Links
 
-- [Solution URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/sunnyside-landing-page-with-next-sass-EZ3xT9DAIG)
 - [Live Site URL](https://sunnyside-gdbecker.netlify.app)
 
 ## My process

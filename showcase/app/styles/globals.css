@@ -98,6 +98,13 @@
   background-size: cover;
 }
 
+.bg-sunnyside {
+  background-image: url(../../public/sunnyside-desktop.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .bg-testimonials-grid {
   background-image: url(../../public/testimonials-grid-desktop.jpg);
   background-position: top center;

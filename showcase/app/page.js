@@ -125,6 +125,16 @@ import ProjectCard from './components/ProjectCard';
       />
 
       <ProjectCard 
+        img_bg="bg-sunnyside"
+        title="Sunnyside Agency Landing Page"
+        title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/sunnyside"
+        level="2"
+        demo_url="https://sunnyside-gdbecker.netlify.app"
+        solution_url="https://www.frontendmentor.io/solutions/sunnyside-landing-page-with-next-sass-EZ3xT9DAIG"
+        brief_url="https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef"
+      />
+
+      <ProjectCard 
         img_bg="bg-testimonials-grid"
         title="Notifications Page"
         title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/testimonials-grid"
