@@ -19,16 +19,16 @@ function Home() {
               </div>
               <div className="flex h-7 items-center justify-center">
                 <div className="flex flex-col">
-                  <h4 className="text-white-100 text-sm">Daniel Clifford</h4>
+                  <h1 className="text-white-100 text-sm">Daniel Clifford</h1>
                   <p className="text-white-200 text-sm">Verified Graduate</p>
                 </div>
               </div>
             </div>
             <div className="flex flex-row py-2">
-              <h4 className="font-barlowSemiBold text-white-100 text-xl">
+              <h2 className="font-barlowSemiBold text-white-100 text-xl">
                 I received a job offer mid-course, and the subjects I learned were current, if not more so, 
                 in the company I joined. I honestly feel I got every penny’s worth.
-              </h4>
+              </h2>
             </div>
             <div className="flex flex-row py-2">
               <p className="text-white-200 text-sm">
@@ -48,15 +48,15 @@ function Home() {
               </div>
               <div className="flex h-7 items-center justify-center">
                 <div className="flex flex-col">
-                  <h4 className="text-white-100 text-sm">Jonathan Walters</h4>
+                  <h1 className="text-white-100 text-sm">Jonathan Walters</h1>
                   <p className="text-white-200 text-sm">Verified Graduate</p>
                 </div>
               </div>
             </div>
             <div className="flex flex-row py-2">
-              <h4 className="font-barlowSemiBold text-white-100 text-xl">
+              <h2 className="font-barlowSemiBold text-white-100 text-xl">
                 The team was very supportive and kept me motivated
-              </h4>
+              </h2>
             </div>
             <div className="flex flex-row py-2">
               <p className="text-white-200 text-sm">
@@ -73,15 +73,15 @@ function Home() {
               </div>
               <div className="flex h-7 items-center justify-center">
                 <div className="flex flex-col">
-                  <h4 className="text-grayishBlue text-sm">Jeanette Harmon</h4>
+                  <h1 className="text-grayishBlue text-sm">Jeanette Harmon</h1>
                   <p className="text-lightGray text-sm">Verified Graduate</p>
                 </div>
               </div>
             </div>
             <div className="flex flex-row py-2">
-              <h4 className="font-barlowSemiBold text-blackishBlue text-xl">
+              <h2 className="font-barlowSemiBold text-blackishBlue text-xl">
                 An overall wonderful and rewarding experience
-              </h4>
+              </h2>
             </div>
             <div className="flex flex-row py-2">
               <p className="text-grayishBlue text-sm">
@@ -98,16 +98,16 @@ function Home() {
               </div>
               <div className="flex h-7 items-center justify-center">
                 <div className="flex flex-col">
-                  <h4 className="text-white-100 text-sm">Patrick Abrams</h4>
+                  <h1 className="text-white-100 text-sm">Patrick Abrams</h1>
                   <p className="text-white-200 text-sm">Verified Graduate</p>
                 </div>
               </div>
             </div>
             <div className="flex flex-row py-2">
-              <h4 className="font-barlowSemiBold text-white-100 text-xl">
+              <h2 className="font-barlowSemiBold text-white-100 text-xl">
                 Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and 
                 learning from their experiences was easy.
-              </h4>
+              </h2>
             </div>
             <div className="flex flex-row py-2">
               <p className="text-white-200 text-sm">
@@ -129,15 +129,15 @@ function Home() {
               </div>
               <div className="flex h-7 items-center justify-center">
                 <div className="flex flex-col">
-                  <h4 className="text-grayishBlue text-sm">Kira Whittle</h4>
+                  <h1 className="text-grayishBlue text-sm">Kira Whittle</h1>
                   <p className="text-lightGray text-sm">Verified Graduate</p>
                 </div>
               </div>
             </div>
             <div className="flex flex-row py-2">
-              <h4 className="font-barlowSemiBold text-blackishBlue text-xl">
+              <h2 className="font-barlowSemiBold text-blackishBlue text-xl">
                 Such a life-changing experience. Highly recommended!
-              </h4>
+              </h2>
             </div>
             <div className="flex flex-row py-2">
               <p className="text-grayishBlue text-sm">
