@@ -49,7 +49,9 @@ function DetailCard({ title, value, social, percent, direction, darkMode }) {
       </div>
       <div className="flex h-10 items-end justify-end">
         <div className="flex">
-          <Image src={getDirectionIcon(direction)} alt="Up" width={10} height={10} className=""/>
+          <div className="w-2 pt-2 items-end justify-center">
+            <Image src={getDirectionIcon(direction)} alt="Direction-Arrow" width={10} height={0}/>
+          </div>
           <p className={getPercentColor(direction)}>{percent}%</p>
         </div>
       </div>

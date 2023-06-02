@@ -58,7 +58,9 @@ function AccountCard({ social, handle, value, title, direction, count }) {
         <h1 className="font-interBold text-6xl text-lightTheme-500 dark:text-darkTheme-500">{value}</h1>
         <p className="text-lightTheme-400 text-sm tracking-[0.4em] py-2 dark:text-darkTheme-400">{title}</p>
         <div className="justify-center flex flex-row py-5">
-          <Image src={getDirectionIcon(direction)} alt="Up" width={10} height={10}/>
+          <div className="w-2 pt-2 items-end justify-center">
+            <Image src={getDirectionIcon(direction)} alt="Direction-Arrow" width={10} height={0}/>
+          </div>
           <p className={getCountColor(direction)}>{count} Today</p>
         </div>
       </div>
