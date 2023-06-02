@@ -98,6 +98,13 @@
   background-size: cover;
 }
 
+.bg-social-media-dashboard {
+  background-image: url(../../public/social-media-dashboard-desktop-dark.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .bg-sunnyside {
   background-image: url(../../public/sunnyside-desktop.jpg);
   background-position: top center;

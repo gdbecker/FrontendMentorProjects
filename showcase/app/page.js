@@ -125,6 +125,16 @@ import ProjectCard from './components/ProjectCard';
       />
 
       <ProjectCard 
+        img_bg="bg-social-media-dashboard"
+        title="Social Media Dashboard with Theme Switcher"
+        title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/social-media-dashboard"
+        level="2"
+        demo_url="https://social-media-dashboard-gdbecker.netlify.app"
+        solution_url="https://www.frontendmentor.io/solutions/social-media-dashboard-with-next-tailwind-k1uS7_Om47"
+        brief_url="https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H"
+      />
+
+      <ProjectCard 
         img_bg="bg-sunnyside"
         title="Sunnyside Agency Landing Page"
         title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/sunnyside"
