@@ -85,6 +85,16 @@ import ProjectCard from './components/ProjectCard';
       />
 
       <ProjectCard 
+        img_bg="bg-advice-app"
+        title="Advice Generator App"
+        title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/advice-app"
+        level="2"
+        demo_url="https://advice-app-gdbecker.netlify.app"
+        solution_url="https://www.frontendmentor.io/solutions/advice-app-with-next-tailwind-8S94c3c-U-"
+        brief_url="https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db"
+      />
+
+      <ProjectCard 
         img_bg="bg-blogr-homepage"
         title="Blogr Landing Page"
         title_url="https://github.com/gdbecker/FrontendMentorProjects/tree/main/blogr-homepage"

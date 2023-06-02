@@ -44,7 +44,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### Links
 
-- [Solution URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/advice-app-with-next-tailwind-8S94c3c-U-)
 - [Live Site URL](https://advice-app-gdbecker.netlify.app)
 
 ## My process
