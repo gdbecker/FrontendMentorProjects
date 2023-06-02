@@ -13,8 +13,8 @@ function Advice({ data, fetchNewData }) {
   return (
     <div className="relative bg-darkGrayishBlue mt-10 px-10 pb-14 min-h-full rounded-lg md:w-[60vh]">
       <div className="flex flex-col">
-        <p className="text-green text-center text-xs tracking-[0.2em] pt-10 pb-2">ADVICE #{data.id}</p>
-        <h3 className="text-cyan text-xl py-4">"{data.advice}"</h3>
+        <h1 className="text-green text-center text-xs tracking-[0.2em] pt-10 pb-2">ADVICE #{data.id}</h1>
+        <h2 className="text-cyan text-xl py-4">"{data.advice}"</h2>
         <div className="flex flex-row">
           <Image 
             src={IconDividerDesktop}
