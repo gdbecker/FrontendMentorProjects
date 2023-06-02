@@ -42,7 +42,7 @@ function Home() {
 
   return (
     <div className="min-h-screen bg-darkBlue font-manropeExtraBold">
-      <div className="flex flex-col text-center items-center justify-center py-32">
+      <div className="flex flex-col text-center items-center justify-center px-4 py-28">
         <Advice 
           data={data}
           fetchNewData={fetchNewData}

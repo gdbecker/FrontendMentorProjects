@@ -1,34 +1,130 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Advice Generator App Solution
 
-## Getting Started
+This is my solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db). I'm super thankful to have found Frontend Mentor as a great way to confidently grow in my coding skills with real-life projects. 
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- [Overview](#overview)
+  - [Project Brief](#project-brief)
+  - [Mobile View](#mobile-view)
+  - [Desktop View](#desktop-view)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+## Overview
+
+### [Project Brief](./project%20brief/)
+
+Your challenge is to build out this advice generator app using the [Advice Slip API](https://api.adviceslip.com) and get it looking as close to the design as possible.
+
+You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+
+Your users should be able to:
+
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Generate a new piece of advice by clicking the dice icon
+
+Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+
+### Mobile View
+
+![](./advice-app-mobile.jpg)
+
+### Desktop View
+
+![](./advice-app-desktop.jpg)
+
+
+### Links
+
+- [Solution URL]()
+- [Live Site URL](https://advice-app-gdbecker.netlify.app)
+
+## My process
+
+### Built with
+
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org) - React framework
+- HTML5
+- CSS
+- [Tailwind CSS](https://tailwindcss.com) - CSS framework
+- Mobile-first workflow
+- [VS Code](https://code.visualstudio.com)
+
+### What I learned
+
+I love any chance I get to practice using public APIs - they're a great way to not only get familiar with receiving external data, but also become more accustomed to reading unfamiliar documentation and figuring out what's needed to make them work. It always feels satisfying connecting to one and making it work! As with the other Frontend Mentor challenges I approached this one by first working on the design and getting that up before tackling the API connection. I made the homepage itself use client side rendering to house the fetch data function, which is fed into the advice app component to be called when the button is clicked. Really happy with out this turned out! I enjoyed working on this one and ended up making a similar app with a free cat facts API located [here](https://github.com/gdbecker/next-js-cat-facts) for extra practice.
+
+Here are a few code samples from this project:
+
+```html
+<!-- Advice app main content -->
+<p className="text-green text-center text-xs tracking-[0.2em] pt-10 pb-2">ADVICE #{data.id}</p>
+<h3 className="text-cyan text-xl py-4">"{data.advice}"</h3>
+<div className="flex flex-row">
+  <Image 
+    src={IconDividerDesktop}
+    alt="icon-divider"
+    width={'120%'}
+    height={'100%'}
+    className="mx-auto py-2"
+  />
+</div>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```css
+/* Importing custom font into my CSS file */
+@font-face {
+  font-family: Manrope-ExtraBold;
+  src: url(../../public/Manrope-ExtraBold.ttf);
+}
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```js
+// Call function for grabbing new data
+const fetchNewData = async () => {
+  const response = await fetch(
+    'https://api.adviceslip.com/advice', {
+      headers: {
+        "Accept": "application/json"
+      }
+    }
+  );  
+  const data = await response.json();
+  console.log(data);
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+  setData({
+    id: data.slip.id,
+    advice: data.slip.advice
+  });
 
-## Learn More
+  setLoading(false)
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Continued development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+As a starter developer, I want to keep growing in working as a team and learning how to deliver smaller packages of code at a time, such as robust and beautiful components like this one. I thought this project was a good way to get back into React and begin doing just that!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Useful resources
 
-## Deploy on Vercel
+- [CSS Formatter](http://www.lonniebest.com/FormatCSS/) - I found this helpful site when I'm feeling lazy and don't want to format my CSS code, I can have this do it for me, especially putting everything in alphabetical order.
+- [Tailwind Grid](https://tailwindcss.com/docs/grid-template-columns) - Handy guide from Tailwind's docs about using grid-cols to structure content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Website - [Garrett Becker]()
+- Frontend Mentor - [@gdbecker](https://www.frontendmentor.io/profile/gdbecker)
+- LinkedIn - [Garrett Becker](https://www.linkedin.com/in/garrett-becker-923b4a106/)
+
+## Acknowledgments
+
+Thank you to the Frontend Mentor team for providing all of these fantastic projects to build, and for our getting to help each other grow!
