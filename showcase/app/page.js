@@ -3,7 +3,7 @@ import ProjectCard from './components/ProjectCard';
 
  function Home() {
   return (
-    <main className="flex flex-col gap-7 w-full p-10 items-center justify-between bg-white lg:grid lg:grid-cols-3 xl:grid-cols-4">
+    <main className="flex flex-col gap-7 w-full p-10 items-center justify-between bg-white md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:px-36">
       <ProjectCard 
         img_bg="bg-3-column-card"
         title="3-Column Preview Card Component"

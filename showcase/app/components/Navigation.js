@@ -6,7 +6,7 @@ import Avatar from '../../public/gdbecker.jpeg';
 function Navigation() {
 
   return (
-    <div class="flex h-16 p-10 items-center justify-between font-heeboRegular overflow-hidden border-lightGray border-b-2 bg-white">
+    <div class="flex h-16 p-10 items-center justify-between font-heeboRegular overflow-hidden border-lightGray border-b-2 bg-white 2xl:px-36">
       <div className="flex items-center justify-between">
         <a class="flex items-center justify-center" href="https://www.frontendmentor.io/profile/gdbecker" target="_blank">
           <Image 

@@ -1,4 +1,4 @@
-# Analytics Projects Showcase
+# Frontend Mentor Projects Showcase
 
 Showcase website to display solutions for Frontend Mentor challenges. Take a look and explore!
 
