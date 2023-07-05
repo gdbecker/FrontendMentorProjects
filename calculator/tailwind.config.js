@@ -12,10 +12,13 @@ module.exports = {
       "theme1ScreenBg": "hsl(224, 36%, 15%)",
 
       "theme1KeyEditBg": "hsl(225, 21%, 49%)",
+      "theme1KeyEditBgHover": "hsl(225, 21%, 70%)",
       "theme1KeyEditShadow": "hsl(224, 28%, 35%)",
       "theme1KeyEqualsBg": "hsl(6, 63%, 50%)",
+      "theme1KeyEqualsBgHover": "hsl(6, 63%, 75%)",
       "theme1KeyEqualsShadow": "hsl(6, 70%, 34%)",
       "theme1KeyMainBg": "hsl(30, 25%, 89%)",
+      "theme1KeyMainBgHover": "hsl(30, 25%, 99%)",
       "theme1KeyMainShadow": "hsl(28, 16%, 65%)",
 
       "theme1TextDark": "hsl(221, 14%, 31%)",

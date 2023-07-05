@@ -7,3 +7,27 @@
   font-family: LeagueSpartan-Bold;
   src: url(../../public/LeagueSpartan-Bold.ttf);
 }
+
+.switch-toggle {
+  border-radius: 9999px !important;
+  width: 100% !important;
+  box-shadow: none !important;
+  padding: 20px !important;
+}
+
+.switch-toggle a {
+  border-radius: 9999px !important;
+  box-shadow: inset 0 0 0 30px hsl(6, 63%, 50%) !important;
+  height: 15px !important;
+  width: 15px !important;
+  margin-left: 4px !important;
+  margin-top: 3px !important;
+}
+
+
+.switch-toggle a:hover {
+  box-shadow: inset 0 0 0 30px hsl(6, 63%, 75%) !important;
+}
+.switch-toggle label:not(.disabled) {
+  cursor: pointer;
+}
