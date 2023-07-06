@@ -17,8 +17,8 @@ export default function RootLayout({ children }) {
         </Providers>
 
         <footer className="text-center font-leagueSpartanBold text-sm">
-          Challenge by <a href="https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29" target="_blank" className="hover:text-theme3TextLight">Frontend Mentor</a>. 
-          Coded by <a href="https://github.com/gdbecker/FrontendMentorProjects/tree/main/calculator" target="_blank" className="hover:text-theme3TextLight">Garrett Becker</a>.
+          Challenge by <a href="https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29" target="_blank" className="hover:text-th-KeyEqualsBg">Frontend Mentor</a>. 
+          Coded by <a href="https://github.com/gdbecker/FrontendMentorProjects/tree/main/calculator" target="_blank" className="hover:text-th-KeyEqualsBg">Garrett Becker</a>.
         </footer>
       </body>
     </html>
