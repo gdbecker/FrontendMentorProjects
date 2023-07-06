@@ -8,6 +8,7 @@
   src: url(../../public/LeagueSpartan-Bold.ttf);
 }
 
+/* Other Styles */
 .switch-toggle {
   border-radius: 9999px !important;
   width: 100% !important;
@@ -15,19 +16,86 @@
   padding: 20px !important;
 }
 
-.switch-toggle a {
+.toggle-circle {
   border-radius: 9999px !important;
-  box-shadow: inset 0 0 0 30px hsl(6, 63%, 50%) !important;
-  height: 15px !important;
-  width: 15px !important;
+  border: none !important;
+  box-shadow: inset 0 0 0 30px !important;
+  height: 12px !important;
+  width: 12px !important;
   margin-left: 4px !important;
-  margin-top: 3px !important;
+  margin-top: 4px !important;
 }
 
+/* Theme Colors */
+[data-theme="one"] {
+  --MainBg: hsl(222, 26%, 31%);
+  --KeypadBg: hsl(223, 31%, 20%);
+  --ScreenBg: hsl(224, 36%, 15%);
 
-.switch-toggle a:hover {
-  box-shadow: inset 0 0 0 30px hsl(6, 63%, 75%) !important;
+  --KeyEditBg: hsl(225, 21%, 49%);
+  --KeyEditBgHover: hsl(225, 21%, 70%);
+  --KeyEditShadow: hsl(224, 28%, 35%);
+  --KeyEqualsBg: hsl(6, 63%, 50%);
+  --KeyEqualsBgHover: hsl(6, 63%, 75%);
+  --KeyEqualsShadow: hsl(6, 70%, 34%);
+  --KeyMainBg: hsl(30, 25%, 89%);
+  --KeyMainBgHover: hsl(30, 25%, 99%);
+  --KeyMainShadow: hsl(28, 16%, 65%);
+
+  --TextHeader: hsl(0, 0%, 100%);
+  --TextMainBtn: hsl(221, 14%, 31%);
+  --TextEditBtn: hsl(0, 0%, 100%);
+  --TextEqualsBtn: hsl(0, 0%, 100%);   
+
+  --TextDark: hsl(221, 14%, 31%);
+  --TextWhite: hsl(0, 0%, 100%);
 }
-.switch-toggle label:not(.disabled) {
-  cursor: pointer;
+
+[data-theme="two"] {
+  --MainBg:hsl(0, 0%, 90%);
+  --KeypadBg:hsl(0, 5%, 81%);
+  --ScreenBg: hsl(0, 0%, 93%);
+
+  --KeyEditBg: hsl(185, 42%, 37%);
+  --KeyEditBgHover: hsl(185, 42%, 50%);
+  --KeyEditShadow: hsl(185, 58%, 25%);
+  --KeyEqualsBg: hsl(25, 98%, 40%);
+  --KeyEqualsBgHover: hsl(25, 98%, 60%);
+  --KeyEqualsShadow: hsl(25, 99%, 27%);
+  --KeyMainBg: hsl(45, 7%, 89%);
+  --KeyMainBgHover: hsl(45, 7%, 98%);
+  --KeyMainShadow: hsl(35, 11%, 61%);
+
+  --TextHeader: hsl(60, 10%, 19%);
+  --TextMainBtn: hsl(60, 10%, 19%);
+  --TextEditBtn: hsl(0, 0%, 100%);
+  --TextEqualsBtn: hsl(0, 0%, 100%);  
+
+  --TextDark: hsl(60, 10%, 19%);
+  --TextWhite: hsl(0, 0%, 100%);
+}
+
+[data-theme="three"] {
+  --MainBg: hsl(268, 75%, 9%);
+  --KeypadBg: hsl(268, 71%, 12%);
+  --ScreenBg: hsl(268, 71%, 12%);
+
+  --KeyEditBg: hsl(281, 89%, 26%);
+  --KeyEditBgHover: hsl(281, 89%, 46%);
+  --KeyEditShadow: hsl(285, 91%, 52%);
+  --KeyEqualsBg: hsl(176, 100%, 44%);
+  --KeyEqualsBgHover: hsl(176, 100%, 74%);
+  --KeyEqualsShadow: hsl(177, 92%, 70%);
+  --KeyMainBg: hsl(268, 47%, 21%);
+  --KeyMainBgHover: hsl(268, 47%, 51%);
+  --KeyMainShadow: hsl(290, 70%, 36%);
+
+  --TextHeader: hsl(52, 100%, 62%);
+  --TextMainBtn: hsl(52, 100%, 62%);
+  --TextEditBtn: hsl(0, 0%, 100%);
+  --TextEqualsBtn: hsl(198, 20%, 13%);
+
+  --TextDark: hsl(198, 20%, 13%);
+  --TextLight: hsl(52, 100%, 62%);
+  --TextWhite: hsl(0, 0%, 100%);
 }

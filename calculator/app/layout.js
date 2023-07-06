@@ -1,4 +1,5 @@
 import './styles/globals.css'
+import {Providers} from './providers';
 
 export const metadata = {
   title: 'Frontend Mentor | Calculator App',
@@ -11,7 +12,9 @@ export default function RootLayout({ children }) {
       <body>
         <link href="https://cdn.jsdelivr.net/css-toggle-switch/latest/toggle-switch.css" rel="stylesheet" />
 
-        {children}
+        <Providers>
+          {children}
+        </Providers>
 
         <footer className="text-center font-leagueSpartanBold text-sm">
           Challenge by <a href="https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29" target="_blank" className="hover:text-theme3TextLight">Frontend Mentor</a>. 
