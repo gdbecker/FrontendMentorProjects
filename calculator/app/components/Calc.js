@@ -12,6 +12,7 @@ function Calc() {
   const [screenNum, setScreenNum] = useState(0);
   const [nextNum, setNextNum] = useState('');
   const [startedNextNum, setStartedNextNum] = useState(false);
+  const [equalsClicked, setEqualsClicked] = useState(false);
   const [operand, setOperand] = useState('');
   
   const appendNum = (e) => {
@@ -19,7 +20,7 @@ function Calc() {
 
     // Check first if an operand was already picked
     if (operand != '') {
-      if (startedNextNum == false) {
+      if (startedNextNum === false) {
         num = "" + e.currentTarget.value;
 
         setScreenNum(num.toLocaleString('en-US'));
@@ -31,10 +32,12 @@ function Calc() {
         setScreenNum(num.toLocaleString('en-US'));
       }
     } else {
-      if (screenNum === 0) {
+      if (screenNum === 0 || equalsClicked) {
         num = "" + e.currentTarget.value;
   
         setScreenNum(num.toLocaleString('en-US'));
+
+        setEqualsClicked(false);
       } else {
         num = screenNum + e.currentTarget.value;
   
@@ -44,7 +47,7 @@ function Calc() {
   }
 
   const removeNum = () => {
-    if (screenNum != 0 && screenNum.slice !== "undefined") {
+    if (screenNum != 0 && screenNum.slice !== undefined) {
       var modifiedNum = screenNum.slice(0, -1)
       setScreenNum(modifiedNum);
     }
@@ -55,6 +58,7 @@ function Calc() {
   }
 
   const pickOperand = (e) => {
+    setEqualsClicked(false);
     if (startedNextNum) {
       var result = doMath();
       setScreenNum(result);
@@ -86,6 +90,7 @@ function Calc() {
   const equals = () => {
     setScreenNum(doMath());
     setStartedNextNum(false);
+    setEqualsClicked(true);
     setOperand('');
   }
 
@@ -93,6 +98,7 @@ function Calc() {
     setScreenNum(0);
     setNextNum('');
     setStartedNextNum(false);
+    setEqualsClicked(false);
     setOperand('');
   }
 
