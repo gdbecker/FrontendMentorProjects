@@ -6,17 +6,63 @@ import IconPerson from '../../public/icon-person.svg';
 
 function Calc() {
 
+  const [bill, setBill] = useState('');
   const [selectedTip, setSelectedTip] = useState('');
+  const [customTip, setCustomTip] = useState('');
   const [numPeople, setNumPeople] = useState('');
-  const [tipPerPerson, setTipPerPerson] = useState('');
-  const [totalPerPerson, setTotalPerPerson] = useState('');
+  const [tipPerPerson, setTipPerPerson] = useState(0);
+  const [totalPerPerson, setTotalPerPerson] = useState(0);
+
+  const onChangeBill = (e) => {
+    setBill(e.target.value);
+
+    if (e.target.value != '' && selectedTip != '' && numPeople != '' && numPeople != "0") {
+      setTipPerPerson(calculateTipPerPerson(e.target.value, selectedTip, numPeople));
+      setTotalPerPerson(calculateTotalPerPerson(e.target.value, selectedTip, numPeople));
+    }
+  }
 
   const tipButtonClick = (e) => {
     setSelectedTip(e.currentTarget.value);
+
+    if (e.currentTarget.id == "custom") {
+      setCustomTip(e.currentTarget.value);
+    } else {
+      setCustomTip('');
+    }
+
+    if (bill != '' && e.currentTarget.value != '' && numPeople != '' && numPeople != "0") {
+      setTipPerPerson(calculateTipPerPerson(bill, e.currentTarget.value, numPeople));
+      setTotalPerPerson(calculateTotalPerPerson(bill, e.currentTarget.value, numPeople));
+    }
   }
 
   const onChangeNumPeople = (e) => {
     setNumPeople(e.target.value);
+
+    if (bill != '' && selectedTip != '' && e.target.value != '' && e.target.value != "0") {
+      setTipPerPerson(calculateTipPerPerson(bill, selectedTip, e.target.value));
+      setTotalPerPerson(calculateTotalPerPerson(bill, selectedTip, e.target.value));
+    }
+  }
+
+  const calculateTipPerPerson = (b, t, p) => {
+    var solution = ((parseInt(t) / 100) * parseFloat(b)) / parseInt(p);
+    return Math.round(solution * 100) / 100;
+  }
+  
+  const calculateTotalPerPerson = (b, t, p) => {
+    var solution = (((parseInt(t) / 100) * parseFloat(b)) + parseFloat(b)) / parseInt(p);
+    return Math.round(solution * 100) / 100;
+  }
+
+  const reset = () => {
+    setBill('');
+    setSelectedTip('');
+    setCustomTip('');
+    setNumPeople('');
+    setTipPerPerson(0.00);
+    setTotalPerPerson(0.00);
   }
 
   return (
@@ -33,7 +79,9 @@ function Calc() {
             className="w-full border-white border-t-2 border-b-2 bg-grayishCyan-100 text-veryDarkCyan text-xl text-right py-2 px-3 rounded-md focus:outline-none focus:border-2 focus:border-strongCyan focus:ring-0" 
             id="bill" 
             type="text" 
-            placeholder="0" 
+            placeholder="0"
+            value={bill}
+            onChange={e => onChangeBill(e)}
             required
           />
         </div>
@@ -84,10 +132,12 @@ function Calc() {
             </button>
 
             <input 
-              className="w-full border-white border-t-2 border-b-2 bg-grayishCyan-100 text-veryDarkCyan text-xl text-right py-2 px-3 rounded-md focus:outline-none focus:border-2 focus:border-strongCyan focus:ring-0" 
+              className="w-full border-white border-t-2 border-b-2 bg-grayishCyan-100 text-veryDarkCyan text-lg text-right py-2 px-3 rounded-md focus:outline-none focus:border-2 focus:border-strongCyan focus:ring-0" 
               id="custom" 
               type="text" 
-              placeholder="Custom" 
+              placeholder="Custom"
+              value={customTip}
+              onChange={e => tipButtonClick(e)}
             />
           </div>
         </div>
@@ -97,7 +147,7 @@ function Calc() {
             <label className="block text-grayishCyan-300 text-left text-sm mb-2" htmlFor="people">
               Number of People
             </label>
-            <label className={"block text-sm mb-2 " + (numPeople == "0" ? "text-error" : "text-white")}>
+            <label className={"block text-sm text-left mb-2 " + (numPeople == "0" ? "text-error" : "text-white")}>
               Can't be zero
             </label>
           </div>
@@ -106,7 +156,7 @@ function Calc() {
             <Image src={IconPerson} alt="Icon" width={12} height={12} className=""/>
           </div>
           <input 
-            className={"w-full border-white border-t-2 border-b-2 bg-grayishCyan-100 text-veryDarkCyan text-xl text-right py-2 px-3 rounded-md focus:outline-none focus:border-2 focus:border-strongCyan focus:ring-0 " + (numPeople == "0" ? "border-error border-2 focus:border-error" : "")} 
+            className={"w-full bg-grayishCyan-100 text-veryDarkCyan text-xl text-right py-2 px-3 rounded-md focus:outline-none focus:border-2 focus:ring-0 " + (numPeople == "0" ? "border-2 border-error focus:border-error" : "border-white border-t-2 border-b-2 focus:border-strongCyan")} 
             id="people" 
             type="text" 
             placeholder="0"
@@ -124,7 +174,7 @@ function Calc() {
               <h1 className="text-white text-sm">Tip Amount</h1>
               <h2 className="text-grayishCyan-300 text-xs">/ person</h2>
             </div>
-            <h1 className="flex items-center text-strongCyan text-3xl md:text-4xl">$0.00</h1>
+            <h1 className="flex items-center text-strongCyan text-3xl md:text-4xl">${tipPerPerson}</h1>
           </div>
 
           <div className="flex flex-row justify-between pb-10 md:pb-0">
@@ -132,13 +182,15 @@ function Calc() {
               <h1 className="text-white text-sm">Total</h1>
               <h2 className="text-grayishCyan-300 text-xs">/ person</h2>
             </div>
-            <h1 className="flex items-center text-strongCyan text-3xl md:text-4xl">$0.00</h1>
+            <h1 className="flex items-center text-strongCyan text-3xl md:text-4xl">${totalPerPerson}</h1>
           </div>
         </div>
 
         <div className="flex flex-row md:align-bottom">
-          <button className="w-full h-full py-2 text-center text-xl text-veryDarkCyan bg-strongCyan rounded-md hover:bg-grayishCyan-200">
-            RESET
+          <button 
+            className={"w-full h-full py-2 text-center text-xl text-veryDarkCyan bg-strongCyan rounded-md hover:bg-grayishCyan-200 " + (tipPerPerson == 0 && totalPerPerson == 0 ? "opacity-25" : "")}
+            onClick={() => reset()}
+          >RESET
           </button>
         </div>
       </div>
