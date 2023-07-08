@@ -15,6 +15,7 @@ module.exports = {
         300: "hsl(184, 14%, 56%)",
       },
       "white": "hsl(0, 0%, 100%)",
+      "error": "hsl(25, 98%, 40%)",
     },
     extend: {
       fontFamily: {
