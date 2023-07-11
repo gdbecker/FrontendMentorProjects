@@ -40,6 +40,11 @@ function Calc() {
   const onChangeNumPeople = (e) => {
     setNumPeople(e.target.value);
 
+    if (e.target.value == "0") {
+      setTipPerPerson(0.00);
+      setTotalPerPerson(0.00);
+    }
+
     if (bill != '' && selectedTip != '' && e.target.value != '' && e.target.value != "0") {
       setTipPerPerson(calculateTipPerPerson(bill, selectedTip, e.target.value));
       setTotalPerPerson(calculateTotalPerPerson(bill, selectedTip, e.target.value));
