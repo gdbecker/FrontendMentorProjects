@@ -8,7 +8,7 @@ import IconMoon from '../public/icon-moon.svg';
 import IconCheck from '../public/icon-check.svg';
 import IconCross from '../public/icon-cross.svg';
 
-import { collection, addDoc, serverTimestamp, getDocs, doc, deleteDoc, updateDoc } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp, getDocs, doc, deleteDoc, runTransaction, orderBy, query } from 'firebase/firestore';
 import { db } from './services/firebase.config';
 
 function Home() {
@@ -68,19 +68,41 @@ function Home() {
     }
   }
 
-  // Edit a Todo
-  const updateTodo = async (e) => {
-    e.preventDefault()
+  // Edit Todo completion
+  const checkHandler = async (event, todo) => {
+
+    setChecked(state => {
+      const indexToUpdate = state.findIndex(checkBox => checkBox.id.toString() === event.target.id);
+      let newState = state.slice()
+
+      console.log(event.target.id)
+
+      newState.splice(indexToUpdate, 1, {
+        ...state[indexToUpdate],
+        isChecked: !state[indexToUpdate].isChecked,
+
+      })
+      setTodo(newState)
+      return newState
+    });
+
+    // Send the completed status to db
     try {
-      const todoDocument = doc(db, "todo", id);
-      await updateDoc(todoDocument, {
-        todo: todos
+      const docRef = doc(db, "todo", event.target.id);
+      await runTransaction(db, async (transaction) => {
+        const todoDoc = await transaction.get(docRef);
+        if (!todoDoc.exists()) {
+          throw "Document does not exist!";
+        }
+        const newValue = !todoDoc.data().isChecked;
+        transaction.update(docRef, { isChecked: newValue });
       });
-      window.location.reload();
-    } catch (err) {
-      console.log(err);
+      console.log("Transaction successfully committed!");
+    } catch (error) {
+      console.log("Transaction failed: ", error);
     }
-  }
+
+  };
 
   const onChangeFilter = (e) => {
     setFilter(e.currentTarget.value);
@@ -142,8 +164,16 @@ function Home() {
                     <div key={id} className="flex flex-row w-full rounded-tl-md rounded-tr-md justify-between p-5 items-center bg-lightTheme-100 dark:bg-darkTheme-200 border-b-[1px] border-lightTheme-300 dark:border-darkTheme-600 group" draggable>
                       <div className="flex flex-row">
                         <button 
-                          className="flex p-0.5 rounded-full ring-1 ring-lightTheme-300 hover:ring-lightTheme-100 hover:bg-gradient-to-br from-checkBgFrom to-checkBgTo group dark:ring-darkTheme-600 dark:hover:ring-darkTheme-200">
-                          <div className="flex h-5 w-5 rounded-full group-hover:bg-lightTheme-100 dark:group-hover:bg-darkTheme-200"></div>
+                          className="flex p-0.5 rounded-full ring-1 ring-lightTheme-300 hover:ring-lightTheme-100 hover:bg-gradient-to-br from-checkBgFrom to-checkBgTo group dark:ring-darkTheme-600 dark:hover:ring-darkTheme-200"
+                          
+                          onClick={(event) => checkHandler(event, todo)}>
+                          <div 
+                            className="flex h-5 w-5 rounded-full group-hover:bg-lightTheme-100 dark:group-hover:bg-darkTheme-200"
+                            name={id}
+                            value={id}
+                            id={id}>
+
+                          </div>
                         </button>
                         <button className="pl-4 text-lightTheme-500 dark:text-darkTheme-300">{todo}</button>
                       </div>
