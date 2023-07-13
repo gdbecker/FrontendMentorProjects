@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 // import LoadingPage from './loading';
 import Image from 'next/image';
 import Task from './components/Task';
@@ -60,7 +60,7 @@ function Home() {
         timestamp: serverTimestamp()
       })
       setNewTodo("");
-      window.location.reload();
+      getTodo();
     } catch (err) {
       console.log(err);
     }
@@ -78,10 +78,20 @@ function Home() {
       // window.confirm("Are you sure you want to delete this Todo?")
       const documentRef = doc(db, "todo", id);
       await deleteDoc(documentRef)
-      window.location.reload();
+      getTodo();
       } catch (err) {
       console.log(err);
     }
+  }
+
+  const clearCompletedBtn = () => {
+    var closedTodos =  todos.filter(function(t) {
+      return t.isChecked == true;
+    });
+
+    closedTodos.map(function(t) {
+      deleteTodo(t.id);
+    })
   }
 
   // Edit Todo completion
@@ -125,7 +135,6 @@ function Home() {
   // Filtering Todos
   const onChangeFilter = (e) => {
     setFilter(e.currentTarget.value);
-
     filterDownTodos(e.currentTarget.value, todos);
   }
 
@@ -163,6 +172,34 @@ function Home() {
     }
   }
 
+  // Drag and drop functionality
+  const dragItem = useRef();
+  const dragOverItem = useRef();
+
+  const dragStart = (e, position) => {
+    dragItem.current = position;
+    console.log(e.target.innerHTML);
+  };
+ 
+  const dragEnter = (e, position) => {
+    dragOverItem.current = position;
+    console.log(e.target.innerHTML);
+  };
+ 
+  const drop = (e) => {
+    if (filter == "All") {
+      const copyTodos = [...todos];
+      const dragItemContent = copyTodos[dragItem.current];
+      copyTodos.splice(dragItem.current, 1);
+      copyTodos.splice(dragOverItem.current, 0, dragItemContent);
+      dragItem.current = null;
+      dragOverItem.current = null;
+      setTodo(copyTodos);
+      setFilteredTodos(copyTodos);
+    }
+  };
+
+  // Set up app for viewing
   useEffect(() => {
     getTodo();
     setIsLoading(false);
@@ -206,11 +243,18 @@ function Home() {
   
                 <div className="flex flex-col h-fit w-full mb-5 !rounded-md bg-lightTheme-100 dark:bg-darkTheme-200">
   
-                  {filteredTodos.map(({ id, todo, isChecked}) =>
-                    <div key={id} className="flex flex-row w-full rounded-tl-md rounded-tr-md justify-between p-5 items-center bg-lightTheme-100 dark:bg-darkTheme-200 border-b-[1px] border-lightTheme-300 dark:border-darkTheme-600 group" draggable>
+                  {filteredTodos.map(({ id, todo, isChecked }, index) =>
+                    <div 
+                      key={index} 
+                      className="flex flex-row w-full rounded-tl-md rounded-tr-md justify-between p-5 items-center bg-lightTheme-100 dark:bg-darkTheme-200 border-b-[1px] border-lightTheme-300 dark:border-darkTheme-600 group"
+                      onDragStart={(e) => dragStart(e, index)}
+                      onDragEnter={(e) => dragEnter(e, index)}
+                      onDragEnd={drop}
+                      draggable
+                    >
                       <div className="flex flex-row">
                         <button 
-                          className={"flex p-0.5 rounded-full ring-1 hover:ring-lightTheme-100 hover:bg-gradient-to-br from-checkBgFrom to-checkBgTo group " + (isChecked ? "ring-lightTheme-100 dark:ring-darkTheme-600 bg-gradient-to-br from-checkBgFrom to-checkBgTo" : "ring-lightTheme-300 dark:hover:ring-darkTheme-200")}
+                          className={"flex p-0.5 rounded-full ring-1 group-hover:ring-lightTheme-100 group-hover:bg-gradient-to-br group-hover:from-checkBgFrom group-hover:to-checkBgTo dark:group-hover:ring-darkTheme-200 group " + (isChecked ? "ring-lightTheme-100 dark:ring-darkTheme-600 bg-gradient-to-br from-checkBgFrom to-checkBgTo" : "ring-lightTheme-300 dark:ring-darkTheme-300 dark:hover:ring-darkTheme-200")}
                           onClick={(event) => checkHandler(event, todo)}>
                           <div 
                             className="flex px-[0.3rem] py-[0.38rem] rounded-full group-hover:bg-lightTheme-100 dark:group-hover:bg-darkTheme-200"
@@ -277,7 +321,10 @@ function Home() {
                       >Completed</button>
                     </div>
   
-                    <button className="px-2 text-lightTheme-400 text-sm hover:text-lightTheme-500 dark:text-darkTheme-600 dark:hover:text-darkTheme-400">Clear Completed</button>
+                    <button 
+                      className="px-2 text-lightTheme-400 text-sm hover:text-lightTheme-500 dark:text-darkTheme-600 dark:hover:text-darkTheme-400"
+                      onClick={() => clearCompletedBtn()}
+                    >Clear Completed</button>
                   </div>
                   
                 </div>
