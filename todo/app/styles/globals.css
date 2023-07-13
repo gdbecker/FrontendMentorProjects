@@ -12,32 +12,3 @@
   font-family: JosefinSans-Bold;
   src: url(../../public/JosefinSans-Bold.ttf);
 }
-
-/* Backgrounds */
-.bg-mobile-light {
-  background-image: url(../../public/bg-mobile-light.jpg);
-  background-repeat: no-repeat;
-  /* background-position: 50%; */
-  background-size: cover;
-}
-
-.dark .dark\:bg-mobile-dark {
-  background-image: url(../../public/bg-mobile-dark.jpg);
-  background-repeat: repeat;
-  background-position: 50%;
-  /* background-size: 15%; */
-}
-
-.bg-desktop-light {
-  background-image: url(../../public/bg-desktop-light.jpg);
-  background-repeat: repeat;
-  background-position: 50%;
-  /* background-size: 15%; */
-}
-
-.dark .dark\:bg-desktop-dark {
-  background-image: url(../../public/bg-desktop-dark.jpg);
-  background-repeat: repeat;
-  background-position: 50%;
-  /* background-size: 15%; */
-}
