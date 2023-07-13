@@ -1,18 +1,19 @@
 'use client';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 // import LoadingPage from './loading';
 import Image from 'next/image';
 import Task from './components/Task';
 import IconSun from '../public/icon-sun.svg';
 import IconMoon from '../public/icon-moon.svg';
-import IconCheck from '../public/icon-check.svg';
+import IconCheckLight from '../public/icon-check-light.svg';
+import IconCheckDark from '../public/icon-check-dark.svg';
 import IconCross from '../public/icon-cross.svg';
 
 import { collection, addDoc, serverTimestamp, getDocs, doc, deleteDoc, runTransaction, orderBy, query } from 'firebase/firestore';
 import { db } from './services/firebase.config';
 
 function Home() {
-  // Dark mode
+  // Dark mode functionality
   const [darkMode, setDarkMode] = useState(false);
 
   const changeTheme = async (e) => {
@@ -23,17 +24,32 @@ function Home() {
   const collectionRef = collection(db, "todo");
   const [newTodo, setNewTodo] = useState('');
   const [todos, setTodo] = useState([]);
+  const [filteredTodos, setFilteredTodos] = useState([]);
   const [checked, setChecked] = useState([]);
 
   // State variables
-  const [filter, setFilter] = useState('All');
   const [isLoading, setIsLoading] = useState(true);
+  const [filter, setFilter] = useState('All');
+  const [itemsLeft, setItemsLeft] = useState('');
 
+  // Get all Todos
+  const getTodo = async () => {
+    await getDocs(collectionRef).then((todo) => {
+      let todoData = todo.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+      setTodo(todoData)
+      setFilteredTodos(todoData)
+      setChecked(todoData)
+      countItemsLeft(todoData)
+    }).catch((err) => {
+      console.log(err);
+    })
+  }
+
+  // Add a new Todo
   const onChangeNewTodo = (e) => {
     setNewTodo(e.target.value);
   }
 
-  // Add a new Todo
   const submitTodo = async (e) => {
     e.preventDefault();
 
@@ -83,6 +99,8 @@ function Home() {
 
       })
       setTodo(newState)
+      countItemsLeft(newState)
+      filterDownTodos(filter, newState)
       return newState
     });
 
@@ -104,20 +122,48 @@ function Home() {
 
   };
 
+  // Filtering Todos
   const onChangeFilter = (e) => {
     setFilter(e.currentTarget.value);
+
+    filterDownTodos(e.currentTarget.value, todos);
+  }
+
+  const countItemsLeft = (todosList) => {
+    var openTodos =  todosList.filter(function(t) {
+      return t.isChecked == false;
+    });
+
+    setItemsLeft(openTodos.length);
+  }
+
+  const filterToActive = (todosList) => {
+    var openTodos =  todosList.filter(function(t) {
+      return t.isChecked == false;
+    });
+
+    setFilteredTodos(openTodos);
+  }
+
+  const filterToCompleted = (todosList) => {
+    var closedTodos =  todosList.filter(function(t) {
+      return t.isChecked == true;
+    });
+
+    setFilteredTodos(closedTodos);
+  }
+
+  const filterDownTodos = (filter, todoList) => {
+    if (filter == "All") {
+      setFilteredTodos(todoList);
+    } else if (filter == "Active") {
+      filterToActive(todoList);
+    } else {
+      filterToCompleted(todoList);
+    }
   }
 
   useEffect(() => {
-    const getTodo = async () => {
-      await getDocs(collectionRef).then((todo) => {
-        let todoData = todo.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
-        setTodo(todoData)
-        setChecked(todoData)
-        }).catch((err) => {
-          console.log(err);
-        })
-      }
     getTodo();
     setIsLoading(false);
   }, [])
@@ -160,22 +206,30 @@ function Home() {
   
                 <div className="flex flex-col h-fit w-full mb-5 !rounded-md bg-lightTheme-100 dark:bg-darkTheme-200">
   
-                  {todos.map(({ id, todo, isChecked}) =>
+                  {filteredTodos.map(({ id, todo, isChecked}) =>
                     <div key={id} className="flex flex-row w-full rounded-tl-md rounded-tr-md justify-between p-5 items-center bg-lightTheme-100 dark:bg-darkTheme-200 border-b-[1px] border-lightTheme-300 dark:border-darkTheme-600 group" draggable>
                       <div className="flex flex-row">
                         <button 
-                          className="flex p-0.5 rounded-full ring-1 ring-lightTheme-300 hover:ring-lightTheme-100 hover:bg-gradient-to-br from-checkBgFrom to-checkBgTo group dark:ring-darkTheme-600 dark:hover:ring-darkTheme-200"
-                          
+                          className={"flex p-0.5 rounded-full ring-1 hover:ring-lightTheme-100 hover:bg-gradient-to-br from-checkBgFrom to-checkBgTo group " + (isChecked ? "ring-lightTheme-100 dark:ring-darkTheme-600 bg-gradient-to-br from-checkBgFrom to-checkBgTo" : "ring-lightTheme-300 dark:hover:ring-darkTheme-200")}
                           onClick={(event) => checkHandler(event, todo)}>
                           <div 
-                            className="flex h-5 w-5 rounded-full group-hover:bg-lightTheme-100 dark:group-hover:bg-darkTheme-200"
-                            name={id}
-                            value={id}
+                            className="flex px-[0.3rem] py-[0.38rem] rounded-full group-hover:bg-lightTheme-100 dark:group-hover:bg-darkTheme-200"
                             id={id}>
-
+                            <Image 
+                              id={id} 
+                              src={(!isChecked && darkMode ? IconCheckDark : IconCheckLight)} 
+                              alt="Icon" 
+                              width={12} 
+                              height={12} 
+                              className="" 
+                            />
                           </div>
                         </button>
-                        <button className="pl-4 text-lightTheme-500 dark:text-darkTheme-300">{todo}</button>
+                        <button 
+                          className={"pl-4 " + (isChecked ? "line-through text-lightTheme-300 dark:text-darkTheme-600" : "text-lightTheme-500 dark:text-darkTheme-300")}
+                          id={id}
+                          onClick={(event) => checkHandler(event, todo)}
+                        >{todo}</button>
                       </div>
                       <button 
                         className="flex lg:invisible group-hover:visible"
@@ -186,7 +240,7 @@ function Home() {
                   )}
                 
   
-                  <div className="flex flex-row w-full justify-between p-5 items-center border-b-[1px] border-lightTheme-300 dark:border-darkTheme-600 group">
+                  {/* <div className="flex flex-row w-full justify-between p-5 items-center border-b-[1px] border-lightTheme-300 dark:border-darkTheme-600 group">
                     <div className="flex flex-row">
                       <button 
                         className="flex p-0.5 rounded-full bg-gradient-to-br from-checkBgFrom to-checkBgTo">
@@ -200,10 +254,10 @@ function Home() {
                       className="flex lg:invisible group-hover:visible">
                       <Image src={IconCross} alt="Icon" width={15} height={15} className="" />
                     </button>
-                  </div>
+                  </div> */}
   
                   <div className="flex flex-row w-full justify-between p-5 items-center">
-                    <h1 className="text-lightTheme-400 text-sm dark:text-darkTheme-600">5 Items Left</h1>
+                    <h1 className="text-lightTheme-400 text-sm dark:text-darkTheme-600">{itemsLeft} Items Left</h1>
   
                     <div className="flex flex-row justify-center invisible lg:visible">
                       <button 
