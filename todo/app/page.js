@@ -2,12 +2,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 // import LoadingPage from './loading';
 import Image from 'next/image';
-import Task from './components/Task';
+import Todo from './components/Todo';
 import IconSun from '../public/icon-sun.svg';
 import IconMoon from '../public/icon-moon.svg';
-import IconCheckLight from '../public/icon-check-light.svg';
-import IconCheckDark from '../public/icon-check-dark.svg';
-import IconCross from '../public/icon-cross.svg';
+// import IconCheckLight from '../public/icon-check-light.svg';
+// import IconCheckDark from '../public/icon-check-dark.svg';
+// import IconCross from '../public/icon-cross.svg';
 
 import { collection, addDoc, serverTimestamp, getDocs, doc, deleteDoc, runTransaction, orderBy, query } from 'firebase/firestore';
 import { db } from './services/firebase.config';
@@ -26,16 +26,34 @@ function Home() {
   const [todos, setTodo] = useState([]);
   const [filteredTodos, setFilteredTodos] = useState([]);
   const [checked, setChecked] = useState([]);
+  const [highestListIndex, setHighestListIndex] = useState('');
 
   // State variables
   const [isLoading, setIsLoading] = useState(true);
   const [filter, setFilter] = useState('All');
   const [itemsLeft, setItemsLeft] = useState('');
 
+  // Get the highest list index value from the Todos list, for assigning next value for a new Todo
+  const getHighestListIndex = () => {
+    var indices = []
+    for (var i = 0; i < todos.length; i++) {
+      indices.push(todos[i]["listIndex"])
+    }
+
+    if (indices.length > 0) {
+      return Math.max.apply(Math, indices);
+    } else {
+      return -1;
+    }
+  }
+
   // Get all Todos
   const getTodo = async () => {
     await getDocs(collectionRef).then((todo) => {
       let todoData = todo.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+      todoData.sort(function(first, second) {
+        return first.listIndex - second.listIndex;
+      });
       setTodo(todoData)
       setFilteredTodos(todoData)
       setChecked(todoData)
@@ -57,6 +75,7 @@ function Home() {
       await addDoc(collectionRef, {
         todo: newTodo,
         isChecked: false,
+        listIndex: getHighestListIndex(todos) + 1,
         timestamp: serverTimestamp()
       })
       setNewTodo("");
@@ -97,11 +116,11 @@ function Home() {
   // Edit Todo completion
   const checkHandler = async (event, todo) => {
 
+    console.log(checked)
+
     setChecked(state => {
       const indexToUpdate = state.findIndex(checkBox => checkBox.id.toString() === event.target.id);
       let newState = state.slice()
-
-      console.log(event.target.id)
 
       newState.splice(indexToUpdate, 1, {
         ...state[indexToUpdate],
@@ -174,28 +193,81 @@ function Home() {
 
   // Drag and drop functionality
   const dragItem = useRef();
+  const dragItemId = useRef();
   const dragOverItem = useRef();
+  const dragOverItemId = useRef();
 
-  const dragStart = (e, position) => {
+  const dragStart = (e, position, id) => {
     dragItem.current = position;
-    console.log(e.target.innerHTML);
+    dragItemId.current = id;
+    // console.log(e.target.innerHTML);
   };
  
-  const dragEnter = (e, position) => {
+  const dragEnter = (e, position, id) => {
     dragOverItem.current = position;
-    console.log(e.target.innerHTML);
+    dragOverItemId.current = id;
+    // console.log(e.target.innerHTML);
   };
  
-  const drop = (e) => {
+  const drop = async (e) => {
     if (filter == "All") {
       const copyTodos = [...todos];
-      const dragItemContent = copyTodos[dragItem.current];
-      copyTodos.splice(dragItem.current, 1);
-      copyTodos.splice(dragOverItem.current, 0, dragItemContent);
+      // const dragItemContent = copyTodos[dragItem.current];
+      // const dragItemContent =  copyTodos.filter(function(t) {
+      //   return t.listIndex == dragItem.current;
+      // });
+
+      // const dragItemContent = copyTodos.find(t => t.listIndex == dragItem.current);
+
+      console.log(checked)
+      console.log(copyTodos)
+
+      copyTodos[dragItem.current].listIndex = dragOverItem.current;
+      copyTodos[dragOverItem.current].listIndex = dragItem.current;
+
+      copyTodos.sort(function(first, second) {
+        return first.listIndex - second.listIndex;
+      });
+
+      // copyTodos.splice(dragItem.current, 1);
+      // copyTodos.splice(dragOverItem.current, 0, dragItemContent);
+
+      // Update new listIndex values to db (switch em)
+      try {
+        const docRefDragItem = doc(db, "todo", dragItemId.current);
+        await runTransaction(db, async (transaction) => {
+          const todoDoc = await transaction.get(docRefDragItem);
+          if (!todoDoc.exists()) {
+            throw "Document does not exist!";
+          }
+          transaction.update(docRefDragItem, { listIndex: dragOverItem.current});
+        });
+        console.log("Transaction successfully committed!");
+      } catch (error) {
+        console.log("Transaction failed: ", error);
+      }
+
+      try {
+        const docRefDragOverItem = doc(db, "todo", dragOverItemId.current);
+        await runTransaction(db, async (transaction) => {
+          const todoDoc = await transaction.get(docRefDragOverItem);
+          if (!todoDoc.exists()) {
+            throw "Document does not exist!";
+          }
+          transaction.update(docRefDragOverItem, { listIndex: dragItem.current});
+        });
+        console.log("Transaction successfully committed!");
+      } catch (error) {
+        console.log("Transaction failed: ", error);
+      }
+
+      console.log(copyTodos)
+
       dragItem.current = null;
       dragOverItem.current = null;
       setTodo(copyTodos);
       setFilteredTodos(copyTodos);
+      setChecked(copyTodos);
     }
   };
 
@@ -210,7 +282,7 @@ function Home() {
       <main className={darkMode ? "dark" : ""}>
         <div className="min-h-screen bg-lightTheme-200 font-josefinSansRegular dark:bg-darkTheme-100">
           <div className="flex h-60 items-center justify-center bg-cover bg-center bg-no-repeat bg-[url('../../public/bg-mobile-light.jpg')] md:bg-[url('../../public/bg-desktop-light.jpg')] dark:bg-[url('../../public/bg-mobile-dark.jpg')] dark:md:bg-[url('../../public/bg-desktop-dark.jpg')]">
-            <div className="relative w-full md:w-[80%] lg:w-[50%]">
+            <div className="relative w-full md:w-[80%] lg:w-[50%] xl:w-[45%] 2xl:w-[40%]">
               <div className="absolute flex-col -top-14 px-8 w-full text-center items-center justify-center">
                 <div className="flex flex-row w-full justify-between">
                   <h1 className="text-lightTheme-100 text-3xl font-josefinSansBold tracking-[0.70rem] lg:text-4xl">TODO</h1>
@@ -243,7 +315,7 @@ function Home() {
   
                 <div className="flex flex-col h-fit w-full mb-5 !rounded-md bg-lightTheme-100 dark:bg-darkTheme-200">
   
-                  {filteredTodos.map(({ id, todo, isChecked }, index) =>
+                  {/* {filteredTodos.map(({ id, todo, isChecked }, index) =>
                     <div 
                       key={index} 
                       className="flex flex-row w-full rounded-tl-md rounded-tr-md justify-between p-5 items-center bg-lightTheme-100 dark:bg-darkTheme-200 border-b-[1px] border-lightTheme-300 dark:border-darkTheme-600 group"
@@ -281,24 +353,23 @@ function Home() {
                         <Image src={IconCross} alt="Icon" width={15} height={15} className="" />
                       </button>
                     </div>
+                  )} */}
+
+                  {filteredTodos.map(({ id, todo, isChecked, listIndex }, index) =>
+                    <Todo 
+                      darkMode={darkMode}
+                      id={id}
+                      todo={todo}
+                      isChecked={isChecked}
+                      listIndex={listIndex}
+                      index={index}
+                      dragStart={dragStart}
+                      dragEnter={dragEnter}
+                      drop={drop}
+                      checkHandler={checkHandler}
+                      deleteTodo={deleteTodo}
+                    />
                   )}
-                
-  
-                  {/* <div className="flex flex-row w-full justify-between p-5 items-center border-b-[1px] border-lightTheme-300 dark:border-darkTheme-600 group">
-                    <div className="flex flex-row">
-                      <button 
-                        className="flex p-0.5 rounded-full bg-gradient-to-br from-checkBgFrom to-checkBgTo">
-                        <div className="flex px-[0.3rem] py-[0.38rem] rounded-full hover:bg-lightTheme-100 dark:hover:bg-darkTheme-200">
-                          <Image src={IconCheck} alt="Icon" width={12} height={12} className="" />
-                        </div>
-                      </button>
-                      <button className="pl-4 text-lightTheme-300 line-through dark:text-darkTheme-600">Example task</button>
-                    </div>
-                    <button 
-                      className="flex lg:invisible group-hover:visible">
-                      <Image src={IconCross} alt="Icon" width={15} height={15} className="" />
-                    </button>
-                  </div> */}
   
                   <div className="flex flex-row w-full justify-between p-5 items-center">
                     <h1 className="text-lightTheme-400 text-sm dark:text-darkTheme-600">{itemsLeft} Items Left</h1>
@@ -350,17 +421,9 @@ function Home() {
                 <div className="flex flex-row w-full justify-center py-10 items-center">
                   <p className="text-lightTheme-400 text-sm dark:text-darkTheme-600">Drag and drop to reorder list</p>
                 </div>
-  
-                
-                
-                {/* Map out all tasks from db */}
-                {/* <Task /> */}
-  
               </div>
-            </div>
-            
-          </div>
-          
+            </div>     
+          </div>      
         </div>
       </main>
     )
