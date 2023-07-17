@@ -3,29 +3,27 @@ import React, { useState, useEffect } from 'react';
 import LoadingPage from './loading';
 import PNGLocation from '../public/icon-location.png';
 import { BiChevronRight } from 'react-icons/bi';
+import dynamic from "next/dynamic"
 
 // Set up Leaflet maps and map marker
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
+// import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+// import "leaflet/dist/leaflet.css";
 // import L from 'leaflet';
-import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
-import markerIcon from 'leaflet/dist/images/marker-icon.png';
-import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+// import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 
-let L
-if (typeof window !== "undefined") {
-    L = require("leaflet");
-}
+// delete L.Icon.Default.prototype._getIconUrl;
+// L.Icon.Default.mergeOptions({
+//     iconUrl: PNGLocation.src,
+//     iconRetinaUrl: PNGLocation.src,
+//     shadowUrl: markerShadow.src,
+//     iconSize: [45,55],
+//     popupAnchor: [10, -40]
+// })
 
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-    iconUrl: PNGLocation.src,
-    iconRetinaUrl: PNGLocation.src,
-    shadowUrl: markerShadow.src,
-    iconSize: [45,55],
-    popupAnchor: [10, -40]
+const MapComponent = dynamic(() => import('./components/Map'), {
+  loading: () => 'Loading...',
+  ssr: false,
 })
-
 
 function Home() {
 
@@ -95,7 +93,7 @@ function Home() {
               <div className="flex flex-row w-full items-center justify-center">
                 <h1 className="text-offWhite text-3xl font-rubikMedium lg:text-3xl">IP Address Tracker</h1>
               </div>
-              <div className="flex flex-row w-full h-full mt-7 justify-center md:px-44">
+              <div className="flex flex-row w-full h-full mt-7 justify-center md:px-44 lg:px-60 2xl:px-80">
                 <input 
                   className="flex w-full pl-7 bg-offWhite text-veryDarkGray font-rubikRegular rounded-tl-xl rounded-bl-xl rounded-tr-none rounded-br-none focus:outline-none" 
                   id="ipAddress" 
@@ -134,7 +132,7 @@ function Home() {
             </div>
           </div>   
         </div>
-        <MapContainer 
+        {/* <MapContainer 
           center={[43.38621, -79.83713]} 
           zoom="13" 
           scrollWheelZoom={false}
@@ -150,7 +148,12 @@ function Home() {
             <Popup>24 hours coding area 👨‍💻 </Popup>
           </Marker>
 
-        </MapContainer>
+        </MapContainer> */}
+
+        <MapComponent
+          lat={43.38621}
+          lng={-79.83713}
+        />  
         
       </main>
     )
