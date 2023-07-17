@@ -14,10 +14,11 @@ L.Icon.Default.mergeOptions({
     popupAnchor: [10, -40]
 })
 
-function Map({ lat, lng }) {
+function Map({ lat, lng, seed }) {
 
   return (
     <MapContainer 
+      key={seed}
       center={[lat, lng]} 
       zoom="13" 
       scrollWheelZoom={false}

@@ -29,6 +29,7 @@ function Home() {
 
   // State variables
   const [isLoading, setIsLoading] = useState(true);
+  const [seed, setSeed] = useState(1); // Controls re-render of just the map
   const [ipSearch, setIPSearch] = useState('');
   const [data, setData] = useState({
     idpAddress: '',
@@ -50,34 +51,37 @@ function Home() {
     var response = "";
 
     if (ipSearch != '') {
-      // response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${ipSearch}`);
+      response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${ipSearch}`);
     } else {
       const clientResponse = await fetch(
         'https://api.ipify.org?format=json'
       )
       const clientData = await clientResponse.json();
-      // response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${clientData.ip}`);
+      response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${clientData.ip}`);
     }
 
-    // const data = await response.json();
-    // console.log(data);
+    const data = await response.json();
+    console.log(data);
 
-    // setData({
-    //   idpAddress: data.ip,
-    //   location: data.location.city + ", " + data.location.region + " " + data.location.postalCode,
-    //   lat: data.location.lat,
-    //   lng: data.location.lng,
-    //   timezone: "UTC" + data.location.timezone,
-    //   isp: data.isp
-    // });
+    setData({
+      ipAddress: data.ip,
+      location: data.location.city + ", " + data.location.region + " " + data.location.postalCode,
+      lat: data.location.lat,
+      lng: data.location.lng,
+      timezone: "UTC" + data.location.timezone,
+      isp: data.isp
+    });
 
-    setIsLoading(false)
+    setSeed(Math.random()); // Controls re-render of just the map
+
+    setIPSearch('');
+
+    setIsLoading(false);
   }
 
   // Prep app for viewing
   useEffect(() => {
     fetchNewData();
-    // setIsLoading(false);
   }, []);
 
   if (isLoading) {
@@ -151,8 +155,9 @@ function Home() {
         </MapContainer> */}
 
         <MapComponent
-          lat={43.38621}
-          lng={-79.83713}
+          lat={data.lat}
+          lng={data.lng}
+          seed={seed}
         />  
         
       </main>
