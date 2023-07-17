@@ -3,15 +3,38 @@ import React, { useState, useEffect } from 'react';
 import LoadingPage from './loading';
 import Image from 'next/image';
 import IconLocation from '../public/icon-location.svg';
+import PNGLocation from '../public/icon-location.png';
 import { BiChevronRight } from 'react-icons/bi';
 
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import icon from "leaflet/dist/images/marker-icon.png";
-import L, { Icon } from "leaflet";
-import iconShadow from "leaflet/dist/images/marker-shadow.png";
-import "leaflet-defaulticon-compatibility";
-import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
+
+import L from 'leaflet';
+import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+    iconUrl: PNGLocation.src,
+    iconRetinaUrl: PNGLocation.src,
+    shadowUrl: markerShadow.src,
+    iconSize: [45,55],
+    popupAnchor: [10, -40]
+})
+
+// Custom map marker
+// const LocIcon = new Icon({
+//   iconUrl: require("../public/icon-location.svg"),
+//   iconSize: [70,70],
+//   iconAnchor: [40, 90],
+//   popupAnchor: [-25, -40],
+// })
+
+// const ICON = icon({
+//   iconUrl: "../public/icon-location.png",
+//   iconSize: [32, 32],
+// })
 
 function Home() {
 
@@ -32,45 +55,32 @@ function Home() {
     setIPSearch(e.currentTarget.value);
   }
 
-  // Custom map marker
-  let DefaultIcon = L.icon({
-    iconUrl: icon,
-    shadowUrl: iconShadow,
-  });
-
-  L.Marker.prototype.options.icon = DefaultIcon;
-
-  const LocIcon = new Icon({
-    iconUrl: require("../public/icon-location.svg"),
-    iconSize: [70,70]
-  })
-
   const fetchNewData = async () => {
 
     const API_KEY = "at_WGi1atAenbIjfq6QgqTt2DjpPrEgP"
     var response = "";
 
     if (ipSearch != '') {
-      response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${ipSearch}`);
+      // response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${ipSearch}`);
     } else {
       const clientResponse = await fetch(
         'https://api.ipify.org?format=json'
       )
       const clientData = await clientResponse.json();
-      response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${clientData.ip}`);
+      // response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${clientData.ip}`);
     }
 
-    const data = await response.json();
-    console.log(data);
+    // const data = await response.json();
+    // console.log(data);
 
-    setData({
-      idpAddress: data.ip,
-      location: data.location.city + ", " + data.location.region + " " + data.location.postalCode,
-      lat: data.location.lat,
-      lng: data.location.lng,
-      timezone: "UTC" + data.location.timezone,
-      isp: data.isp
-    });
+    // setData({
+    //   idpAddress: data.ip,
+    //   location: data.location.city + ", " + data.location.region + " " + data.location.postalCode,
+    //   lat: data.location.lat,
+    //   lng: data.location.lng,
+    //   timezone: "UTC" + data.location.timezone,
+    //   isp: data.isp
+    // });
 
     setIsLoading(false)
   }
@@ -133,16 +143,21 @@ function Home() {
             </div>
           </div>   
         </div>
-        <MapContainer center={[data.lat, data.lng]} zoom={13} scrollWheelZoom={false} className="flex w-full min-h-screen z-0">
+        <MapContainer 
+          center={[43.38621, -79.83713]} 
+          zoom="13" 
+          scrollWheelZoom={false}
+          className="flex min-h-screen z-0"
+        >
           <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker position={[data.lat, data.lng]} icon={LocIcon}>
-            <Popup>My Location</Popup>
+          <Marker position={[43.38621, -79.83713]} >
+            <Popup>24 hours coding area 👨‍💻 </Popup>
           </Marker>
-        </MapContainer>
 
+        </MapContainer>
         
       </main>
     )
