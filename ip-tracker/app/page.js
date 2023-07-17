@@ -5,8 +5,13 @@ import Image from 'next/image';
 import IconLocation from '../public/icon-location.svg';
 import { BiChevronRight } from 'react-icons/bi';
 
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
-import 'leaflet/dist/leaflet.css'
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import icon from "leaflet/dist/images/marker-icon.png";
+import L, { Icon } from "leaflet";
+import iconShadow from "leaflet/dist/images/marker-shadow.png";
+import "leaflet-defaulticon-compatibility";
+import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 
 function Home() {
 
@@ -27,32 +32,45 @@ function Home() {
     setIPSearch(e.currentTarget.value);
   }
 
+  // Custom map marker
+  let DefaultIcon = L.icon({
+    iconUrl: icon,
+    shadowUrl: iconShadow,
+  });
+
+  L.Marker.prototype.options.icon = DefaultIcon;
+
+  const LocIcon = new Icon({
+    iconUrl: require("../public/icon-location.svg"),
+    iconSize: [70,70]
+  })
+
   const fetchNewData = async () => {
 
     const API_KEY = "at_WGi1atAenbIjfq6QgqTt2DjpPrEgP"
     var response = "";
 
     if (ipSearch != '') {
-      // response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${ipSearch}`);
+      response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${ipSearch}`);
     } else {
       const clientResponse = await fetch(
         'https://api.ipify.org?format=json'
       )
       const clientData = await clientResponse.json();
-      // response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${clientData.ip}`);
+      response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${clientData.ip}`);
     }
 
-    // const data = await response.json();
-    // console.log(data);
+    const data = await response.json();
+    console.log(data);
 
-    // setData({
-    //   ipAddress: data.ip,
-    //   location: data.location.city + ", " + data.location.region + " " + data.location.postalCode,
-    //   lat: data.location.lat,
-    //   lng: data.location.lng,
-    //   timezone: "UTC" + data.location.timezone,
-    //   isp: data.isp
-    // });
+    setData({
+      idpAddress: data.ip,
+      location: data.location.city + ", " + data.location.region + " " + data.location.postalCode,
+      lat: data.location.lat,
+      lng: data.location.lng,
+      timezone: "UTC" + data.location.timezone,
+      isp: data.isp
+    });
 
     setIsLoading(false)
   }
@@ -71,7 +89,7 @@ function Home() {
     return (
       <main className="min-h-screen bg-offWhite">
         <div className="flex h-80 md:h-64 items-center justify-center bg-cover bg-center bg-no-repeat bg-[url('../../public/pattern-bg-mobile.png')] md:bg-[url('../../public/pattern-bg-desktop.png')]">
-          <div className="relative w-full md:w-[85%] lg:w-[80%] xl:w-[75%] 2xl:w-[60%]">
+          <div className="relative w-full z-10 md:w-[85%] lg:w-[80%] xl:w-[75%] 2xl:w-[60%]">
             <div className="absolute flex-col -top-32 px-8 w-full text-center items-center justify-center md:-top-24">
               <div className="flex flex-row w-full items-center justify-center">
                 <h1 className="text-offWhite text-3xl font-rubikMedium lg:text-3xl">IP Address Tracker</h1>
@@ -110,26 +128,22 @@ function Home() {
                     <h1 className="text-[0.6rem] text-darkGray font-rubikBold tracking-[0.08rem]">ISP</h1>
                     <h2 className="mt-2 text-xl text-veryDarkGray font-rubikMedium">{data.isp}</h2>
                   </div>
-                  
                 </div>
               </div>
-
-  
-
             </div>
-          </div>     
+          </div>   
         </div>
-        <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} className="flex w-full min-h-screen">
+        <MapContainer center={[data.lat, data.lng]} zoom={13} scrollWheelZoom={false} className="flex w-full min-h-screen z-0">
           <TileLayer
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker position={[51.505, -0.09]}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
+          <Marker position={[data.lat, data.lng]} icon={LocIcon}>
+            <Popup>My Location</Popup>
           </Marker>
-        </MapContainer>   
+        </MapContainer>
+
+        
       </main>
     )
   }
