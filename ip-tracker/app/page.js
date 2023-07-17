@@ -1,18 +1,21 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import LoadingPage from './loading';
-import Image from 'next/image';
-import IconLocation from '../public/icon-location.svg';
 import PNGLocation from '../public/icon-location.png';
 import { BiChevronRight } from 'react-icons/bi';
 
+// Set up Leaflet maps and map marker
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-
-import L from 'leaflet';
+// import L from 'leaflet';
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
 import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+
+let L
+if (typeof window !== "undefined") {
+    L = require("leaflet");
+}
 
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -23,18 +26,6 @@ L.Icon.Default.mergeOptions({
     popupAnchor: [10, -40]
 })
 
-// Custom map marker
-// const LocIcon = new Icon({
-//   iconUrl: require("../public/icon-location.svg"),
-//   iconSize: [70,70],
-//   iconAnchor: [40, 90],
-//   popupAnchor: [-25, -40],
-// })
-
-// const ICON = icon({
-//   iconUrl: "../public/icon-location.png",
-//   iconSize: [32, 32],
-// })
 
 function Home() {
 
@@ -109,7 +100,7 @@ function Home() {
                   className="flex w-full pl-7 bg-offWhite text-veryDarkGray font-rubikRegular rounded-tl-xl rounded-bl-xl rounded-tr-none rounded-br-none focus:outline-none" 
                   id="ipAddress" 
                   type="text" 
-                  ipSearch="Search for any IP address or domain"
+                  placeholder="Search for any IP address or domain"
                   value={ipSearch}
                   onChange={e => onChangeIPAddress(e)}
                   required
@@ -150,8 +141,10 @@ function Home() {
           className="flex min-h-screen z-0"
         >
           <TileLayer
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+            // url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+            // url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+            url="https://www.google.cn/maps/vt?lyrs=m@189&gl=cn&x={x}&y={y}&z={z}"
           />
           <Marker position={[43.38621, -79.83713]} >
             <Popup>24 hours coding area 👨‍💻 </Popup>
