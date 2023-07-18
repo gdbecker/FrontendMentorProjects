@@ -157,6 +157,7 @@ function Home() {
         <MapComponent
           lat={data.lat}
           lng={data.lng}
+          location={data.location}
           seed={seed}
         />  
         

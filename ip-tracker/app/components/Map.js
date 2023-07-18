@@ -14,7 +14,7 @@ L.Icon.Default.mergeOptions({
     popupAnchor: [10, -40]
 })
 
-function Map({ lat, lng, seed }) {
+function Map({ lat, lng, location, seed }) {
 
   return (
     <MapContainer 
@@ -31,7 +31,7 @@ function Map({ lat, lng, seed }) {
         url="https://www.google.cn/maps/vt?lyrs=m@189&gl=cn&x={x}&y={y}&z={z}"
       />
       <Marker position={[lat, lng]} >
-        <Popup>24 hours coding area 👨‍💻 </Popup>
+        <Popup>{location}</Popup>
       </Marker>
 
     </MapContainer>

@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts */
+@font-face {
+  font-family: NunitoSans-ExtraBold;
+  src: url(../../public/NunitoSans_7pt-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: NunitoSans-Light;
+  src: url(../../public/NunitoSans_7pt-Light.ttf);
+}
+
+@font-face {
+  font-family: NunitoSans-SemiBold;
+  src: url(../../public/NunitoSans_7pt-SemiBold.ttf);
+}
