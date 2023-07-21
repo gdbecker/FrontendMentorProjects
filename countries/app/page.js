@@ -16,30 +16,42 @@ import countryData from './json/data.json';
   const onChangeCountrySearch = (e) => {
     setCountrySearch(e.currentTarget.value);
 
-    filterCountryNames(e.currentTarget.value);
+    filterCountries(e.currentTarget.value, regionSelect);
   }
 
   // Update region to filter
   const handleRegionChange = (e) => {
     setRegionSelect(e.target.value);
 
-    filterCountryRegions(e.target.value);
+    filterCountries(countrySearch, e.target.value);
   };
 
   // Filter by country name
-  const filterCountryNames = (countryName) => {
-    var f =  countryData.filter(function(c) {
-      return c.name.slice(0, countryName.length).toLowerCase() == countryName.toLowerCase();
-    });
+  // const filterCountryNames = (countryName) => {
+  //   var f =  countryData.filter(function(c) {
+  //     return c.name.slice(0, countryName.length).toLowerCase() == countryName.toLowerCase();
+  //   });
 
-    setFilteredCountries(f);
-  }
+  //   setFilteredCountries(f);
+  // }
 
-  // Filter by region
-  const filterCountryRegions = (region) => {
-    if (region != "Filter by Region") {
+  // Filter by country name search and region
+  const filterCountries = (countryName, region) => {
+    if (countryName != "" && region != "Filter by Region") {
+      var f =  countryData.filter(function(c) {
+        return c.region == region && c.name.slice(0, countryName.length).toLowerCase() == countryName.toLowerCase();
+      });
+
+      setFilteredCountries(f);
+    } else if (region != "Filter by Region") {
       var f =  countryData.filter(function(c) {
         return c.region == region;
+      });
+
+      setFilteredCountries(f);
+    } else if (countryName != "") {
+      var f =  countryData.filter(function(c) {
+        return c.name.slice(0, countryName.length).toLowerCase() == countryName.toLowerCase();
       });
 
       setFilteredCountries(f);
@@ -47,6 +59,19 @@ import countryData from './json/data.json';
       setFilteredCountries(countryData);
     }
   }
+
+  // Filter by region
+  // const filterCountryRegions = (region) => {
+  //   if (region != "Filter by Region") {
+  //     var f =  countryData.filter(function(c) {
+  //       return c.region == region;
+  //     });
+
+  //     setFilteredCountries(f);
+  //   } else {
+  //     setFilteredCountries(countryData);
+  //   }
+  // }
 
   const grabRegions = () => {
     let allRegions = countryData.map(c => c.region);
@@ -65,7 +90,7 @@ import countryData from './json/data.json';
   }, []);
 
   return (
-    <main className="flex flex-col z-0 w-full h-full p-10 items-center justify-center md:items-center md:px-20 2xl:px-36">
+    <main className="flex flex-col z-0 w-full h-full p-10 items-center justify-center md:items-center md:px-20 2xl:px-44">
 
       <div className="flex flex-col w-full py-5 items-center justify-between md:flex-row">
         <div className="flex flex-row w-full items-center justify-between pl-5 shadow-md rounded-md bg-white dark:bg-darkBlue md:w-[40%]">
@@ -90,7 +115,7 @@ import countryData from './json/data.json';
           {regions.map((r) => (
             <option 
               value={r.country}
-              className="py-5">
+              className="!p-16">
             {r.country}</option>
           ))}
         </select>

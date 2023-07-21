@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import { BsArrowLeft } from 'react-icons/bs';
 import countryData from './../json/data.json';
 
- function ProjectPage({ searchParams }) {
+ function ProjectPage() {
 
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -59,7 +59,7 @@ import countryData from './../json/data.json';
 
   if (!loading) {
     return (
-      <main className="flex flex-col w-full min-h-screen p-10 items-start justify-start bg-gray md:px-20 2xl:px-36">
+      <main className="flex flex-col w-full min-h-screen p-10 items-start justify-start bg-gray md:px-20 2xl:px-44">
 
         <div className="flex flex-row items-start justify-start pb-20">
           <Link
@@ -74,7 +74,7 @@ import countryData from './../json/data.json';
 
         <div className="flex flex-col w-full lg:items-center lg:grid lg:grid-cols-2 lg:gap-20">
           <div 
-            className="flex flex-row h-80 mb-10 w-full bg-no-repeat bg-cover bg-center lg:h-96"
+            className="flex flex-row h-80 mb-10 w-full bg-no-repeat bg-cover bg-center lg:h-96 2xl:h-[28rem]"
             style={{backgroundImage: `url(${pageCountry.flag})`}}>
           </div>
           <div className="flex flex-col items-start justify-start w-full">
@@ -87,12 +87,20 @@ import countryData from './../json/data.json';
                 <p className="py-1 text-md font-nunitoSansSemiBold">Population: <span className="font-nunitoSansLight text-darkGray dark:text-veryLightGray">{numberWithCommas(pageCountry.population)}</span></p>
                 <p className="py-1 text-md font-nunitoSansSemiBold">Region: <span className="font-nunitoSansLight text-darkGray dark:text-veryLightGray">{pageCountry.region}</span></p>
                 <p className="py-1 text-md font-nunitoSansSemiBold">Sub Region: <span className="font-nunitoSansLight text-darkGray dark:text-veryLightGray">{pageCountry.subregion}</span></p>
-                <p className="py-1 text-md font-nunitoSansSemiBold">Capital: <span className="font-nunitoSansLight text-darkGray dark:text-veryLightGray">{pageCountry.capital}</span></p>
+                {pageCountry.capital ? 
+                  <p className="py-1 text-md font-nunitoSansSemiBold">Capital: <span className="font-nunitoSansLight text-darkGray dark:text-veryLightGray">{pageCountry.capital}</span></p>
+                : <></>}
               </div>
               <div className="flex flex-col py-5 md:py-0">
-                <p className="py-1 text-md font-nunitoSansSemiBold">Top Level Domain: <span className="font-nunitoSansLight text-darkGray dark:text-veryLightGray">{pageCountry.topLevelDomain[0]}</span></p>
-                <p className="py-1 text-md font-nunitoSansSemiBold">Currencies: <span className="font-nunitoSansLight text-darkGray dark:text-veryLightGray">{listOutDetails(pageCountry.currencies)}</span></p>
-                <p className="py-1 text-md font-nunitoSansSemiBold">Languages: <span className="font-nunitoSansLight text-darkGray dark:text-veryLightGray">{listOutDetails(pageCountry.languages)}</span></p>
+                {pageCountry.topLevelDomain ? 
+                  <p className="py-1 text-md font-nunitoSansSemiBold">Top Level Domain: <span className="font-nunitoSansLight text-darkGray dark:text-veryLightGray">{pageCountry.topLevelDomain[0]}</span></p>
+                : <></>}
+                {pageCountry.currencies ? 
+                  <p className="py-1 text-md font-nunitoSansSemiBold">Currencies: <span className="font-nunitoSansLight text-darkGray dark:text-veryLightGray">{listOutDetails(pageCountry.currencies)}</span></p>
+                : <></>}
+                {pageCountry.languages ? 
+                  <p className="py-1 text-md font-nunitoSansSemiBold">Currencies: <span className="font-nunitoSansLight text-darkGray dark:text-veryLightGray">{listOutDetails(pageCountry.languages)}</span></p>
+                : <></>}
               </div>
             </div>
 
@@ -113,11 +121,8 @@ import countryData from './../json/data.json';
                 </div>
               </div>
             : <></>}
-
           </div>
         </div>
-       
-
       </main>
     )
   }

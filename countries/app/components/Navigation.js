@@ -21,7 +21,7 @@ function Navigation() {
   }
 
   return (
-    <div class="flex z-10 h-16 py-10 px-10 items-center justify-between overflow-hidden bg-white shadow-md md:px-20 2xl:px-36 dark:bg-darkBlue">
+    <div class="flex z-10 h-16 py-10 px-10 items-center justify-between overflow-hidden bg-white shadow-md md:px-20 2xl:px-44 dark:bg-darkBlue">
       <h1 className="flex font-nunitoSansExtraBold text-md text-veryDarkBlue-Light md:text-xl dark:text-white">Where in the world?</h1>
       <div className="flex flex-row justify-center">
         <button class="flex items-center justify-center" onClick={()=> setTheme( theme === "dark" ? "light" : "dark")}>
@@ -29,7 +29,12 @@ function Navigation() {
             (<IoMoonOutline /> ) : 
             (<IoMoonSharp />) 
           }
-          <h1 className="flex pl-1 font-nunitoSansSemiBold text-sm text-veryDarkBlue-Light dark:text-white">Dark Mode</h1>
+          <h1 className="flex pl-1 font-nunitoSansSemiBold text-sm text-veryDarkBlue-Light dark:text-white">
+            { theme == "dark" ? 
+              (<span>Light Mode</span>) : 
+              (<span>Dark Mode</span>) 
+            }
+          </h1>
         </button>
         
       </div>

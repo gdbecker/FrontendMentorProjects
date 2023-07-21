@@ -10,14 +10,11 @@ function ProjectCard({ alpha3Code, img_url, name, population, region, capital })
   return (
     <Link 
       href={{
-        pathname: `/${alpha3Code}` ,
-        // query: {
-        //   alpha2Code: `${alpha2Code}`,
-        // }
+        pathname: `/${alpha3Code}`,
       }}
       className="flex w-full max-h-fit flex-col rounded-md overflow-hidden bg-white shadow-md dark:bg-darkBlue">
       <div 
-        className="flex flex-row h-40 bg-no-repeat bg-cover bg-center"
+        className="flex flex-row h-40 bg-no-repeat bg-cover bg-center 2xl:h-60"
         style={{backgroundImage: `url(${img_url})`}}>
       </div>
       <div className="flex flex-col p-7 text-veryDarkBlue-Light dark:text-white">
