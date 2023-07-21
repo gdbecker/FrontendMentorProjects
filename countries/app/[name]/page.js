@@ -1,49 +1,126 @@
-import React from 'react';
+'use client'
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
-import { IoChevronBack } from 'react-icons/io5';
-import { FaGithub } from 'react-icons/fa';
+import { usePathname } from 'next/navigation'
+import { BsArrowLeft } from 'react-icons/bs';
+import countryData from './../json/data.json';
 
  function ProjectPage({ searchParams }) {
 
-  function getHoverClass(type) {
-    if (type == 'pbi') {
-      return "flex flex-row hover:text-mediumYellow";
-    } else if (type == 'python') {
-      return "flex flex-row hover:text-lightBlue";
-    } else if (type == 'ml') {
-      return "flex flex-row hover:text-purple";
-    }
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
-  function getShadowClass(type) {
-    if (type == 'pbi') {
-      return "flex w-full min-h-screen rounded-md shadow-lightYellow shadow-[0_0px_2px]";
-    } else if (type == 'python') {
-      return "flex w-full min-h-screen rounded-md shadow-lightBlue shadow-[0_0px_2px]";
-    } else if (type == 'ml') {
-      return "flex w-full min-h-screen rounded-md shadow-purple shadow-[0_0px_2px]";
+  function listOutDetails(l) {
+    let string = "";
+
+    if (l != null && l != undefined) {
+      for (var x = 0; x < l.length; x++) {
+        string += l[x].name + " ";
+      }
     }
+  
+    return string;
+  } 
+
+  // State variables
+  const [loading, setLoading] = useState(true);
+  const [pageCountry, setPageCountry] = useState([]);
+  const pathname = usePathname()
+
+  // Select the country for page view
+  const findCountry = (code) => {
+    var s =  countryData.filter(function(c) {
+      return c.alpha3Code == code;
+    });
+
+    return s[0];
   }
 
-  return (
-    <main className="flex flex-col w-full min-h-screen p-10 justify-center bg-gray 2xl:px-36">
+  const findCountryName = (code) => {
+    var s =  countryData.filter(function(c) {
+      return c.alpha3Code == code;
+    });
 
-      <h1 className="pb-6 font-interBold text-center text-white text-xl">{searchParams.title}</h1>
+    console.log(s[0])
 
-      <div className="grid grid-cols-2 pb-3 items-end justify-between text-white text-md font-interRegular">
-        <a href="/" className={getHoverClass(searchParams.type)}><span className="pt-1 pr-2"><IoChevronBack /></span> Back</a>
-        <a href={searchParams.code_url} target="_blank" className={`justify-end ${getHoverClass(searchParams.type)}`}><span className="pt-1 pr-2"><FaGithub /></span> Learn More</a>
-      </div>
-      <iframe 
-        src={searchParams.demo_url}
-        height="800" 
-        frameborder="0" 
-        scrolling="auto" 
-        title="Project Demo"
-        className={getShadowClass(searchParams.type)}>
-      </iframe>
-    </main>
-  )
+    return s[0].name;
+  }
+
+  const setUpPage = () => {
+    // setPageCountry(findCountry(searchParams.alpha2Code));
+    setPageCountry(findCountry(pathname.slice(1)));
+    setLoading(false);
+  }
+
+  useEffect(() => {
+    setUpPage();
+  }, []);
+
+  if (!loading) {
+    return (
+      <main className="flex flex-col w-full min-h-screen p-10 items-start justify-start bg-gray md:px-20 2xl:px-36">
+
+        <div className="flex flex-row items-start justify-start pb-20">
+          <Link
+            href={{
+              pathname: `/` ,
+            }}
+            class="flex items-center justify-center py-2 px-8 shadow-md rounded-sm bg-white dark:bg-darkBlue">
+            <BsArrowLeft />
+            <h1 className="flex pl-1 font-nunitoSansLight text-sm text-veryDarkBlue-Light dark:text-white">Back</h1>
+          </Link>
+        </div>
+
+        <div className="flex flex-col w-full lg:items-center lg:grid lg:grid-cols-2 lg:gap-20">
+          <div 
+            className="flex flex-row h-80 mb-10 w-full bg-no-repeat bg-cover bg-center lg:h-96"
+            style={{backgroundImage: `url(${pageCountry.flag})`}}>
+          </div>
+          <div className="flex flex-col items-start justify-start w-full">
+            <div className="flex flex-row pb-3 md:pb-5">
+              <h1 className="text-3xl font-nunitoSansExtraBold">{pageCountry.name}</h1>
+            </div>
+            <div className="flex flex-col w-full text-veryDarkBlue-Light dark:text-white md:grid md:grid-cols-2 md:gap-5">
+              <div className="flex flex-col py-5 md:py-0">
+                <p className="py-1 text-md font-nunitoSansSemiBold">Native Name: <span className="font-nunitoSansLight text-darkGray dark:text-veryLightGray">{pageCountry.nativeName}</span></p>
+                <p className="py-1 text-md font-nunitoSansSemiBold">Population: <span className="font-nunitoSansLight text-darkGray dark:text-veryLightGray">{numberWithCommas(pageCountry.population)}</span></p>
+                <p className="py-1 text-md font-nunitoSansSemiBold">Region: <span className="font-nunitoSansLight text-darkGray dark:text-veryLightGray">{pageCountry.region}</span></p>
+                <p className="py-1 text-md font-nunitoSansSemiBold">Sub Region: <span className="font-nunitoSansLight text-darkGray dark:text-veryLightGray">{pageCountry.subregion}</span></p>
+                <p className="py-1 text-md font-nunitoSansSemiBold">Capital: <span className="font-nunitoSansLight text-darkGray dark:text-veryLightGray">{pageCountry.capital}</span></p>
+              </div>
+              <div className="flex flex-col py-5 md:py-0">
+                <p className="py-1 text-md font-nunitoSansSemiBold">Top Level Domain: <span className="font-nunitoSansLight text-darkGray dark:text-veryLightGray">{pageCountry.topLevelDomain[0]}</span></p>
+                <p className="py-1 text-md font-nunitoSansSemiBold">Currencies: <span className="font-nunitoSansLight text-darkGray dark:text-veryLightGray">{listOutDetails(pageCountry.currencies)}</span></p>
+                <p className="py-1 text-md font-nunitoSansSemiBold">Languages: <span className="font-nunitoSansLight text-darkGray dark:text-veryLightGray">{listOutDetails(pageCountry.languages)}</span></p>
+              </div>
+            </div>
+
+            {pageCountry.borders ? 
+              <div className="flex flex-col items-center pt-3 md:pt-5 md:flex-row md:flex-wrap">
+                <p className="py-1 text-md font-nunitoSansSemiBold">Border Countries: </p>
+                <div className="flex flex-row flex-wrap py-2">
+                  {pageCountry.borders.map((b) => (
+                    <Link
+                      href={{
+                        pathname: `/${b}` ,
+                      }}
+                      class="flex items-center justify-center mx-2 my-1 px-8 py-1 shadow-md rounded-sm bg-white dark:bg-darkBlue">
+                      
+                      <h1 className="flex font-nunitoSansLight text-sm text-veryDarkBlue-Light dark:text-white">{findCountryName(b)}</h1>
+                    </Link>
+                  )) }
+                </div>
+              </div>
+            : <></>}
+
+          </div>
+        </div>
+       
+
+      </main>
+    )
+  }
 }
 
 export default ProjectPage;
