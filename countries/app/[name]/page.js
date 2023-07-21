@@ -79,7 +79,7 @@ import countryData from './../json/data.json';
           </div>
           <div className="flex flex-col items-start justify-start w-full">
             <div className="flex flex-row pb-3 md:pb-5">
-              <h1 className="text-3xl font-nunitoSansExtraBold">{pageCountry.name}</h1>
+              <h1 className="text-3xl font-nunitoSansExtraBold text-veryDarkBlue-Light dark:text-white">{pageCountry.name}</h1>
             </div>
             <div className="flex flex-col w-full text-veryDarkBlue-Light dark:text-white md:grid md:grid-cols-2 md:gap-5">
               <div className="flex flex-col py-5 md:py-0">

@@ -2,13 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import ProjectCard from './components/ProjectCard';
 import { BiSearch } from 'react-icons/bi'
+import { BiChevronDown } from 'react-icons/bi'
 import countryData from './json/data.json';
 
  function Home() {
 
   // State variables
   const [countrySearch, setCountrySearch] = useState('');
-  const [regionSelect, setRegionSelect] = useState('');
+  const [regionSelect, setRegionSelect] = useState('Filter by Region');
   const [regions, setRegions] = useState([]);
   const [filteredCountries, setFilteredCountries] = useState([]);
 
@@ -21,9 +22,9 @@ import countryData from './json/data.json';
 
   // Update region to filter
   const handleRegionChange = (e) => {
-    setRegionSelect(e.target.value);
+    setRegionSelect(e.target.name);
 
-    filterCountries(countrySearch, e.target.value);
+    filterCountries(countrySearch, e.target.name);
   };
 
   // Filter by country name
@@ -37,13 +38,14 @@ import countryData from './json/data.json';
 
   // Filter by country name search and region
   const filterCountries = (countryName, region) => {
-    if (countryName != "" && region != "Filter by Region") {
+    if (countryName != "" && region != "All" && region != "Filter by Region") {
       var f =  countryData.filter(function(c) {
-        return c.region == region && c.name.slice(0, countryName.length).toLowerCase() == countryName.toLowerCase();
+        // return c.region == region && c.name.slice(0, countryName.length).toLowerCase() == countryName.toLowerCase();
+        return c.region == region && c.name.toLowerCase().includes(countryName.toLowerCase());
       });
 
       setFilteredCountries(f);
-    } else if (region != "Filter by Region") {
+    } else if (region != "All" && region != "Filter by Region") {
       var f =  countryData.filter(function(c) {
         return c.region == region;
       });
@@ -51,7 +53,8 @@ import countryData from './json/data.json';
       setFilteredCountries(f);
     } else if (countryName != "") {
       var f =  countryData.filter(function(c) {
-        return c.name.slice(0, countryName.length).toLowerCase() == countryName.toLowerCase();
+        // return c.name.slice(0, countryName.length).toLowerCase() == countryName.toLowerCase();
+        return c.name.toLowerCase().includes(countryName.toLowerCase());
       });
 
       setFilteredCountries(f);
@@ -81,6 +84,8 @@ import countryData from './json/data.json';
       return({country: c});
     });
 
+    regionList.unshift({country: "All"})
+
     setRegions(regionList);
   }
 
@@ -92,7 +97,7 @@ import countryData from './json/data.json';
   return (
     <main className="flex flex-col z-0 w-full h-full p-10 items-center justify-center md:items-center md:px-20 2xl:px-44">
 
-      <div className="flex flex-col w-full py-5 items-center justify-between md:flex-row">
+      <div className="flex flex-col w-full py-5 justify-between md:flex-row">
         <div className="flex flex-row w-full items-center justify-between pl-5 shadow-md rounded-md bg-white dark:bg-darkBlue md:w-[40%]">
           <h1 className="font-nunitoSansExtraBold text-darkGray dark:text-white"><BiSearch /></h1>
           <input 
@@ -104,7 +109,7 @@ import countryData from './json/data.json';
             onChange={e => onChangeCountrySearch(e)}
           />
         </div>
-        <select 
+        {/* <select 
           value={regionSelect} 
           onChange={(e) => handleRegionChange(e)}
           className="text-xs font-nunitoSansSemiBold focus:outline-none">
@@ -118,7 +123,33 @@ import countryData from './json/data.json';
               className="!p-16">
             {r.country}</option>
           ))}
-        </select>
+        </select> */}
+        <details className="flex dropdown w-[60%] my-10 md:my-0 md:w-[28%] lg:w-[20%] xl:w-[15%]">
+          <summary className="flex flex-row items-center justify-between mb-[2px] btn w-full rounded-md border-0 shadow-md no-animation bg-white text-veryDarkBlue-Light hover:bg-white dark:bg-darkBlue dark:text-white dark:hover:dark:bg-darkBlue">
+            <h1 
+              className="flex normal-case text-xs font-nunitoSansSemiBold"
+            >{regionSelect}</h1>
+            <BiChevronDown className="text-sm"/>
+          </summary>
+          <ul 
+            className="flex px-2 py-4 shadow menu dropdown-content z-[1] rounded-md w-full bg-white text-veryDarkBlue-Light hover: dark:bg-darkBlue dark:text-white"
+            
+            >
+            {regions.map((r) => (
+              <li
+                onClick={(e) => handleRegionChange(e)}
+                className="text-xs font-nunitoSansSemiBold"
+              >
+                <a 
+                  className="px-4 py-1 rounded-none hover:bg-white dark:hover:dark:bg-darkBlue dark:hover:text-white"
+                  name={r.country}
+                >
+                  {r.country}
+                </a>
+              </li>
+          ))}
+          </ul>
+        </details>
       </div>
 
       
