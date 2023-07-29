@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import ProjectCard from './components/ProjectCard';
+import CountryCard from './components/CountryCard';
 import { BiSearch } from 'react-icons/bi'
 import { BiChevronDown } from 'react-icons/bi'
 import countryData from './json/data.json';

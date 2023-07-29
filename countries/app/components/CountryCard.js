@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-function ProjectCard({ alpha3Code, img_url, name, population, region, capital }) {
+function CountryCard({ alpha3Code, img_url, name, population, region, capital }) {
 
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -27,4 +27,4 @@ function ProjectCard({ alpha3Code, img_url, name, population, region, capital })
   )
 }
 
-export default ProjectCard;
+export default CountryCard
