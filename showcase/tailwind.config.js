@@ -19,6 +19,11 @@ module.exports = {
       "level3": "#f4b404",
       "level4": "#f48c24",
       "level5": "#ec2c4c",
+      "react": "#64DCFC",
+      "bootstrap": "#7d12f8",
+      "sass": "#CC649C",
+      "nextjs": "#040404",
+      "tailwind": "#3CBCFC",
 
     },
     extend: {
@@ -28,5 +33,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("daisyui"),
+  ],
 }
