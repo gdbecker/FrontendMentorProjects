@@ -1,4 +1,4 @@
-# Frontend Mentor - Stats Preview Card Component Solution
+# Frontend Mentor - Huddle Landing Page Solution
 
 This is my solution to the [Huddle landing page with single introductory section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/huddle-landing-page-with-a-single-introductory-section-B_2Wvxgi0). I'm super thankful to have found Frontend Mentor as a great way to confidently grow in my coding skills with real-life projects. 
 
