@@ -1,4 +1,4 @@
-# Frontend Mentor - Testimonials Grid Section Solution
+# Frontend Mentor - Social Media Dashboard with Theme Switcher Solution
 
 This is my solution to the [Social media dashboard with theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H). I'm super thankful to have found Frontend Mentor as a great way to confidently grow in my coding skills with real-life projects. 
 
