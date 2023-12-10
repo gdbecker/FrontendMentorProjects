@@ -99,7 +99,7 @@ function Home() {
               </div>
               <div className="flex flex-row w-full h-full mt-7 justify-center md:px-44 lg:px-60 2xl:px-80">
                 <input 
-                  className="flex w-full pl-7 bg-offWhite text-veryDarkGray font-rubikRegular rounded-tl-xl rounded-bl-xl rounded-tr-none rounded-br-none focus:outline-none" 
+                  className="flex w-full pl-7 bg-offWhite text-sm text-veryDarkGray font-rubikRegular rounded-tl-xl rounded-bl-xl rounded-tr-none rounded-br-none focus:outline-none md:text-md" 
                   id="ipAddress" 
                   type="text" 
                   placeholder="Search for any IP address or domain"

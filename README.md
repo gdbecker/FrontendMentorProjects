@@ -6,7 +6,7 @@ Check out links below for each project's live demo, my Frontend Mentor solution,
 
 ## Links
 
-[Live URL](https://frontend-mentor-showcase-gdbecker.netlify.app)
+[Projects Showcase Site](https://frontend-mentor-showcase-gdbecker.netlify.app)
 
 ## Finished Solutions
 
