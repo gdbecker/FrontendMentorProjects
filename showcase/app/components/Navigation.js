@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Logo from '../../public/fem-logo-png.png';
-import Avatar from '../../public/gdbecker.jpeg';
+import Avatar from '../../public/GarrettBecker.jpg';
 
 function Navigation() {
 
@@ -25,7 +25,7 @@ function Navigation() {
           alt="Profile Photo"
           width={75}
           height={75}
-          className="w-8 h-8 rounded-full md:w-12 md:h-12"
+          className="w-10 h-10 rounded-full border-lightGray border-2 md:w-12 md:h-12"
         />
       </a>
     </div>

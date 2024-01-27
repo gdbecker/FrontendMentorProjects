@@ -22,7 +22,7 @@ module.exports = {
       "react": "#64DCFC",
       "bootstrap": "#7d12f8",
       "sass": "#CC649C",
-      "nextjs": "#040404",
+      "next": "#040404",
       "tailwind": "#3CBCFC",
 
     },

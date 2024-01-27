@@ -1,6 +1,6 @@
 import React from 'react';
 
- function LoadingPage() {
+function LoadingPage() {
   
   return (
     <main className="flex flex-col w-full min-h-screen p-10 justify-start bg-white 2xl:px-36">

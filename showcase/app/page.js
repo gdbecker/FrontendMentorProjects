@@ -7,7 +7,7 @@ import { BiChevronDown } from 'react-icons/bi'
 import { collection, getDocs, doc } from 'firebase/firestore';
 import { db } from './services/firebase.config';
 
- function Home() {
+function Home() {
 
   // Firebase db variables
   const collectionRef = collection(db, "projects");
@@ -46,43 +46,43 @@ import { db } from './services/firebase.config';
   // Filter by project name search, level, and tools
   const filterProjects = (projectName, level, tools) => {
     if (projectName != "" && tools != "Filter by Tools" && level != "Filter by Level") {
-      var f =  projects.filter(function(p) {
+      let f =  projects.filter(function(p) {
         return p.tools.includes(tools) && p.level == level && p.title.toLowerCase().includes(projectName.toLowerCase());
       });
 
       setFilteredProjects(f);
     } else if (tools != "Filter by Tools" && level != "Filter by Level") {
-      var f =  projects.filter(function(p) {
+      let f =  projects.filter(function(p) {
         return p.tools.includes(tools) && p.level == level;
       });
 
       setFilteredProjects(f);
     } else if (tools != "Filter by Tools" && projectName != "") {
-      var f =  projects.filter(function(p) {
+      let f =  projects.filter(function(p) {
         return p.tools.includes(tools) && p.title.toLowerCase().includes(projectName.toLowerCase());
       });
 
       setFilteredProjects(f);
     } else if (level != "Filter by Level" && projectName != "") {
-      var f =  projects.filter(function(p) {
+      let f =  projects.filter(function(p) {
         return p.level == level && p.title.toLowerCase().includes(projectName.toLowerCase());
       });
 
       setFilteredProjects(f);
     } else if (tools != "Filter by Tools") {
-      var f =  projects.filter(function(p) {
+      let f =  projects.filter(function(p) {
         return p.tools.includes(tools);
       });
 
       setFilteredProjects(f);
     } else if (level != "Filter by Level") {
-      var f =  projects.filter(function(p) {
+      let f =  projects.filter(function(p) {
         return p.level == level;
       });
 
       setFilteredProjects(f);
     } else if (projectName != "") {
-      var f =  projects.filter(function(p) {
+      let f =  projects.filter(function(p) {
         return p.title.toLowerCase().includes(projectName.toLowerCase());
       });
 
@@ -94,7 +94,7 @@ import { db } from './services/firebase.config';
 
   // Get project types list
   const grabTools = (projects) => {
-    let allTools = projects.map(p => p.tools.split(","));
+    let allTools = projects.map(p => p.tools);
     let allToolsMerge = allTools.flat(1);
     let toolsList = [...new Set(allToolsMerge)].sort();
 
@@ -103,7 +103,6 @@ import { db } from './services/firebase.config';
     });
 
     toolsList.unshift({tools: "Filter by Tools"})
-
     setTools(toolsList);
   }
 
@@ -117,22 +116,22 @@ import { db } from './services/firebase.config';
     });
 
     levelsList.unshift({level: "Filter by Level"})
-
     setLevels(levelsList);
   }
 
   // Get all projects
   const getProjects = async () => {
     await getDocs(collectionRef).then((project) => {
-      let projectData = project.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+      let projectData = project.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      projectData = projectData.filter((project) => project.active);
       projectData.sort(function (first, second) {
         return second.level - first.level || first.title.localeCompare(second.title)
       })
-      setProjects(projectData)
-      setFilteredProjects(projectData)
-      grabTools(projectData)
-      grabLevels(projectData)
-      setIsLoading(false)
+      setProjects(projectData);
+      setFilteredProjects(projectData);
+      grabTools(projectData);
+      grabLevels(projectData);
+      setIsLoading(false);
     }).catch((err) => {
       console.log(err);
     })
@@ -227,25 +226,25 @@ import { db } from './services/firebase.config';
 
         <div className="flex flex-col w-full pt-5 pb-10 gap-7 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
-          {filteredProjects.map(({ id, img_bg, title, title_url, level, demo_url, solution_url, brief_url, tools  }, index) =>
-              <ProjectCard 
-                index={index}
-                id={id}
-                img_bg={img_bg}
-                title={title}
-                title_url={title_url}
-                level={level}
-                demo_url={demo_url}
-                solution_url={solution_url}
-                brief_url={brief_url}
-                tools={tools}
-              />
-            )}
+          {filteredProjects.map(({ id, img, title, code_url, level, demo_url, solution_url, brief_url, tools  }, index) =>
+            <ProjectCard
+              key={index} 
+              index={index}
+              id={id}
+              img={img}
+              title={title}
+              code_url={code_url}
+              level={level}
+              demo_url={demo_url}
+              solution_url={solution_url}
+              brief_url={brief_url}
+              tools={tools}
+            />
+          )}
         </div>
-    </main>
+      </main>
     )
   }
-  
 }
 
 export default Home;
