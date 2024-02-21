@@ -26,7 +26,7 @@ function ProjectCard({ img, title, code_url, level, demo_url, solution_url, brie
   return (
     <div className="flex w-full max-h-fit flex-col rounded-lg overflow-hidden shadow-lightPurple shadow-[0_0px_5px]" x-intersect="$el.classList.add('fade-in-bottom')">
       <div 
-        className={"flex flex-row h-44 bg-top bg-no-repeat bg-cover"}
+        className={"flex flex-row h-44 bg-top bg-no-repeat bg-cover bg-project"}
         style={{
           backgroundImage: `url(${ img }.jpg)`
         }}

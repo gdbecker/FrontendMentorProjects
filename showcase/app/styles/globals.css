@@ -13,6 +13,15 @@
   src: url(../../public/Heebo-Bold.ttf);
 }
 
+/* Project Backgrounds */
+.bg-project {
+  transition: transform 0.2s;
+}
+
+.bg-project:hover {
+  transform: scale(1.2);
+}
+
 /* Link Underline Animation */
 .project-link {
   position: relative;
