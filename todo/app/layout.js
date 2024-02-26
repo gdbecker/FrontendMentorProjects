@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
       
         {children}
 
-        <footer className="text-center font-josefinSansRegular text-darkTheme-100 text-sm">
+        <footer className="text-center font-josefinSansRegular text-darkTheme-100 text-sm p-2">
           Challenge by <a href="https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW" target="_blank" className=" font-josefinSansRegular hover:text-brightBlue">Frontend Mentor</a>. 
           Coded by <a href="https://github.com/gdbecker/FrontendMentorProjects/tree/main/todo" target="_blank" className="font-josefinSansRegular hover:text-brightBlue">Garrett Becker</a>.
         </footer>

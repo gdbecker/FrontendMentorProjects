@@ -24,8 +24,8 @@ module.exports = {
       "sass": "#CC649C",
       "next": "#040404",
       "tailwind": "#3CBCFC",
-      "HTML": "#F09F4E",
-      "CSS": "#41AEC2", 
+      "html": "#F09F4E",
+      "css": "#41AEC2", 
 
     },
     extend: {
