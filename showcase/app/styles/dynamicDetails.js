@@ -3,6 +3,8 @@ import { FaBootstrap as Bootstrap } from "react-icons/fa";
 import { SiSass as SASS } from "react-icons/si";
 import { SiNextdotjs as Next } from "react-icons/si";
 import { SiTailwindcss as Tailwind } from "react-icons/si";
+import { FaHtml5 as HTML } from "react-icons/fa";
+import { FaCss3Alt as CSS } from "react-icons/fa6";
 
 const details = {
   'levelLabel': {
@@ -39,6 +41,8 @@ const details = {
     'SASS': <SASS />,
     'Next': <Next />,
     'Tailwind': <Tailwind />,
+    'HTML': <HTML />,
+    'CSS': <CSS />,
   },
   'toolText': {
     'React': 'text-react',
@@ -46,6 +50,8 @@ const details = {
     'SASS': 'text-sass',
     'Next': 'text-next',
     'Tailwind': 'text-tailwind',
+    'HTML': <HTML />,
+    'CSS': <CSS />,
   }
 }
 

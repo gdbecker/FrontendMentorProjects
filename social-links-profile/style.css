@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+	--white: hsl(0, 0%, 100%);
+	--grey: hsl(0, 0%, 20%);
+	--darkgrey: hsl(0, 0%, 12%);
+	--offblack: hsl(0, 0%, 8%);
+	--green: hsl(75, 94%, 57%);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--offblack);
+	font-family: 'Inter', 'sans-serif';
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+}
+
+.container {
+	display: flex;
+	flex: 1 0 auto;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	width: 375px;
+	background-color: var(--darkgrey);
+	padding: 2.2rem;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.avatar {
+	border-radius: 50%;
+	width: 86px;
+	height: 86px;
+}
+
+.profile-name {
+	font-size: 1.45rem;
+	margin-top: 1.8rem;
+	font-weight: 600;
+}
+
+.profile-location {
+	color: var(--green);
+	font-size: 0.85rem;
+	margin-top: -0.3rem;
+}
+
+.profile-about {
+	font-size: 14px;
+}
+
+.socials {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+
+.social {
+	padding: 0.85rem;
+	font-weight: bold;
+	font-size: 0.8rem;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 0.9rem;
+	border: none;
+	background-color: var(--grey);
+	color: var(--white);
+}
+
+.social:focus {
+	outline: none;
+}
+
+.social:hover {
+	background-color: var(--green);
+	color: var(--darkgrey);
+}
+
+.social:active {
+	transform: scale(0.98);
+}
+
+footer {
+	flex-shrink: 0;
+	height: fit-content;
+	padding: 0.5rem;
+	text-align: center;
+	color: #ffffff;
+	font-size: 0.8rem;
+	border-top: 5px;
+	background-color: var(--grey);
+	width: 100vw;
+}
+
+footer a {
+	text-decoration: none;
+	color: var(--green);
+}
+
+footer a:hover {
+	color: var(--offblack);
+}

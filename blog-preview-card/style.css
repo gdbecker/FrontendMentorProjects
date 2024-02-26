@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap');
+
+:root {
+	--white: hsl(0, 0%, 100%);
+	--grey: hsl(0, 0%, 50%);
+	--black: hsl(0, 0%, 7%);
+	--yellow: hsl(47, 88%, 63%);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--yellow);
+	font-family: 'Figtree', 'sans-serif';
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+}
+
+.container {
+	display: flex;
+	flex: 1 0 auto;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	color: var(--black);
+	width: 375px;
+	background-color: var(--white);
+	padding: 1.25rem;
+	text-align: left;
+	border-radius: 15px;
+	border: 2px solid var(--black);
+}
+
+.card::after {
+	content: '';
+	background-color: var(--black);
+	width: 375px;
+	height: 515px;
+	position: absolute;
+	border-radius: 20px;
+	z-index: -1;
+	translate: -14px -15px;
+}
+
+.card-img {
+	border-radius: 10px;
+	width: 100%;
+}
+
+p {
+	font-size: 16px;
+}
+
+.type {
+	font-weight: bold;
+	background-color: var(--yellow);
+	width: fit-content;
+	padding: 0.4rem 0.8rem;
+	border-radius: 5px;
+	font-size: 14px;
+	margin-top: 20px;
+}
+
+.published {
+	font-size: 14px;
+	margin-top: 0px;
+}
+
+.title {
+	font-size: 1.5rem;
+	margin-top: 0.2rem;
+	cursor: pointer;
+	width: fit-content;
+}
+
+.title:hover {
+	color: var(--yellow);
+}
+
+.description {
+	color: var(--grey);
+	margin-top: 0;
+	line-height: 1.5rem;
+}
+
+.card-footer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: start;
+}
+
+.avatar {
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+	margin-right: 10px;
+}
+
+.name {
+	font-size: 0.9rem;
+}
+
+footer {
+	flex-shrink: 0;
+	height: fit-content;
+	padding: 0.5rem;
+	text-align: center;
+	color: #ffffff;
+	font-size: 0.8rem;
+	border-top: 5px;
+	background-color: var(--grey);
+	width: 100vw;
+}
+
+footer a {
+	text-decoration: none;
+	color: var(--yellow);
+}
+
+footer a:hover {
+	color: var(--black);
+}
