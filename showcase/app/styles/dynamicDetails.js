@@ -50,8 +50,8 @@ const details = {
     'SASS': 'text-sass',
     'Next': 'text-next',
     'Tailwind': 'text-tailwind',
-    'HTML': <HTML />,
-    'CSS': <CSS />,
+    'HTML': 'text-html',
+    'CSS': 'text-css',
   }
 }
 
