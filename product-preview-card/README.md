@@ -44,7 +44,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### Links
 
-- [Solution URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/product-preview-card-with-html-css-0DgtaPqf1m)
 - [Live Site URL](https://product-preview-card-gdbecker.netlify.app)
 
 ## My process
