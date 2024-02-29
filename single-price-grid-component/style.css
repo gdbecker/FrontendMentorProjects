@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+	--white: hsl(0, 0%, 100%);
+	--cyandark: hsl(179, 62%, 43%);
+	--cyanlight: hsla(179, 62%, 43%, 0.7);
+	--yellow: hsl(71, 73%, 54%);
+	--grey: hsl(204, 43%, 93%);
+	--blue: hsl(218, 22%, 67%);
+	--bluelight: hsla(218, 22%, 67%, 0.5);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--grey);
+	font-family: 'Karla', 'sans-serif';
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0 15px;
+}
+
+.container {
+	display: flex;
+	flex: 1 0 auto;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	color: var(--blue);
+	width: 650px;
+	background-color: var(--white);
+	text-align: left;
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 100px 0;
+	box-shadow: var(--bluelight) 0px 8px 24px;
+}
+
+.top {
+	padding: 2.3rem;
+	color: var(--blue);
+	height: 45%;
+}
+
+.bottom {
+	display: flex;
+	flex-direction: row;
+	color: var(--white);
+	height: 65%;
+}
+
+.first {
+	width: 50%;
+	padding: 2.3rem;
+	background-color: var(--cyandark);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.second {
+	width: 50%;
+	padding: 2.3rem;
+	background-color: var(--cyanlight);
+}
+
+.price-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 0.3rem 0;
+}
+
+.price-dollar {
+	color: var(--white);
+	font-size: 2rem;
+	font-weight: bold;
+	padding-right: 0.8rem;
+}
+
+.price-detail {
+	color: var(--grey);
+}
+
+h1 {
+	margin: 0;
+	color: var(--cyandark);
+	font-size: 1.55rem;
+}
+
+h2 {
+	margin: 0 0 0.85rem 0;
+	color: var(--white);
+	font-size: 1.2rem;
+}
+
+h3 {
+	color: var(--yellow);
+	font-size: 1.13rem;
+	margin-bottom: 0.7rem;
+}
+
+button {
+	background-color: var(--yellow);
+	border: none;
+	color: var(--white);
+	font-family: inherit;
+	font-weight: bold;
+	font-size: 0.9rem;
+	padding: 0.95rem;
+	border-radius: 5px;
+	margin-top: 1.5rem;
+	cursor: pointer;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px;
+}
+
+button:hover {
+	background-color: var(--white);
+	color: var(--cyandark);
+}
+
+button:active {
+	transform: scale(0.98);
+}
+
+p {
+	line-height: 1.5rem;
+	font-size: 1rem;
+	margin: 0;
+}
+
+.why {
+	color: var(--grey);
+	line-height: 1.3rem;
+	font-size: 0.9rem;
+}
+
+footer {
+	flex-shrink: 0;
+	height: fit-content;
+	padding: 0.5rem;
+	text-align: center;
+	color: var(--white);
+	font-size: 0.8rem;
+	border-top: 5px;
+	background-color: var(--cyandark);
+	width: 100vw;
+}
+
+footer a {
+	text-decoration: none;
+	color: var(--grey);
+}
+
+footer a:hover {
+	color: var(--yellow);
+}
+
+@media(max-width: 660px) {
+	body {
+		padding: 0 1.8rem;
+		height: fit-content;
+	}
+
+	.card {
+		width: auto;
+		border-radius: 5px;
+	}
+
+	.top {
+		padding: 1.5rem;
+	}
+
+	.bottom {
+		flex-direction: column;
+	}
+
+	.first {
+		width: 100%;
+		padding: 1.5rem;
+	}
+
+	.second {
+		width: 100%;
+		padding: 1.5rem;
+	}
+
+	.price-row {
+		margin: 0.4rem 0;
+	}
+
+	.price-dollar {
+		font-size: 1.8rem;
+	}
+
+	.price-description {
+		font-size: 0.95rem;
+	}
+
+	h1 {
+		font-size: 1.28rem;
+	}
+
+	h2 {
+		font-size: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	h3 {
+		font-size: 0.95rem;
+		margin: 1.2rem 0;
+		line-height: 1.3rem;
+	}
+
+	button {
+		padding: 0.9rem;
+	}
+
+	p {
+		font-size: 0.8rem;
+		line-height: 1.6rem;
+	}
+
+	.why {
+		line-height: 1.2rem;
+	}
+}
