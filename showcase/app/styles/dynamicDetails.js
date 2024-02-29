@@ -5,6 +5,8 @@ import { SiNextdotjs as Next } from "react-icons/si";
 import { SiTailwindcss as Tailwind } from "react-icons/si";
 import { FaHtml5 as HTML } from "react-icons/fa";
 import { FaCss3Alt as CSS } from "react-icons/fa6";
+import { BiLogoJavascript as JavaScript } from "react-icons/bi";
+import { IoLogoFirebase as Firebase } from "react-icons/io5";
 
 const details = {
   'levelLabel': {
@@ -43,6 +45,8 @@ const details = {
     'Tailwind': <Tailwind />,
     'HTML': <HTML />,
     'CSS': <CSS />,
+    'JavaScript': <JavaScript />,
+    'Firebase': <Firebase />,
   },
   'toolText': {
     'React': 'text-react',
@@ -52,6 +56,8 @@ const details = {
     'Tailwind': 'text-tailwind',
     'HTML': 'text-html',
     'CSS': 'text-css',
+    'JavaScript': 'text-javascript',
+    'Firebase': 'text-firebase',
   }
 }
 

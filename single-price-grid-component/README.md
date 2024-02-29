@@ -32,15 +32,15 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### Mobile View
 
-![](./)
+![](./single-price-grid-component-mobile.jpg)
 
 ### Desktop View
 
-![](./)
+![](./single-price-grid-component-desktop.jpg)
 
 ### Links
 
-- [Solution URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/single-price-grid-component-with-html-css-rvvACzqxRj)
 - [Live Site URL](https://single-price-grid-component-gdbecker.netlify.app)
 
 ## My process
@@ -54,18 +54,58 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### What I learned
 
-I love cooking and baking so this project was calling for me to complete, and I'm definitely happy with how it turned out. It was awesome getting more practice with just HTML and CSS, and I tackled this one by building the card structure and styling at the same time, so going line by line of content and picking the right tags for each part. Having the design guidelines point out that the paragraph text size was 16 pixels helped me figure out the sizing and proportion of elements against each other, so I took my time in getting the overall look and feel down. I think the trickiest part was figuring out the square bullet points, and I ended up using a 'before' pseudo selector to get those in and styled the way I wanted. Might use this or something similar for my own recipe app! I definitely want to keep practicing using the basic tools in more projects like this one.
+This card was more great practice for building projects with only HTML and CSS, and doing more with the basic tools is giving me a lot more confidence and comfort in my skills to structure and design. In a similar approach to the recipe page challenge, I went section by section for this component to add content and style at the same time, checking in with the design guide and pics for each part. I used flex boxes for the main card itself and divided the top from the bottom as well as the middle two sections in the bottom half to keep it simpler to control backgrounds, padding, etc. I definitely want to keep practicing using the basic tools in more projects like this one.
 
 Here are a few code samples from this project:
 
 ```html
-<!-- Ingredients section -->
-
+<!-- Card bottom section -->
+<div class="bottom">
+	<div class="first">
+		<h2>Monthly Subscription</h2>
+		<div class="price-row">
+			<p class="price-dollar">&dollar;29</p>
+			<p class="price-detail">per month</p>
+		</div>
+		<p class="price-description">Full access for less than &dollar;1 a day</p>
+		<button>Sign Up</button>
+	</div>
+	<div class="second">
+		<h2>Why Us</h2>
+		<p class="why">Tutorials by industry experts</p>
+		<p class="why">Peer &amp; expert code review</p>
+		<p class="why">Coding exercises</p>
+		<p class="why">Access to our GitHub repos</p>
+		<p class="why">Community forum</p>
+		<p class="why">Flashcard decks</p>
+		<p class="why">New videos every week</p>
+	</div>
+</div>
 ```
 
 ```css
-/* Styling for unordered lists */
+/* Card bottom styling */
+.bottom {
+	display: flex;
+	flex-direction: row;
+	color: var(--white);
+	height: 65%;
+}
 
+.first {
+	width: 50%;
+	padding: 2.3rem;
+	background-color: var(--cyandark);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.second {
+	width: 50%;
+	padding: 2.3rem;
+	background-color: var(--cyanlight);
+}
 ```
 
 ### Continued development

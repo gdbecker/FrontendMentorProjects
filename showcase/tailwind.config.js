@@ -25,7 +25,9 @@ module.exports = {
       "next": "#040404",
       "tailwind": "#3CBCFC",
       "html": "#F09F4E",
-      "css": "#41AEC2", 
+      "css": "#41AEC2",
+      "javascript": "#F9DC5C",
+      "firebase": "#FFCA28", 
 
     },
     extend: {
