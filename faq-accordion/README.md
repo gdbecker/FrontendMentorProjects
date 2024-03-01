@@ -1,17 +1,15 @@
-# Frontend Mentor - Article Preview Component Solution
+# Frontend Mentor - FAQ Accordion Solution
 
-This is my solution to the [Article preview component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT). I'm super thankful to have found Frontend Mentor as a great way to confidently grow in my coding skills with real-life projects. 
+This is my solution to the [Article preview component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-wyfFdeBwBz). I'm super thankful to have found Frontend Mentor as a great way to confidently grow in my coding skills with real-life projects. 
 
 ## Table of contents
 
-- [Frontend Mentor - Article Preview Component Solution](#frontend-mentor---article-preview-component-solution)
+- [Frontend Mentor - FAQ Accordion Solution](#frontend-mentor---faq-accordion-solution)
 	- [Table of contents](#table-of-contents)
 	- [Overview](#overview)
 		- [Project Brief](#project-brief)
 		- [Mobile View](#mobile-view)
-		- [Mobile View with Links Menu](#mobile-view-with-links-menu)
 		- [Desktop View](#desktop-view)
-		- [Desktop View with Links Menu](#desktop-view-with-links-menu)
 		- [Links](#links)
 	- [My process](#my-process)
 		- [Built with](#built-with)
@@ -25,39 +23,31 @@ This is my solution to the [Article preview component challenge on Frontend Ment
 
 ### [Project Brief](./project%20brief/)
 
-Your challenge is to build out this article preview component and get it looking as close to the design as possible.
+Your challenge is to build out this FAQ accordion and get it looking as close to the design as possible.
 
 You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-The only JavaScript you'll need for this challenge is to initiate the share options when someone clicks the share icon.
-
 Your users should be able to: 
 
-- View the optimal layout for the component depending on their device's screen size
-- See the social media share links when they click the share icon
+- Hide/Show the answer to a question when the question is clicked
+- Navigate the questions and hide/show answers using keyboard navigation alone
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
 
 Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
 
 ### Mobile View
 
-![](./article-preview-component-mobile.jpg)
-
-### Mobile View with Links Menu
-
-![](./article-preview-component-mobile-menu.jpg)
+![](.)
 
 ### Desktop View
 
-![](./article-preview-component-desktop.jpg)
-
-### Desktop View with Links Menu
-
-![](./article-preview-component-desktop-menu.jpg)
+![](./art)
 
 ### Links
 
-- [Solution URL](https://www.frontendmentor.io/solutions/article-preview-component-with-html-css-js-5CUDmusErU)
-- [Live Site URL](https://article-preview-component-gdbecker.netlify.app/)
+- [Solution URL]()
+- [Live Site URL]()
 
 ## My process
 
@@ -77,70 +67,12 @@ Here are a few code samples from this project:
 
 ```html
 <!-- Card bottom section -->
-<div class="second">
-	<h1>
-		Shift the overall look and feel by adding these wonderful touches to furniture in your home
-	</h1>
-	<p>
-		Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.
-	</p>
-	<div class="row">
-		<div class="author">
-			<img src="./public/avatar-michelle.jpg" alt="">
-			<div class="author-details">
-				<h3>Michelle Appleton</h3>
-				<p>28 Jun 2020</p>
-			</div>
-		</div>
-		<button class="btn-card">
-			<i class="fa-solid fa-share"></i>
-		</button>
-	</div>
-</div>
+
 ```
 
 ```css
 /* Styles for the card bottom */
-.second {
-	width: 425px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: flex-start;
-	padding: 2.2rem;
-}
 
-.second img {
-	width: 37px;
-	height: 37px;
-	border-radius: 50%;
-	margin-right: 1rem;
-}
-
-.row {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	margin: 0;
-	margin-top: 1rem;
-}
-
-.author {
-	margin: 0;
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
-}
-
-.author-details {
-	margin: 0;
-	margin-top: 0.25rem;
-	display: flex;
-	flex-direction: column;
-}
 ```
 
 ### Continued development
