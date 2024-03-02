@@ -18,7 +18,7 @@ body::before {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	height: 30%;
+	height: 33%;
 	width: 100%;
 	position: absolute;
 	top: 0;
@@ -53,11 +53,11 @@ body {
 	height: fit-content;
 	background-color: var(--white);
 	text-align: left;
-	border-radius: 10px;
+	border-radius: 15px;
 	box-shadow: var(--boxshadow) 0px 10px 24px;
 	padding: 2.5rem;
 	z-index: 0;
-	margin: 3rem 0;
+	margin: 5rem 0;
 }
 
 .card > .block:nth-last-child(n + 2) {
@@ -141,17 +141,18 @@ footer a:hover {
 	color: var(--greyishPurple);
 }
 
-@media(max-width: 600px) {
+@media(max-width: 635px) {
 	body::before {
 		background-image: url(./public/background-pattern-mobile.svg);
 	}
 
 	body {
-		padding: 3.5rem 1.5rem 0 1.5rem;
+		padding: 0 1.5rem 0 1.5rem;
 	}
 
 	.card {
 		width: 100%;
+		padding: 1.5rem; 
 	}
 
 	.header {
@@ -168,11 +169,11 @@ footer a:hover {
 	}
 
 	h2 {
-		font-size: 0.95rem;
+		font-size: 1rem;
 	}
 
 	p {
-		font-size: 0.8rem;
+		font-size: 0.83rem;
 		line-height: 1.2rem;
 	}
 

@@ -38,11 +38,11 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### Mobile View
 
-![](.)
+![](./faq-accordion-mobile.jpg)
 
 ### Desktop View
 
-![](./art)
+![](./faq-accordion-desktop.jpg)
 
 ### Links
 
@@ -61,18 +61,64 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### What I learned
 
-I was not expecting my CSS file to be as long as it is but I greatly appreciated all the little challenges with this project and getting to use semantic HTML and CSS to build. There was the shelves image that needed some specific positioning and size adjustments, the article author row, and especially the button to open up the social links menu. I first tackled the desktop version since I knew I needed some z-indexing and absolute positioning for that links menu, and I used an 'after' pseudo selector for the triangle and positioned that with absolute as well. It wasn't too bad moving into the mobile version and there I added a z-index for the main card button to appear over the links menu when clicked. All said finishing this component took a bit longer than expected but this was great practice, and I definitely want to keep building more projects with the basic tools like in this one. 
+In Brad Traversy's [50 Projects In 50 Days - HTML, CSS & JavaScript Udemy course](https://www.udemy.com/course/50-projects-50-days/) I worked on an FAQ component but I wanted to get more practice making my own with this project, and I'm definitely happy with how it turned out. There were a lot of great little challenges with this one, especially with the top image of the page background, using the provided icons and activating them depending on if the answer is expanded, and of course adding event listeners to the image buttons to expand/collapse. I used a 'before' pseudo selector to add in the top image background and settled on about 1/3 of the screen height, positioning it absolutely on top of the main pink background but beneath the card. The 'hidden' class gets put on the expand/collapse button depending on the state as well as the answer block, changing its display to none or not. For the JavaScript it did get a bit tricky when I was trying to loop through just the buttons that were siblings together inside a question block, but accessing the parentElement and then its children did the trick. I definitely want to keep building more projects with the basic HTML, CSS, and JavaScript tools like in this one.
 
 Here are a few code samples from this project:
 
 ```html
-<!-- Card bottom section -->
-
+<!-- Question block structure -->
+<div class="block">
+	<div class="question clicked">
+		<h2>What is Frontend Mentor, and how will it help me?</h2>
+		<img class="hidden" src="./public/icon-plus.svg"/>
+		<img class="" src="./public/icon-minus.svg"/>
+	</div>
+	<div class="answer">
+		<p>
+			Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.
+		</p>
+	</div>
+</div>
 ```
 
 ```css
-/* Styles for the card bottom */
+/* Styles for each question block */
+.block:last-child > .question {
+	margin-bottom: 0;
+}
 
+.question {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin: 1.4rem 0;
+}
+
+.question.clicked {
+	margin: 1.4rem 0 0 0;
+}
+
+.question img {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+```
+
+```javascript
+// Event listeners for each expand/collapse button
+buttons.forEach((button) => {
+	button.addEventListener('click', () => {
+		let btns = Array.from(button.parentElement.children);
+		btns = btns.filter(b => b.localName === 'img');
+		btns.forEach(b => b.classList.toggle('hidden'));
+
+		button.parentElement.classList.toggle('clicked');
+
+		const answer = button.parentElement.nextElementSibling.classList.toggle('hidden');
+	});
+});
 ```
 
 ### Continued development
