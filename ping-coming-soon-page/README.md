@@ -1,10 +1,10 @@
-# Frontend Mentor - FAQ Accordion Solution
+# Frontend Mentor - Ping Single Column Coming Soon Page Solution
 
-This is my solution to the [Article preview component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-wyfFdeBwBz). I'm super thankful to have found Frontend Mentor as a great way to confidently grow in my coding skills with real-life projects. 
+This is my solution to the [Ping single column coming soon page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5cadd051fec04111f7b848da). I'm super thankful to have found Frontend Mentor as a great way to confidently grow in my coding skills with real-life projects. 
 
 ## Table of contents
 
-- [Frontend Mentor - FAQ Accordion Solution](#frontend-mentor---faq-accordion-solution)
+- [Frontend Mentor - Ping Single Column Coming Soon Page Solution](#frontend-mentor---ping-single-column-coming-soon-page-solution)
 	- [Table of contents](#table-of-contents)
 	- [Overview](#overview)
 		- [Project Brief](#project-brief)
@@ -23,31 +23,33 @@ This is my solution to the [Article preview component challenge on Frontend Ment
 
 ### [Project Brief](./project%20brief/)
 
-Your challenge is to build out this FAQ accordion and get it looking as close to the design as possible.
+Your challenge is to build out this Coming Soon page and get it looking as close to the design as possible.
 
 You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
 Your users should be able to: 
 
-- Hide/Show the answer to a question when the question is clicked
-- Navigate the questions and hide/show answers using keyboard navigation alone
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Submit their email address using an `input` field
+- Receive an error message when the `form` is submitted if:
+	- The `input` field is empty. The message for this error should say *"Whoops! It looks like you forgot to add your email"*
+	- The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say *"Please provide a valid email address"*
 
 Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
 
 ### Mobile View
 
-![](./faq-accordion-mobile.jpg)
+![](.)
 
 ### Desktop View
 
-![](./faq-accordion-desktop.jpg)
+![](.)
 
 ### Links
 
-- [Solution URL](https://www.frontendmentor.io/solutions/faq-accordion-with-html-css-javascript-LgASHjywcH)
-- [Live Site URL](https://faq-accordion-gdbecker.netlify.app/)
+- [Solution URL]()
+- [Live Site URL](https://ping-coming-soon-page-gdbecker.netlify.app/)
 
 ## My process
 
@@ -67,58 +69,17 @@ Here are a few code samples from this project:
 
 ```html
 <!-- Question block structure -->
-<div class="block">
-	<div class="question clicked">
-		<h2>What is Frontend Mentor, and how will it help me?</h2>
-		<img class="hidden" src="./public/icon-plus.svg"/>
-		<img class="" src="./public/icon-minus.svg"/>
-	</div>
-	<div class="answer">
-		<p>
-			Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.
-		</p>
-	</div>
-</div>
+
 ```
 
 ```css
 /* Styles for each question block */
-.block:last-child > .question {
-	margin-bottom: 0;
-}
 
-.question {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-	margin: 1.4rem 0;
-}
-
-.question.clicked {
-	margin: 1.4rem 0 0 0;
-}
-
-.question img {
-	border: none;
-	background-color: transparent;
-	cursor: pointer;
-}
 ```
 
 ```javascript
 // Event listeners for each expand/collapse button
-buttons.forEach((button) => {
-	button.addEventListener('click', () => {
-		let btns = Array.from(button.parentElement.children);
-		btns = btns.filter(b => b.localName === 'img');
-		btns.forEach(b => b.classList.toggle('hidden'));
 
-		button.parentElement.classList.toggle('clicked');
-
-		const answer = button.parentElement.nextElementSibling.classList.toggle('hidden');
-	});
-});
 ```
 
 ### Continued development

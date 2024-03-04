@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+	--white: hsl(0, 0%, 100%);
+	--red: hsl(0, 78%, 62%);
+	--cyan: hsl(180, 62%, 55%);
+	--orange: hsl(34, 97%, 64%);
+	--blue: hsl(212, 86%, 64%);
+	--darkblue: hsl(234, 12%, 34%);
+	--grayishblue: hsl(229, 6%, 66%);
+	--lightgrey: hsl(0, 0%, 98%);
+	--boxshadow: hsla(234, 12%, 34%, 0.2)
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--lightgrey);
+	font-family: 'Poppins', 'sans-serif';
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0 1.5rem;
+}
+
+.container {
+	display: flex;
+	flex: 1 0 auto;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 5rem 0;
+}
+
+h1 {
+	margin: 0;
+	color: var(--darkblue);
+	font-size: 2.25rem;
+	font-weight: 200;
+}
+
+h2 {
+	margin: 0;
+	color: var(--darkblue);
+	font-size: 2.25rem;
+	font-weight: 600;
+}
+
+p#desc {
+	margin: 1rem 0;
+	color: var(--grayishblue);
+	font-size: 15px;
+	line-height: 1.5rem;
+	width: 500px;
+}
+
+.card-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: 1.5rem 0;
+}
+
+.card-column {
+	display: flex;
+	flex-direction: column;
+	margin: 0 0.8rem;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	color: var(--darkblue);
+	width: 350px;
+	height: 250px;
+	/* height: fit-content; */
+	background-color: var(--white);
+	text-align: left;
+	border-radius: 5px;
+	box-shadow: var(--boxshadow) 0px 10px 20px;
+	padding: 1.9rem;
+	margin: 0.8rem 0;
+}
+
+.card h3 {
+	margin: 0;
+	color: var(--darkblue);
+	font-size: 1.3rem;
+}
+
+.card p {
+	margin: 0;
+	margin-top: 0.5rem;
+	color: var(--grayishblue);
+	font-size: 0.85rem;
+}
+
+.card-header {
+	display: flex;
+	flex-direction: column;
+}
+
+.card-img {
+	display: flex;
+	flex-direction: row;
+	justify-content: end;
+}
+
+.card img {
+	width: 65px;
+	height: 65px;
+}
+
+.card#supervisor {
+	border-top: 4px solid var(--cyan);
+}
+
+.card#team-builder {
+	border-top: 4px solid var(--red);
+}
+
+.card#karma {
+	border-top: 4px solid var(--orange);
+}
+
+.card#calculator {
+	border-top: 4px solid var(--blue);
+}
+
+footer {
+	flex-shrink: 0;
+	height: fit-content;
+	padding: 0.5rem;
+	text-align: center;
+	color: var(--white);
+	font-size: 0.8rem;
+	border-top: 5px;
+	background-color: var(--darkblue);
+	width: 100vw;
+}
+
+footer a {
+	text-decoration: none;
+	color: var(--orange);
+}
+
+footer a:hover {
+	color: var(--lightgrey);
+}
+
+@media(max-width: 1130px) {
+	p#desc {
+		width: 100%;
+	}
+
+	.card-container {
+		flex-direction: column;
+	}
+}
+
+@media(max-width: 500px) {
+	body {
+		padding: 0 1.4rem;
+	}
+
+	h1, h2 {
+		font-size: 1.5rem;
+	}
+
+	p#desc {
+		font-size: 1rem;
+	}
+
+	.card-column {
+		width: 100%;
+	}
+
+	.card {
+		width: 100%;
+		height: 235px;
+	}
+
+	.card h3 {
+		font-size: 1.2rem;
+	}
+
+	.card p {
+		font-size: 0.8rem;
+	}
+}
