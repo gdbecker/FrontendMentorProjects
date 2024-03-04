@@ -35,11 +35,11 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### Mobile View
 
-![](.)
+![](./four-card-feature-section-mobile.jpg)
 
 ### Desktop View
 
-![](.)
+![](./four-card-feature-section-desktop.jpg)
 
 ### Links
 
@@ -57,18 +57,52 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### What I learned
 
-In Brad Traversy's [50 Projects In 50 Days - HTML, CSS & JavaScript Udemy course](https://www.udemy.com/course/50-projects-50-days/) I worked on an FAQ component but I wanted to get more practice making my own with this project, and I'm definitely happy with how it turned out. There were a lot of great little challenges with this one, especially with the top image of the page background, using the provided icons and activating them depending on if the answer is expanded, and of course adding event listeners to the image buttons to expand/collapse. I used a 'before' pseudo selector to add in the top image background and settled on about 1/3 of the screen height, positioning it absolutely on top of the main pink background but beneath the card. The 'hidden' class gets put on the expand/collapse button depending on the state as well as the answer block, changing its display to none or not. For the JavaScript it did get a bit tricky when I was trying to loop through just the buttons that were siblings together inside a question block, but accessing the parentElement and then its children did the trick. I definitely want to keep building more projects with the basic HTML, CSS, and JavaScript tools like in this one.
+This was a great challenge for using layouts and I'm glad to keep getting practice. I settled on using flex boxes for the main page content with cards: using a flex row on desktop screens which switches to column on mobile, and I used three columns to house the cards. Utilizing align-items to the center got the desired effect needed, and from there I styled the cards to get them as close as possible to the design. I definitely want to keep building more projects with the basic HTML, CSS, and JavaScript tools like in this one.
 
 Here are a few code samples from this project:
 
 ```html
-<!-- Question block structure -->
-
+<!-- Card structure -->
+<div class="card" id="team-builder">
+	<div class="card-header">
+		<h3>Team Builder</h3>
+		<p>Scans our talent network to create the optimal team for your project</p>
+	</div>
+	<div class="card-img">
+		<img src="./public/icon-team-builder.svg" alt=""/>
+	</div>
+</div>
 ```
 
 ```css
-/* Styles for each question block */
+/* Card styling */
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	color: var(--darkblue);
+	width: 350px;
+	height: 250px;
+	background-color: var(--white);
+	text-align: left;
+	border-radius: 5px;
+	box-shadow: var(--boxshadow) 0px 10px 20px;
+	padding: 1.9rem;
+	margin: 0.8rem 0;
+}
 
+.card h3 {
+	margin: 0;
+	color: var(--darkblue);
+	font-size: 1.3rem;
+}
+
+.card p {
+	margin: 0;
+	margin-top: 0.5rem;
+	color: var(--grayishblue);
+	font-size: 0.85rem;
+}
 ```
 
 ### Continued development

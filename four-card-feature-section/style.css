@@ -82,7 +82,6 @@ p#desc {
 	color: var(--darkblue);
 	width: 350px;
 	height: 250px;
-	/* height: fit-content; */
 	background-color: var(--white);
 	text-align: left;
 	border-radius: 5px;
