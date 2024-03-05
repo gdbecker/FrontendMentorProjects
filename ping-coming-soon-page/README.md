@@ -48,7 +48,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### Links
 
-- [Solution URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/ping-coming-soon-page-with-html-css-js-RssOlz1me0)
 - [Live Site URL](https://ping-coming-soon-page-gdbecker.netlify.app/)
 
 ## My process

@@ -1,10 +1,10 @@
-# Frontend Mentor - Order Summary Component Solution
+# Frontend Mentor - Base Apparel Coming Soon Page Solution
 
-This is my solution to the [Order summary component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj). I'm super thankful to have found Frontend Mentor as a great way to confidently grow in my coding skills with real-life projects. 
+This is my solution to the [Base apparel coming soon page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0). I'm super thankful to have found Frontend Mentor as a great way to confidently grow in my coding skills with real-life projects. 
 
 ## Table of contents
 
-- [Frontend Mentor - Order Summary Component Solution](#frontend-mentor---order-summary-component-solution)
+- [Frontend Mentor - Base Apparel Coming Soon Page Solution](#frontend-mentor---base-apparel-coming-soon-page-solution)
 	- [Table of contents](#table-of-contents)
 	- [Overview](#overview)
 		- [Project Brief](#project-brief)
@@ -23,28 +23,32 @@ This is my solution to the [Order summary component challenge on Frontend Mentor
 
 ### [Project Brief](./project%20brief/)
 
-Your challenge is to build out this order summary card component and get it looking as close to the design as possible.
+Your challenge is to build out this coming soon page and get it looking as close to the design as possible.
 
 You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
 Your users should be able to:
 
-- See hover states for interactive elements
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Receive an error message when the `form` is submitted if:
+  - The `input` field is empty
+  - The email address is not formatted correctly
 
 Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
 
 ### Mobile View
 
-![](./order-summary-component-mobile.jpg)
+![](.)
 
 ### Desktop View
 
-![](./order-summary-component-desktop.jpg)
+![](.)
 
 ### Links
 
-- [Solution URL](https://www.frontendmentor.io/solutions/order-summary-component-with-html-css--upHZl1KGv)
-- [Live Site URL](https://order-summary-component-gdbecker.netlify.app/)
+- [Solution URL]()
+- [Live Site URL](https://base-apparel-coming-soon-page-gdbecker.netlify.app/)
 
 ## My process
 
@@ -52,42 +56,29 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 - HTML5
 - CSS3
+- JavaScript
+- Mobile-first workflow
 - [VS Code](https://code.visualstudio.com)
 
 ### What I learned
 
-This was more good practice and a challenge for myself to build with only HTML & CSS, and there were several things to watch out with this component, including the background image and the card internal structure, specifically the 'annual plan' box. I got more practice using the 'before' pseudo selector on the body to add in the background image, and this changes to the mobile version on smaller screens. The details box in the card's center is a flex-row with a couple of flex-columns buried inside to achieve the look from the design. Once I got the desktop design down, I moved into the mobile version and used the media query to adjust the styles as needed. Happy with how this turned out! I definitely want to keep building more projects with the basic HTML, CSS, and JavaScript tools like in this one.
+I liked that this challenge gave practice for making my own form inputs and validation, because I'd been pretty used to using frameworks to make them work, like from Bootstrap or Angular. As usual with these HTML/CSS only sites I worked on getting the structure and styling down first to match the design as close as possible, and then moved into the 'notify' form functionality. The button has an event listener for a click, and checks to see if the input field is valid, checking for empty/undefined values and if the email matches the valid regex. If any of those are true, then the red error message pops up (taking off a custom 'hidden' class) and the input box is outlined in red. I also went ahead and added my own blue success message if everything works so users can know that Ping will reach back out with updates later. Happy with how this turned out! I definitely want to keep building more projects with the basic HTML, CSS, and JavaScript tools like in this one.
 
 Here are a few code samples from this project:
 
 ```html
-<!-- Center details structure -->
-<div class="details">
-	<div class="left">
-		<img src="./public/icon-music.svg" alt="music">
-		<div class="left-details">
-			<h4>Annual Plan</h4>
-			<p>$59.99/year</p>
-		</div>
-	</div>
-	<div class="right">
-		<a href="#">Change</a>
-	</div>
-</div>
+<!-- Form section structure -->
+
 ```
 
 ```css
-/* Styles for the center details box */
-.details {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	background-color: var(--verypaleblue);
-	border-radius: 9px;
-	padding: 1.4rem;
-	margin-top: 0.3rem;
-}
+/* Button and status messages styling */
+
+```
+
+```javascript
+// Form button event listener
+
 ```
 
 ### Continued development

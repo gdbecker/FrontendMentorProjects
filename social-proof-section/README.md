@@ -43,7 +43,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### Links
 
-- [Solution URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/social-proof-section-with-html-css-_QFmuPvzpf)
 - [Live Site URL](https://social-proof-section-gdbecker.netlify.app/)
 
 ## My process

@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+	--white: hsl(0, 0%, 100%);
+	--desaturatedred: hsl(0, 36%, 70%);
+	--softred: hsl(0, 93%, 68%);
+	--darkgrayishred: hsl(0, 6%, 24%);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body::before {
+	content: '';
+	background-image: url(./public/bg-pattern-desktop.svg);
+	background-size: 70% 100%;
+	/* background-size: contain; */
+	background-repeat: no-repeat;
+	background-position: 0rem 0rem;
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+body {
+	background-color: var(--white);
+	font-family: 'Josefin Sans', 'sans-serif';
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	overflow-x: hidden;
+	margin: 0;
+}
+
+.container {
+	display: flex;
+	flex: 1 0 auto;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.left {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: start;
+	width: 62%;
+	height: 100%;
+	padding: 4rem 10rem;
+}
+
+#logo {
+	margin-bottom: 7rem;
+}
+
+#hero-mobile {
+	display: none;
+}
+
+.left h1 {
+	margin: 0;
+	margin-bottom: 0.5rem;
+	font-size: 4.1rem;
+	font-weight: 300;
+	color: var(--desaturatedred);
+	text-transform: uppercase;
+	letter-spacing: 14px;
+	line-height: 4.2rem;
+}
+
+.left h1 span {
+	font-weight: 600;
+	color: var(--darkgrayishred)
+}
+
+p {
+	font-size: 1rem;
+	color: var(--desaturatedred);
+	line-height: 1.75rem;
+	width: 72%;
+}
+
+.form-row {
+	width: 72%;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	height: fit-content;
+	margin: 1rem 0;
+}
+
+.form-row input {
+	width: 100%;
+	height: 55px;
+	padding: 1.2rem 0 1.2rem 2rem;
+	font-family: inherit;
+	font-size: 1rem;
+	background-color: var(--white);
+	border-radius: 30px;
+	border: 1px solid var(--desaturatedred);
+}
+
+.form-row input.error {
+	border: 2px solid var(--softred);
+}
+
+.form-row input:focus {
+	outline: none;
+}
+
+::placeholder {
+	color: var(--desaturatedred);
+	opacity: 0.5;
+}
+
+#error-icon {
+	position: absolute;
+	right: 110px;
+	top: 15px;
+}
+
+.form-row button {
+	position: absolute;
+	height: 55px;
+	right: 0;
+	text-align: center;
+	border: none;
+	border-radius: 30px;
+	padding: 1.1rem 2.5rem;
+	cursor: pointer;
+	background: linear-gradient(to bottom right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+	box-shadow: var(--desaturatedred) 0px 8px 24px;
+}
+
+.form-row button:hover {
+	background: linear-gradient(to bottom right, hsl(0, 100%, 98%), hsl(0, 80%, 86%));
+}
+
+.hidden {
+	display: none;
+}
+
+.message {
+	margin: 0;
+	margin-top: -0.75rem;
+	margin-left: 1.6rem;
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
+#error-message {
+	color: var(--softred);
+}
+
+#success-message {
+	color: var(--desaturatedred);
+}
+
+.right {
+	display: flex;
+	flex-direction: column;
+	width: 38%;
+	height: 100%;
+}
+
+.right img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+footer {
+	flex-shrink: 0;
+	height: fit-content;
+	padding: 0.5rem;
+	text-align: center;
+	color: var(--white);
+	font-size: 0.8rem;
+	border-top: 5px;
+	background-color: var(--softred);
+	width: 100vw;
+}
+
+footer a {
+	text-decoration: none;
+	color: var(--darkgrayishred);
+}
+
+footer a:hover {
+	color: var(--desaturatedred);
+}
+
+@media(max-width: 1300px) {
+	.left {
+		padding: 3rem 7rem;
+	}
+
+	p {
+		width: 100%;
+	}
+
+	.form-row {
+		width: 100%;
+	}
+}
+
+@media(max-width: 1200px) {
+	.left {
+		padding: 3rem 5rem;
+	}
+}
+
+@media(max-width: 850px) {
+	body::before {
+		background-size: 100% 100%;
+	}
+
+	body {
+		min-height: 100vh;
+	}
+
+	.container {
+		flex-direction: column;
+		padding: 2rem 0;
+	}
+
+	#logo {
+		height: 25px;
+		margin-top: 10rem;
+		margin-bottom: 0;
+	}
+
+	#hero-mobile {
+		display: block;
+		margin: 4rem 0;
+	}
+
+	.left {
+		width: 100%;
+		text-align: center;
+		padding: 3rem 2rem;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+
+	.left h1 {
+		font-size: 2.4rem;
+		line-height: 2.5rem;
+		letter-spacing: 10px;
+	}
+
+	p {
+		font-size: 0.85rem;
+		line-height: 1.4rem;
+	}
+
+	.form-row {
+		padding-bottom: 5rem;
+	}
+
+	.form-row input {
+		height: 50px;
+		font-size: 0.9rem;
+		padding: 1rem 0 1rem 1.5rem;
+	}
+
+	.form-row button {
+		height: 50px;
+		padding: 0.9rem 1.7rem;
+	}
+
+	#error-icon {
+		right: 80px;
+		top: 12px;
+	}
+
+	.message {
+		margin-left: 0rem;
+	}
+
+	.right {
+		display: none;
+	}
+
+	footer {
+		margin-top: 10rem;
+	}
+}
