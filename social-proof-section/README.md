@@ -35,11 +35,11 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### Mobile View
 
-![](.)
+![](./social-proof-section-mobile.jpg)
 
 ### Desktop View
 
-![](.)
+![](./social-proof-section-desktop.jpg)
 
 ### Links
 
@@ -52,29 +52,67 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 - HTML5
 - CSS3
-- JavaScript
 - Mobile-first workflow
 - [VS Code](https://code.visualstudio.com)
 
 ### What I learned
 
-In Brad Traversy's [50 Projects In 50 Days - HTML, CSS & JavaScript Udemy course](https://www.udemy.com/course/50-projects-50-days/) I worked on an FAQ component but I wanted to get more practice making my own with this project, and I'm definitely happy with how it turned out. There were a lot of great little challenges with this one, especially with the top image of the page background, using the provided icons and activating them depending on if the answer is expanded, and of course adding event listeners to the image buttons to expand/collapse. I used a 'before' pseudo selector to add in the top image background and settled on about 1/3 of the screen height, positioning it absolutely on top of the main pink background but beneath the card. The 'hidden' class gets put on the expand/collapse button depending on the state as well as the answer block, changing its display to none or not. For the JavaScript it did get a bit tricky when I was trying to loop through just the buttons that were siblings together inside a question block, but accessing the parentElement and then its children did the trick. I definitely want to keep building more projects with the basic HTML, CSS, and JavaScript tools like in this one.
+Glad I picked up this challenge since I've been getting used to flex boxes and building layouts - there were a lot of great things to figure out from the backgrounds in the corners, to each of the cards on top and bottom of the screen, as well as figuring out the styling to get the staggered look. I could visualize in my head that I needed various flex-rows and columns to get the overall structure, and I fine-tuned the proportions as best I could to match the design before moving on to staggering the cards. I decided to adjust the margin-right for the top review boxes and then the margin-bottom for the bottom cards to achieve the structure, using ids on each to specify which one to move. This was also good practice using the 'before' and 'after' pseudo selectors on the body to add in the corner background images. I'm happy with how the page turned out! I definitely want to keep building more projects with the basic HTML, CSS, and JavaScript tools like in this one.
 
 Here are a few code samples from this project:
 
 ```html
-<!-- Question block structure -->
+<!-- Top review box structure -->
+<div id="review1" class="review-box">
+	<span>
+		<img src="./public/icon-star.svg" alt="star">
+		<img src="./public/icon-star.svg" alt="star">
+		<img src="./public/icon-star.svg" alt="star">
+		<img src="./public/icon-star.svg" alt="star">
+		<img src="./public/icon-star.svg" alt="star">
+	</span>
+	<p>Rated 5 Stars in Reviews</p>
+</div>
 
+<!-- Bottom card structure -->
+<div id="card1" class="card">
+	<div class="card-header">
+		<img src="./public/image-colton.jpg" alt="colton">
+		<div class="card-header-details">
+			<h3>Colton Smith</h3>
+			<h4>Verified Buyer</h4>
+		</div>
+	</div>
+	<p>
+		"We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also received it in time. Excellent!"
+	</p>
+</div>
 ```
 
 ```css
-/* Styles for each question block */
+/* Styles for review boxes and cards */
+.review-box {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: start;
+	background-color: var(--lightgrayishmagenta);
+	width: 435px;
+	padding: 0.2rem 1.75rem;
+	border-radius: 8px;
+	margin: 0.5rem 0;
+}
 
-```
-
-```javascript
-// Event listeners for each expand/collapse button
-
+.card {
+	background-color: var(--darkmagenta);
+	padding: 2.1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: space-between;
+	width: 350px;
+	border-radius: 8px;
+}
 ```
 
 ### Continued development

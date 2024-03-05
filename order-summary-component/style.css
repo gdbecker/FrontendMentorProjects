@@ -88,7 +88,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	background-color: var(--verypaleblue);
-	border-radius: 8px;
+	border-radius: 9px;
 	padding: 1.4rem;
 	margin-top: 0.3rem;
 }
@@ -139,7 +139,7 @@ body {
 button {
 	width: 100;
 	border: none;
-	border-radius: 8px;
+	border-radius: 9px;
 	font-family: inherit;
 	font-weight: 900;
 	padding: 1rem;
@@ -210,7 +210,7 @@ footer a:hover {
 
 	.card img {
 		background-size: cover;
-		height: 180px;
+		height: 170px;
 	}
 
 	.content {
@@ -222,7 +222,7 @@ footer a:hover {
 	}
 	
 	.content p {
-		font-size: 1rem;
+		font-size: 0.9rem;
 		padding: 0 1.18rem;
 	}
 
@@ -244,6 +244,10 @@ footer a:hover {
 	.left-details p {
 		padding: 0;
 		font-size: 0.9rem;
+	}
+
+	button {
+		font-size: 0.93rem;
 	}
 
 	#proceed {

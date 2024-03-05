@@ -97,16 +97,27 @@ p {
 	cursor: pointer;
 }
 
-#error-message {
+.form-row button:hover {
+	background-color: var(--paleblue);
+}
+
+.message {
 	display: flex;
 	width: 100%;
-	color:var(--red);
 	font-style: italic;
 	font-size: 0.7rem;
 	margin-top: -2.5rem;
 	margin-bottom: 2.5rem;
 	padding-left: 1.8rem;
 	text-align: start;
+}
+
+#error-message {
+	color:var(--red);
+}
+
+#success-message {
+	color: var(--blue);
 }
 
 .hidden {
@@ -177,10 +188,6 @@ footer a:hover {
 }
 
 @media(max-width: 635px) {
-	body {
-		
-	}
-
 	#logo {
 		margin-bottom: 1rem;
 	}
@@ -208,25 +215,23 @@ footer a:hover {
 		margin: 0.5rem 0;
 	}
 
-	.form-row input.error {
+	.form-row input.error, .form-row input.success {
 		margin-bottom: 2.4rem;
 	}
 
 	.form-row button {
 		width: 100%;
-		margin: 0.5rem 0;
+		margin: 0.4rem 0;
 	}
 
-	#error-message {
-		position: fixed;
+	.message {
+		position: absolute;
 		display: flex;
 		width: 100%;
-		color:var(--red);
-		font-style: italic;
 		font-size: 0.7rem;
-		/* justify-content: center;
-		align-items: center; */
 		top: 360px;
-		text-align: center;
+		justify-content: center;
+		padding-left: 0;
 	}
+	
 }

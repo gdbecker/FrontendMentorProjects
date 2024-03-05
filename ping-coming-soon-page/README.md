@@ -40,11 +40,11 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### Mobile View
 
-![](.)
+![](./ping-coming-soon-page-mobile.jpg)
 
 ### Desktop View
 
-![](.)
+![](./ping-coming-soon-page-desktop.jpg)
 
 ### Links
 
@@ -63,23 +63,80 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### What I learned
 
-In Brad Traversy's [50 Projects In 50 Days - HTML, CSS & JavaScript Udemy course](https://www.udemy.com/course/50-projects-50-days/) I worked on an FAQ component but I wanted to get more practice making my own with this project, and I'm definitely happy with how it turned out. There were a lot of great little challenges with this one, especially with the top image of the page background, using the provided icons and activating them depending on if the answer is expanded, and of course adding event listeners to the image buttons to expand/collapse. I used a 'before' pseudo selector to add in the top image background and settled on about 1/3 of the screen height, positioning it absolutely on top of the main pink background but beneath the card. The 'hidden' class gets put on the expand/collapse button depending on the state as well as the answer block, changing its display to none or not. For the JavaScript it did get a bit tricky when I was trying to loop through just the buttons that were siblings together inside a question block, but accessing the parentElement and then its children did the trick. I definitely want to keep building more projects with the basic HTML, CSS, and JavaScript tools like in this one.
+I liked that this challenge gave practice for making my own form inputs and validation, because I'd been pretty used to using frameworks to make them work, like from Bootstrap or Angular. As usual with these HTML/CSS only sites I worked on getting the structure and styling down first to match the design as close as possible, and then moved into the 'notify' form functionality. The button has an event listener for a click, and checks to see if the input field is valid, checking for empty/undefined values and if the email matches the valid regex. If any of those are true, then the red error message pops up (taking off a custom 'hidden' class) and the input box is outlined in red. I also went ahead and added my own blue success message if everything works so users can know that Ping will reach back out with updates later. Happy with how this turned out! I definitely want to keep building more projects with the basic HTML, CSS, and JavaScript tools like in this one.
 
 Here are a few code samples from this project:
 
 ```html
-<!-- Question block structure -->
-
+<!-- Form section structure -->
+<div class="form-row">
+	<input 
+		type="text"
+		placeholder="Your email address..."
+	>
+	<button>Notify Me</button>
+</div>
+<p id="error-message" class="message hidden">Please provide a valid email address</p>
+<p id="success-message" class="message hidden">Submitted! Keep on the lookout for an email from us soon!</p>
 ```
 
 ```css
-/* Styles for each question block */
+/* Button and status messages styling */
+.form-row button {
+	font-family: inherit;
+	font-weight: 600;
+	background-color: var(--blue);
+	color: var(--white);
+	border: none;
+	border-radius: 30px;
+	width: 220px;
+	padding: 0.9rem 1.8rem 0.9rem 1.8rem;
+	box-shadow: var(--paleblue) 0px 7px 24px;
+	cursor: pointer;
+}
 
+.form-row button:hover {
+	background-color: var(--paleblue);
+}
+
+.message {
+	display: flex;
+	width: 100%;
+	font-style: italic;
+	font-size: 0.7rem;
+	margin-top: -2.5rem;
+	margin-bottom: 2.5rem;
+	padding-left: 1.8rem;
+	text-align: start;
+}
+
+#error-message {
+	color:var(--red);
+}
+
+#success-message {
+	color: var(--blue);
+}
 ```
 
 ```javascript
-// Event listeners for each expand/collapse button
+// Form button event listener
+btn.addEventListener('click', () => {
+	const valid = validateEmail(input.value);
+	
+	if (input.value === '' || input.value === undefined || !validateEmail(input.value)) {
+		input.classList.add('error');
+		error.classList.remove('hidden');
+		success.classList.add('hidden');
+	} else {
+		input.classList.remove('error');
+		input.classList.add('success');
+		error.classList.add('hidden');
+		success.classList.remove('hidden');
 
+		input.value = '';
+	}
+});
 ```
 
 ### Continued development

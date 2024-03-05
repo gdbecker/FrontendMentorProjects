@@ -35,11 +35,11 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### Mobile View
 
-![](.)
+![](./order-summary-component-mobile.jpg)
 
 ### Desktop View
 
-![](.)
+![](./order-summary-component-desktop.jpg)
 
 ### Links
 
@@ -52,28 +52,42 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 - HTML5
 - CSS3
-- Mobile-first workflow
 - [VS Code](https://code.visualstudio.com)
 
 ### What I learned
 
-In Brad Traversy's [50 Projects In 50 Days - HTML, CSS & JavaScript Udemy course](https://www.udemy.com/course/50-projects-50-days/) I worked on an FAQ component but I wanted to get more practice making my own with this project, and I'm definitely happy with how it turned out. There were a lot of great little challenges with this one, especially with the top image of the page background, using the provided icons and activating them depending on if the answer is expanded, and of course adding event listeners to the image buttons to expand/collapse. I used a 'before' pseudo selector to add in the top image background and settled on about 1/3 of the screen height, positioning it absolutely on top of the main pink background but beneath the card. The 'hidden' class gets put on the expand/collapse button depending on the state as well as the answer block, changing its display to none or not. For the JavaScript it did get a bit tricky when I was trying to loop through just the buttons that were siblings together inside a question block, but accessing the parentElement and then its children did the trick. I definitely want to keep building more projects with the basic HTML, CSS, and JavaScript tools like in this one.
+This was more good practice and a challenge for myself to build with only HTML & CSS, and there were several things to watch out with this component, including the background image and the card internal structure, specifically the 'annual plan' box. I got more practice using the 'before' pseudo selector on the body to add in the background image, and this changes to the mobile version on smaller screens. The details box in the card's center is a flex-row with a couple of flex-columns buried inside to achieve the look from the design. Once I got the desktop design down, I moved into the mobile version and used the media query to adjust the styles as needed. Happy with how this turned out! I definitely want to keep building more projects with the basic HTML, CSS, and JavaScript tools like in this one.
 
 Here are a few code samples from this project:
 
 ```html
-<!-- Question block structure -->
-
+<!-- Center details structure -->
+<div class="details">
+	<div class="left">
+		<img src="./public/icon-music.svg" alt="music">
+		<div class="left-details">
+			<h4>Annual Plan</h4>
+			<p>$59.99/year</p>
+		</div>
+	</div>
+	<div class="right">
+		<a href="#">Change</a>
+	</div>
+</div>
 ```
 
 ```css
-/* Styles for each question block */
-
-```
-
-```javascript
-// Event listeners for each expand/collapse button
-
+/* Styles for the center details box */
+.details {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--verypaleblue);
+	border-radius: 9px;
+	padding: 1.4rem;
+	margin-top: 0.3rem;
+}
 ```
 
 ### Continued development
