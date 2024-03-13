@@ -6,6 +6,7 @@ const rulesModalBg = document.getElementById('rules-modal-bg');
 
 // Controlling game mode
 const toggle = document.getElementById('toggle');
+const toggleCover = document.getElementById('cover-toggle-container');
 const mainRulesImg = document.getElementById('rules-img');
 const bonusRulesImg = document.getElementById('bonus-rules-img');
 const mainLogo = document.getElementById('main-logo');
@@ -20,15 +21,16 @@ const placeholder = document.getElementById('placeholder');
 const userCol = document.getElementById('you');
 const compCol = document.getElementById('house');
 const playAgain = document.getElementById('play-again');
+const playAgainBtn = document.getElementById('play-again-btn');
 
 // Key variables
 const mainOptions = ['rock', 'paper', 'scissors'];
-const bonusOptions = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+const bonusOptions = ['paper', 'rock', 'lizard', 'spock', 'scissors'];
+const resultOptions = ['draw', 'win', 'lose'];
 let mainScore = +JSON.parse(localStorage.getItem('main'));
 let bonusScore = +JSON.parse(localStorage.getItem('bonus'));
 const score = document.getElementById('score');
 const gameButtons = document.querySelectorAll('.btn');
-
 
 // Controlling game mode and showing/closing rules
 rulesBtn.addEventListener('click', () => {
@@ -62,6 +64,8 @@ toggle.addEventListener('change', (e) => {
 		bonusGame.classList.add('hidden');
 		mode = 'Main';
 	}
+
+	getScores();
 });
 
 // Trigger game when user clicks a game button
@@ -96,6 +100,7 @@ function playGame(btn) {
 
 	// Show results page
 	resultSection.classList.remove('hidden');
+	toggleCover.classList.remove('hidden');
 
 	setTimeout(() => {
 		buildResultBtn(user, userCol);
@@ -120,7 +125,7 @@ function playGame(btn) {
 					h1.classList.add('play-again-title');
 					
 					if (winner === 'user') {
-						h1.innerText = 'YOU WON!';
+						h1.innerText = 'YOU WON';
 
 						if (mode === 'Main') {
 							mainScore++;
@@ -133,7 +138,7 @@ function playGame(btn) {
 					} else if (winner === 'comp') {
 						h1.innerText = 'YOU LOSE';
 					} else {
-						h1.innerText = 'DRAW!';
+						h1.innerText = 'DRAW';
 					}
 
 					playAgain.insertBefore(h1, playAgain.firstChild);
@@ -160,8 +165,29 @@ function getWinnerMain(user, comp) {
 }
 
 // Get game winner (bonus mode)
+// https://stackoverflow.com/questions/22623331/rock-paper-scissors-lizard-spock-in-javascript
 function getWinnerBonus(user, comp) {
+	if (user === comp) {
+		return 'draw';
+	}
 
+	const userIdx = bonusOptions.indexOf(user);
+	const compIdx = bonusOptions.indexOf(comp);
+	let diff = compIdx - userIdx;
+
+	if (diff < 0) {
+		diff += bonusOptions.length;
+	}
+
+	while (diff > 2) {
+		diff -= 2;
+	}
+
+	if (resultOptions[diff] === 'win') {
+		return 'user';
+	} else {
+		return 'comp';
+	}
 }
 
 function buildResultBtn(player, col) {
@@ -179,20 +205,30 @@ function buildResultBtn(player, col) {
 
 // Get localStorage game scores
 function getScores() {
-	// if (mainScore === null) {
-	// 	mainScore = 0;
-	// }
-
-	// if (bonusScore === null) {
-	// 	bonusScore = 0;
-	// }
-
 	if (mode === 'Main') {
 		score.innerText = mainScore;
 	} else {
 		score.innerText = bonusScore;
 	}
 }
+
+// Reset
+playAgainBtn.addEventListener('click', () => {
+	resultSection.classList.add('hidden');
+	userCol.querySelector('.btn').remove();
+	compCol.querySelector('.btn').remove();
+	playAgain.classList.add('hidden');
+	playAgain.querySelector('h1').remove();
+	placeholder.classList.remove('hidden');
+	toggleCover.classList.add('hidden');
+
+	if (mode === 'Main') {
+		mainGame.classList.remove('hidden');
+	} else {
+		bonusGame.classList.remove('hidden');
+	}
+	
+});
 
 // Initialize
 getScores();

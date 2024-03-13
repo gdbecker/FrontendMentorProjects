@@ -323,6 +323,14 @@ body {
 	box-shadow: 0 10px var(--rock3);
 }
 
+.result-col #lizard {
+	box-shadow: 0 10px var(--lizard3);
+}
+
+.result-col #spock {
+	box-shadow: 0 10px var(--cyan3);
+}
+
 .result-col .btn-result .btn-img {
 	z-index: unset;
 	width: 210px;
@@ -492,7 +500,7 @@ body {
 
 .toggle {
 	visibility: hidden;
-	margin-left: -0.6rem;
+	margin-left: -0.7rem;
 }
 
 .label {
@@ -525,6 +533,15 @@ body {
 
 .toggle:checked + .label .ball {
 	animation: slideOn 0.3s linear forwards;
+}
+
+.cover-toggle-container {
+	position: absolute;
+	bottom: 35px ;
+	right: 0px;
+	height: 55px;
+	width: 200px;
+	background-color: var(--background1);
 }
 
 .hidden {
