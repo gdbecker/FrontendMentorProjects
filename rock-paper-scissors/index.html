@@ -14,7 +14,8 @@
 			<h1>RULES</h1>
 			<img id="rules-close-btn" src="./public/icon-close.svg" alt="close">
 		</div>
-		<img id="rules-img" src="./public/image-rules.svg" alt="rules">
+		<img id="rules-img" class="" src="./public/image-rules.svg" alt="rules">
+		<img id="bonus-rules-img" class="hidden" src="./public/image-rules-bonus.svg" alt="rules">
 	</div>
 
 	<div id="rules-modal-bg" class="hidden"></div>
@@ -22,65 +23,109 @@
 	<main class="container">
 		<header id="header">
 			<div class="img-box">
-				<img src="./public/logo.svg" alt="logo">
+				<img id="main-logo" class="" src="./public/logo.svg" alt="logo">
+				<img id="bonus-logo" class="hidden" src="./public/logo-bonus.svg" alt="logo">
 			</div>
 			<div class="score-box">
 				<h1>SCORE</h1>
-				<h2 id="score">12</h2>
+				<h2 id="score"></h2>
 			</div>
 		</header>
 
-		<div id="main" class="main hidden">
+		<div id="main" class="main">
 			<div class="triangle-outside"></div>
 			<div class="triangle-inside"></div>
 
 			<div class="btn" id="paper">
-				<div class="btn-img">
-					<img src="./public/icon-paper.svg" alt="paper">
+				<div class="btn-img" id="paper">
+					<img id="paper" src="./public/icon-paper.svg" alt="paper">
 				</div>
 			</div>
 
 			<div class="btn" id="scissors">
-				<div class="btn-img">
-					<img src="./public/icon-scissors.svg" alt="scissors">
+				<div class="btn-img" id="scissors">
+					<img id="scissors" src="./public/icon-scissors.svg" alt="scissors">
 				</div>
 			</div>
 
 			<div class="btn" id="rock">
-				<div class="btn-img">
-					<img src="./public/icon-rock.svg" alt="rock">
+				<div class="btn-img" id="rock">
+					<img id="rock" src="./public/icon-rock.svg" alt="rock">
 				</div>
 			</div>
 		</div>
 
-		<div id="result" class="result ">
-			<div id="you" class="result-col">
-				<h1 class="result-title">YOU PICKED</h1>
-				<div class="btn btn-result winner" id="scissors">
-					<div class="btn-img">
-						<img src="./public/icon-scissors.svg" alt="scissors">
+		<div id="bonus" class="bonus hidden">
+			<div class="pentagon"></div>
+			<!-- <div class="triangle-inside"></div> -->
+
+			<div class="row row1">
+				<div class="btn" id="scissors">
+					<div class="btn-img" id="scissors">
+						<img id="scissors" src="./public/icon-scissors.svg" alt="scissors">
 					</div>
 				</div>
 			</div>
 
-			<div class="play-again">
-				<h1 id="win" class="play-again-title">YOU WIN</h1>
+			<div class="row row2">
+				<div class="btn" id="spock">
+					<div class="btn-img" id="spock">
+						<img id="spock" src="./public/icon-spock.svg" alt="spock">
+					</div>
+				</div>
+
+				<div class="btn" id="paper">
+					<div class="btn-img" id="paper">
+						<img id="paper" src="./public/icon-paper.svg" alt="paper">
+					</div>
+				</div>
+			</div>
+
+			<div class="row row3">
+				<div class="btn" id="lizard">
+					<div class="btn-img" id="lizard">
+						<img id="lizard" src="./public/icon-lizard.svg" alt="lizard">
+					</div>
+				</div>
+
+				<div class="btn" id="rock">
+					<div class="btn-img" id="rock">
+						<img id="rock" src="./public/icon-rock.svg" alt="rock">
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div id="result" class="result hidden">
+			<div id="you" class="result-col">
+				<h1 class="result-title">YOU PICKED</h1>
+			</div>
+
+			<div id="play-again" class="play-again hidden">
+				<!-- <h1 id="win" class="play-again-title">YOU WIN</h1>
 				<h1 id="lose" class="play-again-title hidden">YOU LOSE</h1>
+				<h1 id="draw" class="play-again-title hidden">DRAW!</h1> -->
 				<button>PLAY AGAIN</button>
 			</div>
 
 			<div id="house" class="result-col">
 				<h1 class="result-title">THE HOUSE PICKED</h1>
-				<div class="btn btn-result" id="rock">
-					<div class="btn-img">
-						<img src="./public/icon-rock.svg" alt="rock">
-					</div>
-				</div>
-				<div id="placeholder" class="hidden"></div>
+				<div id="placeholder" class=""></div>
 			</div>
 		</div>
 
 		<button id="rules-btn">RULES</button>
+
+		<div class="toggle-container">
+      <span>MAIN</span>
+      <input type="checkbox" id="toggle" class="toggle">
+      <label for="toggle" class="label">
+        <div class="ball"></div>
+      </label>
+      <span>BONUS</span>
+    </div>
+
 		<script src="script.js"></script>
 	</main>
 
