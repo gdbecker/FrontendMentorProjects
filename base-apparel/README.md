@@ -39,16 +39,16 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### Mobile View
 
-![](.)
+![](./base-apparel-mobile.jpg)
 
 ### Desktop View
 
-![](.)
+![](./base-apparel.desktop.jpg)
 
 ### Links
 
-- [Solution URL]()
-- [Live Site URL](https://base-apparel-coming-soon-page-gdbecker.netlify.app/)
+- [Solution URL](https://www.frontendmentor.io/solutions/base-apparel-page-with-html-css-KRIlBZ-PMQ)
+- [Live Site URL](https://base-apparel-coming-soon-page-gdbecke.netlify.app/)
 
 ## My process
 
@@ -62,23 +62,69 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### What I learned
 
-I liked that this challenge gave practice for making my own form inputs and validation, because I'd been pretty used to using frameworks to make them work, like from Bootstrap or Angular. As usual with these HTML/CSS only sites I worked on getting the structure and styling down first to match the design as close as possible, and then moved into the 'notify' form functionality. The button has an event listener for a click, and checks to see if the input field is valid, checking for empty/undefined values and if the email matches the valid regex. If any of those are true, then the red error message pops up (taking off a custom 'hidden' class) and the input box is outlined in red. I also went ahead and added my own blue success message if everything works so users can know that Ping will reach back out with updates later. Happy with how this turned out! I definitely want to keep building more projects with the basic HTML, CSS, and JavaScript tools like in this one.
+This Base Apparel page was deceptively challenging for a Newbie project and I'm thankful for that - sometimes you need that extra push to test your assumptions or the initial route you thought you were going to take. The biggest challenges were in figuring out the structure with the image on the side: use an 'after' pseudo selector for the body? Add it in as a hard-coded element on the page? What was the best way to position/size the 'before' pseudo selector for the background image? On top of that was the email input form and adding in the custom error message and icon. I settled on structuring the side image as a block element because that was more clear to me to structure and style, and I had to play around with the positioning an styling for the background image until I was happy enough with how it looked on desktop and mobile. The form input is positioned relative so I could absolutely position the error icon on top of the field; I thought that worked best to get the look right. I also went ahead and added a success message when everything goes well on the form for a better UI experience. Happy with how this turned out! I definitely want to keep building more projects with the basic HTML, CSS, and JavaScript tools like in this one.
 
 Here are a few code samples from this project:
 
 ```html
 <!-- Form section structure -->
-
+<div class="form-row">
+	<input class="" type="text" placeholder="Email Address">
+	<img id="error-icon" class="hidden" src="./public/icon-error.svg" alt="icon-error">
+	<button>
+		<img src="./public/icon-arrow.svg" alt="submit">
+	</button>
+</div>
+<p class="message hidden" id="error-message">Please provide a valid email</p>
+<p class="message hidden" id="success-message">Success! We will be in touch soon</p>
 ```
 
 ```css
-/* Button and status messages styling */
+/* Form styling selection */
+#error-icon {
+	position: absolute;
+	right: 110px;
+	top: 15px;
+}
 
+.form-row button {
+	position: absolute;
+	height: 55px;
+	right: 0;
+	text-align: center;
+	border: none;
+	border-radius: 30px;
+	padding: 1.1rem 2.5rem;
+	cursor: pointer;
+	background: linear-gradient(to bottom right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+	box-shadow: var(--desaturatedred) 0px 8px 24px;
+}
+
+.form-row button:hover {
+	background: linear-gradient(to bottom right, hsl(0, 100%, 98%), hsl(0, 80%, 86%));
+}
 ```
 
 ```javascript
 // Form button event listener
+btn.addEventListener('click', () => {
+	const valid = validateEmail(input.value);
+	
+	if (input.value === '' || input.value === undefined || !validateEmail(input.value)) {
+		input.classList.add('error');
+		errorIcon.classList.remove('hidden');
+		errorMessage.classList.remove('hidden');
+		successMessage.classList.add('hidden');
+	} else {
+		input.classList.remove('error');
+		input.classList.add('success');
+		errorIcon.classList.add('hidden');
+		errorMessage.classList.add('hidden');
+		successMessage.classList.remove('hidden');
 
+		input.value = '';
+	}
+});
 ```
 
 ### Continued development

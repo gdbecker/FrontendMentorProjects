@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="style.css">
+	<title>Frontend Mentor | Expenses Chart Component</title>
+</head>
+<body>
+	<main class="container">
+		<div class="header">
+			<div class="left">
+				<h1>My balance</h1>
+				<p>$921.48</p>
+			</div>
+			<div class="right">
+				<img src="./public/logo.svg" alt="logo">
+			</div>
+		</div>
+
+		<div class="card">
+			<h1>Spending - Last 7 days</h1>
+
+			<div id="graph" class="graph">
+				<div id="mon" class="day">
+					<p class="amount hidden"></p>
+					<div class="bar"></div>
+					<p class="label">mon</p>
+				</div>
+				<div id="tue" class="day">
+					<p class="amount hidden"></p>
+					<div class="bar"></div>
+					<p class="label">tue</p>
+				</div>
+				<div id="wed" class="day">
+					<p class="amount hidden"></p>
+					<div class="bar"></div>
+					<p class="label">wed</p>
+				</div>
+				<div id="thu" class="day">
+					<p class="amount hidden"></p>
+					<div class="bar"></div>
+					<p class="label">thu</p>
+				</div>
+				<div id="fri" class="day">
+					<p class="amount hidden"></p>
+					<div class="bar"></div>
+					<p class="label">fri</p>
+				</div>
+				<div id="sat" class="day">
+					<p class="amount hidden"></p>
+					<div class="bar"></div>
+					<p class="label">sat</p>
+				</div>
+				<div id="sun" class="day">
+					<p class="amount hidden"></p>
+					<div class="bar"></div>
+					<p class="label">sun</p>
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="summary">
+				<div class="part1">
+					<p class="identifier">Total this month</p>
+					<p class="total">$478.33</p>
+				</div>
+				<div class="part2">
+					<p class="percent-change">+2.4%</p>
+					<p class="identifier">from last month</p>
+				</div>
+			</div>
+		</div>
+
+		<script type="module" src="script.js"></script>
+	</main>
+	<footer>
+		Challenge by <a href="https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt"
+			target="_blank" rel="noopener">Frontend Mentor</a>.
+		Coded by <a href="https://github.com/gdbecker/FrontendMentorProjects/tree/main/expenses-chart-component"
+			target="_blank" rel="noopener">Garrett Becker</a>.
+	</footer>
+</body>
+</html>
