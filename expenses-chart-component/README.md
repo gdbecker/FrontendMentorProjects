@@ -41,11 +41,11 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### Mobile View
 
-![](.)
+![](./expenses-chart-component-mobile.jpg)
 
 ### Desktop View
 
-![](.)
+![](./expenses-chart-component-desktop.jpg)
 
 ### Links
 
@@ -64,23 +64,108 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### What I learned
 
-While I greatly enjoy using the various frontend frameworks we have, I wanted to try out a few Frontend Mentor challenges with just basic HTML, CSS, and vanilla JavaScript and first up is this social links profile component. I had been working through one of Brad Traversy's Udemy courses to practice and learn more, and I thought this challenge was perfect - I was surprised how quickly it came together. I focused first on getting the structure down, making use of flex boxes and flex direction, and then tackling each of the profile segments at a time. Using variables at the root level made it simpler to keep track of colors, and I also decided to add some a small scale animation for button clicks to make it more interesting. I definitely want to keep practicing using the basic tools in more projects like this one.
+I really liked this challenge with all the details to figure out as I went. Focused first on the overall design/look for the component and matching up to the requirements as closely as possible, so manually putting in the bars and cyan color for today's day of the week. After that I dove into the JavaScript to add the needed bits of functionality as well as the bonus: dynamically style the bars' height based on provided .json data. Adding the cyan background color wasn't bad as I used the built-in functions to get the index of today's weekday and then grabbed the day name from my own array. Having the dollar amount appear on hover was a bit tricky, but I settled on removing my 'hidden' class on hovering over a bar, finding the amount box by using 'previousElementSibling'. After that was calculating each of the bars' height and I tackled it by first finding the max value, then finding what the bar's height in px should be based on the ratio of the bar's amount to the max amount - just a bit of high school math. Happy with how this turned out! I definitely want to keep practicing using the basic tools in more projects like this one.
 
 Here are a few code samples from this project:
 
 ```html
-<!-- Profile card structure -->
-
+<!-- Graph structure -->
+<div id="graph" class="graph">
+	<div id="mon" class="day">
+		<p class="amount hidden"></p>
+		<div class="bar"></div>
+		<p class="label">mon</p>
+	</div>
+	<div id="tue" class="day">
+		<p class="amount hidden"></p>
+		<div class="bar"></div>
+		<p class="label">tue</p>
+	</div>
+	<div id="wed" class="day">
+		<p class="amount hidden"></p>
+		<div class="bar"></div>
+		<p class="label">wed</p>
+	</div>
+	<div id="thu" class="day">
+		<p class="amount hidden"></p>
+		<div class="bar"></div>
+		<p class="label">thu</p>
+	</div>
+	<div id="fri" class="day">
+		<p class="amount hidden"></p>
+		<div class="bar"></div>
+		<p class="label">fri</p>
+	</div>
+	<div id="sat" class="day">
+		<p class="amount hidden"></p>
+		<div class="bar"></div>
+		<p class="label">sat</p>
+	</div>
+	<div id="sun" class="day">
+		<p class="amount hidden"></p>
+		<div class="bar"></div>
+		<p class="label">sun</p>
+	</div>
+</div>
 ```
 
 ```css
-/* Social button styling */
+/* Dollar amounts and bars styling */
+.amount {
+	position: absolute;
+	top: -57px;
+	left: -9px;
+	font-weight: 700;
+	font-size: 15px;
+	background-color: var(--darkbrown);
+	color: var(--white);
+	padding: 0.45rem 0.5rem;
+	border-radius: 5px;
+	width: 67px;
+	text-align: center;
+	z-index: 10;
+}
 
+.bar {
+	height: 140px;
+	background-color: var(--softred);
+	border-radius: 5px;
+	cursor: pointer;
+	margin-bottom: 0.4rem;
+}
+
+.bar.today {
+	background-color: var(--cyan);
+}
+
+.bar:hover {
+	opacity: 0.5;
+}
 ```
 
 ```js
-//
+// Dynamically styling bars based on .json data
+bars.forEach(bar => {
+	// Mouse enter/leave to show dollar amounts
+	bar.addEventListener('mouseenter', () => {
+		bar.previousElementSibling.classList.remove('hidden');
+	});
 
+	bar.addEventListener('mouseleave', () => {
+		bar.previousElementSibling.classList.add('hidden');
+	});
+
+	// Adjust bar height depending on dollar amount / max for the week
+	const graphHeight = bar.parentElement.parentElement.clientHeight;
+	const amt = +bar.previousElementSibling.innerHTML.slice(1);
+	const height = (graphHeight * amt)/max;
+	bar.style.height = `${height}px`;
+
+	// Assign blue color for today's weekday
+	if (bar.parentElement.id === weekdays[today]) {
+		bar.classList.add('today');
+	}
+});
 ```
 
 ### Continued development

@@ -32,7 +32,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 500px;
+	width: 480px;
 }
 
 .header {
@@ -129,6 +129,7 @@ body {
 	border-radius: 5px;
 	width: 67px;
 	text-align: center;
+	z-index: 10;
 }
 
 .bar {
@@ -226,5 +227,56 @@ footer a:hover {
 }
 
 @media(max-width: 600px) {
+	body {
+		padding: 0 1rem;
+	}
 
+	.container {
+		width: 100%;
+	}
+
+	.left h1 {
+		font-size: 15px;
+	}
+	
+	.left p {
+		font-size: 1.5rem;
+	}
+
+	.right img {
+		height: 38px;
+	}
+
+	.card h1 {
+		font-size: 1.4rem;
+		margin-bottom: 4.5rem;
+	}
+
+	.amount {
+		top: -45px;
+		left: -9px;
+		font-size: 11px;
+		padding: 0.4rem 0.3rem;
+		width: 48px;
+	}
+
+	.bar {
+		border-radius: 3px;
+	}
+
+	.label {
+		font-size: 12px;
+	}
+
+	.identifier {
+		font-size: 14px;
+	}
+
+	.total {
+		font-size: 1.8rem;
+	}
+
+	.percent-change {
+		font-size: 15px;
+	}
 }

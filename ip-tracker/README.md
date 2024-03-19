@@ -53,16 +53,16 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### Mobile View
 
-![](./)
+![](./ip-tracker-mobile.png)
 
 ### Desktop View
 
-![](./)
+![](./ip-tracker-desktop.png)
 
 
 ### Links
 
-- [Solution URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/ip-address-tracker-with-next-tailwind-2Zz94TGTex)
 - [Live Site URL](https://ip-tracker-gdbecker.netlify.app/)
 
 ## My process
@@ -74,27 +74,74 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 - HTML5
 - CSS
 - [Tailwind CSS](https://tailwindcss.com) - CSS framework
+- [LeafletJS](https://leafletjs.com/)
+- [IP Geolocation API](https://geo.ipify.org/)
 - Mobile-first workflow
 - [VS Code](https://code.visualstudio.com)
 
 ### What I learned
 
-When I found out that Tailwind had an intuitive way of switching between light and dark CSS themes, I knew I had to give it a go with this social media dashboard project. Really happy with how this turned out! I approached it by first getting the structure down for the whole page on light theme, and once it was in a good place I adjusted the tailwind.config file to discern the dark theme mode by className. It was simple adjusting the colors and feel by using "dark:" as a prefix in the utility classes, and I put those at the end of each className to keep them consistent spot. Since there was also quite a bit of repetitive code I decided to make separate components for the first four "account cards" and then for the bottom eight "detail cards" to make my code simpler and easier to read and manage. I'm proud of this one and definitely want to keep practicing using themes in Tailwind!
+This challenge gave a lot of great practice in using a new JS library, new API, and figuring out all the little styling details to match the design. Felt super accomplishing figuring it out! As usual I worked first on using Tailwind to get the look down on the main page, and then broke out the map container component to its own file. It took a lot of trial and error to get everything working, from the custom drop pin icon to collecting the right data to displaying the right map layer. I was surprised how tricky it was getting the map layer to work; had to go through at least three different urls to make the TileLayer work like I wanted it to. The page will automatically load with map data based on your current IP address with a quick 'loading' page appearing for better user experience, and it's a quick button click to find the latitude and longitude for any IP address, I'm happy with how this turned out and thankful for more Tailwind and API practice!
 
 Here are a few code samples from this project:
 
 ```html
-<!-- 'AccountCard' component for the top row of cards -->
+<!-- MapContainer component -->
+<MapContainer 
+	key={seed}
+	center={[lat, lng]} 
+	zoom="13" 
+	scrollWheelZoom={false}
+	className="flex min-h-screen z-0"
+>
+	<TileLayer
+		attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+		// url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+		// url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+		url="https://www.google.cn/maps/vt?lyrs=m@189&gl=cn&x={x}&y={y}&z={z}"
+	/>
+	<Marker position={[lat, lng]} >
+		<Popup>{location}</Popup>
+	</Marker>
 
-```
-
-```css
-/* Importing custom font in my main CSS file */
-
+</MapContainer>
 ```
 
 ```js
+// Get new IP data
+const fetchNewData = async () => {
 
+	const API_KEY = "key"
+	var response = "";
+
+	if (ipSearch != '') {
+		response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${ipSearch}`);
+	} else {
+		const clientResponse = await fetch(
+			'https://api.ipify.org?format=json'
+		)
+		const clientData = await clientResponse.json();
+		response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${clientData.ip}`);
+	}
+
+	const data = await response.json();
+	console.log(data);
+
+	setData({
+		ipAddress: data.ip,
+		location: data.location.city + ", " + data.location.region + " " + data.location.postalCode,
+		lat: data.location.lat,
+		lng: data.location.lng,
+		timezone: "UTC" + data.location.timezone,
+		isp: data.isp
+	});
+
+	setSeed(Math.random()); // Controls re-render of just the map
+
+	setIPSearch('');
+
+	setIsLoading(false);
+}
 ```
 
 ### Continued development

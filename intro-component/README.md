@@ -39,15 +39,15 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### Mobile View
 
-![](.)
+![](./intro-component-mobile.jpg)
 
 ### Desktop View
 
-![](.)
+![](./intro-component-desktop.jpg)
 
 ### Links
 
-- [Solution URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/intro-component-with-html-css-javascript-H3bRV-s9mg)
 - [Live Site URL](https://intro-component-sign-up-gdbecker.netlify.app/)
 
 ## My process
@@ -62,23 +62,51 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### What I learned
 
-I liked that this challenge gave practice for making my own form inputs and validation, because I'd been pretty used to using frameworks to make them work, like from Bootstrap or Angular. As usual with these HTML/CSS only sites I worked on getting the structure and styling down first to match the design as close as possible, and then moved into the 'notify' form functionality. The button has an event listener for a click, and checks to see if the input field is valid, checking for empty/undefined values and if the email matches the valid regex. If any of those are true, then the red error message pops up (taking off a custom 'hidden' class) and the input box is outlined in red. I also went ahead and added my own blue success message if everything works so users can know that Ping will reach back out with updates later. Happy with how this turned out! I definitely want to keep building more projects with the basic HTML, CSS, and JavaScript tools like in this one.
+This was more good practice building my own forms without a framework like Angular or React, and adding custom error messages and icons. As usual I worked on getting the structure and styling down first to match the design as close as possible, and then moved into the form functionality. It wasn't bad - each field needed to be checked for being empty, and the email field had an extra test for being a valid format. The form only shows the error message and icon when there's an issue with that specific field. On successful completion the form clears out. Smaller size screen breaks were added for custom sizing on mobile devices. Happy with how this turned out! I definitely want to keep building more projects with the basic HTML, CSS, and JavaScript tools like in this one.
 
 Here are a few code samples from this project:
 
 ```html
-<!-- Form section structure -->
-
+<!-- First name form field -->
+<div class="input-row">
+	<input class="" id="first-name" type="text" placeholder="First Name">
+	<img class="error-icon hidden" id="first-name-error-icon" src="./public/icon-error.svg" alt="error-icon">
+</div>
+<p class="error-message hidden" id="error-first-name">First name cannot be empty</p>
 ```
 
 ```css
-/* Button and status messages styling */
+/* Error message and icon styling */
+.error-icon {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 13px;
+	right: 30px;
+	z-index: 3;
+}
 
+.error-message {
+	margin: 0;
+	margin-top: -0.7rem;
+	margin-bottom: 1rem;
+	text-align: right !important;
+	font-style: italic;
+	color: var(--red) !important;
+}
 ```
 
 ```javascript
-// Form button event listener
-
+// First name form field validation
+if (firstName.value === '' || firstName.value === undefined) {
+	firstName.classList.add('error');
+	firstNameError.classList.remove('hidden');
+	firstNameErrorIcon.classList.remove('hidden');
+} else {
+	firstName.classList.remove('error');
+	firstNameError.classList.add('hidden');
+	firstNameErrorIcon.classList.add('hidden');
+}
 ```
 
 ### Continued development
