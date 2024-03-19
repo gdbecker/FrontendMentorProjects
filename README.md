@@ -21,11 +21,17 @@ Check out links below for each project's live demo, my Frontend Mentor solution,
 | Project | Level | Links | Tools & Approach |
 | ----------- | ----------- | ----------- | ----------- |
 | [REST Countries API with color theme switcher](./countries/) | ⭐️⭐️⭐️⭐️ | [Live Demo]() / [Solution]() / [Project Brief](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca) | React, Next, Tailwind |
+
 | [Calculator App](./calculator/) | ⭐️⭐️⭐️ | [Live Demo]() / [Solution]() / [Project Brief](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29) | React, Next, Tailwind |
+
 | [IP Address Tracker](./ip-tracker/) | ⭐️⭐️⭐️ | [Live Demo](https://ip-tracker-gdbecker.netlify.app/) / [Solution](https://www.frontendmentor.io/solutions/ip-address-tracker-with-next-tailwind-2Zz94TGTex) / [Project Brief](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0) | React, Next, Tailwind |
+
 | [Todo App](./todo/) | ⭐️⭐️⭐️ | [Live Demo]() / [Solution]() / [Project Brief](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW) | React, Next, Tailwind |
+
 | [Advice Generator App](./advice-app/) | ⭐️⭐️ | [Live Demo](https://advice-app-gdbecker.netlify.app) / [Solution](https://www.frontendmentor.io/solutions/advice-app-with-next-tailwind-8S94c3c-U-) / [Project Brief](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db) | React, Next, Tailwind |
+
 | [Age Calculator App](./age-calculator/) | ⭐️⭐️ | [Live Demo]() / [Solution]() / [Project Brief](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q) | React, Bootstrap |
+
 | [Blogr Landing Page](./blogr-homepage/) | ⭐️⭐️ | [Live Demo](https://blogr-homepage-gdbecker.netlify.app) / [Solution](https://www.frontendmentor.io/solutions/blogr-landing-page-with-react-bootstrap-ziqxnxrt9z) / [Project Brief](https://www.frontendmentor.io/challenges/blogr-landing-page-EX2RLAApP) | React, Bootstrap |
 | [Expenses Chart Component](./expenses-chart-component/) | ⭐️⭐️ | [Live Demo]() / [Solution]() / [Project Brief](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt) | HTML, CSS, JavaScript |
 | [Fylo Dark Theme Landing Page](./fylo-landing-dark/) | ⭐️⭐️ | [Live Demo](https://fylo-landing-dark-gdbecker.netlify.app) / [Solution](https://www.frontendmentor.io/solutions/fylo-dark-landing-page-with-next-and-sass-IAyv5CaYqZ) / [Project Brief](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd) | React, Next, SASS, Bootstrap |
