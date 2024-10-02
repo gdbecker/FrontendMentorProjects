@@ -49,7 +49,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### Links
 
-- [Solution URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/expenses-chart-component-with-html-css-javascript-UBH4GcyB5Z)
 - [Live Site URL](https://expenses-chart-component-gdbecker.netlify.app)
 
 ## My process
