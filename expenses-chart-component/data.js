@@ -1,4 +1,4 @@
-[
+let data = [
   {
     "day": "mon",
     "amount": 17.45
@@ -28,3 +28,5 @@
     "amount": 25.48
   }
 ]
+
+export default data;

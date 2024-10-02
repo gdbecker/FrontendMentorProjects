@@ -1,4 +1,4 @@
-import data from './data.json' assert { type: 'json' };
+import data from './data.js';
 
 const bars = document.querySelectorAll('.bar');
 const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];

@@ -41,11 +41,11 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### Mobile View
 
-![](./expenses-chart-component-mobile.jpg)
+![](./expenses-chart-component-mobile.png)
 
 ### Desktop View
 
-![](./expenses-chart-component-desktop.jpg)
+![](./expenses-chart-component-desktop.png)
 
 ### Links
 
@@ -170,7 +170,7 @@ bars.forEach(bar => {
 
 ### Continued development
 
-As a starter developer, I want to keep growing in working as a team and learning how to deliver smaller packages of code at a time, such as components like this one. I thought this project was a good way to get back into React and begin doing just that!
+As a starter developer, I want to keep growing in working as a team and learning how to deliver smaller packages of code at a time, such as components like this one. I thought this project was a good way to get practice building components with vanilla HTML, CSS, and JavaScript!
 
 ### Useful resources
 
