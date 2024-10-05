@@ -16,6 +16,7 @@
 		</div>
 		<img id="rules-img" class="" src="./public/image-rules.svg" alt="rules">
 		<img id="bonus-rules-img" class="hidden" src="./public/image-rules-bonus.svg" alt="rules">
+		<img id="rules-close-btn-sm" src="./public/icon-close.svg" alt="close">
 	</div>
 
 	<div id="rules-modal-bg" class="hidden"></div>
@@ -36,19 +37,19 @@
 			<div class="triangle-outside"></div>
 			<div class="triangle-inside"></div>
 
-			<div class="btn" id="paper">
+			<div class="btn btn-game" id="paper">
 				<div class="btn-img" id="paper">
 					<img id="paper" src="./public/icon-paper.svg" alt="paper">
 				</div>
 			</div>
 
-			<div class="btn" id="scissors">
+			<div class="btn btn-game" id="scissors">
 				<div class="btn-img" id="scissors">
 					<img id="scissors" src="./public/icon-scissors.svg" alt="scissors">
 				</div>
 			</div>
 
-			<div class="btn" id="rock">
+			<div class="btn btn-game" id="rock">
 				<div class="btn-img" id="rock">
 					<img id="rock" src="./public/icon-rock.svg" alt="rock">
 				</div>
@@ -60,7 +61,7 @@
 			<!-- <div class="triangle-inside"></div> -->
 
 			<div class="row row1">
-				<div class="btn" id="scissors">
+				<div class="btn btn-game" id="scissors">
 					<div class="btn-img" id="scissors">
 						<img id="scissors" src="./public/icon-scissors.svg" alt="scissors">
 					</div>
@@ -68,13 +69,13 @@
 			</div>
 
 			<div class="row row2">
-				<div class="btn" id="spock">
+				<div class="btn btn-game" id="spock">
 					<div class="btn-img" id="spock">
 						<img id="spock" src="./public/icon-spock.svg" alt="spock">
 					</div>
 				</div>
 
-				<div class="btn" id="paper">
+				<div class="btn btn-game" id="paper">
 					<div class="btn-img" id="paper">
 						<img id="paper" src="./public/icon-paper.svg" alt="paper">
 					</div>
@@ -82,13 +83,13 @@
 			</div>
 
 			<div class="row row3">
-				<div class="btn" id="lizard">
+				<div class="btn btn-game" id="lizard">
 					<div class="btn-img" id="lizard">
 						<img id="lizard" src="./public/icon-lizard.svg" alt="lizard">
 					</div>
 				</div>
 
-				<div class="btn" id="rock">
+				<div class="btn btn-game" id="rock">
 					<div class="btn-img" id="rock">
 						<img id="rock" src="./public/icon-rock.svg" alt="rock">
 					</div>
@@ -98,23 +99,30 @@
 		</div>
 
 		<div id="result" class="result hidden">
-			<div id="you" class="result-col">
-				<h1 class="result-title">YOU PICKED</h1>
+			<div class="result-row">
+				<div id="you" class="result-col">
+					<h1 class="result-title">YOU PICKED</h1>
+				</div>
+	
+				<div id="play-again" class="play-again hidden">
+					<button id="play-again-btn">PLAY AGAIN</button>
+				</div>
+	
+				<div id="house" class="result-col">
+					<h1 class="result-title">THE HOUSE PICKED</h1>
+					<!-- <div id="placeholder" class=""></div> -->
+				</div>
 			</div>
-
-			<div id="play-again" class="play-again hidden">
-				<button id="play-again-btn">PLAY AGAIN</button>
-			</div>
-
-			<div id="house" class="result-col">
-				<h1 class="result-title">THE HOUSE PICKED</h1>
-				<div id="placeholder" class=""></div>
+			<div class="result-row">
+				<div id="play-again-sm" class="play-again hidden">
+					<button id="play-again-btn-sm">PLAY AGAIN</button>
+				</div>
 			</div>
 		</div>
 
 		<button id="rules-btn">RULES</button>
 
-		<div class="toggle-container">
+		<div id="toggle-container">
       <span>MAIN</span>
       <input type="checkbox" id="toggle" class="toggle">
       <label for="toggle" class="label">
@@ -122,8 +130,6 @@
       </label>
       <span>BONUS</span>
     </div>
-
-		<div id="cover-toggle-container" class="cover-toggle-container hidden"></div>
 
 		<script src="script.js"></script>
 	</main>

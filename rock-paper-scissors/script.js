@@ -1,12 +1,13 @@
 // Show rules images
 const rulesBtn = document.getElementById('rules-btn');
 const rulesCloseBtn = document.getElementById('rules-close-btn');
+const rulesCloseBtnSm = document.getElementById('rules-close-btn-sm');
 const rulesModal = document.getElementById('rules-modal');
 const rulesModalBg = document.getElementById('rules-modal-bg');
 
 // Controlling game mode
 const toggle = document.getElementById('toggle');
-const toggleCover = document.getElementById('cover-toggle-container');
+const toggleContainer = document.getElementById('toggle-container');
 const mainRulesImg = document.getElementById('rules-img');
 const bonusRulesImg = document.getElementById('bonus-rules-img');
 const mainLogo = document.getElementById('main-logo');
@@ -17,11 +18,13 @@ let mode = 'Main';
 
 // Result section
 const resultSection = document.getElementById('result');
-const placeholder = document.getElementById('placeholder');
+// const placeholder = document.getElementById('placeholder');
 const userCol = document.getElementById('you');
 const compCol = document.getElementById('house');
 const playAgain = document.getElementById('play-again');
+const playAgainSm = document.getElementById('play-again-sm');
 const playAgainBtn = document.getElementById('play-again-btn');
+const playAgainBtnSm = document.getElementById('play-again-btn-sm');
 
 // Key variables
 const mainOptions = ['rock', 'paper', 'scissors'];
@@ -41,6 +44,13 @@ rulesBtn.addEventListener('click', () => {
 
 rulesCloseBtn.addEventListener('click', () => {
 	// Hide the rules modal
+	rulesModal.classList.add('hidden');
+	rulesModalBg.classList.add('hidden');
+});
+
+rulesCloseBtnSm.addEventListener('click', () => {
+	// Hide the rules modal
+	// Different button for small screens
 	rulesModal.classList.add('hidden');
 	rulesModalBg.classList.add('hidden');
 });
@@ -100,12 +110,13 @@ function playGame(btn) {
 
 	// Show results page
 	resultSection.classList.remove('hidden');
-	toggleCover.classList.remove('hidden');
+	toggleContainer.classList.add('hidden');
 
 	setTimeout(() => {
 		buildResultBtn(user, userCol);
 
 		setTimeout(() => {
+			const placeholder = document.getElementById('placeholder');
 			placeholder.classList.add('hidden');
 
 			setTimeout(() => {
@@ -121,11 +132,15 @@ function playGame(btn) {
 					}
 
 					playAgain.classList.remove('hidden');
+					playAgainSm.classList.remove('hidden');
 					const h1 = document.createElement('h1');
+					const h1Duplicate = document.createElement('h1');
 					h1.classList.add('play-again-title');
+					h1Duplicate.classList.add('play-again-title');
 					
 					if (winner === 'user') {
 						h1.innerText = 'YOU WON';
+						h1Duplicate.innerText = 'YOU WON';
 
 						if (mode === 'Main') {
 							mainScore++;
@@ -137,11 +152,14 @@ function playGame(btn) {
 						
 					} else if (winner === 'comp') {
 						h1.innerText = 'YOU LOSE';
+						h1Duplicate.innerText = 'YOU LOSE';
 					} else {
 						h1.innerText = 'DRAW';
+						h1Duplicate.innerText = 'DRAW';
 					}
 
 					playAgain.insertBefore(h1, playAgain.firstChild);
+					playAgainSm.insertBefore(h1Duplicate, playAgainSm.firstChild);
 					getScores();
  					
 				}, 1000);
@@ -200,7 +218,13 @@ function buildResultBtn(player, col) {
 		<img src="./public/icon-${player}.svg" alt="${player}">
 	</div>
 	`;
-	col.appendChild(div);
+
+	// Place the button in a different spot, depending on screen size
+	if (window.innerWidth > 680) {
+		col.appendChild(div);
+	} else {
+		col.insertBefore(div, col.firstChild);
+	}
 }
 
 // Get localStorage game scores
@@ -212,15 +236,65 @@ function getScores() {
 	}
 }
 
+// Add placeholder circle to result screen
+function addPlaceholder() {
+	const div = document.createElement('div');
+	div.id = 'placeholder';
+
+	if (window.innerWidth > 680) {
+		compCol.appendChild(div);
+	} else {
+		compCol.insertBefore(div, compCol.firstChild);
+	}
+}
+
+function removePlaceholder() {
+	document.getElementById('placeholder').remove();
+}
+
+// Initialize app
+function init() {
+	getScores();
+	addPlaceholder();
+}
+ 
 // Reset
 playAgainBtn.addEventListener('click', () => {
 	resultSection.classList.add('hidden');
 	userCol.querySelector('.btn').remove();
 	compCol.querySelector('.btn').remove();
 	playAgain.classList.add('hidden');
+	playAgainSm.classList.add('hidden');
 	playAgain.querySelector('h1').remove();
+	playAgainSm.querySelector('h1').remove();
 	placeholder.classList.remove('hidden');
-	toggleCover.classList.add('hidden');
+	toggleContainer.classList.remove('hidden');
+
+	removePlaceholder();
+	addPlaceholder();
+
+	if (mode === 'Main') {
+		mainGame.classList.remove('hidden');
+	} else {
+		bonusGame.classList.remove('hidden');
+	}
+	
+});
+
+// Button for smaller screens
+playAgainBtnSm.addEventListener('click', () => {
+	resultSection.classList.add('hidden');
+	userCol.querySelector('.btn').remove();
+	compCol.querySelector('.btn').remove();
+	playAgain.classList.add('hidden');
+	playAgainSm.classList.add('hidden');
+	playAgain.querySelector('h1').remove();
+	playAgainSm.querySelector('h1').remove();
+	placeholder.classList.remove('hidden');
+	toggleContainer.classList.remove('hidden');
+
+	removePlaceholder();
+	addPlaceholder();
 
 	if (mode === 'Main') {
 		mainGame.classList.remove('hidden');
@@ -231,4 +305,4 @@ playAgainBtn.addEventListener('click', () => {
 });
 
 // Initialize
-getScores();
+init();
