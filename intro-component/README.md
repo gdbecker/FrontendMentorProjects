@@ -111,7 +111,7 @@ if (firstName.value === '' || firstName.value === undefined) {
 
 ### Continued development
 
-As a starter developer, I want to keep growing in working as a team and learning how to deliver smaller packages of code at a time, such as components like this one. I thought this project was a good way to get back into React and begin doing just that!
+As a starter developer, I want to keep growing in working as a team and learning how to deliver smaller packages of code at a time, such as components like this one. I thought this project was a good way to get back into vanilla HTML, CSS, and JavaScript and begin doing just that!
 
 ### Useful resources
 

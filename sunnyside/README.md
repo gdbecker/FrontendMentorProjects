@@ -4,19 +4,21 @@ This is my solution to the [Sunnyside agency landing page challenge on Frontend 
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [Project Brief](#project-brief)
-  - [Mobile View](#mobile-view)
-  - [Mobile View with Menu](#mobile-view-with-menu)
-  - [Desktop View](#desktop-view)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+- [Frontend Mentor - Sunnyside Agency Landing Page Solution](#frontend-mentor---sunnyside-agency-landing-page-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Project Brief](#project-brief)
+    - [Mobile View](#mobile-view)
+    - [Mobile View with Menu](#mobile-view-with-menu)
+    - [Desktop View](#desktop-view)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -148,7 +150,7 @@ if (loading) {
 
 ### Continued development
 
-As a starter developer, I want to keep growing in working as a team and learning how to deliver robust and beautiful solutions like this one. I thought this project was a good way to get back into React and begin doing just that!
+As a starter developer, I want to keep growing in working as a team and learning how to deliver robust and beautiful solutions like this one. I thought this project was a good way to get back into Next.js and begin doing just that!
 
 ### Useful resources
 

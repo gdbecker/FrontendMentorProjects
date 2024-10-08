@@ -4,20 +4,22 @@ This is my solution to the [Social media dashboard with theme switcher challenge
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [Project Brief](#project-brief)
-  - [Mobile View Light Theme](#mobile-view-light-theme)
-  - [Mobile View Dark Theme](#mobile-view-dark-theme)
-  - [Desktop View Light Theme](#desktop-view-light-theme)
-  - [Desktop View Dark Theme](#desktop-view-dark-theme)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+- [Frontend Mentor - Social Media Dashboard with Theme Switcher Solution](#frontend-mentor---social-media-dashboard-with-theme-switcher-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Project Brief](#project-brief)
+    - [Mobile View Light Theme](#mobile-view-light-theme)
+    - [Mobile View Dark Theme](#mobile-view-dark-theme)
+    - [Desktop View Light Theme](#desktop-view-light-theme)
+    - [Desktop View Dark Theme](#desktop-view-dark-theme)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -140,7 +142,7 @@ function getBackground(social) {
 
 ### Continued development
 
-As a starter developer, I want to keep growing in working as a team and learning how to deliver smaller packages of code at a time, such as robust and beautiful pages like this one. I thought this project was a good way to get back into React and begin doing just that!
+As a starter developer, I want to keep growing in working as a team and learning how to deliver smaller packages of code at a time, such as robust and beautiful pages like this one. I thought this project was a good way to get back into Next.js and begin doing just that!
 
 ### Useful resources
 
