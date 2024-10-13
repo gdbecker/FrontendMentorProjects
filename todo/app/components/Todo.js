@@ -15,9 +15,9 @@ function Todo({ darkMode, id, todo, isChecked, listIndex, index, dragStart, drag
       onDragEnd={drop}
       draggable
     >
-      <div className="flex flex-row">
+      <div className="flex flex-row items-center">
         <button 
-          className={"flex p-0.5 rounded-full ring-1 group-hover:ring-lightTheme-100 group-hover:bg-gradient-to-br group-hover:from-checkBgFrom group-hover:to-checkBgTo dark:group-hover:ring-darkTheme-200 group " + (isChecked ? "ring-lightTheme-100 dark:ring-darkTheme-600 bg-gradient-to-br from-checkBgFrom to-checkBgTo" : "ring-lightTheme-300 dark:ring-darkTheme-300 dark:hover:ring-darkTheme-200")}
+          className={"flex p-0.5 w-6 h-6 rounded-full ring-1 group-hover:ring-lightTheme-100 group-hover:bg-gradient-to-br group-hover:from-checkBgFrom group-hover:to-checkBgTo dark:group-hover:ring-darkTheme-200 group " + (isChecked ? "ring-lightTheme-100 dark:ring-darkTheme-600 bg-gradient-to-br from-checkBgFrom to-checkBgTo" : "ring-lightTheme-300 dark:ring-darkTheme-300 dark:hover:ring-darkTheme-200")}
           onClick={(event) => checkHandler(event, todo)}>
           <div 
             className="flex px-[0.3rem] py-[0.38rem] rounded-full group-hover:bg-lightTheme-100 dark:group-hover:bg-darkTheme-200"

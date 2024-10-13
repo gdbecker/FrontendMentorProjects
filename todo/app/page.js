@@ -1,13 +1,9 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
-// import LoadingPage from './loading';
 import Image from 'next/image';
 import Todo from './components/Todo';
 import IconSun from '../public/icon-sun.svg';
 import IconMoon from '../public/icon-moon.svg';
-// import IconCheckLight from '../public/icon-check-light.svg';
-// import IconCheckDark from '../public/icon-check-dark.svg';
-// import IconCross from '../public/icon-cross.svg';
 
 import { collection, addDoc, serverTimestamp, getDocs, doc, deleteDoc, runTransaction, orderBy, query } from 'firebase/firestore';
 import { db } from './services/firebase.config';
@@ -200,37 +196,29 @@ function Home() {
   const dragStart = (e, position, id) => {
     dragItem.current = position;
     dragItemId.current = id;
-    // console.log(e.target.innerHTML);
   };
  
   const dragEnter = (e, position, id) => {
     dragOverItem.current = position;
     dragOverItemId.current = id;
-    // console.log(e.target.innerHTML);
   };
  
   const drop = async (e) => {
     if (filter == "All") {
       const copyTodos = [...todos];
-      // const dragItemContent = copyTodos[dragItem.current];
-      // const dragItemContent =  copyTodos.filter(function(t) {
-      //   return t.listIndex == dragItem.current;
-      // });
 
-      // const dragItemContent = copyTodos.find(t => t.listIndex == dragItem.current);
+      let selectedTodo = copyTodos.filter(todo => todo.listIndex === dragItem.current)[0];
+      let selectedTodoIndex = copyTodos.indexOf(selectedTodo);
 
-      console.log(checked)
-      console.log(copyTodos)
+      let overTodo = copyTodos.filter(todo => todo.listIndex === dragOverItem.current)[0];
+      let selectedOverTodoIndex = copyTodos.indexOf(overTodo);
 
-      copyTodos[dragItem.current].listIndex = dragOverItem.current;
-      copyTodos[dragOverItem.current].listIndex = dragItem.current;
+      copyTodos[selectedTodoIndex].listIndex = dragOverItem.current;
+      copyTodos[selectedOverTodoIndex].listIndex = dragItem.current;
 
       copyTodos.sort(function(first, second) {
         return first.listIndex - second.listIndex;
       });
-
-      // copyTodos.splice(dragItem.current, 1);
-      // copyTodos.splice(dragOverItem.current, 0, dragItemContent);
 
       // Update new listIndex values to db (switch em)
       try {
@@ -242,7 +230,7 @@ function Home() {
           }
           transaction.update(docRefDragItem, { listIndex: dragOverItem.current});
         });
-        console.log("Transaction successfully committed!");
+        // console.log("Transaction successfully committed!");
       } catch (error) {
         console.log("Transaction failed: ", error);
       }
@@ -256,12 +244,12 @@ function Home() {
           }
           transaction.update(docRefDragOverItem, { listIndex: dragItem.current});
         });
-        console.log("Transaction successfully committed!");
+        // console.log("Transaction successfully committed!");
       } catch (error) {
         console.log("Transaction failed: ", error);
       }
 
-      console.log(copyTodos)
+      // console.log(copyTodos)
 
       dragItem.current = null;
       dragOverItem.current = null;
@@ -280,155 +268,115 @@ function Home() {
   if (!isLoading) {
     return (
       <main className={darkMode ? "dark" : ""}>
-        <div className="min-h-screen bg-lightTheme-200 font-josefinSansRegular dark:bg-darkTheme-100">
-          <div className="flex h-60 items-center justify-center bg-cover bg-center bg-no-repeat bg-[url('../../public/bg-mobile-light.jpg')] md:bg-[url('../../public/bg-desktop-light.jpg')] dark:bg-[url('../../public/bg-mobile-dark.jpg')] dark:md:bg-[url('../../public/bg-desktop-dark.jpg')]">
-            <div className="relative w-full md:w-[80%] lg:w-[50%] xl:w-[45%] 2xl:w-[40%]">
-              <div className="absolute flex-col -top-14 px-8 w-full text-center items-center justify-center">
-                <div className="flex flex-row w-full justify-between">
-                  <h1 className="text-lightTheme-100 text-3xl font-josefinSansBold tracking-[0.70rem] lg:text-4xl">TODO</h1>
-                  <button class="flex items-center justify-center" onClick={(e)=> changeTheme(e)}>
-                    { darkMode ? 
-                      (<Image src={IconSun} alt="Icon" width={25} height={25} className="pb-2" /> ) : 
-                      (<Image src={IconMoon} alt="Icon" width={25} height={25} className="pb-2" />) 
-                    }
-                  </button>
-                </div>
-  
-                <div className="flex h-fit w-full mt-8 mb-5 bg-lightTheme-100 rounded-md dark:bg-darkTheme-200">
-                  <div className="flex flex-row w-full p-5 items-center">
-                    <button 
-                      className="flex p-3 rounded-full ring-1 ring-lightTheme-300 dark:ring-darkTheme-600"
-                      onClick={e => submitTodo(e)}
-                    ></button>
-                    <input 
-                      className="flex w-full ml-4 bg-lightTheme-100 text-lightTheme-500 focus:outline-none dark:bg-darkTheme-200 dark:text-darkTheme-300" 
-                      id="newTask" 
-                      type="text" 
-                      placeholder="Create a new todo..."
-                      value={newTodo}
-                      onChange={e => onChangeNewTodo(e)}
-                      onKeyDown={handleKeyDown}
-                      required
-                    />
-                  </div>
-                </div>
-  
-                <div className="flex flex-col h-fit w-full mb-5 !rounded-md bg-lightTheme-100 dark:bg-darkTheme-200">
-  
-                  {/* {filteredTodos.map(({ id, todo, isChecked }, index) =>
-                    <div 
-                      key={index} 
-                      className="flex flex-row w-full rounded-tl-md rounded-tr-md justify-between p-5 items-center bg-lightTheme-100 dark:bg-darkTheme-200 border-b-[1px] border-lightTheme-300 dark:border-darkTheme-600 group"
-                      onDragStart={(e) => dragStart(e, index)}
-                      onDragEnter={(e) => dragEnter(e, index)}
-                      onDragEnd={drop}
-                      draggable
-                    >
-                      <div className="flex flex-row">
-                        <button 
-                          className={"flex p-0.5 rounded-full ring-1 group-hover:ring-lightTheme-100 group-hover:bg-gradient-to-br group-hover:from-checkBgFrom group-hover:to-checkBgTo dark:group-hover:ring-darkTheme-200 group " + (isChecked ? "ring-lightTheme-100 dark:ring-darkTheme-600 bg-gradient-to-br from-checkBgFrom to-checkBgTo" : "ring-lightTheme-300 dark:ring-darkTheme-300 dark:hover:ring-darkTheme-200")}
-                          onClick={(event) => checkHandler(event, todo)}>
-                          <div 
-                            className="flex px-[0.3rem] py-[0.38rem] rounded-full group-hover:bg-lightTheme-100 dark:group-hover:bg-darkTheme-200"
-                            id={id}>
-                            <Image 
-                              id={id} 
-                              src={(!isChecked && darkMode ? IconCheckDark : IconCheckLight)} 
-                              alt="Icon" 
-                              width={12} 
-                              height={12} 
-                              className="" 
-                            />
-                          </div>
-                        </button>
-                        <button 
-                          className={"pl-4 " + (isChecked ? "line-through text-lightTheme-300 dark:text-darkTheme-600" : "text-lightTheme-500 dark:text-darkTheme-300")}
-                          id={id}
-                          onClick={(event) => checkHandler(event, todo)}
-                        >{todo}</button>
-                      </div>
-                      <button 
-                        className="flex lg:invisible group-hover:visible"
-                        onClick={() => deleteTodo(id)}>
-                        <Image src={IconCross} alt="Icon" width={15} height={15} className="" />
-                      </button>
-                    </div>
-                  )} */}
+        <div className="min-h-screen mx-auto bg-lightTheme-200 font-josefinSansRegular pb-10 dark:bg-darkTheme-100">
+          <div className="h-72 bg-cover bg-center bg-no-repeat bg-[url('../../public/bg-mobile-light.jpg')] md:bg-[url('../../public/bg-desktop-light.jpg')] dark:bg-[url('../../public/bg-mobile-dark.jpg')] dark:md:bg-[url('../../public/bg-desktop-dark.jpg')]">
+          </div>  
+          <div className="z-10 w-full mx-auto -mt-52 md:w-[80%] lg:w-[50%] xl:w-[45%] 2xl:w-[40%]">
+            <div className="flex-col px-8 w-full text-center items-center justify-center">
+              <div className="flex flex-row w-full justify-between">
+                <h1 className="text-lightTheme-100 text-3xl font-josefinSansBold tracking-[0.70rem] lg:text-4xl">TODO</h1>
+                <button class="flex items-center justify-center" onClick={(e)=> changeTheme(e)}>
+                  { darkMode ? 
+                    (<Image src={IconSun} alt="Icon" width={25} height={25} className="pb-2" /> ) : 
+                    (<Image src={IconMoon} alt="Icon" width={25} height={25} className="pb-2" />) 
+                  }
+                </button>
+              </div>
 
-                  {filteredTodos.map(({ id, todo, isChecked, listIndex }, index) =>
-                    <Todo 
-                      darkMode={darkMode}
-                      id={id}
-                      todo={todo}
-                      isChecked={isChecked}
-                      listIndex={listIndex}
-                      index={index}
-                      dragStart={dragStart}
-                      dragEnter={dragEnter}
-                      drop={drop}
-                      checkHandler={checkHandler}
-                      deleteTodo={deleteTodo}
-                    />
-                  )}
-  
-                  <div className="flex flex-row w-full justify-between p-5 items-center">
-                    <h1 className="text-lightTheme-400 text-sm dark:text-darkTheme-600">{itemsLeft} Items Left</h1>
-  
-                    <div className="flex flex-row justify-center invisible lg:visible">
-                      <button 
-                        className={"px-2 font-josefinSansBold text-sm hover:text-lightTheme-500 dark:hover:text-darkTheme-400 " + (filter == "All" ? "text-brightBlue" : "text-lightTheme-400 dark:text-darkTheme-600")}
-                        value="All"
-                        onClick={e => onChangeFilter(e)}
-                      >All</button>
-                      <button 
-                        className={"px-2 font-josefinSansBold text-sm hover:text-lightTheme-500 dark:hover:text-darkTheme-400 " + (filter == "Active" ? "text-brightBlue" : "text-lightTheme-400 dark:text-darkTheme-600")}
-                        value="Active"
-                        onClick={e => onChangeFilter(e)}
-                      >Active</button>
-                      <button 
-                        className={"px-2 font-josefinSansBold text-sm hover:text-lightTheme-500 dark:hover:text-darkTheme-400 " + (filter == "Completed" ? "text-brightBlue" : "text-lightTheme-400 dark:text-darkTheme-600")}
-                        value="Completed"
-                        onClick={e => onChangeFilter(e)}
-                      >Completed</button>
-                    </div>
-  
-                    <button 
-                      className="px-2 text-lightTheme-400 text-sm hover:text-lightTheme-500 dark:text-darkTheme-600 dark:hover:text-darkTheme-400"
-                      onClick={() => clearCompletedBtn()}
-                    >Clear Completed</button>
-                  </div>
-                  
-                </div>
-  
-                <div className="flex flex-row h-fit w-full p-5 bg-lightTheme-100 rounded-md justify-center lg:hidden dark:bg-darkTheme-200">
+              <div className="flex h-fit w-full mt-8 mb-5 bg-lightTheme-100 rounded-md dark:bg-darkTheme-200">
+                <div className="flex flex-row w-full p-5 items-center">
                   <button 
-                    className={"px-2 font-josefinSansBold text-sm hover:text-lightTheme-500 dark:hover:text-darkTheme-400 " + (filter == "All" ? "text-brightBlue" : "text-lightTheme-400 dark:text-darkTheme-600")}
-                    value="All"
-                    onClick={e => onChangeFilter(e)}
-                  >All</button>
-                  <button 
-                    className={"px-2 font-josefinSansBold text-sm hover:text-lightTheme-500 dark:hover:text-darkTheme-400 " + (filter == "Active" ? "text-brightBlue" : "text-lightTheme-400 dark:text-darkTheme-600")}
-                    value="Active"
-                    onClick={e => onChangeFilter(e)}
-                  >Active</button>
-                  <button 
-                    className={"px-2 font-josefinSansBold text-sm hover:text-lightTheme-500 dark:hover:text-darkTheme-400 " + (filter == "Completed" ? "text-brightBlue" : "text-lightTheme-400 dark:text-darkTheme-600")}
-                    value="Completed"
-                    onClick={e => onChangeFilter(e)}
-                  >Completed</button>
-                </div>
-  
-                <div className="flex flex-row w-full justify-center py-10 items-center">
-                  <p className="text-lightTheme-400 text-sm dark:text-darkTheme-600">Drag and drop to reorder list</p>
+                    className="flex p-3 rounded-full ring-1 ring-lightTheme-300 dark:ring-darkTheme-600"
+                    onClick={e => submitTodo(e)}
+                  ></button>
+                  <input 
+                    className="flex w-full ml-4 bg-lightTheme-100 text-lightTheme-500 focus:outline-none dark:bg-darkTheme-200 dark:text-darkTheme-300" 
+                    id="newTask" 
+                    type="text" 
+                    placeholder="Create a new todo..."
+                    value={newTodo}
+                    onChange={e => onChangeNewTodo(e)}
+                    onKeyDown={handleKeyDown}
+                    required
+                  />
                 </div>
               </div>
-            </div>     
-          </div>      
+
+              <div className="flex flex-col w-full mb-5 !rounded-md bg-lightTheme-100 dark:bg-darkTheme-200">
+                {filteredTodos.map(({ id, todo, isChecked, listIndex }, index) =>
+                  <Todo 
+                    darkMode={darkMode}
+                    key={listIndex}
+                    id={id}
+                    todo={todo}
+                    isChecked={isChecked}
+                    listIndex={listIndex}
+                    index={index}
+                    dragStart={dragStart}
+                    dragEnter={dragEnter}
+                    drop={drop}
+                    checkHandler={checkHandler}
+                    deleteTodo={deleteTodo}
+                  />
+                )}
+
+                <div className="flex flex-row w-full justify-between p-5 items-center">
+                  <h1 className="text-lightTheme-400 text-sm dark:text-darkTheme-600">{itemsLeft} Items Left</h1>
+
+                  <div className="flex flex-row justify-center invisible lg:visible">
+                    <button 
+                      className={"px-2 font-josefinSansBold text-sm hover:text-lightTheme-500 dark:hover:text-darkTheme-400 " + (filter == "All" ? "text-brightBlue" : "text-lightTheme-400 dark:text-darkTheme-600")}
+                      value="All"
+                      onClick={e => onChangeFilter(e)}
+                    >All</button>
+                    <button 
+                      className={"px-2 font-josefinSansBold text-sm hover:text-lightTheme-500 dark:hover:text-darkTheme-400 " + (filter == "Active" ? "text-brightBlue" : "text-lightTheme-400 dark:text-darkTheme-600")}
+                      value="Active"
+                      onClick={e => onChangeFilter(e)}
+                    >Active</button>
+                    <button 
+                      className={"px-2 font-josefinSansBold text-sm hover:text-lightTheme-500 dark:hover:text-darkTheme-400 " + (filter == "Completed" ? "text-brightBlue" : "text-lightTheme-400 dark:text-darkTheme-600")}
+                      value="Completed"
+                      onClick={e => onChangeFilter(e)}
+                    >Completed</button>
+                  </div>
+
+                  <button 
+                    className="px-2 text-lightTheme-400 text-sm hover:text-lightTheme-500 dark:text-darkTheme-600 dark:hover:text-darkTheme-400"
+                    onClick={() => clearCompletedBtn()}
+                  >Clear Completed</button>
+                </div>
+                
+              </div>
+
+              <div className="flex flex-row h-fit w-full p-5 bg-lightTheme-100 rounded-md justify-center lg:hidden dark:bg-darkTheme-200">
+                <button 
+                  className={"px-2 font-josefinSansBold text-sm hover:text-lightTheme-500 dark:hover:text-darkTheme-400 " + (filter == "All" ? "text-brightBlue" : "text-lightTheme-400 dark:text-darkTheme-600")}
+                  value="All"
+                  onClick={e => onChangeFilter(e)}
+                >All</button>
+                <button 
+                  className={"px-2 font-josefinSansBold text-sm hover:text-lightTheme-500 dark:hover:text-darkTheme-400 " + (filter == "Active" ? "text-brightBlue" : "text-lightTheme-400 dark:text-darkTheme-600")}
+                  value="Active"
+                  onClick={e => onChangeFilter(e)}
+                >Active</button>
+                <button 
+                  className={"px-2 font-josefinSansBold text-sm hover:text-lightTheme-500 dark:hover:text-darkTheme-400 " + (filter == "Completed" ? "text-brightBlue" : "text-lightTheme-400 dark:text-darkTheme-600")}
+                  value="Completed"
+                  onClick={e => onChangeFilter(e)}
+                >Completed</button>
+              </div>
+
+              <div className="flex flex-row w-full justify-center py-10 items-center">
+                <p className="text-lightTheme-400 text-sm dark:text-darkTheme-600">Drag and drop to reorder list</p>
+              </div>
+            </div>
+          </div>     
+               
         </div>
       </main>
     )
   }
-  
 }
 
 export default Home;
