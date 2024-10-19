@@ -104,6 +104,9 @@ function Calc() {
 
   // Make sure calc component is ready to load
   useEffect(() => {
+    if (theme === 'system') {
+      setTheme('one');
+    }
     setMounted(true);
   }, []);
 
@@ -157,76 +160,76 @@ function Calc() {
 
         <div className="flex flex-row bg-th-KeypadBg mt-5 p-6 rounded-lg md:p-8">
           <div className="grid grid-cols-4 gap-3 w-full md:gap-6">
-            <button className="pb-1 bg-th-KeyMainShadow rounded-lg" type="button" value="7" onClick={e => appendNum(e)}>
-              <div className="h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">7</div>
+            <button className="pb-1 bg-th-KeyMainShadow rounded-lg active:pb-0 active:pt-1 active:bg-th-KeypadBg" type="button" value="7" onClick={e => appendNum(e)}>
+              <div className="active:translate-y-px h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">7</div>
             </button>
 
-            <button className="pb-1 bg-th-KeyMainShadow rounded-lg" type="button" value="8" onClick={e => appendNum(e)}>
-              <div className="h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">8</div>
+            <button className="pb-1 bg-th-KeyMainShadow rounded-lg active:pb-0 active:pt-1 active:bg-th-KeypadBg" type="button" value="8" onClick={e => appendNum(e)}>
+              <div className="active:translate-y-px h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">8</div>
             </button>
 
-            <button className="pb-1 bg-th-KeyMainShadow rounded-lg" type="button" value="9" onClick={e => appendNum(e)}>
-              <div className="h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">9</div>
+            <button className="pb-1 bg-th-KeyMainShadow rounded-lg active:pb-0 active:pt-1 active:bg-th-KeypadBg" type="button" value="9" onClick={e => appendNum(e)}>
+              <div className="active:translate-y-px h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">9</div>
             </button>
 
-            <button className="pb-1 bg-th-KeyEditShadow rounded-lg" type="button" onClick={() => removeNum()}>
-              <div className="h-full py-5 pb-3 bg-th-KeyEditBg rounded-lg text-th-TextEditBtn text-2xl md:py-4 md:pb-2 hover:bg-th-KeyEditBgHover">DEL</div>
+            <button className="pb-1 bg-th-KeyEditShadow rounded-lg active:pb-0 active:pt-1 active:bg-th-KeypadBg" type="button" onClick={() => removeNum()}>
+              <div className="active:translate-y-px h-full py-5 pb-3 bg-th-KeyEditBg rounded-lg text-th-TextEditBtn text-2xl md:py-4 md:pb-2 hover:bg-th-KeyEditBgHover">DEL</div>
             </button>
 
-            <button className="pb-1 bg-th-KeyMainShadow rounded-lg" type="button" value="4" onClick={e => appendNum(e)}>
-              <div className="h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">4</div>
+            <button className="pb-1 bg-th-KeyMainShadow rounded-lg active:pb-0 active:pt-1 active:bg-th-KeypadBg" type="button" value="4" onClick={e => appendNum(e)}>
+              <div className="active:translate-y-px h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">4</div>
             </button>
 
-            <button className="pb-1 bg-th-KeyMainShadow rounded-lg" type="button" value="5" onClick={e => appendNum(e)}>
-              <div className="h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">5</div>
+            <button className="pb-1 bg-th-KeyMainShadow rounded-lg active:pb-0 active:pt-1 active:bg-th-KeypadBg" type="button" value="5" onClick={e => appendNum(e)}>
+              <div className="active:translate-y-px h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">5</div>
             </button>
 
-            <button className="pb-1 bg-th-KeyMainShadow rounded-lg" type="button" value="6" onClick={e => appendNum(e)}>
-              <div className="h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">6</div>
+            <button className="pb-1 bg-th-KeyMainShadow rounded-lg active:pb-0 active:pt-1 active:bg-th-KeypadBg" type="button" value="6" onClick={e => appendNum(e)}>
+              <div className="active:translate-y-px h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">6</div>
             </button>
 
-            <button className="pb-1 bg-th-KeyMainShadow rounded-lg" type="button" value="+" onClick={e => pickOperand(e)}>
-              <div className="h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">+</div>
+            <button className="pb-1 bg-th-KeyMainShadow rounded-lg active:pb-0 active:pt-1 active:bg-th-KeypadBg" type="button" value="+" onClick={e => pickOperand(e)}>
+              <div className="active:translate-y-px h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">+</div>
             </button>
 
-            <button className="pb-1 bg-th-KeyMainShadow rounded-lg" type="button" value="1" onClick={e => appendNum(e)}>
-              <div className="h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">1</div>
+            <button className="pb-1 bg-th-KeyMainShadow rounded-lg active:pb-0 active:pt-1 active:bg-th-KeypadBg" type="button" value="1" onClick={e => appendNum(e)}>
+              <div className="active:translate-y-px h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">1</div>
             </button>
 
-            <button className="pb-1 bg-th-KeyMainShadow rounded-lg" type="button" value="2" onClick={e => appendNum(e)}>
-              <div className="h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">2</div>
+            <button className="pb-1 bg-th-KeyMainShadow rounded-lg active:pb-0 active:pt-1 active:bg-th-KeypadBg" type="button" value="2" onClick={e => appendNum(e)}>
+              <div className="active:translate-y-px h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">2</div>
             </button>
 
-            <button className="pb-1 bg-th-KeyMainShadow rounded-lg" type="button" value="3" onClick={e => appendNum(e)}>
-              <div className="h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">3</div>
+            <button className="pb-1 bg-th-KeyMainShadow rounded-lg active:pb-0 active:pt-1 active:bg-th-KeypadBg" type="button" value="3" onClick={e => appendNum(e)}>
+              <div className="active:translate-y-px h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">3</div>
             </button>
 
-            <button className="pb-1 bg-th-KeyMainShadow rounded-lg" type="button" value="-" onClick={e => pickOperand(e)}>
-              <div className="h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">-</div>
+            <button className="pb-1 bg-th-KeyMainShadow rounded-lg active:pb-0 active:pt-1 active:bg-th-KeypadBg" type="button" value="-" onClick={e => pickOperand(e)}>
+              <div className="active:translate-y-px h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">-</div>
             </button>
 
-            <button className="pb-1 bg-th-KeyMainShadow rounded-lg" type="button" value="." onClick={e => appendNum(e)}>
-              <div className="h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">.</div>
+            <button className="pb-1 bg-th-KeyMainShadow rounded-lg active:pb-0 active:pt-1 active:bg-th-KeypadBg" type="button" value="." onClick={e => appendNum(e)}>
+              <div className="active:translate-y-px h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">.</div>
             </button>
 
-            <button className="pb-1 bg-th-KeyMainShadow rounded-lg" type="button" value="0" onClick={e => appendNum(e)}>
-              <div className="h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">0</div>
+            <button className="pb-1 bg-th-KeyMainShadow rounded-lg active:pb-0 active:pt-1 active:bg-th-KeypadBg" type="button" value="0" onClick={e => appendNum(e)}>
+              <div className="active:translate-y-px h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">0</div>
             </button>
 
-            <button className="pb-1 bg-th-KeyMainShadow rounded-lg" type="button" value="/" onClick={e => pickOperand(e)}>
-              <div className="h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">/</div>
+            <button className="pb-1 bg-th-KeyMainShadow rounded-lg active:pb-0 active:pt-1 active:bg-th-KeypadBg" type="button" value="/" onClick={e => pickOperand(e)}>
+              <div className="active:translate-y-px h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">/</div>
             </button>
 
-            <button className="pb-1 bg-th-KeyMainShadow rounded-lg" type="button" value="x" onClick={e => pickOperand(e)}>
-              <div className="h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">x</div>
+            <button className="pb-1 bg-th-KeyMainShadow rounded-lg active:pb-0 active:pt-1 active:bg-th-KeypadBg" type="button" value="x" onClick={e => pickOperand(e)}>
+              <div className="active:translate-y-px h-full p-4 pb-3 bg-th-KeyMainBg rounded-lg text-th-TextMainBtn text-4xl md:text-4xl md:p-3 md:pb-1 hover:bg-th-KeyMainBgHover">x</div>
             </button>
 
-            <button className="pb-1 bg-th-KeyEditShadow rounded-lg col-span-2" type="button" onClick={() => reset()}>
-              <div className="h-full py-5 pb-3 bg-th-KeyEditBg rounded-lg text-th-TextEditBtn text-2xl md:py-4 md:pb-2 hover:bg-th-KeyEditBgHover">RESET</div>
+            <button className="pb-1 bg-th-KeyEditShadow rounded-lg col-span-2 active:pb-0 active:pt-1 active:bg-th-KeypadBg" type="button" onClick={() => reset()}>
+              <div className="active:translate-y-px h-full py-5 pb-3 bg-th-KeyEditBg rounded-lg text-th-TextEditBtn text-2xl md:py-4 md:pb-2 hover:bg-th-KeyEditBgHover">RESET</div>
             </button>
             
-            <button className="pb-1 bg-th-KeyEqualsShadow rounded-lg col-span-2" type="button" onClick={() => equals()}>
-              <div className="h-full py-5 pb-3 bg-th-KeyEqualsBg rounded-lg text-th-TextEqualsBtn text-2xl md:py-4 md:pb-2 hover:bg-th-KeyEqualsBgHover">=</div>
+            <button className="pb-1 bg-th-KeyEqualsShadow rounded-lg col-span-2 active:pb-0 active:pt-1 active:bg-th-KeypadBg" type="button" onClick={() => equals()}>
+              <div className="active:translate-y-px h-full py-5 pb-3 bg-th-KeyEqualsBg rounded-lg text-th-TextEqualsBtn text-2xl md:py-4 md:pb-2 hover:bg-th-KeyEqualsBgHover">=</div>
             </button>
 
           </div>
