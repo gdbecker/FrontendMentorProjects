@@ -48,7 +48,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/base-apparel-page-with-html-css-KRIlBZ-PMQ)
-- [Live Site URL](https://base-apparel-coming-soon-page-gdbecke.netlify.app/)
+- [Live Site URL](https://base-apparel-page-gdbecker.netlify.app)
 
 ## My process
 
