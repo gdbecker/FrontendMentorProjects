@@ -55,7 +55,6 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 ### Built with
 
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org) - React framework
 - HTML5
 - CSS
 - [Tailwind CSS](https://tailwindcss.com) - CSS framework

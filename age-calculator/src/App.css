@@ -48,16 +48,13 @@ Off black: #141414
   color: white;
   min-height: 100vh;
   width: auto;
-  padding: 5%;
 }
 
 /* Landing Page */
 #landing-page {
   background-color: #DBDBDB;
   font-family: Poppins-Regular;
-  padding: 8%;
-  box-shadow: #DBDBDB 0px 13px 27px -5px, #716F6F 0px 8px 16px -8px;
-  border-radius: 10px;
+  padding: 8% 10% 8% 10%;
 }
 
 /* Age Calculator component */
@@ -119,7 +116,7 @@ input[type=number] {
 .calc-button {
   background-color: #854DFF;
   padding: 30px;
-  border:0!important;
+  border:0 !important;
   border-radius: 60px;
   z-index: 1;
 }
@@ -197,5 +194,44 @@ input[type=number] {
 
   .calc-divider {
     text-align: center;
+  }
+}
+
+@media(max-width: 400px) {
+  #landing-page {
+    padding: 15% 3% 3% 3%;
+    min-height: 100vh;
+  }
+
+  #age-calculator {
+    padding: 1% 5% 5% 5%;
+    min-height: 60vh;
+    border-bottom-right-radius: 50%;
+  }
+
+  .calc-form {
+    margin: 0% !important;
+  }
+
+  .calc-box {
+    font-size: 12px !important;
+  }
+
+  .calc-divider {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .calc-button {
+    padding: 16px;
+  }
+
+  .calc-results {
+    font-size: 50px;
   }
 }

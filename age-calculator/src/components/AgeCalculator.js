@@ -165,7 +165,7 @@ function AgeCalculator() {
       <div className="container mt-3">
         <form onSubmit={e => onSubmit(e)}>
           <div className="row">
-            <div className="col-9">
+            <div className="col-xs-12 col-md-9">
               
                 <div className="row g-4">
 
