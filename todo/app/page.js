@@ -230,7 +230,6 @@ function Home() {
           }
           transaction.update(docRefDragItem, { listIndex: dragOverItem.current});
         });
-        // console.log("Transaction successfully committed!");
       } catch (error) {
         console.log("Transaction failed: ", error);
       }
@@ -244,12 +243,9 @@ function Home() {
           }
           transaction.update(docRefDragOverItem, { listIndex: dragItem.current});
         });
-        // console.log("Transaction successfully committed!");
       } catch (error) {
         console.log("Transaction failed: ", error);
       }
-
-      // console.log(copyTodos)
 
       dragItem.current = null;
       dragOverItem.current = null;
