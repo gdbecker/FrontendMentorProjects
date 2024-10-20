@@ -66,7 +66,7 @@ import countryData from './../json/data.json';
             href={{
               pathname: `/` ,
             }}
-            class="flex items-center justify-center py-2 px-8 shadow-md rounded-sm bg-white dark:bg-darkBlue">
+            class="flex items-center justify-center py-2 px-8 shadow-b-md rounded-sm bg-white dark:bg-darkBlue">
             <BsArrowLeft />
             <h1 className="flex pl-1 font-nunitoSansLight text-sm text-veryDarkBlue-Light dark:text-white">Back</h1>
           </Link>
@@ -113,7 +113,7 @@ import countryData from './../json/data.json';
                       href={{
                         pathname: `/${b}` ,
                       }}
-                      class="flex items-center justify-center mx-2 my-1 px-8 py-1 shadow-md rounded-sm bg-white dark:bg-darkBlue">
+                      class="flex items-center justify-center mx-2 my-1 px-8 py-1 shadow-b-md rounded-sm bg-white dark:bg-darkBlue">
                       
                       <h1 className="flex font-nunitoSansLight text-sm text-veryDarkBlue-Light dark:text-white">{findCountryName(b)}</h1>
                     </Link>

@@ -12,7 +12,7 @@ function CountryCard({ alpha3Code, img_url, name, population, region, capital })
       href={{
         pathname: `/${alpha3Code}`,
       }}
-      className="flex w-full max-h-fit flex-col rounded-md overflow-hidden bg-white shadow-md dark:bg-darkBlue">
+      className="flex w-full max-h-fit flex-col rounded-md overflow-hidden bg-white shadow-b-md dark:bg-darkBlue">
       <div 
         className="flex flex-row h-40 bg-no-repeat bg-cover bg-center 2xl:h-60"
         style={{backgroundImage: `url(${img_url})`}}>

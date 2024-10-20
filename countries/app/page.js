@@ -98,7 +98,7 @@ import countryData from './json/data.json';
     <main className="flex flex-col z-0 w-full h-full p-10 items-center justify-center md:items-center md:px-20 2xl:px-44">
 
       <div className="flex flex-col w-full py-5 justify-between md:flex-row">
-        <div className="flex flex-row w-full items-center justify-between pl-5 shadow-md rounded-md bg-white dark:bg-darkBlue md:w-[40%]">
+        <div className="flex flex-row w-full items-center justify-between pl-5 shadow-b-md rounded-md bg-white dark:bg-darkBlue md:w-[40%]">
           <h1 className="font-nunitoSansExtraBold text-darkGray dark:text-white"><BiSearch /></h1>
           <input 
             className="flex w-full p-5 bg-white text-veryDarkBlue-Light text-xs font-nunitoSansSemiBold rounded-md focus:outline-none dark:bg-darkBlue dark:text-white"
@@ -125,7 +125,7 @@ import countryData from './json/data.json';
           ))}
         </select> */}
         <details className="flex dropdown w-[60%] my-10 md:my-0 md:w-[28%] lg:w-[20%] xl:w-[15%]">
-          <summary className="flex flex-row items-center justify-between mb-[2px] btn w-full rounded-md border-0 shadow-md no-animation bg-white text-veryDarkBlue-Light hover:bg-white dark:bg-darkBlue dark:text-white dark:hover:dark:bg-darkBlue">
+          <summary className="flex flex-row items-center justify-between mb-[2px] btn w-full rounded-md border-0 shadow-b-md no-animation bg-white text-veryDarkBlue-Light hover:bg-white dark:bg-darkBlue dark:text-white dark:hover:dark:bg-darkBlue">
             <h1 
               className="flex normal-case text-xs font-nunitoSansSemiBold"
             >{regionSelect}</h1>
@@ -156,7 +156,7 @@ import countryData from './json/data.json';
       <div className="flex flex-col w-full pt-5 pb-10 gap-14 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {filteredCountries.map(function(c) {
           return (
-            <ProjectCard 
+            <CountryCard 
               alpha3Code={c.alpha3Code}
               img_url={c.flag}
               name={c.name}

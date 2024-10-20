@@ -21,7 +21,7 @@ function Navigation() {
   }
 
   return (
-    <div class="flex z-10 h-16 py-10 px-10 items-center justify-between overflow-hidden bg-white shadow-md md:px-20 2xl:px-44 dark:bg-darkBlue">
+    <div class="flex z-10 h-16 py-10 px-10 items-center justify-between overflow-hidden bg-white shadow-b-md md:px-20 2xl:px-44 dark:bg-darkBlue">
       <h1 className="flex font-nunitoSansExtraBold text-md text-veryDarkBlue-Light md:text-xl dark:text-white">Where in the world?</h1>
       <div className="flex flex-row justify-center">
         <button class="flex items-center justify-center text-veryDarkBlue-Light dark:text-white" onClick={()=> setTheme( theme === "dark" ? "light" : "dark")}>
