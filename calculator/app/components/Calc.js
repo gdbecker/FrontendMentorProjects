@@ -22,25 +22,19 @@ function Calc() {
     if (operand != '') {
       if (startedNextNum === false) {
         num = "" + e.currentTarget.value;
-
         setScreenNum(num.toLocaleString('en-US'));
-
         setStartedNextNum(true);
       } else {
         num = screenNum + e.currentTarget.value;
-
         setScreenNum(num.toLocaleString('en-US'));
       }
     } else {
       if (screenNum === 0 || equalsClicked) {
         num = "" + e.currentTarget.value;
-  
         setScreenNum(num.toLocaleString('en-US'));
-
         setEqualsClicked(false);
       } else {
         num = screenNum + e.currentTarget.value;
-  
         setScreenNum(num.toLocaleString('en-US'));
       }
     }
@@ -104,7 +98,7 @@ function Calc() {
 
   // Make sure calc component is ready to load
   useEffect(() => {
-    if (theme === 'system') {
+    if (theme === 'system' || theme === null) {
       setTheme('one');
     }
     setMounted(true);
