@@ -8,8 +8,10 @@ This is my solution to the [REST Countries API with color theme switcher challen
 	- [Table of contents](#table-of-contents)
 	- [Overview](#overview)
 		- [Project Brief](#project-brief)
-		- [Mobile View](#mobile-view)
-		- [Desktop View](#desktop-view)
+		- [Mobile View - Light Mode](#mobile-view---light-mode)
+		- [Mobile View - Dark Mode](#mobile-view---dark-mode)
+		- [Desktop View - Light Mode](#desktop-view---light-mode)
+		- [Desktop View - Dark Mode](#desktop-view---dark-mode)
 		- [Links](#links)
 	- [My process](#my-process)
 		- [Built with](#built-with)
@@ -40,19 +42,22 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 **⚠️ NOTE ⚠️: Sometimes the REST Countries API can go down. We've added a `data.json` file with all the country data if you prefer to use that instead. However, please be aware that the data in the JSON file might not be up-to-date.**
 
-### Mobile View
+### Mobile View - Light Mode
+![](./Mobile%20View%20-%20Light%20Mode.png)
 
-![](./)
+### Mobile View - Dark Mode
+![](./Mobile%20View%20-%20Dark%20Mode.png)
 
-### Desktop View
+### Desktop View - Light Mode
+![](./Desktop%20View%20-%20Light%20Mode.png)
 
-![](./)
-
+### Desktop View - Dark Mode
+![](./Desktop%20View%20-%20Dark%20Mode.png)
 
 ### Links
 
-- [Solution URL]()
-- [Live Site URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/rest-countries-api-app-with-next-tailwind-VZ0_N1UPsW)
+- [Live Site URL](https://rest-countries-api-gdbecker.netlify.app)
 
 ## My process
 
@@ -68,22 +73,69 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### What I learned
 
-When I found out that Tailwind had an intuitive way of switching between light and dark CSS themes, I knew I had to give it a go with this social media dashboard project. Really happy with how this turned out! I approached it by first getting the structure down for the whole page on light theme, and once it was in a good place I adjusted the tailwind.config file to discern the dark theme mode by className. It was simple adjusting the colors and feel by using "dark:" as a prefix in the utility classes, and I put those at the end of each className to keep them consistent spot. Since there was also quite a bit of repetitive code I decided to make separate components for the first four "account cards" and then for the bottom eight "detail cards" to make my code simpler and easier to read and manage. I'm proud of this one and definitely want to keep practicing using themes in Tailwind!
+Level 4 (intermediate) FrontendMentor projects intimated me at first, but seeing the final product for the challenge made me want to take a go at it. As with any larger project, what helped was tackling each part at a time, solving one problem after another and make a plan to attack it. Overall, I knew there were several components/challenges: the navbar up top, being able to switch between light and dark mode, creating a reusable component for each country on the main page, importing the supplied JSON file (since the API could be broken later on), and not to mention each individual country's detail page with the ability to head to another neighboring country's page with a list of links.
+
+I more or less approached this challenge in that order above, working on one component and section at a time, styling as I went with Tailwind, and making sure I was matching the desired design as closely as possible on mobile and desktop screens. It was great practice using mapping functions for both displaying all the country cards on the main page, as well as outputting a list of links to neighboring countries. Creating each country's detail page wasn't too hard with the built-in folder structure that Next has. I could add a general "/[countrycode]" page which would populate based on the selected code's values from the JSON data. For the light/dark mode, I had practice with other projects using Next and Tailwind so setting up the theme provider component wasn't bad, and I first styled the light mode with the design's colors and then moved over to dark mode. It helped me a lot to make smaller goals and accomplish those well before moving onto the next.
+
+I'm proud of how this one turned out and definitely want to keep practicing using themes and Next's folder structure for more dynamic web sites!
 
 Here are a few code samples from this project:
 
 ```html
-<!-- 'AccountCard' component for the top row of cards -->
-
+<!-- 'CountryCard' component for each country -->
+<Link
+	href={{
+		pathname: `/${alpha3Code}`,
+	}}
+	className="flex w-full max-h-fit flex-col rounded-md overflow-hidden bg-white shadow-b-md dark:bg-darkBlue">
+	<div 
+		className="flex flex-row h-40 bg-no-repeat bg-cover bg-center 2xl:h-60"
+		style={{backgroundImage: `url(${img_url})`}}>
+	</div>
+	<div className="flex flex-col p-7 text-veryDarkBlue-Light dark:text-white">
+		<h1 className="text-md font-nunitoSansExtraBold mb-4">{name}</h1>
+		<p className="text-sm font-nunitoSansSemiBold mb-1">Population: <span className="font-nunitoSansLight">{numberWithCommas(population)}</span></p>
+		<p className="text-sm font-nunitoSansSemiBold mb-1">Region: <span className="font-nunitoSansLight">{region}</span></p>
+		<p className="text-sm font-nunitoSansSemiBold mb-1">Capital: <span className="font-nunitoSansLight">{capital}</span></p>
+	</div>
+</Link>
 ```
 
 ```css
 /* Importing custom font in my main CSS file */
-
+@font-face {
+  font-family: NunitoSans-ExtraBold;
+  src: url(../../public/NunitoSans_7pt-ExtraBold.ttf);
+}
 ```
 
 ```js
+// Applying all selected and inputted filter settings
+const filterCountries = (countryName, region) => {
+	if (countryName != "" && region != "All" && region != "Filter by Region") {
+		var f =  countryData.filter(function(c) {
+			// return c.region == region && c.name.slice(0, countryName.length).toLowerCase() == countryName.toLowerCase();
+			return c.region == region && c.name.toLowerCase().includes(countryName.toLowerCase());
+		});
 
+		setFilteredCountries(f);
+	} else if (region != "All" && region != "Filter by Region") {
+		var f =  countryData.filter(function(c) {
+			return c.region == region;
+		});
+
+		setFilteredCountries(f);
+	} else if (countryName != "") {
+		var f =  countryData.filter(function(c) {
+			// return c.name.slice(0, countryName.length).toLowerCase() == countryName.toLowerCase();
+			return c.name.toLowerCase().includes(countryName.toLowerCase());
+		});
+
+		setFilteredCountries(f);
+	} else {
+		setFilteredCountries(countryData);
+	}
+}
 ```
 
 ### Continued development
@@ -92,8 +144,8 @@ As a starter developer, I want to keep growing in working as a team and learning
 
 ### Useful resources
 
-- [CSS Formatter](http://www.lonniebest.com/FormatCSS/) - I found this helpful site when I'm feeling lazy and don't want to format my CSS code, I can have this do it for me, especially putting everything in alphabetical order.
-- [Tailwind Grid](https://tailwindcss.com/docs/grid-template-columns) - Handy guide from Tailwind's docs about using grid-cols to structure content
+- [Regex for adding commas to numbers](https://stackoverflow.com/questions/721304/insert-commas-into-number-string) - Thank goodness for StackOverflow especially in my regex situations. This was where I got help on the pattern to use when adding commas to numbers.
+- [Tailwind Flexbox](https://tailwindcss.com/docs/flex) - Handy guide from Tailwind's docs about using flexbox, including flex columns and rows
 
 ## Author
 

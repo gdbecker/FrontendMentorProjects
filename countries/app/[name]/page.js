@@ -41,9 +41,6 @@ import countryData from './../json/data.json';
     var s =  countryData.filter(function(c) {
       return c.alpha3Code == code;
     });
-
-    console.log(s[0])
-
     return s[0].name;
   }
 

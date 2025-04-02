@@ -27,15 +27,6 @@ import countryData from './json/data.json';
     filterCountries(countrySearch, e.target.name);
   };
 
-  // Filter by country name
-  // const filterCountryNames = (countryName) => {
-  //   var f =  countryData.filter(function(c) {
-  //     return c.name.slice(0, countryName.length).toLowerCase() == countryName.toLowerCase();
-  //   });
-
-  //   setFilteredCountries(f);
-  // }
-
   // Filter by country name search and region
   const filterCountries = (countryName, region) => {
     if (countryName != "" && region != "All" && region != "Filter by Region") {
@@ -62,19 +53,6 @@ import countryData from './json/data.json';
       setFilteredCountries(countryData);
     }
   }
-
-  // Filter by region
-  // const filterCountryRegions = (region) => {
-  //   if (region != "Filter by Region") {
-  //     var f =  countryData.filter(function(c) {
-  //       return c.region == region;
-  //     });
-
-  //     setFilteredCountries(f);
-  //   } else {
-  //     setFilteredCountries(countryData);
-  //   }
-  // }
 
   const grabRegions = () => {
     let allRegions = countryData.map(c => c.region);
@@ -151,7 +129,6 @@ import countryData from './json/data.json';
           </ul>
         </details>
       </div>
-
       
       <div className="flex flex-col w-full pt-5 pb-10 gap-14 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {filteredCountries.map(function(c) {

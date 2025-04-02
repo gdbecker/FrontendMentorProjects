@@ -66,8 +66,8 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### Links
 
-- [Solution URL]()
-- [Live Site URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/calculator-app-with-next-tailwind-YnS4hyZBDm)
+- [Live Site URL](https://calculator-gdbecker.netlify.app)
 
 ## My process
 
