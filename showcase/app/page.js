@@ -150,7 +150,7 @@ function Home() {
 
   if (!isLoading) {
     return (
-      <main className="flex flex-col items-center justify-center w-full h-full p-10 bg-white md:items-center 2xl:px-36">
+      <main className="flex flex-col items-center justify-start w-full min-h-screen p-10 bg-white md:items-center 2xl:px-36">
 
         <h1 className="pb-9 font-heeboRegular text-justify text-darkBlue leading-7 md:w-[50vw]">
           Here is a collection of solutions I created for a variety of challenges from <a href="https://www.frontendmentor.io" target="_blank" className=" font-heeboRegular font-bold hover:text-darkPurple">Frontend Mentor</a> - a platform that provides 
@@ -176,7 +176,31 @@ function Home() {
               onChange={e => onChangeProjectSearch(e)}
             />
           </div>
-          <details className="flex dropdown w-[100%] my-2 md:my-0 md:w-[28%] lg:w-[20%] xl:w-[15%]">
+          <details className="dropdown inline-block w-[100%] my-4 md:my-0 md:w-[28%] lg:w-[20%] xl:w-[15%]">
+            <summary className="flex flex-row items-center justify-between h-12 px-4 btn w-full rounded-md border-0 shadow-md no-animation bg-white text-veryDarkBlue-Light hover:bg-white list-none">
+              <h1 className="normal-case text-xs font-heeboRegular">
+                {levelSelect}
+              </h1>
+              <BiChevronDown className="text-sm"/>
+            </summary>
+            <ul className="dropdown-content absolute z-[100] menu p-2 shadow-xl bg-white text-darkGreen rounded-md w-full mt-2 left-0">
+              {levels.map((l, index) => (
+                <li
+                  key={index}
+                  onClick={(e) => handleLevelChange(e)}
+                  className="text-xs font-heeboRegular"
+                >
+                  <a 
+                    className="px-4 py-3 rounded-md hover:bg-slate-50 active:bg-slate-100"
+                    name={l.level}
+                  >
+                    {l.level}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
+          {/* <details className="flex dropdown w-[100%] my-2 md:my-0 md:w-[28%] lg:w-[20%] xl:w-[15%]">
             <summary className="flex flex-row items-center justify-between h-full mb-[2px] btn w-full rounded-md border-0 shadow-md no-animation bg-white text-veryDarkBlue-Light hover:bg-white">
               <h1 
                 className="flex normal-case text-xs font-heeboRegular"
@@ -198,8 +222,32 @@ function Home() {
                 </li>
               ))}
             </ul>
+          </details> */}
+          <details className="dropdown inline-block w-[100%] my-4 md:my-0 md:w-[28%] lg:w-[20%] xl:w-[15%]">
+            <summary className="flex flex-row items-center justify-between h-12 px-4 btn w-full rounded-md border-0 shadow-md no-animation bg-white text-veryDarkBlue-Light hover:bg-white list-none">
+              <h1 className="normal-case text-xs font-heeboRegular">
+                {toolsSelect}
+              </h1>
+              <BiChevronDown className="text-sm"/>
+            </summary>
+            <ul className="dropdown-content absolute z-[100] menu p-2 shadow-xl bg-white text-darkGreen rounded-md w-full mt-2 left-0">
+              {tools.map((t, index) => (
+                <li
+                  key={index}
+                  onClick={(e) => handleToolsChange(e)}
+                  className="text-xs font-heeboRegular"
+                >
+                  <a 
+                    className="px-4 py-3 rounded-md hover:bg-slate-50 active:bg-slate-100"
+                    name={t.tools}
+                  >
+                    {t.tools}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </details>
-          <details className="flex dropdown w-[100%] my-0 md:my-0 md:w-[28%] lg:w-[20%] xl:w-[15%]">
+          {/* <details className="flex dropdown w-[100%] my-0 md:my-0 md:w-[28%] lg:w-[20%] xl:w-[15%]">
             <summary className="flex flex-row items-center justify-between h-full mb-[2px] btn w-full rounded-md border-0 shadow-md no-animation bg-white text-veryDarkBlue-Light hover:bg-white">
               <h1 
                 className="flex normal-case text-xs font-heeboRegular"
@@ -221,7 +269,7 @@ function Home() {
                 </li>
               ))}
             </ul>
-          </details>
+          </details> */}
         </div>
 
         <div className="flex flex-col w-full pt-5 pb-10 gap-7 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

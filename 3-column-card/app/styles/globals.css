@@ -80,6 +80,9 @@
 
 .icon-wrapper {
   text-align: left;
+  width: auto !important; /* Overrides fixed width if it's being forced */
+  height: auto !important;
+  object-fit: contain;
 }
 
 .card-title {

@@ -14,9 +14,7 @@ function Card() {
               <div className="icon-wrapper"> 
                 <Image 
                   src={SedansIcon}
-                  alt="Sedans Icon"
-                  width={45}
-                  height={45}           
+                  alt="Sedans Icon"         
                 />
               </div>
             </div>
@@ -40,9 +38,7 @@ function Card() {
               <div className="icon-wrapper"> 
                 <Image 
                   src={SuvsIcon} 
-                  alt="Suvs Icon"
-                  width={45}
-                  height={45}           
+                  alt="Suvs Icon"         
                 />
               </div>
             </div>
@@ -66,9 +62,7 @@ function Card() {
               <div className="icon-wrapper"> 
                 <Image 
                   src={LuxuryIcon} 
-                  alt="Luxury Icon"
-                  width={45}
-                  height={45}           
+                  alt="Luxury Icon"         
                 />
               </div>
             </div>
