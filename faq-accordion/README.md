@@ -47,7 +47,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/faq-accordion-with-html-css-javascript-LgASHjywcH)
-- [Live Site URL](https://faq-accordion-gdbecker.netlify.app/)
+- [Live Site URL](https://fm-faq-accordion-gdbecker.netlify.app/)
 
 ## My process
 

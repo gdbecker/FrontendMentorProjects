@@ -4,18 +4,20 @@ This is my solution to the [QR code component challenge on Frontend Mentor](http
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [Project Brief](#project-brief)
-  - [Mobile View](#mobile-view)
-  - [Desktop View](#desktop-view)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+- [Frontend Mentor - QR Code Component Solution](#frontend-mentor---qr-code-component-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Project Brief](#project-brief)
+    - [Mobile View](#mobile-view)
+    - [Desktop View](#desktop-view)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -38,7 +40,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/qr-code-component-hosted-on-netlify-rwLGIUAbUi)
-- [Live Site URL](https://qr-code-gdbecker.netlify.app)
+- [Live Site URL](https://fm-qr-code-gdbecker.netlify.app)
 
 ## My process
 

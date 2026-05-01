@@ -4,7 +4,9 @@ Showcase website to display solutions for Frontend Mentor challenges. Take a loo
 
 ## Links
 
-[Live URL](https://frontend-mentor-showcase-gdbecker.netlify.app)
+[Live URL](https://garrettdbeckershowcasefrontendmentor.netlify.app/)
+
+!["showcase"](./showcase.png)
 
 ## Built with
 

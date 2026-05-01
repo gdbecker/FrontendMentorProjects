@@ -4,19 +4,21 @@ This is my solution to the [Interactive rating component challenge on Frontend M
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [Project Brief](#project-brief)
-  - [Mobile View](#mobile-view)
-  - [Desktop View](#desktop-view)
-  - [Desktop Submitted View](#desktop-submitted-view)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+- [Frontend Mentor - Interactive Rating Component Solution](#frontend-mentor---interactive-rating-component-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Project Brief](#project-brief)
+    - [Mobile View](#mobile-view)
+    - [Desktop View](#desktop-view)
+    - [Desktop Submitted View](#desktop-submitted-view)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -50,7 +52,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/rating-component-with-react-bootstrap-Tba__w3pRE)
-- [Live Site URL](https://rating-component-gdbecker.netlify.app)
+- [Live Site URL](https://fm-rating-component-gdbecker.netlify.app)
 
 ## My process
 

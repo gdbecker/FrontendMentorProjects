@@ -4,19 +4,21 @@ This is my solution to the [News homepage challenge on Frontend Mentor](https://
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [Project Brief](#project-brief)
-  - [Mobile View](#mobile-view)
-  - [Mobile View with Menu](#mobile-view-with-menu)
-  - [Desktop View](#desktop-view)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+- [Frontend Mentor - News Homepage Solution](#frontend-mentor---news-homepage-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Project Brief](#project-brief)
+    - [Mobile View](#mobile-view)
+    - [Mobile View with Menu](#mobile-view-with-menu)
+    - [Desktop View](#desktop-view)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -48,7 +50,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/news-homepage-with-react-bootstrap-tkackbvjn1)
-- [Live Site URL](https://news-homepage-gdbecker.netlify.app)
+- [Live Site URL](https://fm-news-homepage-gdbecker.netlify.app)
 
 ## My process
 

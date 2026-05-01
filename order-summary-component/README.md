@@ -44,7 +44,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/order-summary-component-with-html-css--upHZl1KGv)
-- [Live Site URL](https://order-summary-component-gdbecker.netlify.app/)
+- [Live Site URL](https://fm-order-summary-component-gdbecker.netlify.app/)
 
 ## My process
 

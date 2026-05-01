@@ -48,7 +48,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/intro-component-with-html-css-javascript-H3bRV-s9mg)
-- [Live Site URL](https://intro-component-sign-up-gdbecker.netlify.app/)
+- [Live Site URL](https://fm-intro-component-sign-up-gdbecker.netlify.app/)
 
 ## My process
 

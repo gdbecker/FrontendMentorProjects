@@ -4,18 +4,20 @@ This is my solution to the [Notifications page challenge on Frontend Mentor](htt
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [Project Brief](#project-brief)
-  - [Mobile View](#mobile-view)
-  - [Desktop View](#desktop-view)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+- [Frontend Mentor - Notifications Page Solution](#frontend-mentor---notifications-page-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Project Brief](#project-brief)
+    - [Mobile View](#mobile-view)
+    - [Desktop View](#desktop-view)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -42,11 +44,10 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ![](./notifications-page-desktop.jpg)
 
-
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/notifications-page-with-react-bootstrap-LjvWM4bG57)
-- [Live Site URL](https://notifications-page-gdbecker.netlify.app)
+- [Live Site URL](https://fm-notifications-page-gdbecker.netlify.app)
 
 ## My process
 

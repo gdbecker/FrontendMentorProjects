@@ -48,7 +48,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/age-calculator-with-react-bootstrap-xj_HjknSpR)
-- [Live Site URL](https://age-calculator-gdbecker.netlify.app)
+- [Live Site URL](https://fm-age-calculator-gdbecker.netlify.app)
 
 ## My process
 

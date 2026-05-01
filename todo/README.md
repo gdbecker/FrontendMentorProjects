@@ -63,7 +63,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/todo-app-with-nextjs-tailwind-firebase-3CyqBuYLnn)
-- [Live Site URL](https://todo-app-gdbecker.netlify.app/)
+- [Live Site URL](https://fm-todo-app-gdbecker.netlify.app/)
 
 ## My process
 

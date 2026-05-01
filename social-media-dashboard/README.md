@@ -57,7 +57,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/social-media-dashboard-with-next-tailwind-k1uS7_Om47)
-- [Live Site URL](https://social-media-dashboard-gdbecker.netlify.app)
+- [Live Site URL](https://fm-social-media-dashboard-gdbecker.netlify.app)
 
 ## My process
 

@@ -44,7 +44,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/social-links-profile-with-html-css-gBmKT4syK4)
-- [Live Site URL](https://social-links-profile-gdbecker.netlify.app)
+- [Live Site URL](https://fm-social-links-profile-gdbecker.netlify.app)
 
 ## My process
 

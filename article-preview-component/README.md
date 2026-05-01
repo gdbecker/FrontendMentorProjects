@@ -57,7 +57,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/article-preview-component-with-html-css-js-5CUDmusErU)
-- [Live Site URL](https://article-preview-component-gdbecker.netlify.app/)
+- [Live Site URL](https://fm-article-preview-component-gdbecker.netlify.app/)
 
 ## My process
 

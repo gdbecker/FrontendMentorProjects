@@ -57,7 +57,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/rest-countries-api-app-with-next-tailwind-VZ0_N1UPsW)
-- [Live Site URL](https://rest-countries-api-gdbecker.netlify.app)
+- [Live Site URL](https://fm-countries-api-gdbecker.netlify.app)
 
 ## My process
 

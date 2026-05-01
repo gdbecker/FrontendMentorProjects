@@ -57,7 +57,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/rock-paper-scissors-game-with-html-css-javascript-1KCdykZHJI)
-- [Live Site URL](https://rock-paper-scissors-gdbecker.netlify.app/)
+- [Live Site URL](https://fm-rock-paper-scissors-gdbecker.netlify.app/)
 
 ## My process
 

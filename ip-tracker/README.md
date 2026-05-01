@@ -63,7 +63,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/ip-address-tracker-with-next-tailwind-2Zz94TGTex)
-- [Live Site URL](https://ip-tracker-gdbecker.netlify.app/)
+- [Live Site URL](https://fm-ip-tracker-gdbecker.netlify.app/)
 
 ## My process
 

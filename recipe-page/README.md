@@ -40,7 +40,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/recipe-card-with-html-css-eBDtuI37Uz)
-- [Live Site URL](https://recipe-page-gdbecker.netlify.app)
+- [Live Site URL](https://fm-recipe-page-gdbecker.netlify.app)
 
 ## My process
 

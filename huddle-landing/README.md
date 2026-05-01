@@ -45,7 +45,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/huddle-landing-with-next-tailwind-qui6I1xtZh)
-- [Live Site URL](https://huddle-landing-gdbecker.netlify.app)
+- [Live Site URL](https://fm-huddle-landing-gdbecker.netlify.app)
 
 ## My process
 

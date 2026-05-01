@@ -44,7 +44,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/stats-card-with-next-tailwind-s2UBHsewM6)
-- [Live Site URL](https://stats-card-gdbecker.netlify.app)
+- [Live Site URL](https://fm-stats-card-gdbecker.netlify.app)
 
 ## My process
 

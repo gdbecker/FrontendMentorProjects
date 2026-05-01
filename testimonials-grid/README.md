@@ -45,7 +45,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/testimonials-grid-with-next-tailwind-Jk2KbMWvmV)
-- [Live Site URL](https://testimonials-grid-gdbecker.netlify.app)
+- [Live Site URL](https://fm-testimonials-grid-gdbecker.netlify.app)
 
 ## My process
 

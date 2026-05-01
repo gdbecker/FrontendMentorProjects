@@ -46,7 +46,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/tip-calculator-with-next-tailwind-S4saLJMW04)
-- [Live Site URL](https://tip-calculator-gdbecker.netlify.app)
+- [Live Site URL](https://fm-tip-calculator-gdbecker.netlify.app)
 
 ## My process
 

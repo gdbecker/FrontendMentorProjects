@@ -44,7 +44,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/blog-preview-card-with-html-css-zn9wxN9Jjz)
-- [Live Site URL](https://blog-preview-card-gdbecker.netlify.app)
+- [Live Site URL](https://fm-blog-preview-card-gdbecker.netlify.app)
 
 ## My process
 

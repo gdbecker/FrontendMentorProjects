@@ -4,18 +4,20 @@ This is my solution to the [Results summary component challenge on Frontend Ment
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [Project Brief](#project-brief)
-  - [Mobile View](#mobile-view)
-  - [Desktop View](#desktop-view)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+- [Frontend Mentor - Results Summary Component Solution](#frontend-mentor---results-summary-component-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Project Brief](#project-brief)
+    - [Mobile View](#mobile-view)
+    - [Desktop View](#desktop-view)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -42,11 +44,10 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ![](./results-component-desktop.jpg)
 
-
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/results-component-with-react-bootstrap-EaorfiBf3j)
-- [Live Site URL](https://results-component-gdbecker.netlify.app)
+- [Live Site URL](https://fm-results-component-gdbecker.netlify.app)
 
 ## My process
 
