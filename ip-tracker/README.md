@@ -53,11 +53,11 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### Mobile View
 
-![](./ip-tracker-mobile.png)
+![](./ip-tracker-mobile.jpg)
 
 ### Desktop View
 
-![](./ip-tracker-desktop.png)
+![](./ip-tracker-desktop.jpg)
 
 
 ### Links
@@ -155,7 +155,6 @@ As a starter developer, I want to keep growing in working as a team and learning
 
 ## Author
 
-- Website - [Garrett Becker]()
 - Frontend Mentor - [@gdbecker](https://www.frontendmentor.io/profile/gdbecker)
 - LinkedIn - [Garrett Becker](https://www.linkedin.com/in/garrett-becker-923b4a106/)
 

@@ -20,6 +20,5 @@ Showcase website to display solutions for Frontend Mentor challenges. Take a loo
 
 ## Author
 
-- Website - [Garrett Becker]()
-- Replit - [@gdbecker](https://replit.com/@gdbecker)
+- Frontend Mentor - [@gdbecker](https://www.frontendmentor.io/profile/gdbecker)
 - LinkedIn - [Garrett Becker](https://www.linkedin.com/in/garrett-becker-923b4a106/)

@@ -172,7 +172,6 @@ As a starter developer, I want to keep growing in working as a team and learning
 
 ## Author
 
-- Website - [Garrett Becker]()
 - Frontend Mentor - [@gdbecker](https://www.frontendmentor.io/profile/gdbecker)
 - LinkedIn - [Garrett Becker](https://www.linkedin.com/in/garrett-becker-923b4a106/)
 

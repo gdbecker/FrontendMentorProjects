@@ -1,6 +1,6 @@
 # Frontend Mentor - Sunnyside Agency Landing Page Solution
 
-This is my solution to the [Sunnyside agency landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef). I'm super thankful to have found Frontend Mentor as a great way to confidently grow in my coding skills with real-life projects. 
+This is my solution to the [Sunnyside agency landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/agency-landing-page-7yVs3B6ef). I'm super thankful to have found Frontend Mentor as a great way to confidently grow in my coding skills with real-life projects. 
 
 ## Table of contents
 
@@ -160,7 +160,6 @@ As a starter developer, I want to keep growing in working as a team and learning
 
 ## Author
 
-- Website - [Garrett Becker]()
 - Frontend Mentor - [@gdbecker](https://www.frontendmentor.io/profile/gdbecker)
 - LinkedIn - [Garrett Becker](https://www.linkedin.com/in/garrett-becker-923b4a106/)
 
