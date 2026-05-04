@@ -102,7 +102,7 @@ import countryData from './json/data.json';
                   className="text-xs font-nunitoSansSemiBold"
                 >
                   <a 
-                    className="px-4 py-3 rounded-md hover:bg-slate-50 active:bg-slate-100 dark:hover:bg-veryLightGray"
+                    className="px-4 py-3 rounded-md hover:bg-slate-50 active:bg-slate-100 dark:hover:text-darkBlue dark:hover:bg-veryLightGray"
                     name={r.country}
                   >
                     {r.country}
