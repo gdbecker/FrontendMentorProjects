@@ -147,8 +147,16 @@
 .section-details {
   margin-bottom: 10%;
   margin-top: 10%;
-  padding-left: 14% !important;
-  padding-right: 14% !important;
+  /* padding-left: 14% !important;
+  padding-right: 14% !important; */
+}
+
+.section-details img {
+  width: auto !important;
+  max-width: 100px;
+  height: 100px; /* Or whatever height matches the design */
+  object-fit: contain;
+  text-align: center;
 }
 
 .section-details-header {

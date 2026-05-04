@@ -12,8 +12,7 @@ function ProfileCard() {
           <Image
             src={Avatar}
             alt="Profile-Image"
-            layout='fill'
-            objectFit='contain'
+            fill
           />
         </div>
       </div>

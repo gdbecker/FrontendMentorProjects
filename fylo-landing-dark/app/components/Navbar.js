@@ -13,7 +13,6 @@ function Navbar() {
                 src={Logo}
                 alt="Fylo logo"
                 width={145}
-                height={70}
                 className="navbar-logo"
               />
               Logo

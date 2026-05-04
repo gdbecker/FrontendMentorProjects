@@ -200,29 +200,6 @@ function Home() {
               ))}
             </ul>
           </details>
-          {/* <details className="flex dropdown w-[100%] my-2 md:my-0 md:w-[28%] lg:w-[20%] xl:w-[15%]">
-            <summary className="flex flex-row items-center justify-between h-full mb-[2px] btn w-full rounded-md border-0 shadow-md no-animation bg-white text-veryDarkBlue-Light hover:bg-white">
-              <h1 
-                className="flex normal-case text-xs font-heeboRegular"
-              >{levelSelect}</h1>
-              <BiChevronDown className="text-sm"/>
-            </summary>
-            <ul className="flex px-2 py-4 shadow menu dropdown-content z-[1] rounded-md w-full bg-white text-gray">
-              {levels.map((l) => (
-                <li
-                  onClick={(e) => handleLevelChange(e)}
-                  className="text-xs font-heeboRegular"
-                >
-                  <a 
-                    className="px-4 py-1 rounded-none hover:bg-white"
-                    name={l.level}
-                  >
-                    {l.level}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </details> */}
           <details className="dropdown inline-block w-[100%] my-4 md:my-0 md:w-[28%] lg:w-[20%] xl:w-[15%]">
             <summary className="flex flex-row items-center justify-between h-12 px-4 btn w-full rounded-md border-0 shadow-md no-animation bg-white text-veryDarkBlue-Light hover:bg-white list-none">
               <h1 className="normal-case text-xs font-heeboRegular">
@@ -247,29 +224,6 @@ function Home() {
               ))}
             </ul>
           </details>
-          {/* <details className="flex dropdown w-[100%] my-0 md:my-0 md:w-[28%] lg:w-[20%] xl:w-[15%]">
-            <summary className="flex flex-row items-center justify-between h-full mb-[2px] btn w-full rounded-md border-0 shadow-md no-animation bg-white text-veryDarkBlue-Light hover:bg-white">
-              <h1 
-                className="flex normal-case text-xs font-heeboRegular"
-              >{toolsSelect}</h1>
-              <BiChevronDown className="text-sm"/>
-            </summary>
-            <ul className="flex px-2 py-4 shadow menu dropdown-content z-[1] rounded-md w-full bg-white text-gray">
-              {tools.map((t) => (
-                <li
-                  onClick={(e) => handleToolsChange(e)}
-                  className="text-xs font-heeboRegular"
-                >
-                  <a 
-                    className="px-4 py-1 rounded-none hover:bg-white"
-                    name={t.tools}
-                  >
-                    {t.tools}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </details> */}
         </div>
 
         <div className="flex flex-col w-full pt-5 pb-10 gap-7 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

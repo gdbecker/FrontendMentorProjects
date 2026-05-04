@@ -87,47 +87,30 @@ import countryData from './json/data.json';
             onChange={e => onChangeCountrySearch(e)}
           />
         </div>
-        {/* <select 
-          value={regionSelect} 
-          onChange={(e) => handleRegionChange(e)}
-          className="text-xs font-nunitoSansSemiBold focus:outline-none">
-          <option 
-            value="Filter by Region"
-            className="py-5">
-          Filter by Region</option>
-          {regions.map((r) => (
-            <option 
-              value={r.country}
-              className="!p-16">
-            {r.country}</option>
-          ))}
-        </select> */}
-        <details className="flex dropdown w-[60%] my-10 md:my-0 md:w-[28%] lg:w-[20%] xl:w-[15%]">
-          <summary className="flex flex-row items-center justify-between mb-[2px] btn w-full rounded-md border-0 shadow-b-md no-animation bg-white text-veryDarkBlue-Light hover:bg-white dark:bg-darkBlue dark:text-white dark:hover:dark:bg-darkBlue">
-            <h1 
-              className="flex normal-case text-xs font-nunitoSansSemiBold"
-            >{regionSelect}</h1>
-            <BiChevronDown className="text-sm"/>
-          </summary>
-          <ul 
-            className="flex px-2 py-4 shadow menu dropdown-content z-[1] rounded-md w-full bg-white text-veryDarkBlue-Light hover: dark:bg-darkBlue dark:text-white"
-            
-            >
-            {regions.map((r) => (
-              <li
-                onClick={(e) => handleRegionChange(e)}
-                className="text-xs font-nunitoSansSemiBold"
-              >
-                <a 
-                  className="px-4 py-1 rounded-none hover:bg-white dark:hover:dark:bg-darkBlue dark:hover:text-white"
-                  name={r.country}
+        <details className="dropdown inline-block w-[100%] my-10 md:my-0 md:w-[28%] lg:w-[20%] xl:w-[15%]">
+            <summary className="flex flex-row items-center justify-between h-12 px-4 btn w-full rounded-md border-0 shadow-b-md list-none no-animation bg-white text-veryDarkBlue-Light hover:bg-white dark:bg-darkBlue dark:text-white dark:hover:dark:bg-darkBlue">
+              <h1 className="normal-case text-xs font-nunitoSansSemiBold">
+                {regionSelect}
+              </h1>
+              <BiChevronDown className="text-sm"/>
+            </summary>
+            <ul className="dropdown-content absolute z-[100] menu p-2 shadow-xl bg-white text-darkBlue rounded-md w-full mt-2 left-0 dark:bg-darkBlue dark:text-white">
+              {regions.map((r, index) => (
+                <li
+                  key={index}
+                  onClick={(e) => handleRegionChange(e)}
+                  className="text-xs font-nunitoSansSemiBold"
                 >
-                  {r.country}
-                </a>
-              </li>
-          ))}
-          </ul>
-        </details>
+                  <a 
+                    className="px-4 py-3 rounded-md hover:bg-slate-50 active:bg-slate-100 dark:hover:bg-veryLightGray"
+                    name={r.country}
+                  >
+                    {r.country}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
       </div>
       
       <div className="flex flex-col w-full pt-5 pb-10 gap-14 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

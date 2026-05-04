@@ -77,88 +77,78 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="container section-details">
-        <div className="row mt-5">
-          <div className="col-md-5">
-            <div className="row mt-4">
+      
+      <div className="container section-details py-5">
+        <div className="row text-center justify-content-center">
+          <div className="col-md-5 d-flex flex-column align-items-center mb-5 position-relative">
+            <div className="mb-4 d-flex justify-content-center align-items-center" style={{ width: '75px', height: '75px' }}>
               <Image 
                 src={IconAccess}
-                alt="Access"
+                alt=""
                 width={75}
                 height={75}
+                className="img-fluid"
               />
             </div>
-            <div className="row mt-4">
-              <h2 className="section-details-header">Access your files, anywhere</h2>
-            </div>
-            <div className="row mt-1">
-              <p className="section-details-text">
-                The ability to use a smartphone, tablet, or computer to access your account means your 
-                files follow you everywhere.
-              </p>
-            </div>
+            <h2 className="section-details-header w-100 mt-2">Access your files, anywhere</h2>
+            <p className="section-details-text w-100 mt-3">
+              The ability to use a smartphone, tablet, or computer to access your account means your 
+              files follow you everywhere.
+            </p>
           </div>
-          <div className="col-md-5 offset-md-2">
-            <div className="row mt-4">
+          <div className="col-md-5 offset-md-2 d-flex flex-column align-items-center mb-5 position-relative">
+            <div className="mb-4 d-flex justify-content-center align-items-center" style={{ width: '75px', height: '75px' }}>
               <Image 
                 src={IconSecurity}
-                alt="Security"
+                alt=""
                 width={75}
                 height={75}
+                className="img-fluid"
               />
             </div>
-            <div className="row mt-4">
-              <h2 className="section-details-header">Security you can trust</h2>
-            </div>
-            <div className="row mt-1">
-              <p className="section-details-text">
-                2-factor authentication and user-controlled encryption are just a couple of the security 
-                features we allow to help secure your files.
-              </p>
-            </div>
+            <h2 className="section-details-header w-100 mt-2">Security you can trust</h2>
+            <p className="section-details-text w-100 mt-3">
+              2-factor authentication and user-controlled encryption are just a couple of the security 
+              features we allow to help secure your files.
+            </p>
           </div>
         </div>
-        <div className="row mt-5">
-          <div className="col-md-5">
-            <div className="row mt-4">
+        <div className="row text-center justify-content-center mt-md-4">
+          <div className="col-md-5 d-flex flex-column align-items-center mb-5 position-relative">
+            <div className="mb-4 d-flex justify-content-center align-items-center" style={{ width: '75px', height: '75px' }}>
               <Image 
                 src={IconCollaboration}
-                alt="Collaboration"
+                alt=""
                 width={75}
                 height={75}
+                className="img-fluid"
               />
             </div>
-            <div className="row mt-4">
-              <h2 className="section-details-header">Real-time collaboration</h2>
-            </div>
-            <div className="row mt-1">
-              <p className="section-details-text">
-                Securely share files and folders with friends, family and colleagues for live collaboration. 
-                No email attachments required.
-              </p>
-            </div>
+            <h2 className="section-details-header w-100 mt-2">Real-time collaboration</h2>
+            <p className="section-details-text w-100 mt-3">
+              Securely share files and folders with friends, family and colleagues for live collaboration. 
+              No email attachments required.
+            </p>
           </div>
-          <div className="col-md-5 offset-md-2">
-            <div className="row mt-4">
+          <div className="col-md-5 offset-md-2 d-flex flex-column align-items-center mb-5 position-relative">
+            <div className="mb-4 d-flex justify-content-center align-items-center" style={{ width: '75px', height: '75px' }}>
               <Image 
                 src={IconAnyFile}
-                alt="Any File"
+                alt=""
                 width={75}
                 height={75}
+                className="img-fluid"
               />
             </div>
-            <div className="row mt-4">
-              <h2 className="section-details-header">Store any type of file</h2>
-            </div>
-            <div className="row mt-1">
-              <p className="section-details-text">
-                Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all 
-                file types to be securely stored and shared.
-              </p>
-            </div>
+            <h2 className="section-details-header w-100 mt-2">Store any type of file</h2>
+            <p className="section-details-text w-100 mt-3">
+              Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all 
+              file types to be securely stored and shared.
+            </p>
           </div>
         </div>
       </div>
+  
       <div className="container section-how">
         <div className="row">
           <div className="col-md-6 section-how-pic">
@@ -315,7 +305,6 @@ function Home() {
           src={Logo}
           alt="Logo"
           width={145}
-          height={70}
         />
         <div className="row g-4">
           <div className="col-md-4">
